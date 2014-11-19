@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CAREER CONSULT SERVICES</title>
+    <meta name="description" content="Career Consult. A professional, independent and cost effective advice for job seekers, employees, graduates, 
+    and those new to New Zealand">
+    <meta name="keywords" content="Services,Prices,Career Consultations,Sign Up,Booking Enquiries,About,Contact">
+    <meta name="author" content="Karyn McDonald">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="scss/main.scss">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <!-- Navigation -->
+            <!-- Drop down menu header -->
+            <header id="servicesPage">
+
+              <div id="brand_logo"><a href="index.html"><img src="img/CareerConsult_logo.png" alt="career consult logo"></a></div>
+              
+              <div class="search-container">
+                <form id="searchForm" action="search/SiteSearch" method="get">
+                    <input type="search" id="txtsearch" class="search-bar" placeholder="search" size="50" maxlength="255">
+                </form> 
+                <p id="fa-search"><i class="fa fa-search"></i></p>
+            </div>
+            <div id="tab-desk-nav"></div> 
+            <div id="main-header">
+                <ul id="main-nav">
+                    <!-- <li><a href=""><i class="fa fa-pencil"></i><p>Latest News</p></a></li> -->
+                    <li id="menuServices"><a href="services-admin.html"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>          
+                    <li><a href="prices.html"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
+                    <li><a href="testimonials-admin.html"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
+                    <li><a href=""><i class="fa fa-briefcase"></i><p>Posts</p></a></li>
+                    <li><a href=""><i class="fa fa-phone"></i><p>Clients</p></a></li>
+                    <li><a href="index.html"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
+                </ul>
+
+        </div>
+
+        <div class="nav-handle-other">
+          <a href="#">
+            <!-- source github.com/headloose/Style-Guide / icons / arrow-down.svg -->
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="25px" height="25px" viewBox="0 0 20 14" enable-background="new 0 0 20 14" xml:space="preserve">
+            <rect fill="white" width="20" height="2"></rect>
+            <rect y="6" fill="white" width="20" height="2"></rect>
+            <rect y="12" fill="white" width="20" height="2"></rect>
+        </svg>
+    </a>
+</div>
+<!-- Logged in - career profile -->
+<div class="nav-handle-user">
+    <div id="profilePic">
+      <a href="#">
+        <img src="img/careerprofile.png" alt="user" id="userProfile">
+    </a>
+    </div>
+    <p id="signedInTag">User Name</p>  
+</div>
+</header> 
+<!-- End of Headers -->
+
+<!-- Admin Add Edit or Delete Services -->
+<div id="sectionServices">
+    <section id="servicesListed">
+        <h1 id="header">SERVICES</h1>
+        <p>Career Consult offer a number of services, which you can pick and choose to suit your needs. Please sign up to and recieive a free 15min consultation and let us help you launch your career.</p>
+        <div id="accordion">
+
+            <h3><i class="fa fa-file-text"></i>CV Writing & Cover Letters</h3>
+            
+            <div>
+                <ul>
+                    <li>Choose from a number CV templates & assistance in creating a CV.</li>
+                    <li>Receive honest critique about your existing CV and / or cover letter.</li>
+                    <li>How to tailor your CV and cover letter to a specific job.</li>
+                    <li>Tips to help you ‘get that interview’.</li>
+                    <li>
+                        <form>
+                            <label for="edit"></label>
+                            <button type="submit" name="button" id="edit" class="editButton">EDIT</button>
+                            <label for="delete"></label>
+                            <button type="submit" name="button" id="delete" class="deleteButton">DELETE</button>
+                        </form>
+                    </li>   
+                </ul>
+            </div>
+
+            <h3><i class="fa fa-comments"></i>Interview Preparation</h3>
+            
+            <div>
+                <ul>
+                    <li>Learn about the types of questions asked and how to effectively answer these.</li>
+                    <li>Complete a ‘mock interview’ to practice your approach & gain confidence.</li>
+                    <li>Useful tips to impress your interviewers and stand out from the crowd.</li>
+                    <li>Graduates: what to expect when attending a graduate programme interview.</li>
+                    <li>
+                        <form>
+                            <label for="edit"></label>
+                            <button type="submit" name="button" id="edit" class="editButton">EDIT</button>
+                            <label for="delete"></label>
+                            <button type="submit" name="button" id="delete" class="deleteButton">DELETE</button>
+                        </form>
+                    </li>   
+                </ul>
+            </div>
+            <h3><i class="fa fa-plane"></i>New to NZ</h3>
+            <div>
+                <ul>
+                    <li>NZ workplace culture – what to expect and how to adapt your approach.</li>
+                    <li>Comprehensive spelling and grammar support for your CV and cover letter.</li>
+                    <li>Options for job searching in NZ.</li>
+                    <li>
+                        <form>
+                            <label for="edit"></label>
+                            <button type="submit" name="button" id="edit" class="editButton">EDIT</button>
+                            <label for="delete"></label>
+                            <button type="submit" name="button" id="delete" class="deleteButton">DELETE</button>
+                        </form>
+                    </li>   
+                </ul>
+                
+            </div>
+            <h3><i class="fa fa-file-archive-o"></i>Employment Contracts</h3>
+            <div>
+                <ul>
+                    <li>Independent advice on an employment contract before you sign it.</li>
+                    <li>
+                        <form>
+                            <label for="edit"></label>
+                            <button type="submit" name="button" id="edit" class="editButton">EDIT</button>
+                            <label for="delete"></label>
+                            <button type="submit" name="button" id="delete" class="deleteButton">DELETE</button>
+                        </form>
+                    </li>       
+                </ul>
+                
+            </div>
+            <h3><i class="fa fa-users"></i>General Job Seeking Advice</h3>
+            <div>
+                <ul>
+                    <li>Effective on-line job searching.</li>
+                    <li>Understand recruitment agencies and how to get the best out of them.</li>
+                    <li>Create an effective LinkedIn profile.</li>
+                    <li>Understand the realities of the job market.</li>
+                    <li>
+                        <form>
+                            <label for="edit"></label>
+                            <button type="submit" name="button" id="edit" class="editButton">EDIT</button>
+                            <label for="delete"></label>
+                            <button type="submit" name="button" id="delete" class="deleteButton">DELETE</button>
+                        </form>
+                    </li>   
+                </ul>
+                
+            </div>
+            <h3><i class="fa fa-thumbs-up"></i>General Employment Advice</h3>
+            <div>
+                <ul>
+                    <li>Ask questions about your employment situation and your rights.</li>
+                    <li>Coaching for approaching difficult situations at work.</li>
+                    <li>Advice and / or support person in disciplinary meetings.</li> 
+                    <li>
+                        <form>
+                            <label for="edit"></label>
+                            <button type="submit" name="button" id="edit" class="editButton">EDIT</button>
+                            <label for="delete"></label>
+                            <button type="submit" name="button" id="delete" class="deleteButton">DELETE</button>
+                        </form>
+                    </li>   
+                </ul>
+            </div>
+        </div>
+        <p>During your appointment you are encouraged to ask anything!  No question is too silly. </p>
+        <form>
+        <label for="addAService"></label>
+        <button type="submit" name="button" id="addAService" class="addButton">ADD A SERVICE</button>
+   </section>
+
+
+</div>
+
+
+<aside id="asideLatestNews">
+    <section id="latestUpdates">
+      <div>
+            
+                <h2>ADD A POST</h2>
+            <form id="addPostForm" method="GET">
+                <p>
+                    <span class="border"><i class="fa fa-font"></i></span>
+                    <label for="title"></label>
+                    <input type="text" id="title" placeholder="Post Title"> 
+                </p>
+                <p> 
+                    <span class="border"><i class="fa fa-link"></i></span>   
+                    <label for="hashTag"></label>      
+                    <input type="text" id="hashTag" placeholder="Topic Type">
+                </p>
+                <p> 
+                    <span class="border"><i class="fa fa-camera"></i></span>  
+                    <label for="postPicture"></label>
+                    <input type="file" id="postPicture"> 
+                </p>
+                <p>
+                    <span class="border"><i class="fa fa-file-text-o"></i></span>          
+                    <label for="content"></label>                  
+                    <textarea type="text" id="content" placeholder="Start Writing..."></textarea>
+                </p>
+                <p>
+                    <span class="border"><i class="fa fa-eraser"></i></span>              
+                    <label for="editor"></label>    
+                    <input type="text" id="editor" placeholder="Editor's name">
+                </p> 
+                <p>
+                    <span class="border"><i class="fa fa-calendar"></i></span>         
+                    <label for="date"></label>
+                    <input type="text" id="date" placeholder="Date">
+                </p>      
+                    <label for="addAPost"></label>
+                    <button type="submit" name="button" id="addAPost" class="addButton">ADD A POST</button>   
+            </form>
+    </div>
+        <h2>LATEST CAREER ADVICE</h2>
+       <article>
+            <div class="divWrapperHeader">
+                <h2><a href="#">Find out what you enjoy.</a></h2>
+            </div>
+            <div class="hashTag">
+                <p>
+                    <a href="http://www.careers.govt.nz/fileadmin/multimedia/interactive_flash/career_stories/career-stories.html"><i class="fa fa-bookmark"></i>Trying Things Out</a></p>
+                </div>
+                <div class="content">
+                    <p>Success comes in all shapes and colours. You can be successful in your job and career but you can equally be successful in your marriage, at sports or a hobby. Whatever success you are after there is one thing all radically successful people have in common: Their ferocious drive and hunger for success makes them never give up.</p>
+
+                </div>
+                <div class="readMore">
+                    <p><a href="">Read More.</a></p>
+                </div>
+                <div id="shareSocial">
+                    <p><a href="http://twitter.com/share?text=Contact%20Career%20Consult%20&url=http://www.careerconsult/services.co.nz"><i class="fa fa-twitter"></i></a></p>
+                    <p><a href="http://www.facebook.com/sharer.php?text=Career%20Consult%20Services&u=http://www.careerconsult/services.co.nz"><i class="fa fa-facebook"></i></a></p>
+                    <p><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.careerconsult/services.co.nz"><i class="fa fa-linkedin"></i></a></p>
+                </div>
+                <div class="avatarProfile">
+                    <img src="img/KarynsProfilePic.png" alt="avatarProfile">
+                </div>
+                <div class="editor">
+                    <p>Editor: Karyn McDonald</p>
+                </div>
+                <div class="date">
+                    <p>13th Thursday November 2014</p>
+                </div>
+                <form>
+                    <label for="edit"></label>
+                    <button type="submit" name="button" id="edit" class="editButton">EDIT</button>
+                    <label for="delete"></label>
+                    <button type="submit" name="button" id="delete" class="deleteButton">DELETE</button>
+                </form>
+            </article>   
+            <article>
+                <div class="divWrapperHeader">
+                    <h2><a href="www.linkedin.com">10 LinkedIn Tips to help you get a job.</a></h2>
+                </div>
+                <div class="hashTag">
+                    <p>
+                        <a href="http://theundercoverrecruiter.com/10-linkedin-tips-get-you-job/"><i class="fa fa-bookmark"></i>Tips</a></p>
+                    </div>
+                    <div class="content">
+                        <p>1. Check out the jobs section. 2. Complete your profile. 3.Join Groups 4. Get Connected 5. Get the Messages out 6. Take part in the Q and A.  7. Share updates 8. Recommendations 9. Find events to go to 10. Explore the other applications</p>
+                    </div>
+                    <div class="readMore">
+                        <p><a href="post.html">Read More.</a></p>
+                    </div>
+                    <div id="shareSocial">
+                        <p><a href="http://twitter.com/share?text=Contact%20Career%20Consult%20&url=http://www.careerconsult/services.co.nz"><i class="fa fa-twitter"></i></a></p>
+                        <p><a href="http://www.facebook.com/sharer.php?text=Career%20Consult%20Services&u=http://www.careerconsult/services.co.nz"><i class="fa fa-facebook"></i></a></p>
+                        <p><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.careerconsult/services.co.nz"><i class="fa fa-linkedin"></i></a></p>
+                    </div>
+                    <div class="avatarProfile">
+                        <img src="img/KarynsProfilePic.png" alt="avatarProfile">
+                    </div>
+                    <div class="editor">
+                        <p>Editor: Karyn McDonald</p>
+                    </div>
+                    <div class="date">
+                        <p>15th Thursday November 2014</p>
+                    </div>
+                    <form>
+                        <label for="edit"></label>
+                        <button type="submit" name="button" id="edit" class="editButton">EDIT</button>
+                        <label for="delete"></label>
+                        <button type="submit" name="button" id="delete" class="deleteButton">DELETE</button>
+                </form>    
+                </article>  
+                <div id="pagination">
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                    </ul>
+                </div> 
+        </section>
+    
+</aside>
+
+        <!-- Footer -->
+<footer>
+    <div id="footer_options">
+        <ul>
+            <li><a href="">HELP</a></li>
+            <li><a href="">PRIVACY</a></li>
+            <li><a href="">TERMS</a></li>
+            <li><a href="#">&copy CAREER CONSULT 2014</a></li>
+            <li><a href=""><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter-square"></i></a></li>
+            <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </div>
+</footer>
+        
+        <!-- End of Footer -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CAREER CONSULT PROFILE</title>
+        <meta name="description" content="Career Consult. A professional, independent and cost effective advice for job seekers, employees, graduates, 
+        and those new to New Zealand">
+        <meta name="keywords" content="Services,Prices,Career Consultations,Sign Up,Booking Enquiries,About,Contact">
+        <meta name="author" content="Karyn McDonald">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="scss/main.css">
+        <link rel="stylesheet" href="scss/main.scss">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+<!-- Navigation -->
+<!-- Navigation -->
+<!-- Drop down menu header -->
+<header>
+        
+  <div id="brand_logo"><a href="index.html"><img src="img/CareerConsult_logo.png" alt="career consult logo"></a></div>
+  
+  <div class="search-container">
+        <form id="searchForm" action="search/SiteSearch" method="get">
+            <input type="search" id="txtsearch" class="search-bar" placeholder="search" size="50" maxlength="255">
+        </form> 
+        <p id="fa-search"><i class="fa fa-search"></i></p>
+  </div>
+   <div id="tab-desk-nav"></div> 
+  <div id="main-header">
+    <ul id="main-nav">
+      <!-- <li><a href=""><i class="fa fa-pencil"></i><p>Latest News</p></a></li> -->
+      <li id="menuServices"><a href="services.html"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
+      <li id="seletedServices">
+        <ul>
+        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
+        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
+        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
+        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
+        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
+        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li>
+        </ul>
+      </li>           
+      <li><a href="prices.html"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
+      <li><a href="testimonials.html"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
+      <li><a href=""><i class="fa fa-briefcase"></i><p>About</p></a></li>
+      <li><a href=""><i class="fa fa-phone"></i><p>Contact</p></a></li>
+      <li><a href="Career-Profile.html"><i class="fa fa-archive"></i><p class="styleList">My Career Profile</p></a></li>
+      <li><a href="index.html"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
+    </ul>
+
+</div>
+
+<div class="nav-handle-other">
+  <a href="#">
+    <!-- source github.com/headloose/Style-Guide / icons / arrow-down.svg -->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="25px" height="25px" viewBox="0 0 20 14" enable-background="new 0 0 20 14" xml:space="preserve">
+            <rect fill="white" width="20" height="2"></rect>
+            <rect y="6" fill="white" width="20" height="2"></rect>
+            <rect y="12" fill="white" width="20" height="2"></rect>
+        </svg>
+   </a>
+</div>
+<!-- Logged in - career profile -->
+<div class="nav-handle-user">
+    <div id="profilePic">
+      <a href="#">
+        <img src="img/careerprofile.png" alt="user" id="userProfile">
+    </a>
+    </div>
+    <p id="signedInTag">User Name</p>  
+</div>
+</header> 
+<!-- End of Headers -->
+
+<!-- Career Profile Client add info. -->
+<div id="sectionCareerProfile">
+<section id="career-profile">
+    <h1 id="header">CAREER PROFILE</h1>
+    
+    <p id="description">By updating your Career Profile, this will help your career consultant provide the correct service and help you launch your career, faster and easier.</p>
+    <form id="careerProfile-form" method="get">
+        <div class="profileAuto"><img id="profileImage" src="img/careerprofile-BLK.png" alt="profile picture"></div>
+        <p>
+        <span class="border"><i class="fa fa-camera"></i></span>
+        <label for="avatar"></label>
+        <input type="file" name="imageType" id="avatar" class="border"  >
+        </p>
+
+        <p>
+        <span class="border"><i class="fa fa-user"></i></span>
+        <label for="userName"></label>
+        <input type="text" name="username" id="userName" placeholder="Username" class="border">
+        </p>
+
+        <p>
+        <span class="border"><i class="fa fa-envelope"></i></span>
+        <label for="email"></label>
+        <input type="email" name="email" id="email" placeholder="Email" class="border">
+        </p>
+
+        <p>
+        <span class="border"><i  class="fa fa-user"></i></span>
+        <label for="firstName"></label>
+        <input type="text" name="firstName" id="firstName" placeholder="First Name" class="border">
+        </p>
+
+        <p>
+        <span class="border"><i class="fa fa-user"></i></span>
+        <label for="lastName"></label>
+        <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="border">
+        </p>
+
+        <p>
+        <span class="border"><i  class="fa fa-phone-square"></i></span>
+        <label for="contact"></label>
+        <input type="text" name="phone" id="contact" placeholder="Contact Number" class="border">
+        </p>
+      
+        <p>
+        <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
+        <label for="personalGoals"></label>
+        <textarea name="comment" id="personalGoals" placeholder="Personal Goals" class="border"></textarea>
+        </p>
+
+        <p>
+        <span class="border"><i  class="fa fa-pencil-square-o"></i></span> 
+        <label for="experience"></label>
+        <textarea name="comment" id="experience" placeholder="Experience" class="border"></textarea>
+        </p>
+        
+        <p>
+        <span class="border"><i class="fa fa-university"></i></span>
+        <label for="education"></label>
+        <textarea name="comment" id="education" placeholder="Education" class="border"></textarea>
+        </p>
+
+        <p>
+        <span class="border"><i  class="fa fa-trophy"></i></span> 
+        <label for="acheivements"></label>
+        <textarea name="comment" id="acheivements" placeholder="Acheivements" class="border"></textarea>
+        </p>
+
+        <p>
+        <span class="border"><i class="fa fa-history"></i></span>
+        <label for="careerHistory"></label>
+        <textarea name="comment" id="careerHistory" placeholder="Career History" class="border"></textarea>
+        </p>
+
+        <p>
+        <span class="border"><i class="fa fa-thumbs-o-up"></i></span>
+        <label for="careerClass"></label>      
+        <select id="careerClass" class="border">
+            <option value="0">Choose your Career Class</option>
+            <option value="1">Accounting</option>
+            <option value="2">Administration & Office Support</option>
+            <option value="4">Advertising, Arts & Media</option>
+            <option value="5">Banking  Financial Services</option>
+            <option value="6">Call Centre & Customer Service</option>
+            <option value="7">CEO & General Management</option>
+            <option value="8">Community Services & Development</option>
+            <option value="9">Construction</option>
+            <option value="10">Consulting & Strategy</option>
+            <option value="11">Community Services & Development</option>
+            <option value="12">Design &amp; Architecture</option>
+            <option value="13">Education &amp; Training</option>
+            <option value="14">Engineering</option>
+            <option value="15">Farming, Animals &amp; Conservation</option>
+            <option value="16">Government &amp; Defence</option>
+            <option value="17">Healthcare &amp; Medical</option>
+            <option value="18">Hospitality &amp; Tourism</option>
+            <option value="19">Human Resources &amp; Recruitment</option> 
+            <option value="20">Information &amp; Communication Technology</option>
+            <option value="21">Insurance &amp; Superannuation</option>
+            <option value="22">Legal</option>
+            <option value="23">Manufacturing, Transport &amp; Logistics</option>
+            <option value="24">Marketing &amp; Communications</option>
+            <option value="25">Mining, Resources &amp; Energy</option>
+            <option value="26">Real Estate &amp; Property</option>
+            <option value="27">Retail &amp; Consumer Products</option>
+            <option value="28">Sales</option>
+            <option value="29">Science &amp; Technology</option>
+            <option value="30">Self Employment</option>
+            <option value="31">Sport &amp; Recreation</option>
+            <option value="32">Trades &amp; Services</option>
+        </select>
+        </p>
+       <p>
+        <span class="border"><i  class="fa fa-hand-o-right"></i></span>
+        <label for="servicesSel"></label>
+        <select id="servicesSel" class="border">
+            <option value="0">Services I'm Interested In...</option>
+            <option value="1">CV Writing & Cover Letters</option>
+            <option value="2">Interview Preparation</option>
+            <option value="4">New to NZ</option>
+            <option value="5">Employment Contracts</option>
+            <option value="6">General Job Seeking Advice</option>
+            <option value="7">General Employment Advice</option>
+        </select>
+        </p>
+        
+
+        <p>
+        <p id="agreementStatement" class="border">In order to keep you informed and help you with your future career, we will retain your career profile for future career consult meetings & career planning. I consent by ticking this box.
+        
+        <input type="checkbox" value="agreement" id="checkboxCareerProfile" name="check" />
+        <label for="checkboxCareerProfile"></label></p>
+        
+
+        <label for="updateProfile"></label>
+        <button type="submit" name="button" id="updateProfile" class="button">UPDATE MY PROFILE</button>
+    </form>
+</section>
+</div>
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer>
+    <div id="footer_options">
+        <ul>
+            <li><a href="">HELP</a></li>
+            <li><a href="">PRIVACY</a></li>
+            <li><a href="">TERMS</a></li>
+            <li><a href="#">&copy CAREER CONSULT 2014</a></li>
+            <li><a href=""><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter-square"></i></a></li>
+            <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </div>
+</footer>
+        
+<!-- End of Footer -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/formValidation.js"></script>
+        <script src="js/avatarUpload.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
