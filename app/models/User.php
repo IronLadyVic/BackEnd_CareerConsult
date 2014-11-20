@@ -21,6 +21,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var array
 	 */
-	protected $hidden = array('password', 'remember_token');
+	protected $hidden = array('password', 'remember_token'); //this is if you echo out user you dont see password or remember_me token
+
+	//we need to tell the route when a user fills in their details that the colomns in the table need to be filled in the database.
+	protected $fillable = array('username', 'password','firstname','lastname','email','phone','avatar','personal_goal','experience','education','acheivement','career_history','career_type','service_type','comment');
 
 }
