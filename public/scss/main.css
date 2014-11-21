@@ -31,7 +31,7 @@
         margin-top: 2em;
       }
   */
-  #droparrow.hide {
+  #droparrow.show {
     font-size: 0px;
     display: none; }
 
@@ -104,23 +104,22 @@
     line-height: 0px;
     background-color: #242424;
     cursor: pointer;
-    height: 100%;
-    width: 100%; }
+    margin-left: -2.2em; }
 
   ul#main-nav li:nth-child(7) {
     background-color: white;
-    font-weight: 300; }
+    font-weight: bold; }
 
   ul#main-nav li:nth-child(8) {
     background-color: white;
-    font-weight: 300; }
+    font-weight: bold; }
 
   .styleList {
     color: black !important; }
 
   ul#main-nav li p {
     color: white;
-    font-weight: 100;
+    font-weight: 500;
     padding-left: 5em;
     margin-top: -0.6em; }
 
@@ -211,7 +210,7 @@
     color: black;
     font-size: 0.8em;
     left: 0;
-    margin-left: -3em; }
+    margin-left: -3.9em; }
 
   ul#main-nav li#seletedServices i.display {
     margin-left: 1.8em; }
@@ -644,8 +643,8 @@
     margin-top: -1.2em;
     color: white !important; }
 
-  #droparrow.hide {
-    display: none; }
+  #droparrow.show {
+    display: block; }
 
   /* ==========================================================================
      SEARCH 
@@ -1904,10 +1903,10 @@
     width: 100%; }
 
   #aucklandSkyline img {
-    margin-top: -10em;
+    margin-top: -8em;
     opacity: 0.3;
     position: absolute;
-    margin-left: 6em;
+    margin-left: 4em;
     /*height: 100%;*/
     width: 100%; }
 
