@@ -33,39 +33,39 @@
 <!-- Drop down menu header -->
 <header>
         
-  <div id="brand_logo"><a href="index.html"><img src="img/CareerConsult_logo.png" alt="career consult logo"></a></div>
+  <div id="brand_logo"><a href="{{URL::to('/')}}"><img src="{{asset('img/CareerConsult_logo.png')}}" alt="career consult logo"></a></div>
   
 <div class="search-container">
-        <form id="searchForm" action="search/SiteSearch" method="get">
-            <input type="search" id="txtsearch" class="search-bar" placeholder="search" size="50" maxlength="255">
-        </form> 
-        <p id="fa-search"><i class="fa fa-search"></i></p>
+        {{Form::open(array('url'=>'search', 'id'=>'txtsearch', 'class'=>'search-bar', 'placeholder'=>'search', 'size'=>'50', 'maxlength'=>'255'))}}
+         <p id="fa-search"><i class="fa fa-search"></i></p>   
+        {{Form::close()}}
+        
   </div>
   <div id="tab-desk-nav"></div> 
 <div id="main-header">
     <ul id="main-nav">
       <!-- <li><a href=""><i class="fa fa-pencil"></i><p>Latest News</p></a></li> -->
-      <li id="menuServices"><a href="services.html"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
+      <li id="menuServices"><a href="{{URL::to('services/')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
       <li id="seletedServices">
         <ul>
-        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
-        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
-        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
-        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
-        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
-        <li><a href="services.html"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
+        <li><a href="{{URL::to('services/cv')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
+        <li><a href="{{URL::to('services/interviewprepartion')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
+        <li><a href="{{URL::to('services/newtonz')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
+        <li><a href="{{URL::to('services/employmentcontract')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
+        <li><a href="{{URL::to('services/jobseeking')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
+        <li><a href="{{URL::to('services/employmentadvice')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
         </ul>
       </li>           
-      <li><a href="prices.html"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
-      <li><a href="testimonials.html"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
-      <li><a href=""><i class="fa fa-briefcase"></i><p>About</p></a></li>
-      <li><a href=""><i class="fa fa-phone"></i><p>Contact</p></a></li>
-      <li><a href="sign-up.html"><i class="fa fa-user"></i><p class="styleList">Sign Up</p></a></li>
-      <li><a href="login.html"><i class="fa fa-lock"></i><p class="styleList">Log In</p></a></li>
+      <li><a href="{{URL::to('prices/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
+      <li><a href="{{URL::to('testimonials/')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
+      <li><a href="{{URL::to('about/')}}"><i class="fa fa-briefcase"></i><p>About</p></a></li>
+      <li><a href="{{URL::to('contact/')}}"><i class="fa fa-phone"></i><p>Contact</p></a></li>
+      <li><a href="{{URL::to('signup/')}}"><i class="fa fa-user"></i><p class="styleList">Sign Up</p></a></li>
+      <li><a href="{{URL::to('login/')}}"><i class="fa fa-lock"></i><p class="styleList">Log In</p></a></li>
     </ul>
 </div>
 <div class="nav-handle">
-  <a href="#">
+  <a href="{{URL::to('#')}}">
     <!-- source github.com/headloose/Style-Guide / icons / arrow-down.svg -->
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="25px" height="25px" viewBox="0 0 20 14" enable-background="new 0 0 20 14" xml:space="preserve">
@@ -76,7 +76,7 @@
    </a>
 </div>
 <div class="nav-handle-login">
-        <div id="navLogIn"><i id="navRightArrow" class="fa fa-angle-right"></i><a href="#" id="loginHandle">LOG IN</a></div>   
+        <div id="navLogIn"><i id="navRightArrow" class="fa fa-angle-right"></i><a href="{{URL::to('login/')}}" id="loginHandle">LOG IN</a></div>   
 </div>  
 </header> 
 <!-- End of Headers -->
@@ -88,13 +88,13 @@
 <footer>
     <div id="footer_options">
         <ul>
-            <li><a href="">HELP</a></li>
-            <li><a href="">PRIVACY</a></li>
-            <li><a href="">TERMS</a></li>
-            <li><a href="#">&copy CAREER CONSULT 2014</a></li>
-            <li><a href=""><i class="fa fa-facebook-square"></i></a></li>
-            <li><a href=""><i class="fa fa-twitter-square"></i></a></li>
-            <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>
+            <li><a href="{{URL::to('#')}}">HELP</a></li>
+            <li><a href="{{URL::to('#')}}">PRIVACY</a></li>
+            <li><a href="{{URL::to('#')}}">TERMS</a></li>
+            <li><a href="{{URL::to('#')}}">&copy CAREER CONSULT 2014</a></li>
+            <li><a href="{{URL::to('www.facebook.com')}}"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="{{URL::to('www.twitter.com')}}"><i class="fa fa-twitter-square"></i></a></li>
+            <li><a href="{{URL::to('www.linkedin.com')}}"><i class="fa fa-linkedin-square"></i></a></li>
         </ul>
     </div>
 </footer>
@@ -102,10 +102,10 @@
 <!-- End of Footer -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="public/js/plugins.js"></script>
+        <script src="{{URL::to('js/plugins.js')}}"></script>
 
-        <script src="public/js/formValidation.js"></script>
-        <script src="public/js/main.js"></script>
+        <script src="{{URL::to('js/formValidation.js')}}"></script>
+        <script src="{{URL::to('js/main.js')}}"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

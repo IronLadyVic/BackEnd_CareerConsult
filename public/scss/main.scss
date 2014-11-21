@@ -232,7 +232,7 @@ margin-top: 13em;
   margin-left: 2em;*/
 }
 
-li#seletedServices{
+ul#main-nav li#seletedServices{
   width: 0;
   height: 0;
   display: none;
@@ -240,28 +240,28 @@ li#seletedServices{
 }
 
 
-li#seletedServices.display{
+ul#main-nav li#seletedServices.display{
   width: 112%;
   height: auto;
   display: block;
   color: black;
   font-size: 0.8em;
+  left: 0;
   margin-left: -3em;
 }
-li#seletedServices i.display{
+ul#main-nav li#seletedServices i.display{
   margin-left: 1.8em;
   
 }
 
-li#seletedServices p.display{
+ul#main-nav li#seletedServices p.display{
   margin-left: 1.3em;
 
 }
-#seletedServices li:last-child{
+ul#main-nav li#seletedServices li:last-child{
   border-bottom: none;
 
 }
-
 #brand_logo a img{
   height: 25%;
   width:25%;
@@ -1550,6 +1550,7 @@ div#loginForm.show{
     }
     ul#main-nav.show{
       display: block;
+
     }
 
 
@@ -1665,11 +1666,8 @@ color: #9B8FFB;
 
 
   }
-/*ul#main-nav li:nth-child(6){
-  background-color: #242424;
-  
-  }*/
-  ul#main-nav li:nth-child(7){
+
+ ul#main-nav li:nth-child(7){
     background-color: white;
     
   } 
@@ -1678,6 +1676,47 @@ color: #9B8FFB;
     
   } 
 
+    ul#main-nav li {
+      left: 0;
+      top: 60px;
+      display: block;
+      /*clear: left;*/
+      padding-top: 1.2em;
+      padding-bottom: 0.5em;
+      border-bottom: black 1px solid;
+      margin: 0;
+      font-size: 1.1em;
+      font-weight: 300;
+      /*Animation*/
+ -webkit-transition: height 1s ease;
+    -moz-transition: height 1s ease;
+      -o-transition: height 1s ease;
+     -ms-transition: height 1s ease;
+         transition: height 1s ease;
+      line-height: 0px;
+      background-color: #242424;
+      cursor: pointer;
+      
+
+    }
+ul#main-nav li#seletedServices li{
+  margin-left: -2em;
+  height: 4em;
+  line-height: 120%;
+  width: 19.5em;
+  padding-bottom: 3em;
+}
+
+ul#main-nav li#seletedServices i{
+  padding-left: 1.5em;
+}
+
+ul#main-nav li#seletedServicesv p:nth-child(1){
+    padding-bottom:1em;
+  }
+ul#main-nav li#seletedServices p:nth-child(5){
+    padding-bottom:1em;
+  }
 
 
 /* ==========================================================================
@@ -1989,7 +2028,8 @@ height: 80em;
 
 }*/
 ul#main-nav{
-  width:17.9em;
+  width:18.4em;
+  margin-left: -3em;
 
 }
 #droparrow{
@@ -2126,10 +2166,10 @@ ul#main-nav{
 
 
   section#animation{
-   margin-top: 8em;
+   margin-top: 3em;
    position: relative;
    display: block;
-   height: 20em;
+   height: 22em;
    width: 100%;
  }
  #aucklandSkyline img{
@@ -2144,7 +2184,7 @@ ul#main-nav{
 #ponsonbyHousing img{
  /* height: 65%;*/
  width: 100%;
- margin-top: 6em;
+ margin-top: 11em;
  margin-left: 6em;
  display: block;
  position: absolute;

@@ -16,6 +16,16 @@ $(function(){
 
 		
 	});
+
+	$(".nav-handle-other a").on("click", function(){
+
+		$("ul#main-nav li").toggleClass("show");
+		$("#droparrow").toggleClass("show");
+
+		
+	});
+
+
 	//-----------Introduction in mobile show-----------//
 
 	$(".nav-handle a").on("click", function(){
@@ -28,9 +38,9 @@ $(function(){
 	});
 	//-----------Services drop down menu-----------//
 	$("li#menuServices").on("click", function(){
-		$("li#seletedServices").toggleClass("display");
-		$("#seletedServices p").toggleClass("display");
-		$("#seletedServices i").toggleClass("display");
+		$("ul#main-nav li#seletedServices").toggleClass("display");
+		$("ul#main-nav li#seletedServices p").toggleClass("display");
+		$("ul#main-nav li#seletedServices i").toggleClass("display");
 	});
 
 	$(".nav-handle-sign-up a").on("click", function(){
@@ -62,13 +72,15 @@ $(function(){
 	});
 
 });
-
-//-----------services accordion-----------//
-
-	$(function() {
-		$( "#accordion" ).accordion();
-	});
-
-//-----------In mobile click nav handle to hide menu list-----------//
+//-----------Search Function-----------//
 
 
+document.getElementById('txtsearch').onsubmit = function (event)
+    {
+        // Prevent the form from submitting
+        event.preventDefault();
+
+        // Build the url using the form action and the topic value
+        var topic = document.querySelectorAll('input[name="topic"]')[0];
+        window.location.href = this.action + '/' + encodeURIComponent(topic.value);
+    };

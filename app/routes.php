@@ -52,3 +52,5 @@ Route::get('logout', function()
 {
 	return Redirect::to('index');
 });
+
+
