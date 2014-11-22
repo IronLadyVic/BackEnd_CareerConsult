@@ -1,4 +1,4 @@
-@extends('includes.template')
+@extends('includes.master')
 @section("content")
 
 <div id="mobdeskLogin">
@@ -8,7 +8,7 @@
     <p id="mobdeskDescription">Log in to update your career profile, or enquire about booking a service.</p>
 
     {{Form::open(array('url'=>'login', 'id'=>'mobdeskForm'))}}
-        <p><img id="profileImage" src="{{URL::to('img//careerprofile-BLK.png')}}" alt="profile picture"></p>
+        <p><img id="profileImage" src="{{URL::to('img/careerprofile-BLK.png')}}" alt="profile picture"></p>
         
         <p>
         <span class="border"><i class="fa fa-user"></i></span>
@@ -22,14 +22,14 @@
         {{$errors->first('password','<p class="border">:message</p>')}}     
         </p>
 
+       {{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}
+       <p  id="rememberMe">Remember Me</p>
+        {{$errors->first('checkbox','<p class="border">:message</p>')}}
         
-        <input type="checkbox" value="None" id="checkBoxRemember" name="check" />
-        <label for="checkBoxRemember"></label>
-        <p  id="rememberMe">Remember Me</p>
         
         
-        <label for="loggingInButton"></label>
-        <button type="submit" name="button" id="loggingInButton" class="button">LOG IN</button>
+        {{Form::submit('LOG IN', array('id'=>'loggingInButton', 'class' => 'button'));}}
+        
 
 {{Form::close()}}
 {{Session::get("error")}}

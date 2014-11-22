@@ -364,12 +364,10 @@
      Desktop Login only - no pop up model
      ========================================================================== */
   div#mobdeskLogin {
-    width: 100%;
+    width: 90%;
     height: auto;
     margin: 0 auto;
-    position: relative;
-    left: 20%;
-    top: 20%; }
+    position: relative; }
 
   section#mobdeskSection {
     margin: 0 auto;
@@ -382,7 +380,7 @@
     color: white; }
 
   p#mobdeskDescription {
-    width: 90%;
+    width: 70%;
     color: white; }
 
   form#mobdeskForm {
@@ -402,7 +400,7 @@
     color: black;
     border-bottom: 0.1em white solid !important;
     border-top: 0.1em white solid !important;
-    width: 80%;
+    width: 65%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -413,7 +411,7 @@
     color: white;
     border-bottom: 0.1em white solid !important;
     border-top: 0.1em white solid !important;
-    width: 80%;
+    width: 65%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -424,7 +422,7 @@
     margin-left: 25%; }
 
   form#mobdeskForm #loggingInButton {
-    width: 90%; }
+    width: 76%; }
 
   form#mobdeskForm p#rememberMe {
     margin-top: -1.2em;
@@ -954,7 +952,8 @@
     background-color: transparent;
     height: 3em;
     color: white;
-    border-radius: none; }
+    border-radius: none;
+    color: white; }
 
   #signup-form textarea {
     -webkit-appearance: none;
@@ -987,6 +986,11 @@
     color: white;
     background-color: transparent;
     border-radius: none; }
+
+  #signup-form select option {
+    background-color: #242424;
+    color: white;
+    border: none; }
 
   #signup-form button#signUp {
     margin-left: 1em;
@@ -1314,12 +1318,12 @@
   /* ==========================================================================
      FOOTER
      ========================================================================== */
-  div#footerOptions {
+  div#footer_options {
     position: relative;
     margin-left: -2em;
     margin-top: 2em;
     border-top: 1px solid #3d4144;
-    width: 80%;
+    width: 110%;
     /*padding-bottom: 3em;*/
     overflow: hidden;
     opacity: .5;
@@ -1385,7 +1389,7 @@
     width: 0%;
     height: 0%;
     overflow: hidden;
-    z-index: 1000;
+    z-index: 50000;
     background-color: rgba(0, 0, 0, 0.7);
     display: none; }
 
@@ -1398,18 +1402,46 @@
     display: block;
     background-color: white;
     position: absolute;
-    top: 20%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    z-index: -100000000; }
+    top: 5%;
+    left: 25%;
+    transform: translate(-50%, -50%); }
 
-  [role="close-modal"] {
+  div#loginForm form {
+    background-color: white;
+    width: 28em;
+    height: 36em;
+    padding-left: 2.5em;
+    padding-right: 1em;
+    padding-top: 1em; }
+
+  div#loginForm span[role="close-modal"] {
     position: absolute;
-    top: 0;
-    right: 0;
+    margin-left: 22em;
     padding-right: 0.5em;
-    cursor: pointer;
-    color: #9B8FFB; }
+    cursor: pointer !important;
+    color: black;
+    border-top: none;
+    border-bottom: none; }
+
+  div#loginForm img#profileImage {
+    margin-left: 29%; }
+
+  div#loginForm #checkBoxRemember {
+    height: 1em;
+    width: 1em;
+    float: left;
+    margin-left: 1em; }
+
+  div#loginForm button {
+    border-radius: 0.2em;
+    background-color: #9B8FFB;
+    box-shadow: 0.2em 0.2em 0.5em black;
+    text-decoration: none;
+    width: 21.5em;
+    height: 3em;
+    box-shadow: none;
+    color: white;
+    margin-left: 1em; }
 
   /* ==========================================================================
      MAIN NAV
@@ -1954,7 +1986,7 @@
   #launchCareer a {
     color: black; }
 
-  #careerButton {
+  div#careerButton {
     width: 16.2em;
     height: 2.65em;
     margin-left: 17em;
@@ -2051,6 +2083,15 @@
     background-color: transparent;
     height: 3em;
     color: white; }
+
+  #signup-form select {
+    width: 80%;
+    height: 3em;
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    color: black;
+    background-color: transparent;
+    border-radius: none; }
 
   #signup-form form input[type="email"] {
     color: black;

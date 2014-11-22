@@ -1,4 +1,4 @@
-@extends('includes.template')
+@extends('includes.master-login')
 
 @section('content')
 
@@ -14,7 +14,7 @@
                 <a href="{{URL::to('services/')}}"><span>LAUNCH YOUR CAREER</span></a>
             </div>
             <div id="careerButton">
-                <a href="{{URL::to('signup/')}}"><span>SIGN UP</span></a>
+                <a href="{{URL::to('users/new')}}"><span>SIGN UP</span></a>
             </div>
         </div>
 
@@ -33,30 +33,30 @@
 <!-- Log in pop up -->
 <div id="loginForm" class="l-box-lrg pure-u-1 pure-u-md-2-5">
 
-    <span role="close-modal"><i class="fa fa-times"></i></span>
-
     {{Form::open(array('url'=>'login', 'id'=>'logIn-form', 'class'=>'pure-form pure-form-stacked'))}}
-        <h1 id="header">LOG IN</h1>
+    <span role="close-modal"><i class="fa fa-times"></i></span>
+    <h1 id="header">LOG IN</h1>
 
-        <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
+    <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
 
-        <p><img id="profileImage" src="URL::to('careerprofile/')" alt="profile picture"></p>
-        <p>
-            <span class="border"><i class="fa fa-user"></i></span>           
-            {{Form::text('username')}}
-            {{$errors->first('username','<p class="border">:message</p>')}}
-        </p>
-        <p>
-            <span class="border"><i class="fa fa-lock"></i></span>
-            {{Form::password('password')}}
-            {{$errors->first('password','<p class="border">:message</p>')}}
+    <p><img id="profileImage" src="URL::to('img/careerprofile-BLK.png')" alt="profile picture"></p>
+    <p>
+        <span class="border"><i class="fa fa-user"></i></span>           
+        {{Form::text('username')}}
+        {{$errors->first('username','<p class="border">:message</p>')}}
+    </p>
+    <p>
+        <span class="border"><i class="fa fa-lock"></i></span>
+        {{Form::password('password')}}
+        {{$errors->first('password','<p class="border">:message</p>')}}
 
-        </p> 
-        {{Form::checkbox('checkBoxRemember')}}
-        <p  id="rememberMe">Remember Me</p>
-        
-        {{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
-        
+    </p> 
+    {{Form::checkbox('check', 'agreement', true, array('id' => 'checkBoxRemember'));}}
+    {{$errors->first('checkbox','<p class="border">:message</p>')}} 
+    <p  id="rememberMe">Remember Me</p>
+
+    {{Form::button('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
+
 
     {{Form::close()}}
     {{Session::get("error")}}
