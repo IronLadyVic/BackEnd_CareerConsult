@@ -32,7 +32,7 @@
       margin-left: -2.5em;
       margin-top: 2em;
     }
-*/
+    */
 
 
 
@@ -44,133 +44,133 @@
    NAV LOG IN Desktop hide
    ========================================================================== */
 
-div#navLogIn a{
+   div#navLogIn a{
     display: none;
   }
 
 
   .nav-handle-login{
-        display: none;
+    display: none;
   }
 
-#navRightArrow{
-  display: none;
-}
+  #navRightArrow{
+    display: none;
+  }
 
 
 
 
-    .nav-handle{
-      position: absolute;
-      right: 0;
-      top: 2em;
-      padding-right: 2em;
+  .nav-handle{
+    position: absolute;
+    right: 0;
+    top: 2em;
+    padding-right: 2em;
 
-    }
-    .nav-handle-other{
-      position: absolute;
-      right: 0;
-      top: 2em;
-      padding-right: 2em;
-    }
-    .nav-handle-sign-up{
-      position: absolute;
-      right: 0;
-      top: 2em;
-      padding-right: 2em;
-    }
+  }
+  .nav-handle-other{
+    position: absolute;
+    right: 0;
+    top: 2em;
+    padding-right: 2em;
+  }
+  .nav-handle-sign-up{
+    position: absolute;
+    right: 0;
+    top: 2em;
+    padding-right: 2em;
+  }
 
-    .nav-handle-user{
-      margin-right: 2em;
-      top: 1em;
-      margin-top: -6em;
-      display: none;
-      height: 8em;
+  .nav-handle-user{
+    margin-right: 2em;
+    top: 1em;
+    margin-top: -6em;
+    display: none;
+    height: 8em;
 
-    }
+  }
 
-    #signedInTag{
-      font-size: 0.9em;
-      float: left;
-      color: white!important;
-    }
+  #signedInTag{
+    font-size: 0.9em;
+    float: left;
+    color: white!important;
+  }
 
-    .nav-handle-user img{
-      height:30%;
-      float: right;
+  .nav-handle-user img{
+    height:30%;
+    float: right;
 
-    }
-    ul#main-nav li{
-      display: none;
-    }
+  }
+  ul#main-nav li{
+    display: none;
+  }
 
-    ul#main-nav li.show {
-      left: 0;
-      top: 60px;
-      display: block;
-      /*clear: left;*/
-      padding-top: 1.2em;
-      padding-bottom: 0.5em;
-      border-bottom: black 1px solid;
-      margin: 0;
-      font-size: 1.1em;
-      font-weight: 300;
-      /*Animation*/
- -webkit-transition: height 1s ease;
+  ul#main-nav li.show {
+    left: 0;
+    top: 60px;
+    display: block;
+    /*clear: left;*/
+    padding-top: 1.2em;
+    padding-bottom: 0.5em;
+    border-bottom: black 1px solid;
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 300;
+    /*Animation*/
+    -webkit-transition: height 1s ease;
     -moz-transition: height 1s ease;
-      -o-transition: height 1s ease;
-     -ms-transition: height 1s ease;
-         transition: height 1s ease;
-      line-height: 0px;
-      background-color: #242424;
-      cursor: pointer;
-      // height: 100%;
-      // width: 100%;
-      margin-left:-2.2em;
+    -o-transition: height 1s ease;
+    -ms-transition: height 1s ease;
+    transition: height 1s ease;
+    line-height: 0px;
+    background-color: #242424;
+    cursor: pointer;
+    // height: 100%;
+    // width: 100%;
+    margin-left:-2.2em;
 
-    }
-    ul#main-nav li:nth-child(7){
-      background-color: white;
-      font-weight: bold;
-    } 
-    ul#main-nav li:nth-child(8){
-      background-color: white;
-      font-weight: bold;
-    } 
-    .styleList{
-      color: black!important;
-    }
+  }
+  ul#main-nav li:nth-child(7){
+    background-color: white;
+    font-weight: bold;
+  } 
+  ul#main-nav li:nth-child(8){
+    background-color: white;
+    font-weight: bold;
+  } 
+  .styleList{
+    color: black!important;
+  }
 
-    ul#main-nav li p{
-      color: white;
-      font-weight: 500;
-      padding-left: 5em;
-      margin-top: -0.6em;
-    }
-    ul#main-nav li i{
-      color: #585859;
-      font-size: 1.2em;
-      margin-left: 1.3em;
-    }
+  ul#main-nav li p{
+    color: white;
+    font-weight: 500;
+    padding-left: 5em;
+    margin-top: -0.6em;
+  }
+  ul#main-nav li i{
+    color: #585859;
+    font-size: 1.2em;
+    margin-left: 1.3em;
+  }
 
-    p#testimonialButton{
-      width: 90%;
-      height: 3em;
-      @include purpleButton;
-      box-shadow: none;
-      //   margin: 0 auto;
-      // position: relative;
-      text-align: center;
-      margin-left: 1em;
-    }
-    p#testimonialButton a{
-      color: white;
-      text-decoration: none;
-      line-height: 45px;
-      text-align: center;
+  p#testimonialButton{
+    width: 90%;
+    height: 3em;
+    @include purpleButton;
+    box-shadow: none;
+    //   margin: 0 auto;
+    // position: relative;
+    text-align: center;
+    margin-left: 1em;
+  }
+  p#testimonialButton a{
+    color: white;
+    text-decoration: none;
+    line-height: 45px;
+    text-align: center;
 
 
-    }
+  }
 
 /* ==========================================================================
    NAVIGATION BAR hide
@@ -186,35 +186,35 @@ div#navLogIn a{
     height: 0em;
     width: 0em;
     overflow: hidden;
-  }*/
+    }*/
 
-  section#animation{
-    display: block;
-    width: 100%;
-  }
+    section#animation{
+      display: block;
+      width: 100%;
+    }
 
-  section#animation.hide{
-    display: none;
-    /*Animation*/
- -webkit-transition: height 1s ease;
-    -moz-transition: height 1s ease;
+    section#animation.hide{
+      display: none;
+      /*Animation*/
+      -webkit-transition: height 1s ease;
+      -moz-transition: height 1s ease;
       -o-transition: height 1s ease;
-     -ms-transition: height 1s ease;
-         transition: height 1s ease;
-    
-  }
+      -ms-transition: height 1s ease;
+      transition: height 1s ease;
 
-  #aucklandSkyline img{
-    margin-top: 1em;
-    /*height: 25%;*/
-    width:100%;
-    /* margin-left: -20em;*/
-    /*opacity: 0.8;*/
-    position: relative;
-    border-bottom: 1px #928CC4 solid!important;
-  }
+    }
 
-  #ponsonbyHousing img{
+    #aucklandSkyline img{
+      margin-top: 1em;
+      /*height: 25%;*/
+      width:100%;
+      /* margin-left: -20em;*/
+      /*opacity: 0.8;*/
+      position: relative;
+      border-bottom: 1px #928CC4 solid!important;
+    }
+
+    #ponsonbyHousing img{
 /*  height:10%;
 margin-top: 13em;
 */display: none;
@@ -278,17 +278,17 @@ ul#main-nav li#seletedServices li:last-child{
      margin-left: 1em;
      margin-right: 1em;
      text-align: center; 
-  }
+   }
    section#introduction.hide{
     display: none;
     height: 0;
     width: 0;
     /*Animation*/
- -webkit-transition: height 1s ease;
+    -webkit-transition: height 1s ease;
     -moz-transition: height 1s ease;
-      -o-transition: height 1s ease;
-     -ms-transition: height 1s ease;
-         transition: height 1s ease;
+    -o-transition: height 1s ease;
+    -ms-transition: height 1s ease;
+    transition: height 1s ease;
 
   }
   section#introduction{
@@ -437,56 +437,56 @@ div#shareSocial p a{
     // top: 20%;
   }
 
-section#mobdeskSection{
+  section#mobdeskSection{
     margin: 0 auto;
     position: relative;
     width: 25em;
     height:auto;
     margin-top: 1.5em;
     
-}
-section#mobdeskSection h1{
-  color: white;
-}
-p#mobdeskDescription{
-  width: 70%;
-  color: white;
-}
-form#mobdeskForm{
-  width: 100%;
-}
+  }
+  section#mobdeskSection h1{
+    color: white;
+  }
+  p#mobdeskDescription{
+    width: 70%;
+    color: white;
+  }
+  form#mobdeskForm{
+    width: 100%;
+  }
 
-#mobdeskForm span{
-  border-bottom: 0.1em white solid;
- border-top: 0.1em white solid;
- float: left;
- height: 3em;
- width: 3em;
- color: white;
- padding-top: 0.8em;
- padding-left: 0.8em;
-}
+  #mobdeskForm span{
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    float: left;
+    height: 3em;
+    width: 3em;
+    color: white;
+    padding-top: 0.8em;
+    padding-left: 0.8em;
+  }
 
 
-form#mobdeskForm input[type="password"]{
- color: black;
- border-bottom: 0.1em white solid!important;
- border-top: 0.1em white solid!important;
+  form#mobdeskForm input[type="password"]{
+   color: black;
+   border-bottom: 0.1em white solid!important;
+   border-top: 0.1em white solid!important;
 
- width: 65%;
- @include input;
-}
+   width: 65%;
+   @include input;
+ }
 
-form#mobdeskForm input[type="text"]{
- color: white;
- border-bottom: 0.1em white solid!important;
- border-top: 0.1em white solid!important;
+ form#mobdeskForm input[type="text"]{
+   color: white;
+   border-bottom: 0.1em white solid!important;
+   border-top: 0.1em white solid!important;
 
- width:65%;
- @include input;
- 
-}
-#mobdeskForm img#profileImage{
+   width:65%;
+   @include input;
+
+ }
+ #mobdeskForm img#profileImage{
   margin-left: 25%;
 }
 
@@ -495,8 +495,8 @@ form#mobdeskForm #loggingInButton{
 }
 form#mobdeskForm p#rememberMe{
   margin-top: -1.2em;
-   color: white;
-   margin-left: 1.5em;
+  color: white;
+  margin-left: 1.5em;
 }
 /* ==========================================================================
    PRICING
@@ -506,13 +506,13 @@ form#mobdeskForm p#rememberMe{
 /*    float: left;
 margin: 0 auto;
 position: relative;*/
-   }
+}
 section#pricesListed {
-    float: left;
-    display: block;
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
+  float: left;
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 #pricesListed h1{
   width: 85%;
@@ -522,58 +522,58 @@ section#pricesListed {
 }
 
 .pricing_table {
-min-height: 42em;
+  min-height: 42em;
 
 }
 .priceTable{
-   height: auto;
-   margin-right: 2em; 
-  margin-top: 2em;
-  margin-left: 2em; 
-  width:85%;
-/*margin: 0 1em 0 0;*/
+ height: auto;
+ margin-right: 2em; 
+ margin-top: 2em;
+ margin-left: 2em; 
+ width:85%;
+ /*margin: 0 1em 0 0;*/
 
 }
 .pricesHeader{
   font-size: 1.4em;
   text-align: center;
   border-radius: 5px 5px 0 0;
--moz-border-radius: 5px 5px 0 0;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#686868), to(#525252));
-background-image: -webkit-linear-gradient(top, #686868, #525252);
-background-image: -moz-linear-gradient(top, #686868, #525252);
-background-image: -ms-linear-gradient(top, #686868, #525252);
-background-image: -o-linear-gradient(top, #686868, #525252);
-background-image: linear-gradient(to bottom, #686868, #525252);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
-padding: 9px 14px;
-height: 5em;
-color: white;
+  -moz-border-radius: 5px 5px 0 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#686868), to(#525252));
+  background-image: -webkit-linear-gradient(top, #686868, #525252);
+  background-image: -moz-linear-gradient(top, #686868, #525252);
+  background-image: -ms-linear-gradient(top, #686868, #525252);
+  background-image: -o-linear-gradient(top, #686868, #525252);
+  background-image: linear-gradient(to bottom, #686868, #525252);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+  padding: 9px 14px;
+  height: 5em;
+  color: white;
 }
 .priceContents{
 
-background: #F6F6F6;
-border: 1px solid #dfdfdf
+  background: #F6F6F6;
+  border: 1px solid #dfdfdf
 }
 .priceContents ul li{
 
-list-style: decimal outside none;
-list-style-type: disc;
-padding-right: 0.5em;
-padding-top: 1em;
-padding-bottom: 1em;
-font-size: 0.9em;
-border-bottom: 1px solid #dfdfdf;
-border-top: 1px solid #fff;
-line-height: 1.3em;
-color: #404040;
+  list-style: decimal outside none;
+  list-style-type: disc;
+  padding-right: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 0.9em;
+  border-bottom: 1px solid #dfdfdf;
+  border-top: 1px solid #fff;
+  line-height: 1.3em;
+  color: #404040;
 }
 /* ==========================================================================
    PAGINATION
    ========================================================================== */
 
    div#pagination{
-   margin-left: -2em;
+     margin-left: -2em;
    }
 
    #pagination ul li a{
@@ -679,7 +679,7 @@ color: #404040;
    ========================================================================== */
 
    ul#main-nav li:active{
-    
+
     @include navList;
 
   }
@@ -714,7 +714,7 @@ color: #404040;
     left: 0;
     margin-top: -2.2em;
   }
-    #droparrow{
+  #droparrow{
     @include whiteArrow;
     right: 0;
     padding-right: 2em;
@@ -851,106 +851,106 @@ color: #404040;
 
 /* ==========================================================================
    LOG IN FORM  
-    ========================================================================== */
-    section#loggingIn{
-      display: block;
-      position: relative;
-      
-      margin: 0 auto;
-      margin-top: 1em;
+   ========================================================================== */
+   section#loggingIn{
+    display: block;
+    position: relative;
 
-    }
-    form#logIn-form{
-      width:100%;
-    }
-    #loggingIn h1{
-      color: white;
-      margin-left: 0.5em;
-    }
-    #logIn-form input{
-      @include input;
-      width: 75%;
-      height: 3em;
-      border-bottom: 0.1em white solid;
-      border-top: 0.1em white solid;
-      background-color: transparent;
-      color: white;
-    }
+    margin: 0 auto;
+    margin-top: 1em;
 
-    #logIn-form span{
-      border-bottom: 0.1em white solid;
-      border-top: 0.1em white solid;
-      color: white;
-      display: block;
-      float: left;
-      height: 3em;
-      line-height: 50px;
-      text-align: center;
-      width: 3em;
-      margin-left: 0.5em;
-    }
+  }
+  form#logIn-form{
+    width:100%;
+  }
+  #loggingIn h1{
+    color: white;
+    margin-left: 0.5em;
+  }
+  #logIn-form input{
+    @include input;
+    width: 75%;
+    height: 3em;
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    background-color: transparent;
+    color: white;
+  }
 
-    #loggingIn p{
-      color: white;
-      padding-left: 1em;
-      padding-right: 1em;
-      width: 100%;
-    }
-    p#loginDescription{
-      width: 80%;
-    }
-    #logIn{
-      position: relative;
-      margin: 0 auto;
-      width: 90%;
-      margin-left: 1em;
-      margin-top: 1em;
-    }
+  #logIn-form span{
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    color: white;
+    display: block;
+    float: left;
+    height: 3em;
+    line-height: 50px;
+    text-align: center;
+    width: 3em;
+    margin-left: 0.5em;
+  }
 
+  #loggingIn p{
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+  }
+  p#loginDescription{
+    width: 80%;
+  }
+  #logIn-form input#logIn{
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    margin-left: 1em;
+    margin-top: 1em;
 
-      #loggingIn #profileImage{
-        width: 5em;
-        height: 5em;
-        margin-left: 35%;
-      }
-#logIn-form input#checkBoxRemember{
-  height: 1em;
-  width: 1em;
-  float: left;
-  margin-left: 2em;
+  }
 
-}
-p#rememberMe{
-  margin-top: -0.1em;
-  margin-left: 3em;
-}
+  #loggingIn #profileImage{
+    width: 5em;
+    height: 5em;
+    margin-left: 35%;
+  }
+  #logIn-form input#checkBoxRemember{
+    height: 1em;
+    width: 1em;
+    float: left;
+    margin-left: 2em;
+
+  }
+  p#rememberMe{
+    margin-top: -0.1em;
+    margin-left: 3em;
+  }
 /* ==========================================================================
    Pop up log in
    ========================================================================== */
 
-#background{
+   #background{
     display: none;
 
-}
+  }
 
-div#loginForm{
+  div#loginForm{
     display: none;
     width: 0;
     height: 0;
-}
+  }
 
 
-div#loginForm.show{
+  div#loginForm.show{
     display: none;
     width: 0;
     height: 0;
     
-}
-[role="close-modal"] {
+  }
+  [role="close-modal"] {
     display: none;
     width: 0;
     height: 0;
-}
+  }
 
 
 
@@ -1010,7 +1010,7 @@ div#loginForm.show{
     margin-left:-1em;
   }
   .flex-direction-nav li a:nth-child(1){
-    
+
     padding-right: 2em;
   }
 
@@ -1078,87 +1078,90 @@ div#loginForm.show{
     border-radius: none;
   }
   #signup-form input#signUp{
- @include purpleButton;
- color: white;
- border-top: none;
- border-bottom: none;
+   @include purpleButton;
+   color: white;
+   border-top: none;
+   border-bottom: none;
 
- float: left;
-margin-left: 1em;
-    width: 90%;
-    margin-bottom: 2em;
- margin-left: 1em;
- 
+   float: left;
+   margin-left: 1em;
+   width: 90%;
+   margin-bottom: 2em;
+   margin-left: 1em;
+
+ }
+
+ #signup-form input[type="checkbox"]{
+  width: 1em;
+  height: 1em;
+  position: relative;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  border: none;
 }
 
-  #signup-form input[type="checkbox"]{
-    width: 1em;
-    height: 1em;
-    position: relative;
-    margin-bottom: 1em;
-    margin-left: 1em;
-    border: none;
-  }
+#signup-form form input[type="text"], input[type="password"], input[type="email"], input[type="url"]{
+  -webkit-appearance: none;
+  width: 90%;
+  @include input;
+  border-radius: none;
+  color: white;
+}
 
-  #signup-form form input[type="text"], input[type="password"], input[type="email"], input[type="url"]{
-    -webkit-appearance: none;
-    width: 90%;
-    @include input;
-    border-radius: none;
-    color: white;
-  }
+#signup-form textarea{
+  -webkit-appearance: none;
+  width: 80%;
+  height: 3em;
+  @include input;
+  padding-top: 0.8em;
 
-  #signup-form textarea{
-    -webkit-appearance: none;
-    width: 80%;
-    height: 3em;
-    @include input;
-    padding-top: 0.8em;
-    
-  }
-  form#signup-form span{
-    border-bottom: 0.1em white solid;
-    border-top: 0.1em white solid;
-    color: white;
-    display: block;
-    float: left;
-    height: 48px;
-    line-height: 50px;
-    text-align: center;
-    width: 50px;
-    margin-left: 0.5em;
-  }
-  #signup-form select{
-    width: 80%;
-    height: 3em;
-    border-bottom: 0.1em white solid;
-    border-top: 0.1em white solid;
-    color:white;
-    background-color: transparent;
-    border-radius: none;
-  }
- #signup-form select option {
+}
+form#signup-form span{
+  border-bottom: 0.1em white solid;
+  border-top: 0.1em white solid;
+  color: white;
+  display: block;
+  float: left;
+  height: 48px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  margin-left: 0.5em;
+}
+#signup-form select{
+  width: 80%;
+  height: 3em;
+  border-bottom: 0.1em white solid;
+  border-top: 0.1em white solid;
+  color:white;
+  background-color: transparent;
+  border-radius: none;
+}
+#signup-form select option {
   background-color: #242424; color:white;
   border: none;
 }
 
-  .profileAuto{
-    width: 10em;
-    margin-left: 28%;
-    margin-bottom: 2em;
-  }
-  img#profileImage{
-    border-radius: 50%;
-    height: 8em;
-    width: 8em;
-    
-  }
-  #signup-form p#agreementStatement{
-    // width: 94%;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-  }
+.profileAuto{
+  width: 10em;
+  margin-left: 28%;
+  margin-bottom: 2em;
+}
+img#profileImage{
+  border-radius: 50%;
+  height: 8em;
+  width: 8em;
+
+}
+#signup-form p#agreementStatement{
+  /*// width: 94%;*/
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+/*#signup-form input[type="submit"]#signUp{
+  margin-left: 1em;
+  }*/
 
   #aLink{
     text-decoration: none;
@@ -1170,7 +1173,10 @@ margin-left: 1em;
     
   }
 
-
+  p.error{
+    color: #9B8FFB;
+    margin-top: 0em;
+  }
 /* ==========================================================================
     CAREER PROFILE 
     ========================================================================== */
@@ -1278,12 +1284,12 @@ margin-left: 1em;
   #careerProfile-form input[type="checkbox"]{
     float: right;
     width: 1em;
-height: 1em;
-position: relative;
-magin-top: 1em;
-// margin-top: 6em;
-// margin-left: -2em;
-border: none;
+    height: 1em;
+    position: relative;
+    magin-top: 1em;
+    // margin-top: 6em;
+    // margin-left: -2em;
+    border: none;
   }
 
 
@@ -1411,7 +1417,7 @@ border: none;
     section#servicesListed{
       display: block;
       margin: 0 auto;
-     /* width: 90%;*/
+      /* width: 90%;*/
       margin-top: 6em;
 
     }
@@ -1520,13 +1526,13 @@ border: none;
    ========================================================================== */
 
 
- div#footer_options{
+   div#footer_options{
 
 
     position: relative;
     margin-left: -2em;
-  margin-top: 2em;
-  border-top: 1px solid #3d4144;
+    margin-top: 2em;
+    border-top: 1px solid #3d4144;
 
     width: 110%;
 
@@ -1609,7 +1615,7 @@ border: none;
    Pop up log in
    ========================================================================== */
 
-#background{
+   #background{
     position: fixed;
     top:50%;
     left:50%;
@@ -1621,57 +1627,61 @@ border: none;
     background-color:rgba(0,0,0,0.7);
     display: none;
 
-}
+  }
 
-div#loginForm{
+  div#loginForm{
     display: none;
     width: 0;
     height: 0;
-}
+  }
 
 
-div#loginForm.show{
-  display: block;
+  div#loginForm.show{
+    display: block;
     background-color: white;
     position: absolute;
     top:5%;
     left:25%;
     transform: translate(-50%,-50%);    
-}
-div#loginForm form{
-  background-color:white;
-  width: 28em;
-  height: 36em;
-  padding-left: 2.5em;
-  padding-right: 1em;
-  padding-top: 1em;
-}
-div#loginForm span[role="close-modal"] {
-position: absolute;
-margin-left: 22em;
-padding-right: 0.5em;
-cursor: pointer!important;
-color: black;
-border-top: none;
-border-bottom: none;
-}
-div#loginForm img#profileImage {
-margin-left: 29%;
-}
-div#loginForm #checkBoxRemember{
+  }
+  div#loginForm form{
+    background-color:white;
+    width: 36em;
+    height: 38em;
+    padding-left: 6em;
+    padding-right: 1em;
+    padding-top: 1em;
+  }
+  div#loginForm span[role="close-modal"] {
+    position: absolute;
+    margin-left: 22em;
+    padding-right: 0.5em;
+    cursor: pointer!important;
+    color: black;
+    border-top: none;
+    border-bottom: none;
+  }
+  div#loginForm img#profileImage {
+    margin-left: 29%;
+  }
+  div#loginForm #checkBoxRemember{
     height: 1em;
-  width: 1em;
-  float: left;
-  margin-left: 1em;
-}
-div#loginForm button{
-  @include purpleButton;
-  width: 21.5em;
-height: 3em;
-box-shadow: none;
-color: white;
-margin-left: 1em;
-}
+    width: 1em;
+    float: left;
+    margin-left: 1em;
+  }
+  div#loginForm input#logIn{
+    @include purpleButton;
+    width: 21.5em;
+    height: 3em;
+    box-shadow: none;
+    margin-left: 1em;
+    color: white!important;
+    box-shadow: none;
+    border-top: none;
+    border-bottom: none;
+    color: white;
+  }
 /* ==========================================================================
    MAIN NAV
    ========================================================================== */
@@ -1726,7 +1736,7 @@ margin-left: 1em;
 
   }
 
- ul#main-nav li:nth-child(7){
+  ul#main-nav li:nth-child(7){
     background-color: white;
     
   } 
@@ -1735,45 +1745,45 @@ margin-left: 1em;
     
   } 
 
-    ul#main-nav li {
-      left: 0;
-      top: 60px;
-      display: block;
-      /*clear: left;*/
-      padding-top: 1.2em;
-      padding-bottom: 0.5em;
-      border-bottom: black 1px solid;
-      margin: 0;
-      font-size: 1.1em;
-      font-weight: 300;
-      /*Animation*/
- -webkit-transition: height 1s ease;
+  ul#main-nav li {
+    left: 0;
+    top: 60px;
+    display: block;
+    /*clear: left;*/
+    padding-top: 1.2em;
+    padding-bottom: 0.5em;
+    border-bottom: black 1px solid;
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 300;
+    /*Animation*/
+    -webkit-transition: height 1s ease;
     -moz-transition: height 1s ease;
-      -o-transition: height 1s ease;
-     -ms-transition: height 1s ease;
-         transition: height 1s ease;
-      line-height: 0px;
-      background-color: #242424;
-      cursor: pointer;
-      
+    -o-transition: height 1s ease;
+    -ms-transition: height 1s ease;
+    transition: height 1s ease;
+    line-height: 0px;
+    background-color: #242424;
+    cursor: pointer;
 
-    }
-ul#main-nav li#seletedServices li{
-  margin-left: -2em;
-  height: 4em;
-  line-height: 120%;
-  width: 19.5em;
-  padding-bottom: 3em;
-}
 
-ul#main-nav li#seletedServices i{
-  padding-left: 1.5em;
-}
+  }
+  ul#main-nav li#seletedServices li{
+    margin-left: -2em;
+    height: 4em;
+    line-height: 120%;
+    width: 19.5em;
+    padding-bottom: 3em;
+  }
 
-ul#main-nav li#seletedServicesv p:nth-child(1){
+  ul#main-nav li#seletedServices i{
+    padding-left: 1.5em;
+  }
+
+  ul#main-nav li#seletedServicesv p:nth-child(1){
     padding-bottom:1em;
   }
-ul#main-nav li#seletedServices p:nth-child(5){
+  ul#main-nav li#seletedServices p:nth-child(5){
     padding-bottom:1em;
   }
 
@@ -1892,7 +1902,7 @@ input #checkBox{
    NAV LOG IN
    ========================================================================== */
 
-div#navLogIn a{
+   div#navLogIn a{
     text-decoration: none;
     color: black;
     @include outlineButton;
@@ -1908,18 +1918,18 @@ div#navLogIn a{
 
 
   .nav-handle-login{
-        float: left;
+    float: left;
     margin-top: -5em;
     margin-left: 1.6em;
     display: block;
   }
 
-#navRightArrow{
-  margin-left: 1em;
-  margin-top: 0.8em;
-  position: absolute;
-  display: block;
-}
+  #navRightArrow{
+    margin-left: 1em;
+    margin-top: 0.8em;
+    position: absolute;
+    display: block;
+  }
 /* ==========================================================================
    PRICING
    ========================================================================== */
@@ -1928,15 +1938,15 @@ div#navLogIn a{
 /*    float: left;
 margin: 0 auto;
 position: relative;*/
-   }
+}
 section#pricesListed {
-    float: left;
-    display: block;
-    position: relative;
-    width: 75%;
-    margin: 0 auto;
-    margin-top: -26em;
-    margin-left: 22em;
+  float: left;
+  display: block;
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: -26em;
+  margin-left: 22em;
 }
 #pricesListed h1{
   width: 70%;
@@ -1945,74 +1955,74 @@ section#pricesListed {
 }
 
 .pricing_table {
-min-height: 42em;
-margin-left: -6em;
+  min-height: 42em;
+  margin-left: -6em;
 }
 .priceTable{
-   height: auto;
-  width: 12em;
-  margin-top: 2em;
-    float: left;
-    margin-right:0em; 
-/*margin: 0 1em 0 0;*/
+ height: auto;
+ width: 12em;
+ margin-top: 2em;
+ float: left;
+ margin-right:0em; 
+ /*margin: 0 1em 0 0;*/
 
 }
 .pricesHeader{
   font-size: 1.4em;
   text-align: center;
   border-radius: 5px 5px 0 0;
--moz-border-radius: 5px 5px 0 0;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#686868), to(#525252));
-background-image: -webkit-linear-gradient(top, #686868, #525252);
-background-image: -moz-linear-gradient(top, #686868, #525252);
-background-image: -ms-linear-gradient(top, #686868, #525252);
-background-image: -o-linear-gradient(top, #686868, #525252);
-background-image: linear-gradient(to bottom, #686868, #525252);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
-padding: 9px 14px;
-height: 110px;
-color: white;
+  -moz-border-radius: 5px 5px 0 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#686868), to(#525252));
+  background-image: -webkit-linear-gradient(top, #686868, #525252);
+  background-image: -moz-linear-gradient(top, #686868, #525252);
+  background-image: -ms-linear-gradient(top, #686868, #525252);
+  background-image: -o-linear-gradient(top, #686868, #525252);
+  background-image: linear-gradient(to bottom, #686868, #525252);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+  padding: 9px 14px;
+  height: 110px;
+  color: white;
 }
 .priceContents{
 
-/*background: #F6F6F6;*/
-border: 1px solid #dfdfdf
+  /*background: #F6F6F6;*/
+  border: 1px solid #dfdfdf
 }
 .priceContents ul li{
   width: 10em;
-list-style: decimal outside none;
-list-style-type: disc;
-padding-right: 2em;
-padding-top: 1em;
-padding-bottom: 1em;
-font-size: 0.9em;
-border-bottom: 1px solid #dfdfdf;
-border-top: 1px solid #fff;
-line-height: 1.3em;
-color: #404040;
+  list-style: decimal outside none;
+  list-style-type: disc;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 0.9em;
+  border-bottom: 1px solid #dfdfdf;
+  border-top: 1px solid #fff;
+  line-height: 1.3em;
+  color: #404040;
 }
 
 /* ==========================================================================
    Login when you press login button form styling
    ========================================================================== */
-form#logIn-form {
-width: 32em;
-height: 40em;
-margin-left: 8em;
-margin-top: 5em;
+   form#logIn-form {
+    width: 32em;
+    height: 40em;
+    margin-left: 8em;
+    margin-top: 5em;
 
-}
+  }
   #sectionLogin h1{
    color: black;
  }
  p#loginDescription{
   width: 20em;
- }
- #sectionLogin p{
-   color: black;
+}
+#sectionLogin p{
+ color: black;
 
- }
- #logIn-form input{
+}
+#logIn-form input{
   border-bottom: 0.1em black solid;
   border-top: 0.1em black solid;
   color: black!important;
@@ -2152,33 +2162,33 @@ ul#main-nav{
     
   }
 
-    input#txtsearch.search-bar{
-     display: block;
-     height: 3em;
-     width: 16em;
-     padding-left: 3.5em;
-     font-size: 1em;
-     font-weight: 100;
-     position: absolute;
-     color: white!important;
-     font-weight: bold;
-     margin-top: 3em;
-     margin-left: -2em;
+  input#txtsearch.search-bar{
+   display: block;
+   height: 3em;
+   width: 16em;
+   padding-left: 3.5em;
+   font-size: 1em;
+   font-weight: 100;
+   position: absolute;
+   color: white!important;
+   font-weight: bold;
+   margin-top: 3em;
+   margin-left: -2em;
 
-   }
+ }
 
-   #txtsearch{
-    background-color: black;
-  }
-  #fa-search{
-    margin-left: -1em;
-    padding-right: 0.5em;
-    margin-top: 2.6em;
-    font-size: 1.4em;
-    position: absolute;
-    color: white!important;
-    border-right: 1px white solid;
-  }
+ #txtsearch{
+  background-color: black;
+}
+#fa-search{
+  margin-left: -1em;
+  padding-right: 0.5em;
+  margin-top: 2.6em;
+  font-size: 1.4em;
+  position: absolute;
+  color: white!important;
+  border-right: 1px white solid;
+}
 /* ==========================================================================
    INTRODUCTION
    ========================================================================== */
@@ -2255,45 +2265,45 @@ display: none;
 
   }
   // #introButtons{
-  //   z-index: -2000;
-  // }
-  #rightarrow{
-    top: 1.8em;
-    position: relative;
-    color: black;
-    left: -1.5em;
-  }
+    //   z-index: -2000;
+    // }
+    #rightarrow{
+      top: 1.8em;
+      position: relative;
+      color: black;
+      left: -1.5em;
+    }
 
 
-  #launchCareer{
-    border-color: black;
-    width: 18em;
-    margin-left: 0em;
-    margin-top: -0.1em;   
+    #launchCareer{
+      border-color: black;
+      width: 18em;
+      margin-left: 0em;
+      margin-top: -0.1em;   
 
-  }
+    }
 
 
-  #launchCareer a{
-    color: black;
+    #launchCareer a{
+      color: black;
 
-  }
+    }
 
-  div#careerButton{
-    width: 16.2em;
-    height: 2.65em;
+    div#careerButton{
+      width: 16.2em;
+      height: 2.65em;
 
-    margin-left: 17em;
-    margin-top: -2.7em;   
-    box-shadow: none;
-  }
+      margin-left: 17em;
+      margin-top: -2.7em;   
+      box-shadow: none;
+    }
 
-  .button{
-    /*    float: left;*/
-    box-shadow: none;
-    width: 18em;  
-    z-index: 4000;
-  }
+    .button{
+      /*    float: left;*/
+      box-shadow: none;
+      width: 18em;  
+      z-index: 4000;
+    }
 
 
 /* ==========================================================================
@@ -2319,6 +2329,7 @@ display: none;
   form#signup-form{
     width: 100%;
     margin-top: 7em;
+
 
   }
 
@@ -2367,15 +2378,15 @@ display: none;
   border-top: 0.1em black solid;
   color: black;
 }
-  #signup-form input[type="password"]{
-    width: 80%;
-    height: 3em;
-    border-bottom: 0.1em black solid;
-    border-top: 0.1em black solid;
-    background-color: transparent;
-    color: black;
-    border-radius: none;
-  }
+#signup-form input[type="password"]{
+  width: 80%;
+  height: 3em;
+  border-bottom: 0.1em black solid;
+  border-top: 0.1em black solid;
+  background-color: transparent;
+  color: black;
+  border-radius: none;
+}
 
 #signing-up h1#header{
   color: black;
@@ -2406,13 +2417,13 @@ form#signup-form span{
  @include input;
 }
 #signup-form select {
-width: 80%;
-height: 3em;
-border-bottom: 0.1em black solid;
-border-top: 0.1em black solid;
-color: black;
-background-color: transparent;
-border-radius: none;
+  width: 80%;
+  height: 3em;
+  border-bottom: 0.1em black solid;
+  border-top: 0.1em black solid;
+  color: black;
+  background-color: transparent;
+  border-radius: none;
 }
 #signup-form form input[type="email"]{
  color: black;
@@ -2429,25 +2440,12 @@ border-radius: none;
  @include input;
  
 }
-/*form#signup-form  i{
-color: black!important;
-border-bottom: 0.1em white solid;
-border-top: 0.1em white solid;
-padding-left: 0.9em;
-display: block;
-float: left;
-line-height: 50px;
-text-align: center;
-width: 5%;
 
-
-}*/
 #signup-form select#servicesSel{
   border-bottom: 0.1em black solid;
   border-top: 0.1em black solid;
   color: black;
 
-  /*width: 20em; */
 }
 #signup-form p#agreementStatement{
   color: black;
@@ -2472,23 +2470,26 @@ width: 5%;
  
 }
 
-  #signup-form input[type="checkbox"] {
-    width: 1em;
-    height: 1em;
-    position: relative;
-    margin-top: 6em;
-    margin-left: -2em;
-    border: none;
-  }
+#signup-form input[type="checkbox"] {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  margin-top: 6em;
+  margin-left: -2em;
+  border: none;
+}
 
-  #signup-form img#profileImage{
-    position: relative;
-    margin: 0 auto;
-    margin-left: 55%;
-    /* position: absolute;*/
-  }
+#signup-form img#profileImage{
+  position: relative;
+  margin: 0 auto;
+  margin-left: 55%;
+  /* position: absolute;*/
+}
 
-
+p.error{
+ position: absolute;
+ margin-top: -2em;
+}
 
 
 /* ==========================================================================
@@ -2611,30 +2612,30 @@ width: 5%;
   height: 7em;
   padding: 0.5em;
 }
-   #careerProfile-form input[type="submit"]{
-    @include purpleButton;
-    border-top: none;
-    border-bottom: none;
-    width: 100%;
-    color: white;
-    box-shadow: none;
-    margin-bottom: 2em;
-    margin-top: 2em;
-  }
-// #careerProfile-form input#checkbox{
-//   margin-top: 35em;
-//   margin-left: -4em;
-//   width: 1em;
-//   height: 1em;
-
-// }
-#careerProfile-form img#profileImage{
-  width: 8em;
-  height: 8em;
-  margin-left: 55%;
+#careerProfile-form input[type="submit"]{
+  @include purpleButton;
+  border-top: none;
+  border-bottom: none;
+  width: 100%;
+  color: white;
+  box-shadow: none;
+  margin-bottom: 2em;
   margin-top: 2em;
-
 }
+// #careerProfile-form input#checkbox{
+  //   margin-top: 35em;
+  //   margin-left: -4em;
+  //   width: 1em;
+  //   height: 1em;
+
+  // }
+  #careerProfile-form img#profileImage{
+    width: 8em;
+    height: 8em;
+    margin-left: 55%;
+    margin-top: 2em;
+
+  }
 
 /* ==========================================================================
    LATEST UPDATES - NEXT TO SERVICES ACCORDION
@@ -3074,12 +3075,12 @@ div#shareSocial p a{
       transform: translateY(-27px) rotate(45deg);
     }
 
-  #addATestimonial{
-    width: 20em;
-    margin: 0 auto;
-    position: relative;
-    margin-left: 48%;
-  }
+    #addATestimonial{
+      width: 20em;
+      margin: 0 auto;
+      position: relative;
+      margin-left: 48%;
+    }
 
 /* ==========================================================================
    PAGINATION
@@ -3108,56 +3109,56 @@ div#shareSocial p a{
     top: 20%;
   }
 
-section#mobdeskSection{
+  section#mobdeskSection{
     margin: 0 auto;
     position: relative;
     width: 25em;
     height:auto;
     margin-top: 2.5em;
     
-}
-section#mobdeskSection h1{
-  color: black;
-}
-p#mobdeskDescription{
-  width: 90%;
-  color: black;
-}
-form#mobdeskForm{
-  width: 28em;
-}
+  }
+  section#mobdeskSection h1{
+    color: black;
+  }
+  p#mobdeskDescription{
+    width: 90%;
+    color: black;
+  }
+  form#mobdeskForm{
+    width: 28em;
+  }
 
-#mobdeskForm span{
-  border-bottom: 0.1em black solid;
- border-top: 0.1em black solid;
- float: left;
- height: 3em;
- width: 3em;
- color: black;
- padding-top: 0.8em;
- padding-left: 1em;
-}
+  #mobdeskForm span{
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    float: left;
+    height: 3em;
+    width: 3em;
+    color: black;
+    padding-top: 0.8em;
+    padding-left: 1em;
+  }
 
 
-form#mobdeskForm input[type="password"]{
- color: black;
- border-bottom: 0.1em black solid!important;
- border-top: 0.1em black solid!important;
+  form#mobdeskForm input[type="password"]{
+   color: black;
+   border-bottom: 0.1em black solid!important;
+   border-top: 0.1em black solid!important;
 
- width: 70%;
- @include input;
-}
+   width: 70%;
+   @include input;
+ }
 
-form#mobdeskForm input[type="text"]{
- color: black;
- border-bottom: 0.1em black solid!important;
- border-top: 0.1em black solid!important;
+ form#mobdeskForm input[type="text"]{
+   color: black;
+   border-bottom: 0.1em black solid!important;
+   border-top: 0.1em black solid!important;
 
- width:70%;
- @include input;
- 
-}
-#mobdeskForm img#profileImage{
+   width:70%;
+   @include input;
+
+ }
+ #mobdeskForm img#profileImage{
   margin-left: 25%;
 }
 

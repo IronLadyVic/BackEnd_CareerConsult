@@ -84,8 +84,8 @@ Route::post('users',function(){
 	//validate input in the sign up form
 
 	$aRules = array(
-		'avatar'=>'required|mimes:jpeg,jpg,png,bmp,gif,svg',
-		"username"=>"required|unique:users",
+		'avatar'=>'required',
+		'username'=>'required|unique:users',
 		'password'=>'required|confirmed',
 		'password_confirmation'=>'required',
 		'firstname'=>'required',
@@ -101,7 +101,7 @@ Route::post('users',function(){
 
 	$messages= array(
 		"email"=>"email is invalid",
-		"avatar"=>"please upload either a jpeg, jpg, png, bmp, gif, svg file",
+		"avatar"=>"please upload either a jpeg, jpg, png, bmp, gif, or an svg file",
 		"required"=>"Submission required"
 		);
 

@@ -34,55 +34,62 @@
             <span class="border" ><i class="fa fa-lock"></i></span>
             <!-- {{Form::label('password', 'Password');}} -->
             {{Form::password('password', array('placeholder'=>'Password'));}}
-            {{$errors->first('password','<p class="error">:message</p>')}} <!-- //error message is built into laravel - you can change the password as well.. -->
+            {{$errors->first('password')}} <!-- //error message is built into laravel - you can change the password as well.. -->
     
         </p>
         <p>
             <span class="border"><i class="fa fa-lock"></i></span>
             <!-- {{Form::label('password_confirmation', 'Confirm Password');}} -->
             {{Form::password('password_confirmation',array('placeholder'=>'Confirm Password'));}}
-            {{$errors->first('password_confirmation','<p class="error">:message</p>')}}
+            {{$errors->first('password_confirmation')}}
             
         </p>
         <p>
             <span class="border" ><i class="fa fa-user"></i></span>
+            
             {{Form::text('firstname', '', array('placeholder'=>'First Name', 'id'=>'firstName', 'class'=>'border'))}}
             {{$errors->first('firstname','<p class="error">:message</p>')}}
             
         </p>
         <p>
             <span class="border"><i class="fa fa-user"></i></span>
+            
             {{Form::text('lastname', '', array('placeholder'=>'Last Name', 'id'=>'lastName', 'class'=>'border'))}}
             {{$errors->first('lastname','<p class="error">:message</p>')}}   
             
         </p>
         <p>
             <span class="border"><i class="fa fa-envelope"></i></span>
+
             {{Form::email('email', '', array('placeholder'=>'Email', 'id'=>'email', 'class'=>'border'))}}
             {{$errors->first('email','<p class="error">:message</p>')}}   
             
         </p>
         <p>
             <span class="border" ><i class="fa fa-phone-square"></i></span>
+
             {{Form::text('phone', '', array('placeholder'=>'Contact Number', 'id'=>'contact', 'class'=>'border'))}}
             {{$errors->first('phone','<p class="error">:message</p>')}}  
             
         </p>
         <p>
             <span class="border"><i class="fa fa-hand-o-right"></i></span>
+
             {{Form::select('service_type', array('0' => 'Services I am interested in..','1'=>'CV Writing & Cover Letters','2'=>'Interview Preparation','3'=>'New to NZ', '4'=>'Employment Contracts', '5'=>'General Job Seeking Advice', '6'=>'General Employment Advice', 'class'=>'border'))}}
             {{$errors->first('select','<p class="error">:message</p>')}}  
         </p>
         <p>
             <span class="border"><i class="fa fa-pencil-square-o"></i></span>
-            <label for="comment"></label>
-            <textarea name="comment" id="comment" placeholder="Comments or Questions" class="border"></textarea>
+            
+            {{Form::textarea('comment', '',array('id'=>'comment', 'placeholder'=>'Questions or Comments'))}}
+            {{$errors->first('comment','<p class="error">:message</p>')}} 
+            
         </p>
 
         <p id="agreementStatement" class="border">Terms & Conditions. In order to keep you informed and help you with your future career, we will retain your sign up information, private email address and mobile number on file to keep in touch with you. Please tick this box if you agree with this statement.</p>
         <div>
         {{Form::checkbox('check', 'I agree to the terms & conditions', true, array('id' => 'check'));}}
-        {{$errors->first('checkbox','<p class="border">:message</p>')}}    
+        {{$errors->first('checkbox','<p class="error">:message</p>')}}    
          
         </div>
         
@@ -120,7 +127,7 @@
     {{$errors->first('checkbox','<p class="border">:message</p>')}} 
     <p  id="rememberMe">Remember Me</p>
 
-    {{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
+    {{Form::submit('LOG IN', array('id'=>'logIn'))}}
 
 
     {{Form::close()}}

@@ -15,7 +15,7 @@
     background-color: #242424; }
 
   body {
-    background-color: #2b2937; }
+    background-color: #2B2937; }
 
   header #main-header {
     z-index: 1000;
@@ -30,7 +30,7 @@
         margin-left: -2.5em;
         margin-top: 2em;
       }
-  */
+      */
   #droparrow.show {
     font-size: 0px;
     display: none; }
@@ -158,7 +158,7 @@
       height: 0em;
       width: 0em;
       overflow: hidden;
-    }*/
+      }*/
   section#animation {
     display: block;
     width: 100%; }
@@ -179,7 +179,7 @@
     /* margin-left: -20em;*/
     /*opacity: 0.8;*/
     position: relative;
-    border-bottom: 1px #928cc4 solid !important; }
+    border-bottom: 1px #928CC4 solid !important; }
 
   #ponsonbyHousing img {
     /*  height:10%;
@@ -471,7 +471,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 5em;
     color: white; }
@@ -604,13 +604,13 @@
      ACTIVE HOLD ON LI DROP DOWN MENU
      ========================================================================== */
   ul#main-nav li:active {
-    background-image: linear-gradient(#9b8ffb, #2b2937); }
+    background-image: linear-gradient(#9B8FFB, #2B2937); }
 
   ul#main-nav li p:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   ul#main-nav li i:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   header #main-header ul#main-nav li a {
     text-decoration: none;
@@ -746,7 +746,7 @@
 
   /* ==========================================================================
      LOG IN FORM  
-      ========================================================================== */
+     ========================================================================== */
   section#loggingIn {
     display: block;
     position: relative;
@@ -794,7 +794,7 @@
   p#loginDescription {
     width: 80%; }
 
-  #logIn {
+  #logIn-form input#logIn {
     position: relative;
     margin: 0 auto;
     width: 90%;
@@ -1026,16 +1026,24 @@
     width: 8em; }
 
   #signup-form p#agreementStatement {
+    /*// width: 94%;*/
     padding-left: 1em;
     padding-right: 1em;
     padding-bottom: 1em; }
 
+  /*#signup-form input[type="submit"]#signUp{
+    margin-left: 1em;
+    }*/
   #aLink {
     text-decoration: none;
     color: #9B8FFB; }
 
   #signup-form input#checkbox {
     float: left; }
+
+  p.error {
+    color: #9B8FFB;
+    margin-top: 0em; }
 
   /* ==========================================================================
       CAREER PROFILE 
@@ -1339,7 +1347,7 @@
       INPUT ERRORS
       ========================================================================== */
   .invalid {
-    color: #9b8ffb;
+    color: #9B8FFB;
     font-size: 0.5em;
     position: absolute;
     margin-top: -1em; }
@@ -1437,9 +1445,9 @@
 
   div#loginForm form {
     background-color: white;
-    width: 28em;
-    height: 36em;
-    padding-left: 2.5em;
+    width: 36em;
+    height: 38em;
+    padding-left: 6em;
     padding-right: 1em;
     padding-top: 1em; }
 
@@ -1461,7 +1469,7 @@
     float: left;
     margin-left: 1em; }
 
-  div#loginForm button {
+  div#loginForm input#logIn {
     border-radius: 0.2em;
     background-color: #9B8FFB;
     box-shadow: 0.2em 0.2em 0.5em black;
@@ -1469,8 +1477,12 @@
     width: 21.5em;
     height: 3em;
     box-shadow: none;
-    color: white;
-    margin-left: 1em; }
+    margin-left: 1em;
+    color: white !important;
+    box-shadow: none;
+    border-top: none;
+    border-bottom: none;
+    color: white; }
 
   /* ==========================================================================
      MAIN NAV
@@ -1728,7 +1740,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 110px;
     color: white; }
@@ -2136,24 +2148,10 @@
     height: 3em;
     color: white; }
 
-  /*form#signup-form  i{
-  color: black!important;
-  border-bottom: 0.1em white solid;
-  border-top: 0.1em white solid;
-  padding-left: 0.9em;
-  display: block;
-  float: left;
-  line-height: 50px;
-  text-align: center;
-  width: 5%;
-  
-  
-  }*/
   #signup-form select#servicesSel {
     border-bottom: 0.1em black solid;
     border-top: 0.1em black solid;
-    color: black;
-    /*width: 20em; */ }
+    color: black; }
 
   #signup-form p#agreementStatement {
     color: black;
@@ -2189,6 +2187,10 @@
     margin: 0 auto;
     margin-left: 55%;
     /* position: absolute;*/ }
+
+  p.error {
+    position: absolute;
+    margin-top: -2em; }
 
   /* ==========================================================================
       CAREER PROFILE 
@@ -2820,3 +2822,5 @@
   #brand_logo a img {
     width: 6em;
     height: 6em; } }
+
+/*# sourceMappingURL=main.css.map */
