@@ -22,6 +22,13 @@ Route::get('index', function()
 	return View::make('index');
 	//return the index view
 });
+Route::get('welcome', function()
+{
+	return View::make('index-loggedin');
+	//return the index view logged in
+});
+
+
 
 // Login for main desktop routes, GET POST, GET
 
@@ -38,15 +45,15 @@ Route::post('login',function(){
 	$aLoginDetails=array(
 		'username'=>Input::get('username'),
 		'password'=>Input::get('password'),
-		'rememberMe'=>Checkbox::get('check')
+		// 'checkbox'=>Input::get('check')
 
 	);
 
 	if(Auth::attempt($aLoginDetails)){
-		return Redirect::intended("users/".Auth::user()->id);
-
+		// return Redirect::intended("users/".Auth::user()->id);
+		return Redirect::to('login')->with("error","Submission Required");
 	}else{
-		return Redirect::to('login')->with("error","Submission Required"); //error control
+		return Redirect::to('welcome'); //error control
 	}
 
 });
@@ -77,10 +84,10 @@ Route::post('users',function(){
 	//validate input in the sign up form
 
 	$aRules = array(
-		'avatar'=>'required',
+		'avatar'=>'required|mimes:jpeg,jpg,png,bmp,gif,svg',
 		"username"=>"required|unique:users",
-		'password'=>'required',
-		'confirm_password'=>'required',
+		'password'=>'required|confirmed',
+		'password_confirmation'=>'required',
 		'firstname'=>'required',
 		'lastname'=>'required',
 		"email"=>"required|email|unique:users",
@@ -90,38 +97,54 @@ Route::post('users',function(){
 		'check'=>'required'
 		);
 
-
 	$aUserInput = Input::all();
 
 	$messages= array(
 		"email"=>"email is invalid",
-		"avatar"=>"please upload a jpg or png file",
-		"required"=>"please fill in"
+		"avatar"=>"please upload either a jpeg, jpg, png, bmp, gif, svg file",
+		"required"=>"Submission required"
 		);
 
-	$oValidator = Validator::make(Input::all(), $aRules);
+	$oValidator = Validator::make($aUserInput, $aRules, $messages);
 
 	if($oValidator->fails()){
 		return Redirect::to("users/new")->withErrors($oValidator)->withInput();
 	}else{
+
 		$aDetails = Input::all();
 		$aDetails["password"] = Hash::make($aDetails["password"]);
 		//we need to tell the route when a user fills in their details that the colomns in the table need to be filled in SQL.
 		
 		//in laravel we need to tell aDetails that it is a key to be filled into the database user table
+		// rename users profile picture, and rename to users name.
+
+		//upload photo
+		$sNewName = Input::get("username").".".Input::file("avatar")->getClientOriginalExtension(); //now tell laravel to move the photo file from temporary location to new location
+		Input::file("avatar")->move("careerprofile/",$sNewName);
+
+		$aDetails = Input::all();
+		$aDetails['avatar'] = $sNewName;
+
+				
 		User::create($aDetails);
 		//redirect back to login page once sign up is complete
-		return Redirect::to("login");
+		return Redirect::to("users/1");
 
 	}
 
 });
 
+
+
+
+
+
+
 //make form for CareerProfile with user id and put the concrete data into the controls
-// Route::get('users/{id}', function($id){
+Route::get('users/{id}', function($id){
 
-// 	$oUser = User::find($id);
+	$oUser = User::find($id);
 
-// 	return View::make('careerProfile')->with("user",$oUser);
+	return View::make('careerprofile')->with("user",$oUser);
 
-// });
+});

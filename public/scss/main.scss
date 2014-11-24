@@ -96,7 +96,6 @@ div#navLogIn a{
     }
 
     .nav-handle-user img{
-
       height:30%;
       float: right;
 
@@ -1068,6 +1067,30 @@ div#loginForm.show{
     color: white;
     border-radius: none;
   }
+
+  #signup-form input[type="password"]{
+    width: 80%;
+    height: 3em;
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    background-color: transparent;
+    color: white;
+    border-radius: none;
+  }
+  #signup-form input#signUp{
+ @include purpleButton;
+ color: white;
+ border-top: none;
+ border-bottom: none;
+
+ float: left;
+margin-left: 1em;
+    width: 90%;
+    margin-bottom: 2em;
+ margin-left: 1em;
+ 
+}
+
   #signup-form input[type="checkbox"]{
     width: 1em;
     height: 1em;
@@ -1118,11 +1141,7 @@ div#loginForm.show{
   background-color: #242424; color:white;
   border: none;
 }
-  #signup-form button#signUp{
-    margin-left: 1em;
-    width: 90%;
-    margin-bottom: 2em;
-  }
+
   .profileAuto{
     width: 10em;
     margin-left: 28%;
@@ -1238,10 +1257,13 @@ div#loginForm.show{
    }
 
 
-   #careerProfile-form button#updateProfile{
-    margin-left: 1em;
-    width: 90%;
+   #careerProfile-form input[type="submit"]{
+    @include purpleButton;
+    border-top: none;
+    border-bottom: none;
+    width: 98%;
     margin-bottom: 2em;
+    margin-top: 2em;
   }
   #agreementStatement{
     padding: 1em;
@@ -1253,9 +1275,15 @@ div#loginForm.show{
 
   }
 
-  input#checkboxCareerProfile{
-    float: left;
-    
+  #careerProfile-form input[type="checkbox"]{
+    float: right;
+    width: 1em;
+height: 1em;
+position: relative;
+magin-top: 1em;
+// margin-top: 6em;
+// margin-left: -2em;
+border: none;
   }
 
 
@@ -1666,6 +1694,9 @@ margin-left: 1em;
     position: relative;
     width: 50%;
     /*margin-right: 18em;*/
+  }
+  .nav-handle-user img{
+    border-radius: 50%;
   }
 
   #signedInTag{
@@ -2121,33 +2152,16 @@ ul#main-nav{
     
   }
 
-/*.search-bar{
-  display: block;
-  }*/
-
-/*input#txtsearch.search-bar{
-  display: none;
-
-    -webkit-transition-property: width;
-    -webkit-transition-duration: 1s;
-    -webkit-transition-timing-function: linear;
-    -webkit-transition-delay: 2s;
-  
-    transition-property: width;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-    transition-delay: 2s;
-    }*/
     input#txtsearch.search-bar{
      display: block;
      height: 3em;
-     width: 14em;
+     width: 16em;
      padding-left: 3.5em;
      font-size: 1em;
      font-weight: 100;
      position: absolute;
      color: white!important;
-     font-weight: 100;
+     font-weight: bold;
      margin-top: 3em;
      margin-left: -2em;
 
@@ -2174,14 +2188,10 @@ ul#main-nav{
     width: 80%;
     padding-left: 4em;
     margin: 0 auto;
-    /*z-index: 1000;*/
-
-
   }
 
 
   section#introduction{
-   /* top: 28em;*/
     position: relative;
     margin-left: 8em;
     z-index: 4000;
@@ -2357,6 +2367,15 @@ display: none;
   border-top: 0.1em black solid;
   color: black;
 }
+  #signup-form input[type="password"]{
+    width: 80%;
+    height: 3em;
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    background-color: transparent;
+    color: black;
+    border-radius: none;
+  }
 
 #signing-up h1#header{
   color: black;
@@ -2439,8 +2458,12 @@ width: 5%;
 }
 
 
-#signup-form button#signUp{
- /*width: 26.5em;*/
+#signup-form input#signUp{
+ @include purpleButton;
+ color: white;
+ border-top: none;
+ border-bottom: none;
+ box-shadow: none;
  float: left;
  width: 88%;
  height: 3.4em;
@@ -2448,14 +2471,7 @@ width: 5%;
  margin-left: 0.5em;
  
 }
-// #signup-form input#checkbox{
-  //   margin-top: 30em;
-  //   margin-left: -4em;
-  //   width: 1em;
-  //   height: 1em;
-  //   position: absolute;
 
-  // }
   #signup-form input[type="checkbox"] {
     width: 1em;
     height: 1em;
@@ -2595,20 +2611,23 @@ width: 5%;
   height: 7em;
   padding: 0.5em;
 }
-#careerProfile-form button#updateProfile{
- width: 95%; 
- float: left;
- height: 3.4em;
- margin-top: 2em;
- margin-left: 0.5em;
-}
-#careerProfile-form input#checkbox{
-  margin-top: 35em;
-  margin-left: -4em;
-  width: 1em;
-  height: 1em;
+   #careerProfile-form input[type="submit"]{
+    @include purpleButton;
+    border-top: none;
+    border-bottom: none;
+    width: 100%;
+    color: white;
+    box-shadow: none;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+// #careerProfile-form input#checkbox{
+//   margin-top: 35em;
+//   margin-left: -4em;
+//   width: 1em;
+//   height: 1em;
 
-}
+// }
 #careerProfile-form img#profileImage{
   width: 8em;
   height: 8em;

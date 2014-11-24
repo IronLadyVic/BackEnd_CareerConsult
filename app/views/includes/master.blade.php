@@ -33,7 +33,7 @@
 <!-- Drop down menu header -->
 <header>
         
-  <div id="brand_logo"><a href="{{URL::to('index')}}"><img src="{{asset('img/CareerConsult_logo.png')}}" alt="career consult logo"></a></div>
+  <div id="brand_logo"><a href="{{URL::to('welcome')}}"><img src="{{asset('img/CareerConsult_logo.png')}}" alt="career consult logo"></a></div>
   
 <div class="search-container">
         {{Form::open(array( 'id'=>'serachForm'))}}
@@ -62,8 +62,8 @@
       <li><a href="{{URL::to('testimonials/')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
       <li><a href="{{URL::to('about/')}}"><i class="fa fa-briefcase"></i><p>About</p></a></li>
       <li><a href="{{URL::to('contact/')}}"><i class="fa fa-phone"></i><p>Contact</p></a></li>
-      <li><a href="{{URL::to('users/new')}}"><i class="fa fa-user"></i><p class="styleList">Sign Up</p></a></li>
-      <li><a href="{{URL::to('login/')}}"><i class="fa fa-lock"></i><p class="styleList">Log In</p></a></li>
+      <li><a href="{{URL::to('users/{id}')}}"><i class="fa fa-archive"></i><p class="styleList">My Career Profile</p></a></li>
+      <li><a href="{{URL::to('index/')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
     </ul>
 </div>
 <div class="nav-handle">
@@ -77,7 +77,14 @@
         </svg>
    </a>
 </div>
- 
+ <div class="nav-handle-user">
+    <div id="profilePic">
+      <a href="Career-Profile.html">
+        <img src="{{asset('img/careerprofile-BLK.png')}}" alt="user" id="userProfile">
+    </a>
+    </div>
+    <p id="signedInTag">User Name</p>  
+</div> 
 </header> 
 <!-- End of Headers -->
 @yield('content')

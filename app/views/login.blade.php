@@ -1,4 +1,4 @@
-@extends('includes.master')
+@extends('includes.master-login')
 @section("content")
 
 <div id="mobdeskLogin">
@@ -22,9 +22,9 @@
         {{$errors->first('password','<p class="border">:message</p>')}}     
         </p>
 
-       {{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}
+       <!-- {{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}
        <p  id="rememberMe">Remember Me</p>
-        {{$errors->first('checkbox','<p class="border">:message</p>')}}
+        {{$errors->first('checkbox','<p class="border">:message</p>')}} -->
         
         
         
