@@ -13,13 +13,13 @@
         <p>
         <span class="border"><i class="fa fa-user"></i></span>
         {{Form::text('username', '', array('placeholder'=>'Username', 'id'=>'userName', 'class'=>'border'))}}
-        {{$errors->first('username','<p class="border">:message</p>')}}
+        {{$errors->first('username','<p class="error">:message</p>')}}
         </p>
 
         <p>
         <span class="border" ><i class="fa fa-lock"></i></span>       
         {{Form::password('password', array('placeholder' => 'Password', 'id'=>'passwordLogin'))}}
-        {{$errors->first('password','<p class="border">:message</p>')}}     
+        {{$errors->first('password','<p class="error">:message</p>')}}     
         </p>
 
        <!-- {{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}

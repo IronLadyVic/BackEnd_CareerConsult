@@ -384,7 +384,8 @@
     color: white; }
 
   form#mobdeskForm {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 1em; }
 
   #mobdeskForm span {
     border-bottom: 0.1em white solid;
@@ -428,6 +429,9 @@
     margin-top: -1.2em;
     color: white;
     margin-left: 1.5em; }
+
+  p.error {
+    color: #9B8FFB; }
 
   /* ==========================================================================
      PRICING
@@ -2743,7 +2747,8 @@
     color: black; }
 
   form#mobdeskForm {
-    width: 28em; }
+    width: 28em;
+    padding-bottom: 1em; }
 
   #mobdeskForm span {
     border-bottom: 0.1em black solid;
@@ -2756,7 +2761,7 @@
     padding-left: 1em; }
 
   form#mobdeskForm input[type="password"] {
-    color: black;
+    color: black !important;
     border-bottom: 0.1em black solid !important;
     border-top: 0.1em black solid !important;
     width: 70%;
@@ -2767,7 +2772,7 @@
     color: white; }
 
   form#mobdeskForm input[type="text"] {
-    color: black;
+    color: black !important;
     border-bottom: 0.1em black solid !important;
     border-top: 0.1em black solid !important;
     width: 70%;

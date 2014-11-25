@@ -454,6 +454,7 @@ div#shareSocial p a{
   }
   form#mobdeskForm{
     width: 100%;
+    margin-bottom: 1em;
   }
 
   #mobdeskForm span{
@@ -497,6 +498,9 @@ form#mobdeskForm p#rememberMe{
   margin-top: -1.2em;
   color: white;
   margin-left: 1.5em;
+}
+p.error{
+  color: #9B8FFB;
 }
 /* ==========================================================================
    PRICING
@@ -3126,6 +3130,7 @@ div#shareSocial p a{
   }
   form#mobdeskForm{
     width: 28em;
+    padding-bottom: 1em;
   }
 
   #mobdeskForm span{
@@ -3141,7 +3146,7 @@ div#shareSocial p a{
 
 
   form#mobdeskForm input[type="password"]{
-   color: black;
+   color: black!important;
    border-bottom: 0.1em black solid!important;
    border-top: 0.1em black solid!important;
 
@@ -3150,7 +3155,7 @@ div#shareSocial p a{
  }
 
  form#mobdeskForm input[type="text"]{
-   color: black;
+   color: black!important;
    border-bottom: 0.1em black solid!important;
    border-top: 0.1em black solid!important;
 

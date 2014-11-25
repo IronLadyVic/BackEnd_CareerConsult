@@ -50,10 +50,12 @@ Route::post('login',function(){
 	);
 
 	if(Auth::attempt($aLoginDetails)){
-		// return Redirect::intended("users/".Auth::user()->id);
-		return Redirect::to('login')->with("error","Submission Required");
+		//redirect to user home page
+		//ideally should redirect back to origin
+		return Redirect::intended("welcome/".Auth::user()->id);
 	}else{
-		return Redirect::to('welcome'); //error control
+		//send back to login page with errors
+		return Redirect::to("login")->with("error","Incorrect Login, please try again.");
 	}
 
 });
@@ -68,7 +70,7 @@ Route::get('logout', function()
 
 
 
-//Sign up GET, sign up form for new users
+//Sign up GET, sign up form for users/new route (ReSTful URI)
 Route::get('users/new', function(){
 
 	 return View::make('signup');
@@ -93,48 +95,53 @@ Route::post('users',function(){
 		"email"=>"required|email|unique:users",
 		'phone'=>'required',
 		'service_type'=>'required',
-		'comment'=>'required',
 		'check'=>'required'
 		);
 
 	$aUserInput = Input::all();
 
 	$messages= array(
-		"email"=>"email is invalid",
-		"avatar"=>"please upload either a jpeg, jpg, png, bmp, gif, or an svg file",
-		"required"=>"Submission required"
+		"email"=>'email is invalid',
+		"avatar"=>'please upload either a jpeg, jpg, png, bmp, gif, or an svg file',
+		"required"=>'The :attribute field is required.'
 		);
 
 	$oValidator = Validator::make($aUserInput, $aRules, $messages);
 
-	if($oValidator->fails()){
-		return Redirect::to("users/new")->withErrors($oValidator)->withInput();
-	}else{
 
+		if($oValidator->passes()){
+		//hash password	
 		$aDetails = Input::all();
-		$aDetails["password"] = Hash::make($aDetails["password"]);
+		$aDetails["password"] = Hash::make($aDetails["password"]);	
+		//uploading avatar career profile picture
 		//we need to tell the route when a user fills in their details that the colomns in the table need to be filled in SQL.
 		
 		//in laravel we need to tell aDetails that it is a key to be filled into the database user table
 		// rename users profile picture, and rename to users name.
+		$sNewPhotoName = Input::get("firstname").("lastname").".".Input::file('avatar')->getClientOriginalExtension();
+		Input::file("avatar")->move("uploads",$sNewPhotoName);
 
-		//upload photo
-		$sNewName = Input::get("username").".".Input::file("avatar")->getClientOriginalExtension(); //now tell laravel to move the photo file from temporary location to new location
-		Input::file("avatar")->move("careerprofile/",$sNewName);
+
+		
+
+		$aDetails["avatar"] = $sNewPhotoName;
+
 
 		$aDetails = Input::all();
-		$aDetails['avatar'] = $sNewName;
 
-				
-		User::create($aDetails);
-		//redirect back to login page once sign up is complete
-		return Redirect::to("users/1");
+		//create new User
+		$oUser = User::create($aDetails);
+
+		//redirect to product list
+		return Redirect::to("welcome/".$oUser->user_id);
+		}else{
+
+		//redirect new user form with errors and sticky data
+		return Redirect::to("users/new")->withErrors($oValidator)->withInput();
 
 	}
-
-});
-
-
+		
+})->before("auth|admin");
 
 
 
