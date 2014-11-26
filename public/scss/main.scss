@@ -280,6 +280,13 @@ ul#main-nav li#seletedServices li:last-child{
      margin-right: 1em;
      text-align: center; 
    }
+   #intro-paragraph-loggedin{
+     @include headers;
+     width: 90%;
+     margin-left: 1em;
+     margin-right: 1em;
+     text-align: center; 
+   }
    section#introduction.hide{
     display: none;
     height: 0;
@@ -1720,7 +1727,7 @@ img#profileImage{
     padding-right: 1em;
     padding-left: 1em;
     color: black!important;
-    
+    font-weight: bold;
   }
   div#profilePic{
     height: 3em;
@@ -2271,8 +2278,25 @@ display: none;
     font-weight: 500;
     width: 16em;
     margin-left: 0em;
+    font-weight: 500;
 
   }
+     #intro-paragraph-loggedin{
+    text-align: left;
+    color: black;
+    font-size:1.6em;
+    font-weight: 500;
+    width: 65%;
+    margin-left: 0em;
+    font-weight: 500;
+
+  }
+.para-loggedin{
+  width: 62%;
+  font-size: 1.2em;
+}
+
+
   // #introButtons{
     //   z-index: -2000;
     // }
@@ -2495,9 +2519,10 @@ form#signup-form span{
   /* position: absolute;*/
 }
 
-p.error{
- position: absolute;
- margin-top: -2em;
+
+  #signing-up p.error{
+ position: relative;
+ /*margin-top: -2em;*/
 }
 
 

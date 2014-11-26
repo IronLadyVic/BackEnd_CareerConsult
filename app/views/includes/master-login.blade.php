@@ -14,6 +14,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        {{HTML::style('css/jquery-ui.css')}}
+        {{HTML::style('css/jquery.bxslider.css')}}
         {{HTML::style('css/normalize.css')}}
         {{HTML::style('scss/main.css')}}
         {{HTML::style('scss/main.scss')}}
@@ -105,9 +107,17 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="{{URL::to('js/plugins.js')}}"></script>
+        <script src="{{URL::to('js/jquery-1.10.2.js')}}"></script>
+        <script src="{{URL::to('js/jquery-ui.js')}}"></script>
         <script src="{{URL::to('js/avatarUpload.js')}}"></script>
+        <script src="{{URL::to('js/caroselMain.js')}}"></script>
+        <script src="{{URL::to('js/jquery.flexslider-min.js')}}"></script>
+        <script src="{{URL::to('js/masonry.pkgd.min.js')}}"></script>
+        <script src="{{URL::to('js/modernizr.js')}}"></script>
         <script src="{{URL::to('js/formValidation.js')}}"></script>
         <script src="{{URL::to('js/main.js')}}"></script>
+
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

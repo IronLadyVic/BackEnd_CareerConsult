@@ -15,7 +15,7 @@
     background-color: #242424; }
 
   body {
-    background-color: #2b2937; }
+    background-color: #2B2937; }
 
   header #main-header {
     z-index: 1000;
@@ -180,7 +180,7 @@
     /* margin-left: -20em;*/
     /*opacity: 0.8;*/
     position: relative;
-    border-bottom: 1px #928cc4 solid !important; }
+    border-bottom: 1px #928CC4 solid !important; }
 
   #ponsonbyHousing img {
     /*  height:10%;
@@ -231,6 +231,15 @@
       SECTION INTRODUCTION BUTTONS AND INTRO  
       ========================================================================== */
   #intro-paragraph {
+    font-size: 1.1em;
+    font-weight: 300;
+    color: white;
+    width: 90%;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: center; }
+
+  #intro-paragraph-loggedin {
     font-size: 1.1em;
     font-weight: 300;
     color: white;
@@ -476,7 +485,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 5em;
     color: white; }
@@ -609,13 +618,13 @@
      ACTIVE HOLD ON LI DROP DOWN MENU
      ========================================================================== */
   ul#main-nav li:active {
-    background-image: linear-gradient(#9b8ffb, #2b2937); }
+    background-image: linear-gradient(#9B8FFB, #2B2937); }
 
   ul#main-nav li p:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   ul#main-nav li i:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   header #main-header ul#main-nav li a {
     text-decoration: none;
@@ -1352,7 +1361,7 @@
       INPUT ERRORS
       ========================================================================== */
   .invalid {
-    color: #9b8ffb;
+    color: #9B8FFB;
     font-size: 0.5em;
     position: absolute;
     margin-top: -1em; }
@@ -1519,7 +1528,8 @@
     float: left;
     padding-right: 1em;
     padding-left: 1em;
-    color: black !important; }
+    color: black !important;
+    font-weight: bold; }
 
   div#profilePic {
     height: 3em;
@@ -1745,7 +1755,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 110px;
     color: white; }
@@ -2007,7 +2017,21 @@
     font-size: 1.8em;
     font-weight: 500;
     width: 16em;
-    margin-left: 0em; }
+    margin-left: 0em;
+    font-weight: 500; }
+
+  #intro-paragraph-loggedin {
+    text-align: left;
+    color: black;
+    font-size: 1.6em;
+    font-weight: 500;
+    width: 65%;
+    margin-left: 0em;
+    font-weight: 500; }
+
+  .para-loggedin {
+    width: 62%;
+    font-size: 1.2em; }
 
   #rightarrow {
     top: 1.8em;
@@ -2200,9 +2224,9 @@
     margin-left: 55%;
     /* position: absolute;*/ }
 
-  p.error {
-    position: absolute;
-    margin-top: -2em; }
+  #signing-up p.error {
+    position: relative;
+    /*margin-top: -2em;*/ }
 
   /* ==========================================================================
       CAREER PROFILE 
@@ -2835,3 +2859,5 @@
   #brand_logo a img {
     width: 6em;
     height: 6em; } }
+
+/*# sourceMappingURL=main.css.map */

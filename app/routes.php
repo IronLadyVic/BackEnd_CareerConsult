@@ -17,21 +17,34 @@ Route::get('/', function()
 	//return the index view
 });
 
+// ROUTES FOR VIEWING WHEN NOT LOGGED IN
+
 //index not logged in
 Route::get('index', function(){
 	return View::make('index');
 	//return the index view
 });
 
+//services not logged in
+Route::get('services', function(){
+	return View::make('services');
+	
+});
+
+
+
+
 
 //index logged in
-Route::get('welcome/users/{id}', function($id){
+Route::get('welcome/{id}', function($id){
 
 	$oUser = User::find($id);
 	return View::make('index-loggedin')->with("user",$oUser);
 	//return the index view logged in with user id showing in URI
 
 })->before("auth");
+
+
 
 
 
@@ -141,7 +154,7 @@ Route::post('users',function(){
 		$oUser = User::create($aDetails);
 
 		//redirect to product list
-		return Redirect::to("welcome/".$oUser->user_id);
+		return Redirect::to("welcome/".Auth::user()->id);
 		}else{
 
 		//redirect new user form with errors and sticky data

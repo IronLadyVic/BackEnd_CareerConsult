@@ -13,7 +13,9 @@
         <meta name="author" content="Karyn McDonald">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->      
+        {{HTML::style('css/jquery-ui.css')}}
+        {{HTML::style('css/jquery.bxslider.css')}}
         {{HTML::style('css/normalize.css')}}
         {{HTML::style('scss/main.css')}}
         {{HTML::style('scss/main.scss')}}
@@ -21,6 +23,7 @@
         <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
         <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     
     </head>
@@ -61,8 +64,8 @@
       <li><a href="{{URL::to('prices/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
       <li><a href="{{URL::to('testimonials/')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
       <li><a href="{{URL::to('about/')}}"><i class="fa fa-briefcase"></i><p>About</p></a></li>
-      <li><a href="{{URL::to('contact/')}}"><i class="fa fa-phone"></i><p>Contact</p></a></li>
-      <li><a href="{{URL::to('users/'.Auth::user()->id)}}"><i class="fa fa-archive"></i><p class="styleList">My Career Profile</p></a></li>
+      <li><a href="{{URL::to('book/')}}"><i class="fa fa-calendar"></i><p>Book</p></a></li>
+      <li><a href="{{URL::to('careerprofile/')}}"><i class="fa fa-archive"></i><p class="styleList">My Career Profile</p></a></li>
       <li><a href="{{URL::to('index/')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
     </ul>
 </div>
@@ -81,7 +84,7 @@
     <div id="profilePic">
       <a href="{{URL::to('careerprofile/'.Auth::user()->id)}}">
         <img src="{{URL::to('uploads/'.Auth::user()->avatar)}}" alt="user" id="userProfile">
-        <!-- When user logs in, the model Auth is a function in laravel - get that users id and use their avatar to upload here-->
+        <!-- '->' refers to the table row in the database. When user logs in, the model Auth is a function in laravel - get that users id and use their avatar to upload here-->
     </a>
     </div>
     <p id="signedInTag">Welcome, {{Auth::user()->firstname}}</p>  
@@ -110,8 +113,15 @@
 <!-- End of Footer -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        
         <script src="{{URL::to('js/plugins.js')}}"></script>
-
+        <script src="{{URL::to('js/jquery-1.10.2.js')}}"></script>
+        <script src="{{URL::to('js/jquery-ui.js')}}"></script>
+        <script src="{{URL::to('js/avatarUpload.js')}}"></script>
+        <script src="{{URL::to('js/caroselMain.js')}}"></script>
+        <script src="{{URL::to('js/jquery.flexslider-min.js')}}"></script>
+        <script src="{{URL::to('js/masonry.pkgd.min.js')}}"></script>
+        <script src="{{URL::to('js/modernizr.js')}}"></script>
         <script src="{{URL::to('js/formValidation.js')}}"></script>
         <script src="{{URL::to('js/main.js')}}"></script>
 

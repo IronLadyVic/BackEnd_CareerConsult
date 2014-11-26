@@ -7,7 +7,7 @@
     
     <p id="mobdeskDescription">Log in to update your career profile, or enquire about booking a service.</p>
 
-    {{Form::open(array('url'=>'login', 'id'=>'mobdeskForm'))}}
+    {{Form::open(array('url'=>'login', 'id'=>'mobdeskForm', 'method'=>'get'))}}
         <p><img id="profileImage" src="{{URL::to('img/careerprofile-BLK.png')}}" alt="profile picture"></p>
         
         <p>
