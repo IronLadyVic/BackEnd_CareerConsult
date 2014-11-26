@@ -15,7 +15,7 @@
         </ul>
 
 
-        {{Form::open(array('url'=>'users','id'=>'signup-form'))}}
+        {{Form::open(array('url'=>'users','files'=>'true','id'=>'signup-form'))}}
         <div class="profileAuto">
             <img id="profileImage" src="{{URL::to('careerprofile/users/{id}')}}" alt="career profile">
         </div>
@@ -32,14 +32,14 @@
         </p>
         <p>
             <span class="border" ><i class="fa fa-lock"></i></span>
-            <!-- {{Form::label('password', 'Password');}} -->
+           
             {{Form::password('password', array('placeholder'=>'Password'));}}
             {{$errors->first('password')}} <!-- //error message is built into laravel - you can change the password as well.. -->
     
         </p>
         <p>
             <span class="border"><i class="fa fa-lock"></i></span>
-            <!-- {{Form::label('password_confirmation', 'Confirm Password');}} -->
+            
             {{Form::password('password_confirmation',array('placeholder'=>'Confirm Password'));}}
             {{$errors->first('password_confirmation')}}
             
@@ -75,7 +75,7 @@
         <p>
             <span class="border"><i class="fa fa-hand-o-right"></i></span>
 
-            {{Form::select('service_type', array('0' => 'Services I am interested in..','1'=>'CV Writing & Cover Letters','2'=>'Interview Preparation','3'=>'New to NZ', '4'=>'Employment Contracts', '5'=>'General Job Seeking Advice', '6'=>'General Employment Advice', 'class'=>'border'))}}
+            {{Form::select('service_type', array('0' => 'Services I am interested in..','1'=>'CV Writing &amp Cover Letters','2'=>'Interview Preparation','3'=>'New to NZ', '4'=>'Employment Contracts', '5'=>'General Job Seeking Advice', '6'=>'General Employment Advice'))}}
             {{$errors->first('select','<p class="error">:message</p>')}}  
         </p>
         <p>

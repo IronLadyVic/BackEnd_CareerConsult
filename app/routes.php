@@ -17,16 +17,21 @@ Route::get('/', function()
 	//return the index view
 });
 
-Route::get('index', function()
-{
+//index not logged in
+Route::get('index', function(){
 	return View::make('index');
 	//return the index view
 });
-Route::get('welcome', function()
-{
-	return View::make('index-loggedin');
-	//return the index view logged in
-});
+
+
+//index logged in
+Route::get('welcome/users/{id}', function($id){
+
+	$oUser = User::find($id);
+	return View::make('index-loggedin')->with("user",$oUser);
+	//return the index view logged in with user id showing in URI
+
+})->before("auth");
 
 
 
@@ -46,13 +51,18 @@ Route::post('login',function(){
 		'username'=>Input::get('username'),
 		'password'=>Input::get('password'),
 		// 'checkbox'=>Input::get('check')
-
 	);
-
 	if(Auth::attempt($aLoginDetails)){
-		//redirect to user home page
-		//ideally should redirect back to origin
-		return Redirect::intended("welcome/".Auth::user()->id);
+		//redirect to user home page or admin editable pages to view clients, add clients
+		
+		if(Auth::user()->admin == 1){
+
+			return Redirect::intended("admin/".Auth::user()->id);
+
+		}else{
+			return Redirect::intended("welcome/".Auth::user()->id);
+		}
+		
 	}else{
 		//send back to login page with errors
 		return Redirect::to("login")->with("error","Incorrect Login, please try again.");
@@ -111,24 +121,22 @@ Route::post('users',function(){
 
 		if($oValidator->passes()){
 		//hash password	
-		$aDetails = Input::all();
-		$aDetails["password"] = Hash::make($aDetails["password"]);	
+		
 		//uploading avatar career profile picture
 		//we need to tell the route when a user fills in their details that the colomns in the table need to be filled in SQL.
 		
 		//in laravel we need to tell aDetails that it is a key to be filled into the database user table
 		// rename users profile picture, and rename to users name.
-		$sNewPhotoName = Input::get("firstname").("lastname").".".Input::file('avatar')->getClientOriginalExtension();
+		$sNewPhotoName = Input::get("firstname").".".Input::file('avatar')->getClientOriginalExtension();
 		Input::file("avatar")->move("uploads",$sNewPhotoName);
 
 
 		
 
-		$aDetails["avatar"] = $sNewPhotoName;
-
-
 		$aDetails = Input::all();
-
+		$aDetails["password"] = Hash::make($aDetails["password"]);	
+	
+		$aDetails["avatar"] = $sNewPhotoName;
 		//create new User
 		$oUser = User::create($aDetails);
 
@@ -141,17 +149,28 @@ Route::post('users',function(){
 
 	}
 		
-})->before("auth|admin");
+});
 
 
 
 
 
 //make form for CareerProfile with user id and put the concrete data into the controls
-Route::get('users/{id}', function($id){
+Route::get('careerprofile/{id}', function($id){
 
 	$oUser = User::find($id);
 
-	return View::make('careerprofile')->with("user",$oUser);
+	return View::make('careerprofile')->with("user",$oUser); //"user" is the object assigned to the varible name $oUser.
 
-});
+})->before("auth"); //this is a filter to check if input is filled in - auth is a filter. you could name this anything.
+
+
+
+Route::get('users/{id}/edit',function($id){
+	// allow sticky data to you are able to edit the data
+	$oUser = User::find($id);
+
+	return View::make("editprofile")->with("user", $oUser);
+	// now bind one by one for each input
+
+})->before("auth");

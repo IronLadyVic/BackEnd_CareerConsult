@@ -60,9 +60,8 @@
       </li>           
       <li><a href="{{URL::to('prices/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
       <li><a href="{{URL::to('testimonials/')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
-      <li><a href="{{URL::to('about/')}}"><i class="fa fa-briefcase"></i><p>About</p></a></li>
-      <li><a href="{{URL::to('contact/')}}"><i class="fa fa-phone"></i><p>Contact</p></a></li>
-      <li><a href="{{URL::to('users/'.Auth::user()->id)}}"><i class="fa fa-archive"></i><p class="styleList">My Career Profile</p></a></li>
+      <li><a href="{{URL::to('contact/')}}"><i class="fa fa-briefcase"></i><p>Posts</p></a></li>
+      <li><a href="{{URL::to('clients/')}}"><i class="fa fa-archive"></i><p class="styleList">Clients</p></a></li>    
       <li><a href="{{URL::to('index/')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
     </ul>
 </div>
@@ -79,7 +78,7 @@
 </div>
  <div class="nav-handle-user">
     <div id="profilePic">
-      <a href="{{URL::to('careerprofile/'.Auth::user()->id)}}">
+      <a href="{{URL::to('careerprofile/'.$user->id)}}">
         <img src="{{URL::to('uploads/'.Auth::user()->avatar)}}" alt="user" id="userProfile">
         <!-- When user logs in, the model Auth is a function in laravel - get that users id and use their avatar to upload here-->
     </a>

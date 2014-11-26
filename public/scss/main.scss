@@ -91,6 +91,7 @@
 
   #signedInTag{
     font-size: 0.9em;
+    font-weight:bold;
     float: left;
     color: white!important;
   }
@@ -2036,8 +2037,12 @@ section#pricesListed {
 }
 
 #logIn{
-  width: 24.5em;
+  width: 22em;
+  height: 3em;
   margin-left: 0.5em;
+  box-shadow: none;
+  color: white;
+  @include purpleButton;
 }
 
 form#logIn-form span{
