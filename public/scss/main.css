@@ -180,7 +180,7 @@
     /* margin-left: -20em;*/
     /*opacity: 0.8;*/
     position: relative;
-    border-bottom: 1px #928cc4 solid !important; }
+    border-bottom: 1px #928CC4 solid !important; }
 
   #ponsonbyHousing img {
     /*  height:10%;
@@ -272,13 +272,6 @@
   /* ==========================================================================
      LATEST UPDATES - NEXT TO SERVICES ACCORDION
      ========================================================================== */
-  #asideLatestNews {
-    border-top: 1px solid white;
-    padding-bottom: 1em;
-    /*  margin-top: 2em;
-      margin-left: 2em;
-      margin-right: 2em;*/ }
-
   #latestUpdates article {
     border-bottom: 1px solid white;
     border-top: 1px solid white;
@@ -485,7 +478,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 5em;
     color: white; }
@@ -509,18 +502,22 @@
   /* ==========================================================================
      PAGINATION
      ========================================================================== */
-  div#pagination {
-    margin-left: -2em; }
-
-  #pagination ul li a {
-    float: left;
-    color: white;
-    text-decoration: none;
-    padding: 0.5em; }
-
-  #pagination ul li a:hover {
-    color: #9B8FFB; }
-
+  /*   div#pagination{
+       margin-left: -2em;
+     }
+  
+     #pagination ul li a{
+      float: left;
+      color: white;
+      text-decoration: none;
+  
+      padding: 0.5em;
+  
+    }
+    #pagination ul li a:hover{
+      color: #9B8FFB;
+  
+    }*/
   /* ==========================================================================
      ADMIN ADD EDIT AND DELETE BUTTONS
      ========================================================================== */
@@ -618,13 +615,13 @@
      ACTIVE HOLD ON LI DROP DOWN MENU
      ========================================================================== */
   ul#main-nav li:active {
-    background-image: linear-gradient(#9b8ffb, #2b2937); }
+    background-image: linear-gradient(#9B8FFB, #2B2937); }
 
   ul#main-nav li p:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   ul#main-nav li i:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   header #main-header ul#main-nav li a {
     text-decoration: none;
@@ -1029,15 +1026,16 @@
     color: white;
     border: none; }
 
-  .profileAuto {
+  /*.profileAuto{
     width: 10em;
     margin-left: 28%;
-    margin-bottom: 2em; }
-
+    margin-bottom: 2em;
+  }*/
   img#profileImage {
     border-radius: 50%;
     height: 8em;
-    width: 8em; }
+    width: 8em;
+    margin-left: 28%; }
 
   #signup-form p#agreementStatement {
     /*// width: 94%;*/
@@ -1058,6 +1056,10 @@
   p.error {
     color: #9B8FFB;
     margin-top: 0em; }
+
+  #signup-form button#signUp.button {
+    width: 90%;
+    margin-left: 1em; }
 
   /* ==========================================================================
       CAREER PROFILE 
@@ -1294,7 +1296,9 @@
   #servicesListed p {
     color: white;
     padding-left: 0.8em;
-    padding-right: 0.8em; }
+    padding-right: 0.8em;
+    /*margin-top: -1em;*/
+    padding-bottom: 1em; }
 
   #accordion {
     margin: 0 auto;
@@ -1315,15 +1319,15 @@
 
   #accordion h3 {
     cursor: pointer;
+    border-top: 1px solid #aaaaaa;
     border-bottom: 1px solid #aaaaaa;
     padding-bottom: 1em;
-    padding-left: 2em; }
-
-  .enquiryButton {
+    padding-left: 2em;
     padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 3em;
-    padding-right: 3em;
+    margin-top: -1em; }
+
+  li.enquiryButton {
+    height: 3.5em;
     color: white;
     margin: 0 auto;
     border-radius: 0.2em;
@@ -1331,11 +1335,24 @@
     box-shadow: 0.2em 0.2em 0.5em black;
     text-decoration: none;
     margin-top: 1em;
-    margin-left: -1em; }
+    margin-left: -2em;
+    text-align: center;
+    text-decoration: none;
+    position: center;
+    padding-top: 0.5em; }
+
+  .enquiryButton a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    position: center; }
 
   #accordion i {
     margin-left: -1em;
     padding-right: 1em; }
+
+  .serviceContent ul {
+    margin-top: -1.5em; }
 
   .serviceContent ul li {
     font-size: 0.9em;
@@ -1348,8 +1365,7 @@
     color: white; }
 
   .serviceContent ul li:nth-last-child(1) {
-    padding-top: 3em;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
     list-style: none;
     list-style-type: none; }
 
@@ -1366,7 +1382,7 @@
       INPUT ERRORS
       ========================================================================== */
   .invalid {
-    color: #9b8ffb;
+    color: #9B8FFB;
     font-size: 0.5em;
     position: absolute;
     margin-top: -1em; }
@@ -1662,8 +1678,7 @@
     color: black; }
 
   .serviceContent ul li:nth-last-child(1) {
-    padding-top: 3em;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
     list-style: none;
     list-style-type: none; }
 
@@ -1771,7 +1786,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 110px;
     color: white; }
@@ -1995,35 +2010,58 @@
     margin-top: 0em;
     position: relative;
     display: block;
-    height: 22em;
+    height: 18em;
     width: 100%; }
 
   #aucklandSkyline img {
-    margin-top: -8em;
+    margin-top: -6em;
     opacity: 0.3;
     position: absolute;
-    margin-left: 4em;
+    margin-left: 1em;
     /*height: 100%;*/
-    width: 100%; }
+    width: 110%; }
 
   #ponsonbyHousing img {
     /* height: 65%;*/
-    width: 100%;
-    margin-top: 11em;
+    width: 115%;
+    margin-top: 10em;
     margin-left: 6em;
     display: block;
     position: absolute; }
 
-  #workingGirl img {
-    margin-top: 20em;
-    width: 10%;
-    /*  height: 6.5em;
-    width: 7em;*/
+  img#workingGirl {
+    width: 5em;
+    height: 5em;
     position: absolute;
-    z-index: 4000;
-    margin-left: 10em;
-    display: none; }
+    bottom: 10px;
+    left: 20px;
+    /*    -webkit-animation-timing-function: cubic-bezier(0.25,0.46,0.45,0.94);
+    -moz-animation-timing-function: cubic-bezier(0.25,0.46,0.45,0.94);
+    -ms-animation-timing-function: cubic-bezier(0.25,0.46,0.45,0.94);
+    -o-animation-timing-function: cubic-bezier(0.25,0.46,0.45,0.94);
+    animation-timing-function: cubic-bezier(0.25,0.46,0.45,0.94);
+    -webkit-animation-duration: .8s;
+    -moz-animation-duration: .8s;
+    -ms-animation-duration: .8s;
+    -o-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;*/ }
 
+  /*img#workingGirl{
+      width: 10%;
+      height: 6.5em;
+      display: block;
+      background: url(public/img/CareerConsultBicyle_grey.gif) no-repeat;
+      -webkit-transition: 2s ease-in-out;
+      -moz-transition: 2s ease-in-out;
+      -o-transition: 2s ease-in-out;
+      transition: 2s ease-in-out;
+    }
+  */
   /* ==========================================================================
      Introduction buttons 
      ========================================================================== */
@@ -2060,7 +2098,8 @@
     border-color: black;
     width: 18em;
     margin-left: 0em;
-    margin-top: -0.1em; }
+    margin-top: -0.1em;
+    background-color: #f4f2ef; }
 
   #launchCareer a {
     color: black; }
@@ -2238,7 +2277,11 @@
   #signup-form img#profileImage {
     position: relative;
     margin: 0 auto;
-    margin-left: 55%;
+    margin-left: 39%;
+    background-color: #242424;
+    color: #242424;
+    /*background-image: url('img/careerprofile-BLK.png');
+    background-repeat: no-repeat;*/
     /* position: absolute;*/ }
 
   #signing-up p.error {
@@ -2676,7 +2719,7 @@
     max-width: 60em; }
 
   .flex-active-slide p {
-    font-size: 1.8em;
+    font-size: 1.6em;
     width: 85%;
     color: black; }
 
@@ -2762,12 +2805,22 @@
   /* ==========================================================================
      PAGINATION
      ========================================================================== */
-  #pagination ul li a {
+  /*ul.pagination{
+    margin-left: -1.9em;
+  }*/
+  li.disabled {
+    float: left; }
+
+  li.active {
+    float: left; }
+
+  ul.pagination li a {
     float: left;
     color: black;
-    text-decoration: none; }
+    text-decoration: none;
+    padding: 0.8em; }
 
-  #pagination ul li a:hover {
+  ul.pagination li a:hover {
     color: #9B8FFB; }
 
   /* ==========================================================================
@@ -2872,7 +2925,82 @@
 /* ==========================================================================
    DESKTOP
    ========================================================================== */
-@media only screen and (min-width: 60em) {
-  #brand_logo a img {
-    width: 6em;
-    height: 6em; } }
+@media only screen and (min-width: 80em) {
+  section#animation {
+    margin-top: 0em;
+    position: relative;
+    display: block;
+    height: 26em;
+    width: 100%; }
+
+  #aucklandSkyline img {
+    margin-top: -8em;
+    opacity: 0.3;
+    position: absolute;
+    margin-left: 1em;
+    width: 110%; }
+
+  #ponsonbyHousing img {
+    width: 105%;
+    margin-top: 14em;
+    margin-left: 5em;
+    display: block;
+    position: absolute; } }
+@media only screen and (min-width: 100em) {
+  /*
+      #brand_logo a img {
+        width: 6em;
+        height: 6em;
+      }*/
+  section#animation {
+    margin-top: 0em;
+    position: relative;
+    display: block;
+    height: 26em;
+    width: 100%; }
+
+  #aucklandSkyline img {
+    margin-top: -9em;
+    opacity: 0.3;
+    position: absolute;
+    margin-left: 1em;
+    /*height: 100%;*/
+    width: 100%; }
+
+  #ponsonbyHousing img {
+    /* height: 65%;*/
+    width: 100%;
+    margin-top: 14em;
+    margin-left: 5em;
+    display: block;
+    position: absolute; } }
+@media only screen and (min-width: 120em) {
+  /*
+      #brand_logo a img {
+        width: 6em;
+        height: 6em;
+      }*/
+  section#animation {
+    margin-top: 0em;
+    position: relative;
+    display: block;
+    height: 30em;
+    width: 100%; }
+
+  #aucklandSkyline img {
+    margin-top: -11em;
+    opacity: 0.3;
+    position: absolute;
+    margin-left: 1em;
+    /*height: 100%;*/
+    width: 100%; }
+
+  #ponsonbyHousing img {
+    /* height: 65%;*/
+    width: 100%;
+    margin-top: 16em;
+    margin-left: 5em;
+    display: block;
+    position: absolute; } }
+
+/*# sourceMappingURL=main.css.map */

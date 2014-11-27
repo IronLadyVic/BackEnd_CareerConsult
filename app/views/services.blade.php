@@ -16,8 +16,8 @@
                     <li>Receive honest critique about your existing CV and / or cover letter.</li>
                     <li>How to tailor your CV and cover letter to a specific job.</li>
                     <li>Tips to help you ‘get that interview’.</li>
-                    <li>
-                        <a href="services/" class="enquiryButton">BOOKING ENQUIRY</a>
+                    <li class="enquiryButton">
+                        <a href="services/">BOOKING ENQUIRY</a>
                     </li>   
                 </ul>
             </div>
@@ -30,8 +30,8 @@
                     <li>Complete a ‘mock interview’ to practice your approach & gain confidence.</li>
                     <li>Useful tips to impress your interviewers and stand out from the crowd.</li>
                     <li>Graduates: what to expect when attending a graduate programme interview.</li>
-                    <li>
-                        <a href="services/" class="enquiryButton">BOOKING ENQUIRY</a>
+                    <li class="enquiryButton">
+                        <a href="services/">BOOKING ENQUIRY</a>
                     </li>   
                 </ul>
             </div>
@@ -41,8 +41,8 @@
                     <li>NZ workplace culture – what to expect and how to adapt your approach.</li>
                     <li>Comprehensive spelling and grammar support for your CV and cover letter.</li>
                     <li>Options for job searching in NZ.</li>
-                    <li>
-                        <a href="services/" class="enquiryButton">BOOKING ENQUIRY</a>
+                    <li class="enquiryButton">
+                        <a href="services/">BOOKING ENQUIRY</a>
                     </li>   
                 </ul>
                 
@@ -51,8 +51,8 @@
             <div class="serviceContent">
                 <ul>
                     <li>Independent advice on an employment contract before you sign it.</li>
-                    <li>
-                        <a href="services/" class="enquiryButton">BOOKING ENQUIRY</a>
+                    <li class="enquiryButton">
+                        <a href="services/">BOOKING ENQUIRY</a>
                        
                     </li>       
                 </ul>
@@ -65,8 +65,8 @@
                     <li>Understand recruitment agencies and how to get the best out of them.</li>
                     <li>Create an effective LinkedIn profile.</li>
                     <li>Understand the realities of the job market.</li>
-                    <li>
-                        <a href="services/" class="enquiryButton">BOOKING ENQUIRY</a>
+                    <li class="enquiryButton">
+                        <a href="services/">BOOKING ENQUIRY</a>
                     </li>   
                 </ul>
                 
@@ -77,8 +77,8 @@
                     <li>Ask questions about your employment situation and your rights.</li>
                     <li>Coaching for approaching difficult situations at work.</li>
                     <li>Advice and / or support person in disciplinary meetings.</li> 
-                    <li>
-                        <a href="services/" class="enquiryButton">BOOKING ENQUIRY</a>
+                    <li class="enquiryButton">
+                        <a href="services/">BOOKING ENQUIRY</a>
                     </li>   
                 </ul>
             </div>
@@ -133,14 +133,7 @@
             @endforeach
             <!-- this will create links which is a ul li -->
             {{$pagPostTypes->links()}}        
-            <div id="pagination">
-                <ul>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                </ul>
-            </div>       
+  
         </section>
         
     </aside>

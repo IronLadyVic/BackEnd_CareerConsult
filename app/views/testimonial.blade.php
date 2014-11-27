@@ -9,7 +9,7 @@
 <h1>WHAT CLIENTS ARE SAYING:</h1>
     <ul class="cd-testimonials">
         <li> 
-        <?php $testimonialTypes =  Testimonial::paginate(1);; ?> 
+        <?php $testimonialTypes =  Testimonial::paginate(1); ?> 
 
         @foreach($testimonialTypes as $testimonial)          
             <p>{{$testimonial->content}}</p>

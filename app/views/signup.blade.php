@@ -16,8 +16,18 @@
 
 
         {{Form::open(array('url'=>'users','files'=>'true','id'=>'signup-form'))}}
+
+        <?php
+            $sPhoto = URL::to('img/careerprofile-BLK.png');
+
+            if(Auth::check()){
+
+                 $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
+
+            }
+        ?>
         <div class="profileAuto">
-            <img id="profileImage" src="{{URL::to('careerprofile/users/{id}')}}" alt="career profile">
+            <img id="profileImage" src="{{$sPhoto}}" alt="career profile">
         </div>
         <p>
             <span class="border"><i class="fa fa-camera"></i></span>

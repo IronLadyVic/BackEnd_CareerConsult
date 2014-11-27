@@ -61,7 +61,7 @@
         <li><a href="{{URL::to('services/6')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
         </ul>
       </li>           
-      <li><a href="{{URL::to('prices/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
+      <li><a href="{{URL::to('pricing/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
       <li><a href="{{URL::to('testimonials/')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
       <li><a href="{{URL::to('about/')}}"><i class="fa fa-briefcase"></i><p>About</p></a></li>
       <li><a href="{{URL::to('book/')}}"><i class="fa fa-calendar"></i><p>Book</p></a></li>

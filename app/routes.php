@@ -37,6 +37,12 @@ Route::get('testimonials', function(){
 	
 });
 
+//pricing 
+Route::get('pricing', function(){
+	return View::make('pricing');
+	
+});
+
 
 
 //index logged in

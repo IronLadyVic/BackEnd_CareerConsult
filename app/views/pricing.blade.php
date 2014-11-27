@@ -1,34 +1,37 @@
 @extends('includes.master-login')
+@section("content")
 
-@section('content')
+<!-- Start of Services -->
+<div id="sectionPrices">
+    <section id="pricesListed">
+        <h1 id="header">TRY CAREER CONSULT FOR FREE. <a href="{{URL::to('users/new')}}" id="aLink">SIGN UP</a> TODAY.</h1>
 
-<!-- Section One -->
-<div id="sectionOne">
+        <div class="pricing_table">
 
-    <!-- Introduction Section -->
-    <section id="introduction">
-        <h2 id="intro-paragraph">professional, independent and cost effective advice for job seekers, employees, graduates, and those new to New Zealand.</h2>
-        <div id="introButtons">
-            <i id="rightarrow" class="fa fa-angle-right"></i>
-            <div id="launchCareer">
-                <a href="{{URL::to('services/')}}"><span>LAUNCH YOUR CAREER</span></a>
+        <?php $pricingTypes =  pricing::paginate(6); ?> 
+
+        @foreach($pricingTypes as $price)
+            <!-- Price type 1 -->
+            <div class="priceTable">
+                <div class="pricesHeader"><h2>{{$price->price}}</h2>
+
+                </div>
+                <div class="priceContents">
+                    <ul>
+                        <li>{{$price->content}}</li>
+                        <li>{{$price->content}}</li>
+                        <li>{{$price->content}}</li>
+                        <li>{{$price->content}}</li>
+                        <li>{{$price->content}}</li>
+                    </ul>
+                </div>
             </div>
-            <div id="careerButton">
-                <a href="{{URL::to('users/new')}}"><span>SIGN UP</span></a>
-            </div>
+        @endforeach     
+            
+
         </div>
-
-    </section>
-    <!-- End of Introduction Section -->
-    <section id="animation">
-        <h1 style="font-size: 0em;">Auckland Skyline</h1>
-        <div id="aucklandSkyline"><img src="{{URL::to('img/Auckland-skyline.png')}}" alt="Auckland City"></div>
-        <div id="ponsonbyHousing"><img src="{{URL::to('img/Ponsonby_Grey.png')}}" alt="Auckland City"></div>
-        <div><img src="{{URL::to('img/CareerConsultBicyle_grey.png')}}" alt="Career Consult" id="workingGirl" style=""></div>
-    </section>
-
+    </section>   
 </div>
-<!-- End of Section One -->
 
 <!-- Log in pop up -->
 <div id="loginForm" class="l-box-lrg pure-u-1 pure-u-md-2-5">
@@ -55,7 +58,7 @@
     {{$errors->first('checkbox','<p class="border">:message</p>')}} 
     <p  id="rememberMe">Remember Me</p>
 
-    {{Form::button('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
+    {{Form::submit('LOG IN', array('id'=>'logIn'))}}
 
 
     {{Form::close()}}
@@ -65,5 +68,6 @@
 
 <div id="background"></div>
 <!-- End of Log in pop up -->
+
 
 @stop
