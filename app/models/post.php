@@ -1,6 +1,6 @@
 <?php
 
-class Post extends Eleoquent{
+class Post extends Eloquent{
 	public function topic(){
 		return $this->belongsTo('Topic');
 	}

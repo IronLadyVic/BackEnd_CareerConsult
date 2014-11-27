@@ -13,7 +13,7 @@
     }
 
     body{
-      @include responsiveBackground(#2B2937);
+      @include responsiveBackground(#242424);
 
     }
 
@@ -1422,6 +1422,7 @@ img#profileImage{
     div#sectionServices{
       float: left;
       width: 100%;
+      border-top: none!important;
       margin: 0 auto;
       position: relative;
     }
@@ -1431,7 +1432,7 @@ img#profileImage{
       margin: 0 auto;
       /* width: 90%;*/
       margin-top: 6em;
-
+    border-top: none!important;
     }
 
     #servicesListed h1#header{
@@ -1451,69 +1452,72 @@ img#profileImage{
 
     }  
 
-    .ui-accordion {
-      /*background-color: white;*/
-      font-family: 'Quicksand'!important;
-      border-radius: none!important;
-      /*  background-color: transparent!important;*/
+#accordion{
+  margin:0 auto;
+  padding-bottom: 1em;
+  color: white;
+  padding-top:0.5em;
+}  
+#accordion .h3 {
+font-size: 0.95em;
+padding-right: 0.5em;
+}
 
-    }
+#accordion div.serviceContent{
+  height: auto;
+  width: 100%;
+  // border-bottom: 1px solid white;
+  // border-top: 1px solid white;
+  margin-left: -1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 
+#accordion h3{
+  cursor:  pointer;
+// margin-left: 2em;
+border-bottom: 1px solid #aaaaaa;
+padding-bottom: 1em;
+padding-left:2em;
+}
 
-    .ui-corner-all{
-      border-radius: none!important;
-    }
-    .ui-accordion .ui-accordion-header{
-      font-size: 0.95em;
-      padding-right: 0.5em;
-    }
-    .ui-accordion .ui-accordion-header .ui-accordion-header-icon{
-      left: 16.5em;
+.enquiryButton{
+  padding-top:1em;
+  padding-bottom:1em;
+  padding-left:3em;
+  padding-right:3em;
+  color: white;
+  margin:0 auto;
+  @include purpleButton;
+  margin-top: 1em;
+  
+  margin-left: -1em;
+}
+#accordion i{
+     margin-left: -1em;
+     padding-right: 1em;
+ }
 
-    }
-    .ui-accordion .ui-accordion-content{
-      padding: 0.2em;
-      padding-top: 1em;
-
-    }
-    .ui-accordion-content ul{
-      margin-left: -0.7em;
-    }
-    .ui-accordion .ui-accordion-content ul li{
+    .serviceContent ul li{
       font-size: 0.9em;
       padding-top: 1em;
       left: 0;
       width: 90%;
       list-style: decimal outside none;
       list-style-type: disc;
+      margin-left: 1em;
+      color: white;
+
     }
-    .ui-accordion .ui-accordion-content ul li:nth-last-child(1){
+    .serviceContent ul li:nth-last-child(1){
+      padding-top:3em;
+      padding-bottom:2em;
 
       list-style: none;
       list-style-type: none;
     }
-    .ui-accordion .ui-accordion-content button.button{
-      font-family: 'Quicksand'!important;
-      margin-left: -1em;
-      width: 90%;
-      padding-bottom: 0.5em;
-      box-shadow: none;
-      line-height: 40px;
-      /*    list-style-type: none!important;*/
-    }
-    .ui-accordion .ui-accordion-content{
-      height: auto;
-    }
-    #accordion i{
-      margin-left: -1em;
-      padding-right: 1em;
-    }
-    #accordion i.fa.fa-circle{
-      font-size: 0.1em;
-
-    }
     #shareSocial p a{
-      color: black;
+      color: white;
       float: left;
       width: 3em;
       font-size: 1.5em;
@@ -1826,59 +1830,69 @@ img#profileImage{
   }  
   #servicesListed p{
     color: black;
-    margin-left:-6.3em;
+    margin-left:-6.5em;
     padding-bottom: 1em;
+    // width: 100%;
   }  
 
+#accordion{
+  margin-left: -5.5em;
+  padding-bottom: 0.5em;
+}  
 
-  .ui-accordion {
-    width: 118%;
-    float: left;
-    margin-left: -5em;
-    margin-bottom: 2em;
-    background-color: transparent!important;
-    border: none;
-  }
-  div#accordion.ui-accordion .ui-widget .ui-helper-reset{
-    background-color: none!important;
-  }
+#accordion div.serviceContent{
+  height: auto;
+  width: 100%;
+  // border-bottom: 1px solid #aaaaaa;
+  // border-top: 1px solid #aaaaaa;
+  margin-left: 1em;
+  // padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#accordion h3{
+  cursor:  pointer;
+  color: black;
+}
+
+.enquiryButton{
+  padding-top:1em;
+  padding-bottom:1em;
+  padding-left:2em;
+  padding-right:2em;
+  color: white;
+  margin:0 auto;
+  @include purpleButton;
+  margin-top: 1em;
+  box-shadow: none;
+  margin-left: -1em;
+}
+#accordion i{
+     margin-left: -1em;
+     padding-right: 1em;
+ }
+
+    .serviceContent ul li{
+      font-size: 0.9em;
+      padding-top: 1em;
+      left: 0;
+      width: 90%;
+      list-style: decimal outside none;
+      list-style-type: disc;
+      margin-left: -1.5em;
+      color: black;
+
+    }
+    .serviceContent ul li:nth-last-child(1){
+      padding-top:3em;
+      padding-bottom:2em;
+
+      list-style: none;
+      list-style-type: none;
+    }
 
 
 
-
-  .ui-accordion .ui-accordion-content ul li{
-    width: 100%;
-  }
-
-
-
-
-  .ui-accordion .ui-accordion-content button.button{
-    margin: 0 auto;
-    /*position: relative;*/
-    margin-top:2em;
-    width: 100%;
-    margin-left: -1em;
-    line-height: 45px;
-  }
-  .ui-accordion .ui-accordion-header .ui-accordion-header-icon{
-    float: right;
-  }
-
-  .ui-accordion .ui-accordion-content{
-    background-color: transparent;
-  }
-  .ui-accordion .ui-accordion-icons{
-    background-color: transparent!important;
-  }
-  #accordion i{
-    margin-left: -1em;
-    padding-right: 1em;
-
-  }
-  #accordion i.fa.fa-circle{
-    font-size: 0.1em;
-  }
 
   p#testimonialButton{
     width: 20em;
@@ -2210,7 +2224,7 @@ ul#main-nav{
    ========================================================================== */
 
    div#sectionOne{
-    margin-top: 1em;
+    margin-top:1em;
     width: 80%;
     padding-left: 4em;
     margin: 0 auto;
@@ -2230,7 +2244,7 @@ ul#main-nav{
 
 
   section#animation{
-   margin-top: 3em;
+   margin-top: 0em;
    position: relative;
    display: block;
    height: 22em;
@@ -2289,6 +2303,7 @@ display: none;
     width: 65%;
     margin-left: 0em;
     font-weight: 500;
+    margin-top: 0em;
 
   }
 .para-loggedin{

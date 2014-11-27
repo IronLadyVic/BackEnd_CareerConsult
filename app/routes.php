@@ -50,12 +50,14 @@ Route::get('welcome/{id}', function($id){
 
 // Login for main desktop routes, GET POST, GET
 
-//GET
+//GET desktop login
 
 Route::get('login', function()
 {
 	return View::make('login');
 });
+
+
 
 //POST
 Route::post('login',function(){

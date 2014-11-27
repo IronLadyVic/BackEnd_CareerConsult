@@ -7,8 +7,20 @@
     
     <p id="mobdeskDescription">Log in to update your career profile, or enquire about booking a service.</p>
 
-    {{Form::open(array('url'=>'login', 'id'=>'mobdeskForm', 'method'=>'get'))}}
-        <p><img id="profileImage" src="{{URL::to('img/careerprofile-BLK.png')}}" alt="profile picture"></p>
+    {{Form::open(array('url'=>'login', 'id'=>'mobdeskForm'))}}
+
+        <?php
+            $sPhoto = URL::to('img/careerprofile-BLK.png');
+
+            if(Auth::check()){
+
+                 $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
+
+            }
+        ?>
+
+
+        <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
         
         <p>
         <span class="border"><i class="fa fa-user"></i></span>
@@ -22,9 +34,9 @@
         {{$errors->first('password','<p class="error">:message</p>')}}     
         </p>
 
-       <!-- {{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}
+       {{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}
        <p  id="rememberMe">Remember Me</p>
-        {{$errors->first('checkbox','<p class="border">:message</p>')}} -->
+        {{$errors->first('checkbox','<p class="border">:message</p>')}}
         
     
         {{Form::submit('LOG IN', array('id'=>'loggingInButton', 'class' => 'button'));}}

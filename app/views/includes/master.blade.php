@@ -115,8 +115,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         
         <script src="{{URL::to('js/plugins.js')}}"></script>
-        <script src="{{URL::to('js/jquery-1.10.2.js')}}"></script>
-        <script src="{{URL::to('js/jquery-ui.js')}}"></script>
+        <script src="{{URL::to('js/accordion.js')}}"></script>
         <script src="{{URL::to('js/avatarUpload.js')}}"></script>
         <script src="{{URL::to('js/caroselMain.js')}}"></script>
         <script src="{{URL::to('js/jquery.flexslider-min.js')}}"></script>
