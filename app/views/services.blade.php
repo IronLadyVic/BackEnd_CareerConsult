@@ -109,7 +109,7 @@
                     <a href="#"><i class="fa fa-bookmark"></i>{{$post->topic->name}}</a></p>
                 </div>
                 <div class="content">
-                    <p>{{$post->content}}</p>
+                    <p>{{substr($post->content, 200)}}</p>
 
                 </div>
                 <div class="readMore">
