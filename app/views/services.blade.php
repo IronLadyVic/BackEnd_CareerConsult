@@ -97,7 +97,7 @@
     <section id="latestUpdates">
         <h2>LATEST CAREER ADVICE</h2>
         
-        <?php $pagPostTypes =  Post::paginate(1); ?>
+        <?php $pagPostTypes =  Post::paginate(2); ?>
         @foreach($pagPostTypes as $post)
         <article>
 
@@ -109,7 +109,7 @@
                     <a href="#"><i class="fa fa-bookmark"></i>{{$post->topic->name}}</a></p>
                 </div>
                 <div class="content">
-                    <p>{{substr($post->content, 200)}}</p>
+                    <p>{{substr($post->content, 0, 300)}}.......</p>
 
                 </div>
                 <div class="readMore">
@@ -121,7 +121,7 @@
                     <p><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.careerconsult/services.co.nz"><i class="fa fa-linkedin"></i></a></p>
                 </div>
                 <div class="avatarProfile">
-                    <img src="{{URL::to('uploads/'.$post->avatar)}}" alt="Avatar Profile Picture">
+                    <img src="{{URL::to('img/'.$post->avatar)}}" alt="Avatar Profile Picture">
                 </div>
                 <div class="editor">
                     <p>Editor: {{$post->editor}}</p>

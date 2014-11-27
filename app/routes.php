@@ -25,13 +25,17 @@ Route::get('index', function(){
 	//return the index view
 });
 
-//services not logged in
+//services 
 Route::get('services', function(){
 	return View::make('services');
 	
 });
 
-
+//testimonials 
+Route::get('testimonials', function(){
+	return View::make('testimonial');
+	
+});
 
 
 
