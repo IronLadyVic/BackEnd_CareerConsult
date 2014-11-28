@@ -85,7 +85,7 @@
         <p>
             <span class="border"><i class="fa fa-hand-o-right"></i></span>
 
-            {{Form::select('service_type', array('0' => 'Services I am interested in..','1'=>'CV Writing &amp Cover Letters','2'=>'Interview Preparation','3'=>'New to NZ', '4'=>'Employment Contracts', '5'=>'General Job Seeking Advice', '6'=>'General Employment Advice'))}}
+            {{Form::select('service_type', array('0' => 'Services I am interested in..','1'=>'CV Writing & Cover Letters','2'=>'Interview Preparation','3'=>'New to NZ', '4'=>'Employment Contracts', '5'=>'General Job Seeking Advice', '6'=>'General Employment Advice'))}}
             {{$errors->first('select','<p class="error">:message</p>')}}  
         </p>
         <p>

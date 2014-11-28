@@ -52,12 +52,12 @@
       <li id="menuServices"><a href="{{URL::to('services/')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
       <li id="seletedServices">
         <ul>
-        <li><a href="{{URL::to('services/1')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
-        <li><a href="{{URL::to('services/2')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
-        <li><a href="{{URL::to('services/3')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
-        <li><a href="{{URL::to('services/4')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
-        <li><a href="{{URL::to('services/5')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
-        <li><a href="{{URL::to('services/6')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
+        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
+        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
+        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
+        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
+        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
+        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
         </ul>
       </li>           
       <li><a href="{{URL::to('pricing/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
@@ -107,6 +107,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="{{URL::to('js/plugins.js')}}"></script>
+        <script src="{{URL::to('js/infinite.loop.js')}}"></script>
         <script src="{{URL::to('js/accordion.js')}}"></script>
         <script src="{{URL::to('js/avatarUpload.js')}}"></script>
         <script src="{{URL::to('js/caroselMain.js')}}"></script>

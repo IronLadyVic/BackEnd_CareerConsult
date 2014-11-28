@@ -8,10 +8,21 @@
 <div class="cd-testimonials-wrapper cd-container">
 <h1>WHAT CLIENTS ARE SAYING:</h1>
     <ul class="cd-testimonials">
-        <li> 
-        <?php $testimonialTypes =  Testimonial::paginate(1); ?> 
 
-        @foreach($testimonialTypes as $testimonial)          
+    <?php 
+        // $sEditable = "" ;
+        // if(){
+        //     $sEditable = 'data-editable="yes"';
+        // }
+
+    ?>
+
+
+     @foreach(Testimonial::all() as $testimonial)
+        <li> 
+        
+
+                 
             <p>{{$testimonial->content}}</p>
             <div class="cd-client">
                 <img src="{{URL::to('img/'.$testimonial->avatar)}}" alt="Client Profile Image">
@@ -20,8 +31,9 @@
                     <li>{{$testimonial->company}}</li>
                 </ul>
             </div>               
-       @endforeach 
-     </li>   
+       
+     </li> 
+      @endforeach   
 </ul> 
     
 </div> 

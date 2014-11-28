@@ -12,12 +12,12 @@
         {{ Form::model($user, array('url' => 'users/'.$user->id, 'files'=>'true', 'id'=>'careerProfile-form')) }} 
 
         <div class="profileAuto">
-            <img id="profileImage" src="{{URL::to('uploads/'.$user->id)}}" alt="profile picture">
+            <img id="profileImage" src="{{URL::to('uploads/'.Auth::user()->id)}}" alt="profile picture">
         </div>
 
         <p>
             <span class="border"><i class="fa fa-camera"></i></span>
-            {{Form::label(array('id'=>'avatar'))}}
+            {{Form::label('avatar','', array('id'=>'avatar'))}}
             {{Form::file('avatar', array('id' => 'avatar', 'class'=>'border'))}}
             {{$errors->first('avatar','<p class="error">:message</p>')}}
         </p>

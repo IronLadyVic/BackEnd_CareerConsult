@@ -7,81 +7,20 @@
         <h1 id="header">SERVICES</h1>
         <p>Career Consult offer a number of services, which you can pick and choose to suit your needs. Please sign up to and recieive a free 15min consultation and let us help you launch your career.</p>
         <div id="accordion">
-
-            <h3><i class="fa fa-file-text"></i>CV Writing & Cover Letters</h3>
+        @foreach(Service::all() as $service)
+            <h3><img src="{{$service->icon}}" alt="service icon image" id="serviceIcon">>{{$service->service_type}}</h3>
             
             <div class="serviceContent">
                 <ul>
-                    <li>Choose from a number CV templates & assistance in creating a CV.</li>
-                    <li>Receive honest critique about your existing CV and / or cover letter.</li>
-                    <li>How to tailor your CV and cover letter to a specific job.</li>
-                    <li>Tips to help you ‘get that interview’.</li>
+                    <li>{{$service->content}}</li>
+                    
                     <li class="enquiryButton">
                         <a href="services/">BOOKING ENQUIRY</a>
                     </li>   
                 </ul>
             </div>
 
-            <h3><i class="fa fa-comments"></i>Interview Preparation</h3>
-            
-            <div class="serviceContent">
-                <ul>
-                    <li>Learn about the types of questions asked and how to effectively answer these.</li>
-                    <li>Complete a ‘mock interview’ to practice your approach & gain confidence.</li>
-                    <li>Useful tips to impress your interviewers and stand out from the crowd.</li>
-                    <li>Graduates: what to expect when attending a graduate programme interview.</li>
-                    <li class="enquiryButton">
-                        <a href="services/">BOOKING ENQUIRY</a>
-                    </li>   
-                </ul>
-            </div>
-            <h3><i class="fa fa-plane"></i>New to NZ</h3>
-            <div class="serviceContent">
-                <ul>
-                    <li>NZ workplace culture – what to expect and how to adapt your approach.</li>
-                    <li>Comprehensive spelling and grammar support for your CV and cover letter.</li>
-                    <li>Options for job searching in NZ.</li>
-                    <li class="enquiryButton">
-                        <a href="services/">BOOKING ENQUIRY</a>
-                    </li>   
-                </ul>
-                
-            </div>
-            <h3><i class="fa fa-file-archive-o"></i>Employment Contracts</h3>
-            <div class="serviceContent">
-                <ul>
-                    <li>Independent advice on an employment contract before you sign it.</li>
-                    <li class="enquiryButton">
-                        <a href="services/">BOOKING ENQUIRY</a>
-                       
-                    </li>       
-                </ul>
-                
-            </div>
-            <h3><i class="fa fa-users"></i>General Job Seeking Advice</h3>
-            <div class="serviceContent">
-                <ul>
-                    <li>Effective on-line job searching.</li>
-                    <li>Understand recruitment agencies and how to get the best out of them.</li>
-                    <li>Create an effective LinkedIn profile.</li>
-                    <li>Understand the realities of the job market.</li>
-                    <li class="enquiryButton">
-                        <a href="services/">BOOKING ENQUIRY</a>
-                    </li>   
-                </ul>
-                
-            </div>
-            <h3><i class="fa fa-thumbs-up"></i>General Employment Advice</h3>
-            <div class="serviceContent">
-                <ul>
-                    <li>Ask questions about your employment situation and your rights.</li>
-                    <li>Coaching for approaching difficult situations at work.</li>
-                    <li>Advice and / or support person in disciplinary meetings.</li> 
-                    <li class="enquiryButton">
-                        <a href="services/">BOOKING ENQUIRY</a>
-                    </li>   
-                </ul>
-            </div>
+        @endforeach      
         </div>
         <p>During your appointment you are encouraged to ask anything!  No question is too silly. </p>
         <p id="testimonialButton">

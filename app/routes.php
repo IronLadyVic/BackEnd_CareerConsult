@@ -166,8 +166,10 @@ Route::post('users',function(){
 		$oUser = User::create($aDetails);
 
 		//redirect to product list
-		return Redirect::to("welcome/".Auth::user()->id);
-		}else{
+		return Redirect::to("welcome/");
+		}
+		
+		else{
 
 		//redirect new user form with errors and sticky data
 		return Redirect::to("users/new")->withErrors($oValidator)->withInput();
@@ -191,11 +193,11 @@ Route::get('careerprofile/{id}', function($id){
 
 
 
-Route::get('users/{id}/edit',function($id){
+Route::get('careerprofile/{id}/edit',function($id){
 	// allow sticky data to you are able to edit the data
 	$oUser = User::find($id);
 
-	return View::make("editprofile")->with("user", $oUser);
+	return View::make("editcareerprofile")->with("user", $oUser);
 	// now bind one by one for each input
 
 })->before("auth");

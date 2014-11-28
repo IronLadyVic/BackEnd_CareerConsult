@@ -59,7 +59,7 @@ $(function(){
 		
 		$("#background").show().animate({width:"100%",height:"100%"},1000);
 		$("div#loginForm").toggleClass("show");
-		$("div#loginForm").appendTo("#background");
+		$("div#loginForm").show().appendTo("#background");
 
 	});
 
@@ -67,7 +67,7 @@ $(function(){
 
 		$("#background").animate({width:"0%",height:"0%",display:"none"},1000,function(){
 			$(this).hide();
-			$("div#loginForm form").appendTo("body");
+			$("div#loginForm").appendTo("body").hide();
 		});
 		
 	});

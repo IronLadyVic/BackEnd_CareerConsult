@@ -8,20 +8,15 @@
 
         <div class="pricing_table">
 
-        <?php $pricingTypes =  pricing::paginate(6); ?> 
-
-        @foreach($pricingTypes as $price)
-            <!-- Price type 1 -->
+         
+        @foreach(Price::all() as $price)
+        <!-- Price type 1 -->
             <div class="priceTable">
                 <div class="pricesHeader"><h2>{{$price->price}}</h2>
 
                 </div>
                 <div class="priceContents">
                     <ul>
-                        <li>{{$price->content}}</li>
-                        <li>{{$price->content}}</li>
-                        <li>{{$price->content}}</li>
-                        <li>{{$price->content}}</li>
                         <li>{{$price->content}}</li>
                     </ul>
                 </div>

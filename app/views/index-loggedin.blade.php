@@ -16,7 +16,7 @@
                 <a href="{{URL::to('book/')}}"><span>BOOK AN APPOINTMENT</span></a>
             </div>
             <div id="careerButton">
-                <a href="{{URL::to('users/{id}')}}"><span>CAREER PROFILE</span></a>
+                <a href="{{URL::to('careerprofile/'.Auth::user()->id)}}"><span>CAREER PROFILE</span></a>
             </div>
         </div>
 
@@ -26,7 +26,7 @@
         <h1 style="font-size: 0em;">Auckland Skyline</h1>
         <div id="aucklandSkyline"><img src="{{URL::to('img/Auckland-skyline.png')}}" alt="Auckland City"></div>
         <div id="ponsonbyHousing"><img src="{{URL::to('img/Ponsonby_Grey.png')}}" alt="Auckland City"></div>
-        <div id="workingGirl"><img src="{{URL::to('img/CareerConsultBicyle_grey.png')}}" alt="On my way to work"></div>
+        <div id="hideBicycle"><img src="{{URL::to('img/CareerConsultBicyle_grey.png')}}" alt="Career Consult" id="workingGirl" style=""></div>
     </section>
 
 </div>

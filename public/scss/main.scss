@@ -158,9 +158,8 @@
     width: 90%;
     height: 3em;
     @include purpleButton;
-    box-shadow: none;
-    //   margin: 0 auto;
-    // position: relative;
+    
+    
     text-align: center;
     margin-left: 1em;
   }
@@ -216,21 +215,12 @@
     }
 
     #ponsonbyHousing img{
-/*  height:10%;
-margin-top: 13em;
-*/display: none;
-/*outline: 1px red solid;*/
-/*position: absolute;*/
+display: none;
 
 }
-#workingGirl img{
+ img#workingGirl{
   display: none;
-/*  margin-top:10em;
-  height:22%;
-  width: 22%;
-  position: relative;
-  z-index: 4000;
-  margin-left: 2em;*/
+
 }
 
 
@@ -288,6 +278,21 @@ ul#main-nav li#seletedServices li:last-child{
      margin-right: 1em;
      text-align: center; 
    }
+   h2#intro-paragraph-loggedin{
+    font-weight: 500;
+   }
+   .para-loggedin{
+  width: 85%;
+  font-size: 1em;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  font-weight: 100;
+}
+p.para-loggedin{
+  padding-top: 0.5em;
+}
+
    section#introduction.hide{
     display: none;
     height: 0;
@@ -1528,6 +1533,8 @@ li.enquiryButton {
 margin-bottom: 2em;
 list-style: none;
 list-style-type: none;
+margin-left: -0.5em;
+ width: 100%;
 
 }
 #shareSocial p a{
@@ -1540,6 +1547,14 @@ list-style-type: none;
 #shareSocial p a:hover{
   color: #9B8FFB;
 
+}
+img#serviceIcon{
+  outline: 1px red solid;
+  margin-left: -1em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  
 }
 /* ==========================================================================
     INPUT ERRORS
@@ -1799,7 +1814,7 @@ list-style-type: none;
 
   }
   ul#main-nav li#seletedServices li{
-    margin-left: -2em;
+    margin-left: -1em;
     height: 4em;
     line-height: 120%;
     width: 19.5em;
@@ -1901,6 +1916,10 @@ list-style-type: none;
       margin-bottom: 2em;
       list-style: none;
       list-style-type: none;
+      box-shadow: none;
+      width: 22em;
+      height: 3.5em;
+      margin-left: -4em;
     }
 
 
@@ -1924,6 +1943,12 @@ list-style-type: none;
 
 
   }
+  img#serviceIcon{
+  outline: 1px red solid;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+}
 /* ==========================================================================
    Checkbox for Nav Sign up
    ========================================================================== */
@@ -1957,7 +1982,7 @@ input #checkBox{
 
   .nav-handle-login{
     float: left;
-    margin-top: -5em;
+    margin-top: -4em;
     margin-left: 1.6em;
     display: block;
   }
@@ -2200,7 +2225,7 @@ ul#main-nav{
     display: block;
     float: right;
     width: 16em;
-    margin-top: -8em;
+    margin-top: -7em;
     
   }
 
@@ -2259,7 +2284,7 @@ ul#main-nav{
    margin-top: 0em;
    position: relative;
    display: block;
-   height: 18em;
+   height: 22em;
    width: 100%;
  }
  #aucklandSkyline img{
@@ -2281,41 +2306,29 @@ ul#main-nav{
 
 
 }
+#ponsonbyHousing img{
+ /* height: 65%;*/
+ width: 115%;
+ margin-top: 10em;
+ margin-left: 6em;
+ display: block;
+ position: absolute;
 
+
+}
+#hideBicycle img#workingGirl{
+  margin-left: -5em;
+}
 
 img#workingGirl {
   width: 5em;
     height: 5em;
     position: absolute;
-    bottom: 10px;
-    left: 20px;
-/*    -webkit-animation-timing-function: cubic-bezier(0.25,0.46,0.45,0.94);
--moz-animation-timing-function: cubic-bezier(0.25,0.46,0.45,0.94);
--ms-animation-timing-function: cubic-bezier(0.25,0.46,0.45,0.94);
--o-animation-timing-function: cubic-bezier(0.25,0.46,0.45,0.94);
-animation-timing-function: cubic-bezier(0.25,0.46,0.45,0.94);
--webkit-animation-duration: .8s;
--moz-animation-duration: .8s;
--ms-animation-duration: .8s;
--o-animation-duration: .8s;
-animation-duration: .8s;
--webkit-animation-iteration-count: infinite;
--moz-animation-iteration-count: infinite;
--ms-animation-iteration-count: infinite;
--o-animation-iteration-count: infinite;
-animation-iteration-count: infinite;*/
+    top: 16em;
+    display:block;
+
   }
-/*img#workingGirl{
-    width: 10%;
-    height: 6.5em;
-    display: block;
-    background: url(public/img/CareerConsultBicyle_grey.gif) no-repeat;
-    -webkit-transition: 2s ease-in-out;
-    -moz-transition: 2s ease-in-out;
-    -o-transition: 2s ease-in-out;
-    transition: 2s ease-in-out;
-  }
-*/
+
 
 /* ==========================================================================
    Introduction buttons 
@@ -2342,9 +2355,15 @@ animation-iteration-count: infinite;*/
     margin-top: 0em;
 
   }
+  p.para-loggedin{
+    margin-left: 0em;
+  }
 .para-loggedin{
   width: 62%;
   font-size: 1.2em;
+  color: black;
+  text-align: left;
+  font-weight: 500;
 }
 
 
@@ -3024,7 +3043,7 @@ div#shareSocial p a{
 
   }
   div.leftColomn{
-    height: 40em;
+    height: 35em;
   }
   .cd-testimonials-wrapper h1{
     margin-left: 0.2em;
@@ -3202,7 +3221,7 @@ ul.pagination li a:hover{
    ========================================================================== */
    div#mobdeskLogin{
     width: 80%;
-    height: 40em;
+    height: 35em;
     margin: 0 auto;
     position: relative;
     left: 10%;
@@ -3277,7 +3296,7 @@ form#mobdeskForm p#rememberMe{
    div#footer_options{
     float: left;
     width: 100%;
-    margin-left: 12em;  
+    margin-left: 10em;  
     margin-top: 2em;
     border-top: 1px solid #3d4144;
     position: relative;
@@ -3339,6 +3358,9 @@ form#mobdeskForm p#rememberMe{
 
 
 }
+img#workingGirl{
+  margin-top: 4em;
+}
 
   }
 
@@ -3366,14 +3388,18 @@ form#mobdeskForm p#rememberMe{
 }
 
 #ponsonbyHousing img{
- /* height: 65%;*/
+ 
  width: 100%;
- margin-top: 14em;
+ margin-top: 15em;
  margin-left: 5em;
  display: block;
  position: absolute;
 
 
+}
+
+img#workingGirl{
+  margin-top: 6em;
 }
 
   }
@@ -3392,23 +3418,26 @@ form#mobdeskForm p#rememberMe{
    width: 100%;
  }
  #aucklandSkyline img{
-  margin-top: -11em;
+  margin-top: -10em;
   opacity: 0.3;
   position: absolute;
   margin-left: 1em;
   /*height: 100%;*/
-  width: 100%;
+  width: 95%;
 }
 
 #ponsonbyHousing img{
  /* height: 65%;*/
- width: 100%;
+ width: 105%;
  margin-top: 16em;
- margin-left: 5em;
+ margin-left: 1em;
  display: block;
  position: absolute;
 
 
+}
+img#workingGirl{
+  margin-top: 9em;
 }
 
   }
