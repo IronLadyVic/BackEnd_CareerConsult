@@ -65,7 +65,7 @@
       <li><a href="{{URL::to('testimonials/')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
       <li><a href="{{URL::to('about/')}}"><i class="fa fa-briefcase"></i><p>About</p></a></li>
       <li><a href="{{URL::to('book/')}}"><i class="fa fa-calendar"></i><p>Book</p></a></li>
-      <li><a href="{{URL::to('careerprofile/'.Auth::user()->id)')}}"><i class="fa fa-archive"></i><p class="styleList">My Career Profile</p></a></li>
+      <li><a href="{{URL::to('careerprofile/'.Auth::user()->id)}}"><i class="fa fa-archive"></i><p class="styleList">My Career Profile</p></a></li>
       <li><a href="{{URL::to('index/')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
     </ul>
 </div>
@@ -115,6 +115,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         
         <script src="{{URL::to('js/plugins.js')}}"></script>
+        <script src="{{URL::to('js/ponsonby.loop.js')}}"></script>
         <script src="{{URL::to('js/infinite.loop.js')}}"></script>
         <script src="{{URL::to('js/accordion.js')}}"></script>
         <script src="{{URL::to('js/avatarUpload.js')}}"></script>

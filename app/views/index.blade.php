@@ -23,7 +23,7 @@
     <section id="animation">
         <h1 style="font-size: 0em;">Auckland Skyline</h1>
         <div id="aucklandSkyline"><img src="{{URL::to('img/Auckland-skyline.png')}}" alt="Auckland City"></div>
-        <div id="ponsonbyHousing"><img src="{{URL::to('img/Ponsonby_Grey.png')}}" alt="Auckland City"></div>
+        <div id="ponsonbyHousing"><img src="{{URL::to('img/Ponsonby_Grey_Street.fw.png')}}" alt="Auckland City"></div>
         <div id="hideBicycle"><img src="{{URL::to('img/CareerConsultBicyle_grey.png')}}" alt="Career Consult" id="workingGirl" style=""></div>
     </section>
 

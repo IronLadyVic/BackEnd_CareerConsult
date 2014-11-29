@@ -121,10 +121,10 @@
         </p>
         
         <p class="editProfile">
-            <a href="{{URL::to('careerprofile/'.$user->id.'/edit')}}">EDIT MY PROFILE</a>
+            <a href="{{URL::to('careerprofile/'.$user->id.'/edit')}}">UPDATE MY PROFILE</a>
             </p>
         <p id="agreementStatement" class="border">In order to keep you informed and help you with your future career, we will retain your career profile for future career consult meetings and career planning. I consent by ticking this box. </p>           
-        <p>{{Form::checkbox('check', 'consent given', true, array('id' => 'checkboxCareerProfile'))}}</p>
+        <p>{{Form::checkbox('check', 'consent given', true, array('id' => 'checkboxCareerProfile'))}}</p>        
             <!-- {{$errors->first('checkbox','<p class="border">:message</p>')}} -->            
             
             

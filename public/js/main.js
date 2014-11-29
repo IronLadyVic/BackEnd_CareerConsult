@@ -12,7 +12,7 @@ $(function(){
 	$(".nav-handle a").on("click", function(){
 
 		$("ul#main-nav li").toggleClass("show");
-		$("#droparrow").toggleClass("show");
+		$(".fa .fa-angle-down").toggleClass("show");
 
 		
 	});

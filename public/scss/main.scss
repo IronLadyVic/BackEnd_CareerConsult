@@ -103,6 +103,7 @@
   }
   ul#main-nav li{
     display: none;
+
   }
 
   ul#main-nav li.show {
@@ -117,15 +118,15 @@
     font-size: 1.1em;
     font-weight: 300;
     /*Animation*/
-    -webkit-transition: height 1s ease;
-    -moz-transition: height 1s ease;
-    -o-transition: height 1s ease;
-    -ms-transition: height 1s ease;
-    transition: height 1s ease;
+    -webkit-transition: height 2s ease;
+    -moz-transition: height 2s ease;
+    -o-transition: height 2s ease;
+    -ms-transition:height 2s ease;
+    transition: height 2s ease;
     line-height: 0px;
     background-color: #242424;
     cursor: pointer;
-    // height: 100%;
+    height:100%;
     // width: 100%;
     margin-left:-2.2em;
 
@@ -508,7 +509,8 @@ form#mobdeskForm p#rememberMe{
   margin-left: 1.5em;
 }
 p.error{
-  color: #9B8FFB;
+  border-bottom: 1px #9B8FFB solid;
+  border-top: 1px #9B8FFB solid;
 }
 /* ==========================================================================
    PRICING
@@ -1032,20 +1034,20 @@ section#pricesListed {
 
     #signing-up h1{
       color: white;
-      margin-left: 0.2em;
+      margin-left: 0.5em;
     }
     #signing-up p#description{
       color: white;
       width: 95%;
       font-size: 1.2em;
-      padding-left: 0.5em;
+      padding-left: 0.9em;
       font-weight: bold;
     }
 
     ul#reasonsToSignUp{
       height: 14em;
       width: 92%;
-      margin-left: 0.5em;
+      margin-left: 0.9em;
     }
     ul#reasonsToSignUp li{
      float: left;
@@ -1236,6 +1238,36 @@ img#profileImage{
       @include input;
       
     }
+    #careerProfile-form label{
+      font-size: 0px;
+    }
+    #careerProfile-form p input{
+  margin-left: -0.3em;
+}
+
+    #careerProfile-form p textarea{
+  margin-left: -0.3em;
+}
+#careerProfile-form p select{
+  margin-left: -0.3em;
+}
+
+ #careerProfile-form select#service_type{
+  border-bottom: 0.1em black solid;
+  border-top: 0.1em black solid;
+  color: black;
+  @include input;
+  width: 80%;
+}
+
+
+#careerProfile-form select#career_type{
+  color: black;
+  border-bottom: 0.1em black solid;
+  border-top: 0.1em black solid;
+  @include input;
+
+}
 
     #careerProfile-form textarea{
       -webkit-appearance: none;
@@ -1277,19 +1309,46 @@ img#profileImage{
      color:white;
      background-color: transparent;
    }
+    #careerProfile-form select#experience{
+     width: 80%;
+     height: 3em;
+     border-bottom: 0.1em white solid;
+     border-top: 0.1em white solid;
+     color:white;
+     background-color: transparent;
+   }
 
 
-   #careerProfile-form input[type="submit"]{
+
+
+
+
+   #careerProfile-form p.editProfile{
     @include purpleButton;
-    border-top: none;
-    border-bottom: none;
-    width: 98%;
-    margin-bottom: 2em;
+    position: relative;
+    margin: 0 auto;
+    margin-left: 1em;
+    margin-right: 1em;
     margin-top: 2em;
+    color: white;
+    text-align:center;
+    padding-top:1em;
+    padding-bottom: 1em;  
+    padding-left: 3em;
+    padding-right: 3em;
   }
-  #agreementStatement{
+
+
+   #careerProfile-form p.editProfile a{
+    color: white;
+    text-decoration:none;
+  }
+
+
+  p#agreementStatement{
     padding: 1em;
     color: white;
+    
   }
   p#description{
     padding: 1em;
@@ -1297,17 +1356,33 @@ img#profileImage{
 
   }
 
-  #careerProfile-form input[type="checkbox"]{
-    float: right;
+  #careerProfile-form p input[type="checkbox"]{
+    float: left;
     width: 1em;
     height: 1em;
-    position: relative;
-    magin-top: 1em;
-    // margin-top: 6em;
-    // margin-left: -2em;
+    margin-top: -1em;
+    margin-left: 1em;
     border: none;
   }
+ #careerProfile-form select#service_type{
+  border-bottom: 0.1em white solid;
+  border-top: 0.1em white solid;
+  color: white;
+  @include input;
+  width: 80%;
+}
+#careerProfile-form select option {
+  background-color: #242424; color:white;
+  border: none;
+}
 
+#careerProfile-form select#career_type{
+  color: white;
+  border-bottom: 0.1em white solid;
+  border-top: 0.1em white solid;
+  @include input;
+width: 80%;
+}
 
 /* ==========================================================================
    POSTS
@@ -1741,13 +1816,13 @@ img#serviceIcon{
     display: none;
   }
   .nav-handle-user{
-    top: -5em;
-    /*  background-color: rgba(255,255,255,0.5);*/
+    top: -4em;
+    left: 2em;
     display: block;
     height: 3em;
     margin: 0 auto;
     position: relative;
-    width: 50%;
+    width: 80%;
     /*margin-right: 18em;*/
   }
   .nav-handle-user img{
@@ -2293,38 +2368,29 @@ ul#main-nav{
   position: absolute;
   margin-left: 1em;
   /*height: 100%;*/
-  width: 110%;
+  width: 160%;
 }
 
 #ponsonbyHousing img{
  /* height: 65%;*/
- width: 115%;
- margin-top: 10em;
- margin-left: 6em;
+ width: 205%;
+ margin-top: 12em;
+ margin-left: 0em;
  display: block;
  position: absolute;
 
 
 }
-#ponsonbyHousing img{
- /* height: 65%;*/
- width: 115%;
- margin-top: 10em;
- margin-left: 6em;
- display: block;
- position: absolute;
 
-
-}
 #hideBicycle img#workingGirl{
   margin-left: -5em;
 }
 
 img#workingGirl {
-  width: 5em;
-    height: 5em;
+  width: 4em;
+    height: 4em;
     position: absolute;
-    top: 16em;
+    top: 18em;
     display:block;
 
   }
@@ -2349,7 +2415,7 @@ img#workingGirl {
     color: black;
     font-size:1.6em;
     font-weight: 500;
-    width: 65%;
+    // width: 60%;
     margin-left: 0em;
     font-weight: 500;
     margin-top: 0em;
@@ -2448,6 +2514,7 @@ img#workingGirl {
     float: left;
     width: 46%;
     height: 3em;
+    margin: 0.5em;
   }
 
   ul#reasonsToSignUp{
@@ -2567,10 +2634,10 @@ form#signup-form span{
  border-bottom: none;
  box-shadow: none;
  float: left;
- width: 88%;
+ width: 43%;
  height: 3.4em;
 
- margin-left: 0.5em;
+ margin-left: 1em;
  
 }
 
@@ -2578,7 +2645,7 @@ form#signup-form span{
   width: 1em;
   height: 1em;
   position: relative;
-  margin-top: 6em;
+  margin-top: 5em;
   margin-left: -2em;
   border: none;
 }
@@ -2617,9 +2684,12 @@ form#signup-form span{
     float: left;
     margin-left: 2em;
 
+
   }
 
-
+#careerProfile-form label{
+  font-size: 0px;
+}
 
   #career-profile p{
     float: left;
@@ -2633,8 +2703,8 @@ form#signup-form span{
 
   form#careerProfile-form{
     width: 100%;
-    margin-top: 7em;
-
+    margin-top: 6em;
+    
   }
 
   p#description{
@@ -2667,8 +2737,7 @@ form#signup-form span{
     border-bottom: 0.1em black solid;
     border-top: 0.1em black solid;
     color: black;
-
-    /*  width: 20em; */
+    width: 79%;
   }
   form#careerProfile-form span{
    border-bottom: 0.1em black solid;
@@ -2696,55 +2765,70 @@ form#signup-form span{
    @include input;
    
  }
+#careerProfile-form p{
+  margin-top: -0.2em;
+}
 
+#careerProfile-form p textarea{
+  margin-left: -0.3em;
+}
+#careerProfile-form p select{
+  margin-left: -0.3em;
+}
 
-
- #careerProfile-form select#servicesSel{
+ #careerProfile-form select#service_type{
   border-bottom: 0.1em black solid;
   border-top: 0.1em black solid;
   color: black;
-
+  @include input;
+  width: 79%;
 }
 
 
-#careerProfile-form select#careerClass{
+#careerProfile-form select#career_type{
   color: black;
   border-bottom: 0.1em black solid;
   border-top: 0.1em black solid;
-
+  @include input;
+width: 79%;
 }
 #careerProfile-form p#agreementStatement{
   color: black;
-  float: right;
-  width: 46%;
+  float: left;
+  width: 45%;
   margin-right: 2em;  
-  margin-top: -5em;
-  height: 7em;
-  padding: 0.5em;
+  margin-top: -2em;
+  
+  padding-right: 2em;
 }
-#careerProfile-form input[type="submit"]{
-  @include purpleButton;
-  border-top: none;
-  border-bottom: none;
-  width: 100%;
-  color: white;
-  box-shadow: none;
-  margin-bottom: 2em;
-  margin-top: 2em;
-}
-// #careerProfile-form input#checkbox{
-  //   margin-top: 35em;
-  //   margin-left: -4em;
-  //   width: 1em;
-  //   height: 1em;
 
-  // }
+#careerProfile-form p input[type="checkbox"] {
+margin-left: -3em;
+margin-top: 1em;
+width: 1em;
+height: 1em;
+float: left;
+border: none;
+}
+
   #careerProfile-form img#profileImage{
     width: 8em;
     height: 8em;
-    margin-left: 55%;
-    margin-top: 2em;
+    margin-left: 40%;
+    margin-bottom: 1em;
 
+
+  }
+  #careerProfile-form p.editProfile{
+    @include purpleButton;
+  border-top: none;
+  border-bottom: none;
+  width: 44%;
+  margin-left: 0.5em;
+  color: white;
+  box-shadow: none;
+  margin-bottom: 2em;
+  margin-top:0em;
   }
 
 /* ==========================================================================
@@ -3325,9 +3409,19 @@ form#mobdeskForm p#rememberMe{
 
 
 }
+  @media only screen and (min-width: 60em) {
+#ponsonbyHousing img{
+
+ width: 205%;
+ margin-top: 13em;
+ margin-left: 3em;
+ display: block;
+ position: absolute;
 
 
+}
 
+}
 /* ==========================================================================
    DESKTOP
    ========================================================================== */
@@ -3336,30 +3430,33 @@ form#mobdeskForm p#rememberMe{
    margin-top: 0em;
    position: relative;
    display: block;
-   height: 26em;
+   height: 24em;
    width: 100%;
  }
  #aucklandSkyline img{
-  margin-top: -8em;
+  margin-top: 0em;
   opacity: 0.3;
   position: absolute;
-  margin-left: 1em;
+ 
 
   width: 110%;
 }
 
 #ponsonbyHousing img{
 
- width: 105%;
- margin-top: 14em;
- margin-left: 5em;
+ width: 205%;
+ margin-top: 12em;
+ margin-left:0em;
  display: block;
  position: absolute;
 
 
 }
 img#workingGirl{
-  margin-top: 4em;
+  margin-top: 2em;
+}
+#intro-paragraph-loggedin{
+  width: 60%;
 }
 
   }
@@ -3379,27 +3476,27 @@ img#workingGirl{
    width: 100%;
  }
  #aucklandSkyline img{
-  margin-top: -9em;
+  margin-top: 0em;
   opacity: 0.3;
   position: absolute;
-  margin-left: 1em;
+  margin-left: 0em;
   /*height: 100%;*/
   width: 100%;
 }
 
 #ponsonbyHousing img{
  
- width: 100%;
- margin-top: 15em;
- margin-left: 5em;
+ width: 205%;
+ margin-top: 12em;
+ margin-left: 0em;
  display: block;
  position: absolute;
 
 
 }
 
-img#workingGirl{
-  margin-top: 6em;
+#hideBicycle img#workingGirl{
+  margin-top:2em;
 }
 
   }
@@ -3414,7 +3511,7 @@ img#workingGirl{
    margin-top: 0em;
    position: relative;
    display: block;
-   height: 30em;
+   height: 28em;
    width: 100%;
  }
  #aucklandSkyline img{
@@ -3428,8 +3525,8 @@ img#workingGirl{
 
 #ponsonbyHousing img{
  /* height: 65%;*/
- width: 105%;
- margin-top: 16em;
+ width: 205%;
+ margin-top: 18em;
  margin-left: 1em;
  display: block;
  position: absolute;

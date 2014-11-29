@@ -7,9 +7,9 @@
 
     <!-- Introduction Section -->
     <section id="introduction">
-        <h2 id="intro-paragraph-loggedin">Career Consult understands that when you are looking for a job, or need employment advice, money can be a concern.</h2>
-        <p class="para-loggedin">I aim to reduce this worry by offering a FREE 15 minute consultation to determine your needs and prepare a tailored plan.</p>
-        <p class="para-loggedin">There is no obligation to book an appointment after your consultation, however prices are set so that most budgets can use this service.</p>
+        <h2 id="intro-paragraph-loggedin">Career Consult understands that when you are looking for a job, or need employment advice, money can be a concern. I aim to reduce this worry by offering a free 15 minute consultation to determine your needs and prepare a tailored plan.</h2>
+        <!-- <p class="para-loggedin">I aim to reduce this worry by offering a FREE 15 minute consultation to determine your needs and prepare a tailored plan.</p>
+        <p class="para-loggedin">There is no obligation to book an appointment after your consultation, however prices are set so that most budgets can use this service.</p> -->
         <div id="introButtons">
             <i id="rightarrow" class="fa fa-angle-right"></i>
             <div id="launchCareer">
@@ -25,8 +25,8 @@
     <section id="animation">
         <h1 style="font-size: 0em;">Auckland Skyline</h1>
         <div id="aucklandSkyline"><img src="{{URL::to('img/Auckland-skyline.png')}}" alt="Auckland City"></div>
-        <div id="ponsonbyHousing"><img src="{{URL::to('img/Ponsonby_Grey.png')}}" alt="Auckland City"></div>
-        <div id="hideBicycle"><img src="{{URL::to('img/CareerConsultBicyle_grey.png')}}" alt="Career Consult" id="workingGirl" style=""></div>
+        <div id="ponsonbyHousing"><img src="{{URL::to('img/Ponsonby_Grey_Street.fw.png')}}" alt="Ponsonby"></div>
+        <div id="hideBicycle"><img src="{{URL::to('img/CareerConsultBicyle_grey.png')}}" alt="Career Consult, working girl" id="workingGirl" style=""></div>
     </section>
 
 </div>

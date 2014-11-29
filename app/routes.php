@@ -74,7 +74,7 @@ Route::post('login',function(){
 
 	$aLoginDetails=array(
 		'username'=>Input::get('username'),
-		'password'=>Input::get('password'),
+		'password'=>Input::get('password')
 		// 'checkbox'=>Input::get('check')
 	);
 	if(Auth::attempt($aLoginDetails)){
@@ -197,7 +197,44 @@ Route::get('careerprofile/{id}/edit',function($id){
 	// allow sticky data to you are able to edit the data
 	$oUser = User::find($id);
 
-	return View::make("editcareerprofile")->with("user", $oUser);
+	return View::make("careerprofile-edit")->with("user", $oUser);
 	// now bind one by one for each input
+
+
+})->before("auth");
+
+Route::put('careerprofile/{id}',function($id){
+
+	// validate data
+	$aRules = array(
+
+	"avatar" => 'required',	
+	"username" => 'required',
+	"email" => 'required|email|unique:users,email,'.$id,	
+	"firstname" => 'required',
+	"lastname" => 'required',
+	"phone" => 'required',
+	"service_type" => 'required');
+
+	$oValidator = Validator::make(Input::all(),$aRules);
+
+	if($oValidator->passes()){
+		// update user detail
+
+		$oUser = User::find($id);
+		$oUser->fill(Input::all());
+		$oUser->save();
+
+
+		// redirect to user page
+		return Redirect::to("careerprofile/".$id);
+
+
+	}else{
+		// redirect to editUserDetails with sticky data input and errors
+		return Redirect::to('careerprofile/'.$id.'/edit')->withErrors($oValidator)->withInput();//session flash data (old input)
+								 
+	
+}
 
 })->before("auth");
