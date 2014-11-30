@@ -8,7 +8,8 @@
         <p>Career Consult offer a number of services, which you can pick and choose to suit your needs. Please sign up to and recieive a free 15min consultation and let us help you launch your career.</p>
         <div id="accordion">
         @foreach(Service::all() as $service)
-            <h3><img src="{{$service->icon}}" alt="service icon image" id="serviceIcon">>{{$service->service_type}}</h3>
+        <img src="{{URL::to('uploads/'.$service->icon)}}" alt="header services, icon image" id="serviceIcon">
+            <h3>{{$service->service_type}}</h3>
             
             <div class="serviceContent">
                 <ul>
@@ -71,7 +72,7 @@
             </article>   
             @endforeach
             <!-- this will create links which is a ul li -->
-            {{$pagPostTypes->links()}}        
+            <div id="pagination">{{$pagPostTypes->links()}}</div>        
   
         </section>
         

@@ -36,10 +36,10 @@
       @endforeach   
 </ul> 
     
-</div> 
-
 </div>
 
+</div>
+<div id="testimonialImage"><img src="img/AucklandCityExtended.png" alt="testimonials from career consult"></div>
 </div>
 
 <!-- Log in pop up -->
