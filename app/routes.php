@@ -42,6 +42,12 @@ Route::get('pricing', function(){
 	return View::make('pricing');
 	
 });
+//post 
+Route::get('post/{id}', function($id){
+	$oPost = Post::find($id);
+	return View::make('post')->with("post",$oPost);
+	
+});
 
 
 
@@ -184,7 +190,7 @@ Route::post('users',function(){
 
 
 //make form for CareerProfile with user id and put the concrete data into the controls
-Route::get('careerprofile/{id}', function($id){
+Route::get('users/{id}', function($id){
 
 	$oUser = User::find($id);
 
@@ -204,6 +210,8 @@ Route::get('users/{id}/edit',function($id){
 
 })->before("auth");
 
+
+
 Route::put('users/{id}',function($id){
 
 	// validate data
@@ -222,15 +230,22 @@ Route::put('users/{id}',function($id){
 	$oValidator = Validator::make(Input::all(),$aRules);
 
 	if($oValidator->passes()){
-		// update user detail
+		// update user avatar
 
+		$sNewPhotoName = Input::get("firstname").".".Input::file('avatar')->getClientOriginalExtension();
+		Input::file("avatar")->move("uploads",$sNewPhotoName);
+
+		$aDetails["avatar"] = $sNewPhotoName;
+		
+		// update user details
 		$oUser = User::find($id);
 		$oUser->fill(Input::all());
+
 		$oUser->save();
 
 
 		// redirect to user page
-		return Redirect::to('users/{id}');
+		return Redirect::to('users/'.$id);
 
 
 	}else{

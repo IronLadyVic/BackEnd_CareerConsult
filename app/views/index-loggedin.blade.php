@@ -16,7 +16,7 @@
                 <a href="{{URL::to('book/')}}"><span>BOOK AN APPOINTMENT</span></a>
             </div>
             <div id="careerButton">
-                <a href="{{URL::to('careerprofile/'.Auth::user()->id)}}"><span>CAREER PROFILE</span></a>
+                <a href="{{URL::to('users/'.Auth::user()->id)}}"><span>CAREER PROFILE</span></a>
             </div>
         </div>
 

@@ -9,7 +9,7 @@
 
         <p id="description">Start updating your Career Profile.</p>
 
-        {{ Form::model($user, array('url' => 'users/'.$user->id, 'files'=>'true', 'id'=>'careerProfile-form')) }} 
+        {{ Form::model($user, array('url' => 'users/'.$user->id, 'method'=>'put', 'files'=>'true', 'id'=>'careerProfile-form')) }} 
         <?php
             $sPhoto = URL::to('img/careerprofile-BLK.png');
 
@@ -109,14 +109,14 @@
             '23'=>'Insurance and Superannuation', '24'=>'Legal', '25'=>'Manufacturing, Transport and Logistics', '26'=>'Marketing and Communications', '27'=>'Mining, Resources and Energy',
             '28'=>'Real Estate and Property', '29'=>'Retail and Consumer Products', '30'=>'Sales', '31'=>'Sales', '32'=>'Science and Technology', '33'=>'Self Employment', '34'=>'Sport and Recreation', '35'=>'Trades and Services'))}}
             
-           <!--  {{$errors->first('select','<p class="error">:message</p>')}}  -->    
+            {{$errors->first('select','<p class="error">:message</p>')}}     
         </p>
         <p>
             <span class="border"><i  class="fa fa-hand-o-right"></i></span>        
             {{Form::label('service_type','', array('id'=>'service_type'))}}
 
             {{Form::select('service_type', array('0' => 'Services I am interested in..','1'=>'CV Writing & Cover Letters','2'=>'Interview Preparation','3'=>'New to NZ', '4'=>'Employment Contracts', '5'=>'General Job Seeking Advice', '6'=>'General Employment Advice'))}}
-            <!-- {{$errors->first('service_type','<p class="error">:message</p>')}}  -->
+            {{$errors->first('service_type','<p class="error">:message</p>')}} 
         </p>
         
         <p class="editProfile">

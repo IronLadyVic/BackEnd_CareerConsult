@@ -37,6 +37,10 @@
 <header>
 @if(Auth::check())    
   <div id="brand_logo"><a href="{{URL::to('welcome/'.Auth::user()->id)}}"><img src="{{asset('img/CareerConsult_logo.png')}}" alt="career consult logo"></a></div>
+@else
+  <div id="brand_logo"><a href="{{URL::to('index')}}"><img src="{{asset('img/CareerConsult_logo.png')}}" alt="career consult logo"></a></div>
+
+
 @endif
 
 <div class="search-container">
@@ -55,30 +59,30 @@
       <li id="menuServices"><a href="{{URL::to('services/')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
       <li id="seletedServices">
         <ul>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
+        <li><a href="{{URL::to('services/1')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
+        <li><a href="{{URL::to('services/2')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
+        <li><a href="{{URL::to('services/3')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
+        <li><a href="{{URL::to('services/4')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
+        <li><a href="{{URL::to('services/5')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
+        <li><a href="{{URL::to('services/6')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
         </ul>
       </li>           
       <li><a href="{{URL::to('pricing/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
       <li><a href="{{URL::to('testimonials/')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
       <li><a href="{{URL::to('about/')}}"><i class="fa fa-briefcase"></i><p>About</p></a></li>
       <li><a href="{{URL::to('book/')}}"><i class="fa fa-calendar"></i><p>Book</p></a></li>
-      <li><a href="{{URL::to('careerprofile/'.Auth::user()->id)}}"><i class="fa fa-archive"></i><p class="styleList">My Career Profile</p></a></li>
+      <li><a href="{{URL::to('users/'.Auth::user()->id)}}"><i class="fa fa-archive"></i><p class="styleList">My Career Profile</p></a></li>
       <li><a href="{{URL::to('logout')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
       @else
     <li id="menuServices"><a href="{{URL::to('services/')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
       <li id="seletedServices">
         <ul>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
-        <li><a href="{{URL::to('services/')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
+        <li><a href="{{URL::to('services/1')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
+        <li><a href="{{URL::to('services/2')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
+        <li><a href="{{URL::to('services/3')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
+        <li><a href="{{URL::to('services/4')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
+        <li><a href="{{URL::to('services/5')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
+        <li><a href="{{URL::to('services/6')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
         </ul>
       </li>           
       <li><a href="{{URL::to('pricing/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
@@ -126,13 +130,15 @@
     <div id="profilePic">
       <a href="{{URL::to('careerprofile/'.Auth::user()->id)}}">
         <img src="{{URL::to('uploads/'.Auth::user()->avatar)}}" alt="user" id="userProfile">
-        <!-- '->' refers to the table row in the database. When user logs in, the model Auth is a function in laravel - get that users id and use their avatar to upload here-->
-    </a>
+   </a>
     </div>
    
     <p id="signedInTag">Welcome, {{{Auth::user()->firstname}}}.</p> 
-    
-</div> 
+</div>
+@else 
+<div class="nav-handle-login">
+    <div id="navLogIn"><i id="navRightArrow" class="fa fa-angle-right"></i><a href="{{URL::to('login/')}}" id="loginHandle">LOG IN</a></div>   
+</div>  
 @endif
 
 </header> 
