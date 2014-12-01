@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.12
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:8889
--- Generation Time: Nov 18, 2014 at 10:12 AM
--- Server version: 5.5.34
--- PHP Version: 5.5.10
+-- Host: 127.0.0.1
+-- Generation Time: Dec 01, 2014 at 05:11 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `careerconsult`
@@ -20,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `posts`
 --
 
-CREATE TABLE `posts` (
+CREATE TABLE IF NOT EXISTS `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `topic_id` int(11) NOT NULL,
   `title` varchar(5000) NOT NULL,
@@ -49,10 +55,10 @@ INSERT INTO `posts` (`id`, `topic_id`, `title`, `photo_path`, `content`, `avatar
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pricing`
+-- Table structure for table `prices`
 --
 
-CREATE TABLE `pricing` (
+CREATE TABLE IF NOT EXISTS `prices` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `price` varchar(5000) NOT NULL,
   `content` text NOT NULL,
@@ -63,10 +69,10 @@ CREATE TABLE `pricing` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `pricing`
+-- Dumping data for table `prices`
 --
 
-INSERT INTO `pricing` (`id`, `price`, `content`, `created_at`, `updated_at`, `deleted_at`) VALUES
+INSERT INTO `prices` (`id`, `price`, `content`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'FREE', '15 minute consultation\r\nVia telephone or emailhowever\r\nSkype\r\nFace to Face\r\nI will phone you', '2014-11-18 09:03:55', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, '$30', '30 minute appointment\r\nCover a range of services\r\nSign up, and prepare your Career Profile for a consultation\r\nCV Design\r\nMeet up in Ponsonby', '2014-11-18 09:03:55', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (3, '$40', '45 minute appointment\r\nHave a service tailored to your needs\r\nSign up, and prepare your Career Profile for a consultation\r\nPrepare your CV and Interview Questions\r\nMeet in CBD', '2014-11-18 09:04:22', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -80,7 +86,7 @@ INSERT INTO `pricing` (`id`, `price`, `content`, `created_at`, `updated_at`, `de
 -- Table structure for table `services`
 --
 
-CREATE TABLE `services` (
+CREATE TABLE IF NOT EXISTS `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `icon` varchar(5000) NOT NULL,
   `service_type` varchar(5000) NOT NULL,
@@ -96,12 +102,12 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `icon`, `service_type`, `content`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'fa fa-file-text', 'CV Writing & Cover Letters', 'Choose from a number CV templates & assistance in creating a CV.\r\nReceive honest critique about your existing CV and / or cover letter.\r\nHow to tailor your CV and cover letter to a specific job.\r\nTips to help you ‘get that interview’.', '2014-11-18 09:00:31', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(2, 'fa fa-comments', 'Interview Preparation', 'Learn about the types of questions asked and how to effectively answer these.\r\nComplete a ‘mock interview’ to practice your approach & gain confidence.\r\nUseful tips to impress your interviewers and stand out from the crowd.\r\nGraduates: what to expect when attending a graduate programme interview.', '2014-11-18 09:00:31', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, 'fa fa-plane', 'New to NZ', 'NZ workplace culture – what to expect and how to adapt your approach.\r\nComprehensive spelling and grammar support for your CV and cover letter.\r\nOptions for job searching in NZ.', '2014-11-18 09:01:38', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(4, 'fa fa-file-archive-o', 'Employment Contracts', 'Independent advice on an employment contract before you sign it.', '2014-11-18 09:01:38', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(5, 'fa fa-users', 'General Job Seeking Advice', 'Effective on-line job searching.\r\nUnderstand recruitment agencies and how to get the best out of them.\r\nCreate an effective LinkedIn profile.\r\nUnderstand the realities of the job market.', '2014-11-18 09:02:46', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(6, 'fa fa-thumbs-up', 'General Employment Advice', 'Ask questions about your employment situation and your rights.\r\nCoaching for approaching difficult situations at work.\r\nAdvice and / or support person in disciplinary meetings.', '2014-11-18 09:02:46', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(1, 'file.png', 'CV Writing & Cover Letters', '<li>Choose from a number CV templates & assistance in creating a CV.</li>\n<li>Receive honest critique about your existing CV and / or cover letter.</li>\n<li>How to tailor your CV and cover letter to a specific job.</li>\n<li>Tips to help you ‘get that interview’.</li>', '2014-12-01 02:53:24', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 'comments.png', 'Interview Preparation', '<li>Learn about the types of questions asked and how to effectively answer these.</li>\n<li>Complete a ‘mock interview’ to practice your approach & gain confidence.</li>\n<li>Useful tips to impress your interviewers and stand out from the crowd.</li>\n<li>Graduates: what to expect when attending a graduate programme interview.</li>', '2014-12-01 02:31:55', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'aeroplane.png', 'New to NZ', '<li>NZ workplace culture – what to expect and how to adapt your approach.</li>\n<li>Comprehensive spelling and grammar support for your CV and cover letter.</li>\n<li>Options for job searching in NZ.</li>', '2014-12-01 02:32:10', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 'zipfile.png', 'Employment Contracts', '<li>Independent advice on an employment contract before you sign it.</li>', '2014-12-01 02:54:44', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 'users.png', 'General Job Seeking Advice', '<li>Effective on-line job searching.</li>\n<li>Understand recruitment agencies and how to get the best out of them.</li>\n<li>Create an effective LinkedIn profile.</li>\n<li>Understand the realities of the job market.</li>', '2014-12-01 02:54:59', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(6, 'thumbsup.png', 'General Employment Advice', '<li>Ask questions about your employment situation and your rights.</li>\n<li>Coaching for approaching difficult situations at work.</li>\n<li>Advice and / or support person in disciplinary meetings.</li>', '2014-12-01 02:32:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -109,7 +115,7 @@ INSERT INTO `services` (`id`, `icon`, `service_type`, `content`, `created_at`, `
 -- Table structure for table `testimonials`
 --
 
-CREATE TABLE `testimonials` (
+CREATE TABLE IF NOT EXISTS `testimonials` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content` text NOT NULL,
   `avatar` varchar(5000) NOT NULL,
@@ -137,7 +143,7 @@ INSERT INTO `testimonials` (`id`, `content`, `avatar`, `client`, `company`, `cre
 -- Table structure for table `topics`
 --
 
-CREATE TABLE `topics` (
+CREATE TABLE IF NOT EXISTS `topics` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(1000) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -163,7 +169,7 @@ INSERT INTO `topics` (`id`, `name`, `created_at`, `updated_at`, `deleted_at`) VA
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) NOT NULL,
   `password` varchar(50000) NOT NULL,
@@ -186,7 +192,7 @@ CREATE TABLE `users` (
   `deleted_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `admin` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `users`
@@ -199,4 +205,9 @@ INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `lastname`, `ema
 (4, 'Jay', '1', 'Jane', 'Clark', 'j.clark@xtra.co.nz', '021 234 1234', 'avatar-2.jpg', 'I am new to New Zealand, and wanting to know the right way to go about and get started by finding a job that suits me, not the other way around.', 'Previous Gymnastics coach teaching school age through to competitor.', 'Bachelor in Sport and Education.', 'Almost making the Commonwealth games in 2002, but my achievement was outweighed by a ankle injury. I believe this was an achievement in its own right, my lead up to the trials was hard, and I trained morning and night.', 'My Career involved working in a community group with school aged children in the weekends, teaching them a range of sports. I found I loved working with kids, and took on a role working as a part time gymnast instructor in England. I have come to NZ, to start a new journey and find a job and income.', 'Education & Training', 'New to NZ', 'Please help me find the right job, a full time job here in Auckland NZ.', '', '2014-11-18 08:05:17', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0),
 (5, 'JadaSmith', '1', 'Jada Pink', 'Smith', 'jades.smith@yahoo.com', '021 1234 234', 'avatar-4.jpg', 'To be a fully qualified pharmacist and work in a pharmaceutical company researching skin age care.', 'Administrative Assistant\r\nJanuary 2010 - Date\r\n\r\nAdministrative Co-ordinator\r\nAugust 2006 - November 2008', 'Bachelor of  Arts 2006', 'Top Grade 2006 for paper in American Pharmaceuticals.', 'Administrative Assistant\r\n\r\nPremier Pharmaceuticals, Christchurch, Nz\r\n\r\nJanuary 2010 - Date\r\n\r\nprovide full secretarial and administrative support to the 10-person sales department\r\nmanage customer requests for information\r\nprepare departmental correspondence, documents, reports, presentations\r\nschedule and coordinate meetings and appointments\r\ndraw up and distribute minutes of meetings\r\nplan and arrange travel itineraries\r\norganize functions and events\r\ntrack expense claims and prepare expense reports\r\nset up and maintain customer data management systems\r\n\r\nAdministrative Co-ordinator\r\n\r\nBuckleys Property Management Company, Christchurch, NZ\r\n\r\nAugust 2006 - November 2008\r\n\r\nprovided the full range of secretarial and administrative support to the Managing Director plus 5 employees\r\nscheduled meetings, appointments and property viewings\r\nco-ordinated company events and functions\r\nhandled incoming calls and correspondence\r\nprepared correspondence, documents, newsletters\r\nliaised directly with maintenance contractors, clients, tenants\r\nprocessed invoices and prepared payments', 'Science and Technology', 'Interview Preparation', 'Please help me prepare for a job interview I have dated for 30th of November 2014. Scared out of my wits. Thanks\r\nRegards\r\nJade', '', '2014-11-18 08:05:17', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0),
 (6, 'Justin1986', '1', 'Justin', 'Beibs', 'justinbeibs@gmail.com', '021 2345 234', 'avatar-5.jpg', 'I want a job to utilize the skills which I''ve gotten from my studies and my parents, teachers, friends and others.', 'Lead role in Les Miserables, both acting and singing for 3 month tour around NZ.\r\n\r\nSmall advertising acting role, where I portrayed a young man for Colgate toothpaste.', 'Bachelor of Drama', 'Achievement in fine arts at the School of Drama, Auckland, NZ.\r\n\r\nHonorable mention in the Sunday Star times for the lead role in Les Miserables 2010.', '2010, 3mth contract \r\nActors Guild, Auckland\r\n\r\n2009-2010\r\nBar Manager\r\nFoodStore\r\n\r\n2008 - 2009\r\nAuckland Actors Company', 'Advertising, Arts and Media', 'Employment Contracts', 'Please help me with my next acting gig, I need help with a current contract I have signed, my employer is not doing the right thing, I need a human resources help.', '', '2014-11-18 08:23:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0),
-(7, 'karfifie1234', '1', 'Karfifie', 'James', 'karfif@gmail.com', '02134 1122', 'avatar-6.jpg', 'I wouldn''t know where to start, and have no real goal, but take interest in Real Estate and doing up houses.', 'No Real Estate experience. But experience in buying my own houses and doing these up and selling for a captial gain. My experience comes from researching house in garden and inspired by online media.', 'Certificate in Microsoft Office', 'Selling five of my homes with in a space of three years and making a substantial captial gain. Love making lots of money.', 'House wife, Christchurch\r\nAndre Biani, Merivale Mall, sales assistant, Christchurch\r\nFirst year of architect studies at Canterbury University', 'Design & Architecture', 'General Employment Advice', 'need general employment advice and confidence in finding a real job.', '', '2014-11-18 08:23:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0);
+(7, 'karfifie1234', '1', 'Karfifie', 'James', 'karfif@gmail.com', '02134 1122', 'avatar-6.jpg', 'I wouldn''t know where to start, and have no real goal, but take interest in Real Estate and doing up houses.', 'No Real Estate experience. But experience in buying my own houses and doing these up and selling for a captial gain. My experience comes from researching house in garden and inspired by online media.', 'Certificate in Microsoft Office', 'Selling five of my homes with in a space of three years and making a substantial captial gain. Love making lots of money.', 'House wife, Christchurch\r\nAndre Biani, Merivale Mall, sales assistant, Christchurch\r\nFirst year of architect studies at Canterbury University', 'Design & Architecture', 'General Employment Advice', 'need general employment advice and confidence in finding a real job.', '', '2014-11-18 08:23:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0),
+(8, 'Kathryn1985', '$2y$10$jaKgV/kdHYL/a4vv5YfnYu9w5DRELNPpuM.nBBbikG9iWIti19XpG', 'Kathy', 'Bates', 'kbates@gmail.com', '021 678 223', 'Kathy.png', '', '', '', '', '', '', '6', 'Please help me with general job employment\r\n', 'ddFXvKXy5eG77gIEJAFRTAGCKK8QutyHtMiTt9eOoeMD9sT0aKlDjZJ7peKn', '2014-12-01 03:34:46', '2014-11-30 14:34:46', '0000-00-00 00:00:00', 0);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
