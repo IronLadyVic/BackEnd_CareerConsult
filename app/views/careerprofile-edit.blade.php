@@ -7,7 +7,7 @@
     <section id="career-profile">
         <h1 id="header">CAREER PROFILE</h1>
 
-        <p id="description">By updating your Career Profile, this will help your career consultant provide the correct service and help you launch your career, faster and easier.</p>
+        <p id="description">Start updating your Career Profile.</p>
 
         {{ Form::model($user, array('url' => 'users/'.$user->id, 'files'=>'true', 'id'=>'careerProfile-form')) }} 
         <?php
@@ -24,10 +24,10 @@
         </div>
         
         <p>
-            <span class="border"><i class="fa fa-camera"></i></span>
+            <span class="border"><i class="fa fa-camera"></i></span>            
             {{Form::label('avatar','', array('id'=>'avatar'))}}
-            {{Form::file('avatar', array('disabled'=>'disabled', 'id' => 'avatar', 'class'=>'border'))}}
-            <!-- {{$errors->first('avatar','<p class="error">:message</p>')}} -->
+            {{Form::file('avatar', array('id' => 'avatar', 'class'=>'border'))}}
+            {{$errors->first('avatar','<p class="error">:message</p>')}}
         </p>
 
         <p>
@@ -37,66 +37,65 @@
             <!-- {{$errors->first('username','<p class="error">:message</p>')}} -->
 
         </p>
-
         <p>
             <span class="border"><i class="fa fa-envelope"></i></span>
             {{Form::label('email','', array('id'=>'email'))}}
-            {{Form::email('email', $user->email, array('disabled'=>'disabled', 'id'=>'email', 'placeholder'=>'Email', 'class'=>'border'))}}
-            <!-- {{$errors->first('email','<p class="error">:message</p>')}} -->
+            {{Form::email('email', $user->email, array('id'=>'email', 'placeholder'=>'Email', 'class'=>'border'))}}
+            {{$errors->first('email','<p class="error">:message</p>')}}
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-user"></i></span>
             {{Form::label('firstname','', array('id'=>'firstName'))}}
-            {{Form::text('firstname', $user->firstname, array('disabled'=>'disabled', 'id'=>'firstName', 'placeholder'=>'First Name', 'class'=>'border'))}}
-            <!-- {{$errors->first('firstname','<p class="error">:message</p>')}} -->
+            {{Form::text('firstname', $user->firstname, array('placeholder'=>'First Name', 'class'=>'border'))}}
+            {{$errors->first('firstname','<p class="error">:message</p>')}}
         </p>
 
         <p>
             <span class="border"><i class="fa fa-user"></i></span>
             {{Form::label('lastname','', array('id'=>'lastName'))}}
-            {{Form::text('lastname', $user->lastname, array('disabled'=>'disabled', 'id'=>'lastName', 'placeholder'=>'Last Name', 'class'=>'border'))}}
-            <!-- {{$errors->first('lastname','<p class="error">:message</p>')}} -->
+            {{Form::text('lastname', $user->lastname, array('placeholder'=>'Last Name', 'class'=>'border'))}}
+            {{$errors->first('lastname','<p class="error">:message</p>')}}
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-phone-square"></i></span>
             {{Form::label('phone','', array('id'=>'contact'))}}
-            {{Form::text('phone', $user->phone, array('disabled'=>'disabled', 'id'=>'contact', 'placeholder'=>'Contact Number', 'class'=>'border'))}}
-            <!-- {{$errors->first('phone','<p class="error">:message</p>')}} -->
+            {{Form::text('phone', $user->phone, array( 'id'=>'contact', 'placeholder'=>'Contact Number', 'class'=>'border'))}}
+            {{$errors->first('phone','<p class="error">:message</p>')}}
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
             {{Form::label('personal_goal','', array('id'=>'personalGoals'))}}
-            {{Form::textarea('personal_goal', '', array('disabled'=>'disabled', 'id'=>'personalGoals', 'placeholder'=>'Personal Goals', 'class'=>'border'))}}
+            {{Form::textarea('personal_goal', '', array('id'=>'personalGoals', 'placeholder'=>'Personal Goals', 'class'=>'border'))}}
             <!-- {{$errors->first('personal_goal','<p class="error">:message</p>')}} -->
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
             {{Form::label('experience','', array('id'=>'experience'))}}
-            {{Form::textarea('experience', '', array('disabled'=>'disabled', 'id'=>'experience', 'placeholder'=>'Experience', 'class'=>'border'))}}
+            {{Form::textarea('experience', '', array('id'=>'experience', 'placeholder'=>'Experience', 'class'=>'border'))}}
             <!-- {{$errors->first('experience','<p class="error">:message</p>')}}  -->
         </p>
         
         <p>
             <span class="border"><i class="fa fa-university"></i></span>
             {{Form::label('education','', array('id'=>'education'))}}
-            {{Form::textarea('education', '', array('disabled'=>'disabled', 'id'=>'education', 'placeholder'=>'Education', 'class'=>'border'))}}
+            {{Form::textarea('education', '', array('id'=>'education', 'placeholder'=>'Education', 'class'=>'border'))}}
             <!-- {{$errors->first('education','<p class="error">:message</p>')}}  -->
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-trophy"></i></span>
             {{Form::label('acheivements','', array('id'=>'acheivements'))}}
-            {{Form::textarea('acheivements', '', array('disabled'=>'disabled', 'id'=>'acheivements', 'placeholder'=>'Acheivements', 'class'=>'border'))}}
+            {{Form::textarea('acheivements', '', array('id'=>'acheivements', 'placeholder'=>'Acheivements', 'class'=>'border'))}}
             <!-- {{$errors->first('acheivements','<p class="error">:message</p>')}}   -->
         </p>
         <p>
             <span class="border"><i class="fa fa-history"></i></span>
             {{Form::label('career_history','', array('id'=>'careerHistory'))}}
-            {{Form::textarea('career_history', '', array('disabled'=>'disabled', 'id'=>'careerHistory', 'placeholder'=>'Career History', 'class'=>'border'))}}
+            {{Form::textarea('career_history', '', array('id'=>'careerHistory', 'placeholder'=>'Career History', 'class'=>'border'))}}
            <!--  {{$errors->first('career_history','<p class="error">:message</p>')}}   -->
         </p>
         <p>
@@ -121,11 +120,9 @@
         </p>
         
         <p class="editProfile">
-            <a href="{{URL::to('careerprofile/'.$user->id.'/edit')}}">UPDATE MY PROFILE</a>
+            <a href="{{URL::to('users/'.$user->id.'/edit')}}">UPDATE MY PROFILE</a>
             </p>
-        <p id="agreementStatement" class="border">In order to keep you informed and help you with your future career, we will retain your career profile for future career consult meetings and career planning. I consent by ticking this box. </p>           
-        <p>{{Form::checkbox('check', 'consent given', true, array('id' => 'checkboxCareerProfile'))}}</p>        
-            <!-- {{$errors->first('checkbox','<p class="border">:message</p>')}} -->            
+         
             
             
             {{Form::close()}}

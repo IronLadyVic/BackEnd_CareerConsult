@@ -1,4 +1,4 @@
-@extends('includes.master-login')
+@extends('includes.master')
 @section("content")
 
 <!-- Start of Services -->
@@ -25,7 +25,10 @@
             
 
         </div>
-    </section>   
+    </section>
+    </div>
+        <div id="pricingImage"><img src="img/AucklandCityExtended.png" alt="testimonials from career consult"></div>
+</div>   
 </div>
 
 <!-- Log in pop up -->

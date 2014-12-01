@@ -180,7 +180,7 @@
     /* margin-left: -20em;*/
     /*opacity: 0.8;*/
     position: relative;
-    border-bottom: 1px #928CC4 solid !important; }
+    border-bottom: 1px #928cc4 solid !important; }
 
   #ponsonbyHousing img {
     display: none; }
@@ -457,7 +457,7 @@
 
   #pricesListed h1 {
     width: 85%;
-    margin-left: 1em;
+    margin-left: 0.5em;
     color: white; }
 
   .pricing_table {
@@ -467,7 +467,7 @@
     height: auto;
     margin-right: 2em;
     margin-top: 2em;
-    margin-left: 2em;
+    margin-left: 1em;
     width: 85%;
     /*margin: 0 1em 0 0;*/ }
 
@@ -482,7 +482,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 5em;
     color: white; }
@@ -502,6 +502,9 @@
     border-top: 1px solid #fff;
     line-height: 1.3em;
     color: #404040; }
+
+  #pricingImage img {
+    display: none; }
 
   /* ==========================================================================
      PAGINATION
@@ -619,13 +622,13 @@
      ACTIVE HOLD ON LI DROP DOWN MENU
      ========================================================================== */
   ul#main-nav li:active {
-    background-image: linear-gradient(#9B8FFB, #2B2937); }
+    background-image: linear-gradient(#9b8ffb, #2b2937); }
 
   ul#main-nav li p:active {
-    color: #E6E6FA; }
+    color: lavender; }
 
   ul#main-nav li i:active {
-    color: #E6E6FA; }
+    color: lavender; }
 
   header #main-header ul#main-nav li a {
     text-decoration: none;
@@ -1492,7 +1495,7 @@
       INPUT ERRORS
       ========================================================================== */
   .invalid {
-    color: #9B8FFB;
+    color: #9b8ffb;
     font-size: 0.5em;
     position: absolute;
     margin-top: -1em; }
@@ -1901,7 +1904,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 110px;
     color: white; }
@@ -1922,6 +1925,12 @@
     border-top: 1px solid #fff;
     line-height: 1.3em;
     color: #404040; }
+
+  #pricingImage img {
+    display: block;
+    width: 100%;
+    margin-top: -5em;
+    opacity: 0.5; }
 
   /* ==========================================================================
      Login when you press login button form styling
@@ -2224,10 +2233,11 @@
     margin-top: 1em; }
 
   section#signing-up {
-    width: 70%;
+    width: 80%;
     height: 68em;
     float: left;
-    margin-left: 2em; }
+    margin-top: -26em;
+    margin-left: 17em; }
 
   form#signup-form {
     width: 100%;
@@ -2236,17 +2246,18 @@
   #signing-up p#description {
     color: black;
     font-size: 1.1em;
-    margin-left: -0.5em; }
+    margin-left: -1em; }
 
   #signing-up p {
     float: left;
     width: 46%;
     height: 3em;
-    margin: 0.5em; }
+    margin: 0.5em;
+    margin-left: -1em; }
 
   ul#reasonsToSignUp {
     height: 8em;
-    width: 100%;
+    width: 80%;
     margin-left: -0.2em; }
 
   ul#reasonsToSignUp li {
@@ -2347,8 +2358,8 @@
     color: black;
     height: 7em;
     width: 90%;
-    margin-top: 0.5em;
-    margin-left: 0.5em; }
+    margin-top: 0em;
+    margin-left: -1em; }
 
   #signup-form input#signUp {
     border-radius: 0.2em;
@@ -2362,7 +2373,7 @@
     float: left;
     width: 43%;
     height: 3.4em;
-    margin-left: 1em; }
+    margin-left: -0.5em; }
 
   #signup-form input[type="checkbox"] {
     width: 1em;
@@ -2375,12 +2386,14 @@
   #signup-form img#profileImage {
     position: relative;
     margin: 0 auto;
-    margin-left: 39%;
+    margin-left: 35%;
     background-color: #242424;
-    color: #242424;
-    /*background-image: url('img/careerprofile-BLK.png');
-    background-repeat: no-repeat;*/
-    /* position: absolute;*/ }
+    color: #242424; }
+
+  #signup-form select option {
+    background-color: #f4f2ef;
+    color: black;
+    border: none; }
 
   #signing-up p.error {
     position: relative;
@@ -2397,7 +2410,7 @@
 
   section#career-profile {
     width: 70%;
-    height: 68em;
+    height: 50em;
     float: left;
     margin-left: 2em; }
 
@@ -2411,13 +2424,14 @@
 
   form#careerProfile-form {
     width: 100%;
-    margin-top: 6em; }
+    margin-top: 6em;
+    margin-left: 1em; }
 
   p#description {
     color: black !important;
     font-size: 1.1em;
     margin-left: -0.5em;
-    width: 100%; }
+    width: 80%; }
 
   #careerProfile-form p {
     float: left;
@@ -2470,7 +2484,8 @@
     color: white; }
 
   #careerProfile-form p {
-    margin-top: -0.2em; }
+    margin-top: -0.2em;
+    margin-left: -1em; }
 
   #careerProfile-form p textarea {
     margin-left: -0.3em; }
@@ -2519,7 +2534,7 @@
   #careerProfile-form img#profileImage {
     width: 8em;
     height: 8em;
-    margin-left: 40%;
+    margin-left: 35%;
     margin-bottom: 1em; }
 
   #careerProfile-form p.editProfile {
@@ -2529,12 +2544,17 @@
     text-decoration: none;
     border-top: none;
     border-bottom: none;
-    width: 44%;
-    margin-left: 0.5em;
+    width: 45%;
+    margin-left: 0em;
     color: white;
     box-shadow: none;
     margin-bottom: 2em;
     margin-top: 0em; }
+
+  #careerProfile-form select option {
+    background-color: #f4f2ef;
+    color: black;
+    border: none; }
 
   /* ==========================================================================
      LATEST UPDATES - NEXT TO SERVICES ACCORDION
@@ -2567,7 +2587,7 @@
   section#latestUpdates article {
     /*  margin-top: 2.2em;*/
     border-bottom: 1px solid #aaaaaa;
-    border-top: 1px solid #aaaaaa;
+    border-top: 1px solid white;
     /*padding-bottom: 1em;*/
     float: left; }
 
@@ -3091,8 +3111,48 @@
     margin-top: 2em; }
 
   #intro-paragraph-loggedin {
-    width: 60%; } }
-@media only screen and (min-width: 100em) {
+    width: 60%; }
+
+  form#careerProfile-form {
+    width: 100%;
+    margin-top: 6em;
+    margin-left: 3em; }
+
+  #careerProfile-form p {
+    margin-top: -0.2em;
+    margin-left: -2em; }
+
+  #careerProfile-form img#profileImage {
+    margin-left: 38%; }
+
+  #careerProfile-form p.editProfile {
+    margin-left: -1.5em;
+    width: 43%; }
+
+  form#signup-form {
+    margin-left: 4em; }
+
+  #signing-up p {
+    margin-left: -4em; }
+
+  ul#reasonsToSignUp {
+    margin-left: -0.2em; }
+
+  #signup-form input#signUp {
+    margin-left: -0.5em; }
+
+  #signup-form img#profileImage {
+    margin-left: 32%; }
+
+  #signup-form p#agreementStatement {
+    margin-left: -4em;
+    width: 80%; }
+
+  #signup-form input#signUp {
+    margin-left: -4em;
+    margin-top: -2em;
+    width: 40%; } }
+@media only screen and (min-width: 80em) {
   /*
       #brand_logo a img {
         width: 6em;
@@ -3115,7 +3175,7 @@
 
   #ponsonbyHousing img {
     width: 205%;
-    margin-top: 12em;
+    margin-top: 13em;
     margin-left: 0em;
     display: block;
     position: absolute; }
@@ -3153,5 +3213,3 @@
 
   #hideBicycle img#workingGirl {
     margin-top: 8em; } }
-
-/*# sourceMappingURL=main.css.map */

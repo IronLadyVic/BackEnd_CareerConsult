@@ -1,4 +1,4 @@
-@extends('includes.master-login')
+@extends('includes.master')
 @section("content")
 
 <div id="leftColomnTestimonials">

@@ -82,7 +82,7 @@ Route::post('login',function(){
 		
 		if(Auth::user()->admin == 1){
 
-			return Redirect::intended("admin/".Auth::user()->id);
+			return Redirect::intended("welcome/".Auth::user()->id);
 
 		}else{
 			return Redirect::intended("welcome/".Auth::user()->id);
@@ -98,6 +98,7 @@ Route::post('login',function(){
 
 Route::get('logout', function()
 {
+	Auth::logout();
 	return Redirect::to('index');
 });
 
@@ -166,7 +167,7 @@ Route::post('users',function(){
 		$oUser = User::create($aDetails);
 
 		//redirect to product list
-		return Redirect::to("welcome/");
+		return Redirect::to("login/");
 		}
 		
 		else{
@@ -193,7 +194,7 @@ Route::get('careerprofile/{id}', function($id){
 
 
 
-Route::get('careerprofile/{id}/edit',function($id){
+Route::get('users/{id}/edit',function($id){
 	// allow sticky data to you are able to edit the data
 	$oUser = User::find($id);
 
@@ -203,18 +204,20 @@ Route::get('careerprofile/{id}/edit',function($id){
 
 })->before("auth");
 
-Route::put('careerprofile/{id}',function($id){
+Route::put('users/{id}',function($id){
 
 	// validate data
 	$aRules = array(
 
 	"avatar" => 'required',	
-	"username" => 'required',
 	"email" => 'required|email|unique:users,email,'.$id,	
 	"firstname" => 'required',
 	"lastname" => 'required',
 	"phone" => 'required',
-	"service_type" => 'required');
+	"service_type" => 'required',
+	"career_type" => 'required'
+
+	);
 
 	$oValidator = Validator::make(Input::all(),$aRules);
 
@@ -227,12 +230,12 @@ Route::put('careerprofile/{id}',function($id){
 
 
 		// redirect to user page
-		return Redirect::to("careerprofile/".$id);
+		return Redirect::to('users/{id}');
 
 
 	}else{
 		// redirect to editUserDetails with sticky data input and errors
-		return Redirect::to('careerprofile/'.$id.'/edit')->withErrors($oValidator)->withInput();//session flash data (old input)
+		return Redirect::to('users/'.$id.'/edit')->withErrors($oValidator)->withInput();//session flash data (old input)
 								 
 	
 }

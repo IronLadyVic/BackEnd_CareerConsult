@@ -530,7 +530,7 @@ section#pricesListed {
 }
 #pricesListed h1{
   width: 85%;
-  margin-left: 1em;
+  margin-left: 0.5em;
   color: white;
 
 }
@@ -543,7 +543,7 @@ section#pricesListed {
  height: auto;
  margin-right: 2em; 
  margin-top: 2em;
- margin-left: 2em; 
+ margin-left: 1em; 
  width:85%;
  /*margin: 0 1em 0 0;*/
 
@@ -581,6 +581,10 @@ section#pricesListed {
   border-top: 1px solid #fff;
   line-height: 1.3em;
   color: #404040;
+}
+
+#pricingImage img{
+  display: none;
 }
 /* ==========================================================================
    PAGINATION
@@ -1032,6 +1036,7 @@ ul.pagination{
   #testimonialImage img{
     display: none;
   }
+
 
 /* ==========================================================================
     SIGN UP FORM
@@ -2104,6 +2109,7 @@ section#pricesListed {
   display: block;
   position: relative;
   width: 75%;
+
   margin: 0 auto;
   margin-top: -26em;
   margin-left: 22em;
@@ -2161,7 +2167,12 @@ section#pricesListed {
   line-height: 1.3em;
   color: #404040;
 }
-
+#pricingImage img{
+  display: block;
+  width: 100%;
+  margin-top: -5em;
+  opacity: 0.5;
+}
 /* ==========================================================================
    Login when you press login button form styling
    ========================================================================== */
@@ -2509,10 +2520,11 @@ img#workingGirl {
      margin-top: 1em;
    }
    section#signing-up{
-    width: 70%;
+    width: 80%;
     height: 68em;
     float: left;
-    margin-left: 2em;
+    margin-top: -26em;
+    margin-left: 17em;
 
   }
 
@@ -2528,8 +2540,8 @@ img#workingGirl {
   #signing-up p#description{
     color: black;
     font-size: 1.1em;
-
-    margin-left: -0.5em;
+  
+    margin-left: -1em;
   }
 
   #signing-up p{
@@ -2537,11 +2549,12 @@ img#workingGirl {
     width: 46%;
     height: 3em;
     margin: 0.5em;
+    margin-left: -1em;
   }
 
   ul#reasonsToSignUp{
     height: 8em;
-    width: 100%;
+    width: 80%;
     margin-left: -0.2em;
   }
   ul#reasonsToSignUp li{
@@ -2644,8 +2657,8 @@ form#signup-form span{
   color: black;
   height: 7em;
   width: 90%;
-  margin-top: 0.5em;
-  margin-left: 0.5em;
+  margin-top: 0em;
+  margin-left: -1em;
 }
 
 
@@ -2659,7 +2672,7 @@ form#signup-form span{
  width: 43%;
  height: 3.4em;
 
- margin-left: 1em;
+ margin-left: -0.5em;
  
 }
 
@@ -2675,16 +2688,16 @@ form#signup-form span{
 #signup-form img#profileImage{
   position: relative;
   margin: 0 auto;
-  margin-left: 39%;
+  margin-left: 35%;
   background-color: #242424;
   color: #242424;
 
-  /*background-image: url('img/careerprofile-BLK.png');
-  background-repeat: no-repeat;*/
-  /* position: absolute;*/
 }
 
-
+#signup-form select option {
+  background-color: #f4f2ef; color:black;
+  border: none;
+}
   #signing-up p.error{
  position: relative;
  /*margin-top: -2em;*/
@@ -2702,7 +2715,7 @@ form#signup-form span{
    }
    section#career-profile{
     width: 70%;
-    height: 68em;
+    height: 50em;
     float: left;
     margin-left: 2em;
 
@@ -2726,14 +2739,14 @@ form#signup-form span{
   form#careerProfile-form{
     width: 100%;
     margin-top: 6em;
-    
+    margin-left: 1em;
   }
 
   p#description{
     color: black!important;
     font-size: 1.1em;
     margin-left: -0.5em;
-    width: 100%;
+    width: 80%;
   }
 
   #careerProfile-form p{
@@ -2789,6 +2802,7 @@ form#signup-form span{
  }
 #careerProfile-form p{
   margin-top: -0.2em;
+  margin-left: -1em;
 }
 
 #careerProfile-form p textarea{
@@ -2836,7 +2850,7 @@ border: none;
   #careerProfile-form img#profileImage{
     width: 8em;
     height: 8em;
-    margin-left: 40%;
+    margin-left: 35%;
     margin-bottom: 1em;
 
 
@@ -2845,14 +2859,17 @@ border: none;
     @include purpleButton;
   border-top: none;
   border-bottom: none;
-  width: 44%;
-  margin-left: 0.5em;
+  width: 45%;
+  margin-left: 0em;
   color: white;
   box-shadow: none;
   margin-bottom: 2em;
   margin-top:0em;
   }
-
+#careerProfile-form select option {
+  background-color: #f4f2ef; color:black;
+  border: none;
+}
 /* ==========================================================================
    LATEST UPDATES - NEXT TO SERVICES ACCORDION
    ========================================================================== */
@@ -2889,17 +2906,19 @@ section#latestUpdates{
 section#latestUpdates article{
   /*  margin-top: 2.2em;*/
   border-bottom: 1px solid #aaaaaa;
-  border-top: 1px solid #aaaaaa;
+  border-top: 1px solid white;
   /*padding-bottom: 1em;*/
   float: left;
 
 }
+
 #latestUpdates h2{
   font-size:1.3em;
   width: 100%;
   color: black;
   font-weight: 500;
   text-decoration: none;
+
 }
 
 
@@ -3446,6 +3465,8 @@ form#mobdeskForm p#rememberMe{
 
 }
 
+
+
 }
 /* ==========================================================================
    DESKTOP
@@ -3483,11 +3504,57 @@ img#workingGirl{
 #intro-paragraph-loggedin{
   width: 60%;
 }
+  form#careerProfile-form{
+    width: 100%;
+    margin-top: 6em;
+    margin-left: 3em;
+  }
+#careerProfile-form p{
+  margin-top: -0.2em;
+  margin-left: -2em;
+}
+#careerProfile-form img#profileImage {
+margin-left: 38%;
+}
 
+  #careerProfile-form p.editProfile{
+  margin-left: -1.5em;
+  width: 43%;
+
+  }
+form#signup-form{
+  margin-left: 4em;
+}
+  #signing-up p{
+    margin-left: -4em;
+  }
+  ul#reasonsToSignUp{
+    margin-left: -0.2em;
+  }
+
+#signup-form input#signUp{
+
+ margin-left: -0.5em;
+ 
+}
+#signup-form img#profileImage{
+  margin-left: 32%;
+  
+
+}
+#signup-form p#agreementStatement{
+  margin-left: -4em;
+  width: 80%;
+}
+#signup-form input#signUp{
+  margin-left: -4em;
+  margin-top: -2em;
+  width: 40%;
   }
 
 
    @media only screen and (min-width: 100em) {
+}
 /*
     #brand_logo a img {
       width: 6em;
@@ -3512,7 +3579,7 @@ img#workingGirl{
 #ponsonbyHousing img{
  
  width: 205%;
- margin-top: 12em;
+ margin-top: 13em;
  margin-left: 0em;
  display: block;
  position: absolute;

@@ -1,4 +1,4 @@
-@extends('includes.master-login')
+@extends('includes.master')
 @section("content")
 
 <!-- Start of Services -->
@@ -13,7 +13,7 @@
             
             <div class="serviceContent">
                 <ul>
-                    <li>{{$service->content}}</li>
+                    {{$service->content}}
                     
                     <li class="enquiryButton">
                         <a href="services/">BOOKING ENQUIRY</a>

@@ -1,4 +1,4 @@
-@extends('includes.master-login')
+@extends('includes.master')
 @section("content")
 
 <div id="sectionSignUp">
@@ -31,6 +31,8 @@
         </div>
         <p>
             <span class="border"><i class="fa fa-camera"></i></span>
+
+
             {{Form::file('avatar', array('id' => 'avatar', 'class'=>'border'))}}
             {{$errors->first('avatar','<p class="error">:message</p>')}}
         </p>
