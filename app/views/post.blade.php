@@ -13,7 +13,7 @@
                 </div>
                 <div class="hashtagPost">
                     <p>
-                        <a href="#"><i class="fa fa-bookmark"></i></a></p>
+                        <a href="#"><i class="fa fa-bookmark"></i>{{$post->topic_id}}</a></p>
                     </div>
                     <div class="postPhoto">
                         <img src="{{URL::to('uploadPostPhotos/'.$post->photo_path)}}" alt="Post Image">
@@ -37,8 +37,8 @@
 
 
             <!-- end of paginator -->
-
-            <!-- Main Topics -->
+        </div>
+                    <!-- Main Topics -->
             <aside id="rightColomn">
                 <section>
                     <h2>CAREER ADVICE TOPICS</h2>               
@@ -52,6 +52,5 @@
                 </section>
             </aside>
             <!-- End of Topics -->
-        </div>
     </div>
 @stop

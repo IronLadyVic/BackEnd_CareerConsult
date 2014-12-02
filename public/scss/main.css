@@ -180,7 +180,7 @@
     /* margin-left: -20em;*/
     /*opacity: 0.8;*/
     position: relative;
-    border-bottom: 1px #928cc4 solid !important; }
+    border-bottom: 1px #928CC4 solid !important; }
 
   #ponsonbyHousing img {
     display: none; }
@@ -484,7 +484,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 5em;
     color: white; }
@@ -624,13 +624,13 @@
      ACTIVE HOLD ON LI DROP DOWN MENU
      ========================================================================== */
   ul#main-nav li:active {
-    background-image: linear-gradient(#9b8ffb, #2b2937); }
+    background-image: linear-gradient(#9B8FFB, #2B2937); }
 
   ul#main-nav li p:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   ul#main-nav li i:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   header #main-header ul#main-nav li a {
     text-decoration: none;
@@ -1330,14 +1330,13 @@
     color: white;
     font-weight: 500;
     text-decoration: none;
-    margin-top: -1em;
-    /*border-bottom: 1px solid #aaaaaa;*/
+    padding-top: 1em;
     padding-bottom: 1em; }
 
   .panelTopics {
     height: auto; }
 
-  li.styleList {
+  .panelTopics li {
     border-bottom: 1px solid #dfdfdf;
     border-top: 1px solid #fff;
     cursor: pointer;
@@ -1347,14 +1346,15 @@
     padding-bottom: 2em;
     color: black;
     margin-left: -2.5em;
-    line-height: 100%;
+    width: 130%;
     padding-top: 1em; }
 
-  .styleList a {
+  .panelTopics li a {
     text-decoration: none;
     color: white; }
 
-  .styleList a:hover {
+  .panelTopics li a:hover {
+    transition: color 2s ease;
     color: #9B8FFB; }
 
   /* ==========================================================================
@@ -1497,7 +1497,7 @@
       INPUT ERRORS
       ========================================================================== */
   .invalid {
-    color: #9b8ffb;
+    color: #9B8FFB;
     font-size: 0.5em;
     position: absolute;
     margin-top: -1em; }
@@ -1733,7 +1733,7 @@
     position: relative;
     width: 75%;
     margin: 0 auto;
-    margin-top: 12em;
+    margin-top: 8em;
     margin-left: 7em; }
 
   #servicesListed h1#header {
@@ -1908,7 +1908,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 110px;
     color: white; }
@@ -2496,9 +2496,9 @@
     margin-left: -0.3em; }
 
   #careerProfile-form select#service_type {
-    border-bottom: 0.1em black solid;
-    border-top: 0.1em black solid;
-    color: black;
+    border-bottom: 0.1em black solid !important;
+    border-top: 0.1em black solid !important;
+    color: black !important;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -2507,9 +2507,9 @@
     width: 79%; }
 
   #careerProfile-form select#career_type {
-    color: black;
-    border-bottom: 0.1em black solid;
-    border-top: 0.1em black solid;
+    color: black !important;
+    border-bottom: 0.1em black solid !important;
+    border-top: 0.1em black solid !important;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -2593,6 +2593,9 @@
     border-top: 1px solid white;
     /*padding-bottom: 1em;*/
     float: left; }
+
+  section#latestUpdates article:first-child {
+    border-top: none !important; }
 
   #latestUpdates h2 {
     font-size: 1.3em;
@@ -2731,7 +2734,7 @@
   #leftColomn {
     width: 55%;
     float: left;
-    margin-top: -2.5em;
+    margin-top: -5.5em;
     margin-bottom: 5em; }
 
   .contentWrapper {
@@ -2776,39 +2779,39 @@
   #rightColomn {
     width: 20%;
     float: left;
-    margin-top: -1em; }
+    margin-top: 1em; }
 
   #rightColomn h2 {
     font-size: 1.3em;
-    width: 100%;
+    width: 120%;
     color: black;
     font-weight: 500;
     text-decoration: none;
     margin-top: -1em;
-    padding-bottom: 1em; }
+    /*padding-bottom:1em;*/ }
 
   .panelTopics {
-    width: 100%;
     height: auto; }
 
-  li.styleList {
+  .panelTopics li {
     border-bottom: 1px solid #dfdfdf;
     border-top: 1px solid #fff;
     cursor: pointer;
     font-weight: 500;
     height: 3em;
-    padding-top: 0.5em;
-    padding-bottom: 2em;
+    /* padding-top: 0.5em;
+     padding-bottom: 2em;*/
     color: black;
     margin-left: -2.5em;
-    width: 130%;
+    /*width: 130%;*/
     padding-top: 1em; }
 
-  .styleList a {
+  .panelTopics li a {
     text-decoration: none;
     color: black; }
 
-  .styleList a:hover {
+  .panelTopics li a:hover {
+    transition: color 2s ease;
     color: #9B8FFB; }
 
   /* ==========================================================================
@@ -3155,8 +3158,8 @@
   #signup-form input#signUp {
     margin-left: -4em;
     margin-top: -2em;
-    width: 40%; } }
-@media only screen and (min-width: 80em) {
+    width: 40%; }
+
   /*
       #brand_logo a img {
         width: 6em;
@@ -3220,3 +3223,5 @@
 
   #hideBicycle img#workingGirl {
     margin-top: 8em; } }
+
+/*# sourceMappingURL=main.css.map */

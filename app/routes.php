@@ -31,12 +31,18 @@ Route::get('services/{id?}', function($id=null){
 	return View::make('services')->with("id",$id);
 	
 });
+
+
+
 // //finding services id, whne you click on navigation service type
 // Route::get('services/{id}', function($id){
 // 	$oService = Service::find($id);
 // 	return View::make('service')->with("id",$id);
 	
 // });
+
+
+
 
 
 //testimonials 

@@ -1481,27 +1481,32 @@ width: 80%;
     color: white;
     font-weight: 500;
     text-decoration: none;
-    margin-top: -1em;
-    /*border-bottom: 1px solid #aaaaaa;*/
+    padding-top: 1em;
     padding-bottom:1em;
   }
 
   .panelTopics{
     height: auto;
+
   }
-  li.styleList{
-    @include styleList;
+  .panelTopics li {
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #fff;
+    cursor: pointer;
+    font-weight: 500;
+    height: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+    color: black;
     margin-left: -2.5em;
-    line-height: 100%;
-    padding-top: 1em;
-  }
-  .styleList a{
+    width: 130%;
+    padding-top: 1em; }
+
+  .panelTopics li a {
     text-decoration: none;
-    color: white;
-    
-  }
-  .styleList a:hover{
-   // transition: color 2s ease; 
+    color: white; }
+  .panelTopics li a:hover{
+   transition: color 2s ease; 
    color: #9B8FFB;
    
  }
@@ -1948,7 +1953,7 @@ img#serviceIcon{
     position: relative;
     width: 75%;
     margin: 0 auto;
-    margin-top: 12em;
+    margin-top: 8em;
     margin-left: 7em;
 
   }
@@ -2817,18 +2822,18 @@ form#signup-form span{
 }
 
  #careerProfile-form select#service_type{
-  border-bottom: 0.1em black solid;
-  border-top: 0.1em black solid;
-  color: black;
+  border-bottom: 0.1em black solid!important;
+  border-top: 0.1em black solid!important;
+  color: black!important;
   @include input;
   width: 79%;
 }
 
 
 #careerProfile-form select#career_type{
-  color: black;
-  border-bottom: 0.1em black solid;
-  border-top: 0.1em black solid;
+  color: black!important;
+  border-bottom: 0.1em black solid!important;
+  border-top: 0.1em black solid!important;
   @include input;
 width: 79%;
 }
@@ -2916,7 +2921,9 @@ section#latestUpdates article{
   float: left;
 
 }
-
+section#latestUpdates article:first-child{
+  border-top: none!important;
+}
 #latestUpdates h2{
   font-size:1.3em;
   width: 100%;
@@ -3079,7 +3086,7 @@ div#shareSocial p a{
   #leftColomn{
     width: 55%;
     float: left;
-    margin-top: -2.5em;
+    margin-top: -5.5em;
     margin-bottom: 5em;
   }
   .contentWrapper{
@@ -3129,38 +3136,44 @@ div#shareSocial p a{
   #rightColomn{
     width: 20%;
     float: left;
-    margin-top: -1em;
+    margin-top: 1em;
+    
   }
 
   #rightColomn h2 {
     font-size: 1.3em;
-    width: 100%;
+    width: 120%;
     color: black;
     font-weight: 500;
     text-decoration: none;
     margin-top: -1em;
-    padding-bottom:1em;
+    /*padding-bottom:1em;*/
   }
 
+  
   .panelTopics{
-    width: 100%;
     height: auto;
+
   }
-  li.styleList{
-    @include styleList;
-    margin-left: -2.5em;
-    // line-height: 100%;
-    width: 130%;
-    padding-top: 1em;
-    // padding-bottom: 1em;
-  }
-  .styleList a{
-    text-decoration: none;
+  .panelTopics li {
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #fff;
+    cursor: pointer;
+    font-weight: 500;
+    height: 3em;
+   /* padding-top: 0.5em;
+    padding-bottom: 2em;*/
     color: black;
-    
+    margin-left: -2.5em;
+    /*width: 130%;*/
+    padding-top: 1em; }
+
+  .panelTopics li a {
+    text-decoration: none;
+    color: black; 
   }
-  .styleList a:hover{
-   // transition: color 2s ease; 
+  .panelTopics li a:hover{
+   transition: color 2s ease; 
    color: #9B8FFB;
    
  }
