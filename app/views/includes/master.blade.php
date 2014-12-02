@@ -28,29 +28,22 @@
     
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
 <!-- Navigation -->
-<!-- Drop down menu header -->
+
 <header>
 @if(Auth::check())    
   <div id="brand_logo"><a href="{{URL::to('welcome/'.Auth::user()->id)}}"><img src="{{asset('img/CareerConsult_logo.png')}}" alt="career consult logo"></a></div>
 @else
   <div id="brand_logo"><a href="{{URL::to('index')}}"><img src="{{asset('img/CareerConsult_logo.png')}}" alt="career consult logo"></a></div>
-
-
 @endif
-
 <div class="search-container">
         {{Form::open(array( 'id'=>'serachForm'))}}
-        {{Form::text('serach', '', array('placeholder'=>'search','id'=>'txtsearch','class' => 'search-bar'))}}
-             
+        {{Form::text('serach', '', array('placeholder'=>'search','id'=>'txtsearch','class' => 'search-bar'))}}             
          <p id="fa-search"><i class="fa fa-search"></i></p>           
-        {{Form::close()}}
-        
-  </div>
+        {{Form::close()}}        
+</div>
+<!-- Drop down menu header -->
   <div id="tab-desk-nav"></div> 
 <div id="main-header">
     <ul id="main-nav">
@@ -93,7 +86,7 @@
       <li><a href="{{URL::to('login/')}}"><i class="fa fa-lock"></i><p class="styleList">Log In</p></a></li>
       @endif
       
-     @if(Auth::check() && (Auth::user()->admin == 1))
+    @if(Auth::check() && (Auth::user()->admin == 1))
     <li id="menuServices"><a href="{{URL::to('services/')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
       <li id="seletedServices">
         <ul>
@@ -128,7 +121,7 @@
  @if(Auth::check())
  <div class="nav-handle-user">
     <div id="profilePic">
-      <a href="{{URL::to('careerprofile/'.Auth::user()->id)}}">
+      <a href="{{URL::to('users/'.Auth::user()->id)}}">
         <img src="{{URL::to('uploads/'.Auth::user()->avatar)}}" alt="user" id="userProfile">
    </a>
     </div>
@@ -143,8 +136,10 @@
 
 </header> 
 <!-- End of Headers -->
-@yield('content')
 
+<!-- Main content -->
+@yield('content')
+<!-- stop main content -->
 
 
 <!-- Footer -->

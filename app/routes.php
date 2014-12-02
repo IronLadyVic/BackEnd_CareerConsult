@@ -25,11 +25,19 @@ Route::get('index', function(){
 	//return the index view
 });
 
+
 //services 
-Route::get('services', function(){
-	return View::make('services');
+Route::get('services/{id?}', function($id=null){
+	return View::make('services')->with("id",$id);
 	
 });
+// //finding services id, whne you click on navigation service type
+// Route::get('services/{id}', function($id){
+// 	$oService = Service::find($id);
+// 	return View::make('service')->with("id",$id);
+	
+// });
+
 
 //testimonials 
 Route::get('testimonials', function(){
@@ -42,12 +50,15 @@ Route::get('pricing', function(){
 	return View::make('pricing');
 	
 });
-//post 
+
 Route::get('post/{id}', function($id){
 	$oPost = Post::find($id);
+
 	return View::make('post')->with("post",$oPost);
 	
 });
+
+
 
 
 
@@ -59,9 +70,6 @@ Route::get('welcome/{id}', function($id){
 	//return the index view logged in with user id showing in URI
 
 })->before("auth");
-
-
-
 
 
 // Login for main desktop routes, GET POST, GET

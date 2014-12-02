@@ -9,7 +9,14 @@
         <div id="accordion">
         @foreach(Service::all() as $service)
         <img src="{{URL::to('uploads/'.$service->icon)}}" alt="header services, icon image" id="serviceIcon">
-            <h3>{{$service->service_type}}</h3>
+
+            @if($service->id == $id)
+             <h3 class="open">{{$service->service_type}}</h3>
+            @else
+
+             <h3>{{$service->service_type}}</h3>
+            @endif
+           
             
             <div class="serviceContent">
                 <ul>
@@ -53,8 +60,11 @@
 
                 </div>
                 <div class="readMore">
-                    <p><a href="{{URL::to('post/{id}')}}">Read More.</a></p>
-                </div>
+                    <p><a href="{{URL::to('post/'.$post->id)}}">
+                    {{Form::button('Read More.');}}
+                    {{@Form::hidden("postID",$post->id)}}
+                    </a></p>
+               </div>
                 <div id="shareSocial">
                     <p><a href="http://twitter.com/share?text=Contact%20Career%20Consult%20&url=http://www.careerconsult/services.co.nz"><i class="fa fa-twitter"></i></a></p>
                     <p><a href="http://www.facebook.com/sharer.php?text=Career%20Consult%20Services&u=http://www.careerconsult/services.co.nz"><i class="fa fa-facebook"></i></a></p>

@@ -383,13 +383,15 @@ section#latestUpdates{
   color: #9B8FFB;
   padding-right: 0.5em;
 }
-.readMore p a{
+.readMore p a button{
   color: white;
   text-decoration: none;
+  background: transparent;
 }
-.readMore p a:hover{
+.readMore p a button:hover{
   color: #9B8FFB;
   text-decoration: none;
+   background: transparent;
 }
 .avatarProfile{
   height: 4em;
@@ -1946,7 +1948,7 @@ img#serviceIcon{
     position: relative;
     width: 75%;
     margin: 0 auto;
-    margin-top: 8em;
+    margin-top: 12em;
     margin-left: 7em;
 
   }
@@ -1998,6 +2000,7 @@ img#serviceIcon{
 
 div.serviceContent ul{
 background: none;
+padding-top: 1em;
 }
     .serviceContent ul li{
       font-size: 0.9em;
@@ -2116,13 +2119,14 @@ section#pricesListed {
 }
 #pricesListed h1{
   width: 70%;
-  margin-left: -2em;
+  margin-left: -2.5em;
   color: black;
 }
 
 .pricing_table {
   min-height: 42em;
   margin-left: -6em;
+  margin-top: -2em;
 }
 .priceTable{
  height: auto;
@@ -2745,7 +2749,7 @@ form#signup-form span{
   p#description{
     color: black!important;
     font-size: 1.1em;
-    margin-left: -0.5em;
+    // margin-left: -0.5em;
     width: 80%;
   }
 
@@ -2764,7 +2768,7 @@ form#signup-form span{
 
   #career-profile h1#header{
     color: black;
-    margin-left: 0.1em;
+    // margin-left: 0.1em;
   }
 
 
@@ -2884,6 +2888,7 @@ div#sectionServices{
   width: 50%;
   margin: 0 auto;
   position: relative;
+  margin-top: -3em;
 }
 aside#asideLatestNews{
   /*  height: 70em;*/
@@ -2962,13 +2967,15 @@ section#latestUpdates article{
   color: #9B8FFB;
   padding-right: 0.5em;
 }
-.readMore p a{
+.readMore p a button{
   color: #2B2937;
   text-decoration: none;
+  background: transparent;
 }
-.readMore p a:hover{
+.readMore p a button:hover{
   color: #9B8FFB;
   text-decoration: none;
+  background: transparent;
 }
 
 .avatarProfile{
@@ -3164,11 +3171,11 @@ div#shareSocial p a{
     display: block;
     width: 100%;
     margin-left: 12em;
-    margin-top:4em;
+    margin-top:-2em;
 
   }
   div.leftColomn{
-    height: 32em;
+    height: 29em;
   }
   .cd-testimonials-wrapper h1{
     margin-left: 0.2em;
@@ -3221,7 +3228,7 @@ div#shareSocial p a{
   .flex-active-slide{
     width: 100%;
     position: relative;
-    width: 90%;
+    
     max-width: 60em;
   }
   .flex-active-slide p{
@@ -3319,7 +3326,7 @@ div#shareSocial p a{
 
   #testimonialImage img{
     display: block;
-    width: 90%;
+    width: 100%;
     margin-top: 0em;
     opacity: 0.5;
     /*border-bottom: 1px solid #9B8FFB;*/
@@ -3590,6 +3597,13 @@ form#signup-form{
 #hideBicycle img#workingGirl{
   margin-top:4em;
 }
+
+   #leftColomnTestimonials{
+
+    margin-left: 8em;
+
+
+  }
 
   }
 
