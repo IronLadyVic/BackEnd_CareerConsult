@@ -7,26 +7,33 @@
         <h1 id="header">SERVICES</h1>
         <p>Career Consult offer a number of services, which you can pick and choose to suit your needs. Please sign up to and recieive a free 15min consultation and let us help you launch your career.</p>
         <div id="accordion">
-        @foreach(Service::all() as $service)
-        <img data-editable="icon" src="{{URL::to('uploads/'.$service->icon)}}" alt="header services, icon image" id="serviceIcon">
+            @foreach(Service::all() as $service)
+            <img data-editable="icon" src="{{URL::to('uploads/'.$service->icon)}}" alt="header services, icon image" id="serviceIcon">
 
-         
 
-             <h3 data-editable="service_type">{{$service->service_type}}</h3>
-            
-            <div class="serviceContent">
+            <form method="post" action="service/id">
+               <h3>{{$service->service_type}}</h3>
+
+               <div class="serviceContent">
                 <ul>
-                <li data-editable="content"></li>
-                </ul>
-            </div>
+                    <textarea id="editService" name="content" style="width:100%">{{$service->content}}</textarea>
+                    
+                     <li id="editbutton" style="margin-top: 1em;">
+                        <a href="#" onclick="tinymce.activeEditor.formatter.apply('customformat');return false;">Apply custom format</a>
+                        <a href="#" onclick="tinymce.activeEditor.formatter.remove('customformat');return false;">Remove custom format</a>
+                    </li>
+                 </li>   
+             </ul>
+         </div>
 
-        @endforeach      
-        </div>
-        <p>During your appointment you are encouraged to ask anything!  No question is too silly. </p>
-        <p id="testimonialButton">
-         <a href="{{URL::to('testimonials/')}}"><span>TESTIMONIALS</span></a>
-     </p>
- </section>
+         @endforeach
+     </form>     
+ </div>
+ <p>During your appointment you are encouraged to ask anything!  No question is too silly. </p>
+ <p id="testimonialButton">
+   <a href="{{URL::to('testimonials/')}}"><span>TESTIMONIALS</span></a>
+</p>
+</section>
 
 
 </div>
@@ -34,53 +41,53 @@
 
 <aside id="asideLatestNews">
     <section id="latestUpdates">
-          <div>
-            
-             
-    </div>
-        <h2>LATEST CAREER ADVICE</h2>
-        
-        <?php $pagPostTypes =  Post::paginate(1); ?>
-        @foreach($pagPostTypes as $post)
-        <article>
+      <div>
 
-            <div class="divWrapperHeader">
-                <h2><a href="#">{{$post->title}}</a></h2>
+
+      </div>
+      <h2>LATEST CAREER ADVICE</h2>
+
+      <?php $pagPostTypes =  Post::paginate(1); ?>
+      @foreach($pagPostTypes as $post)
+      <article>
+
+        <div class="divWrapperHeader">
+            <h2><a href="#">{{$post->title}}</a></h2>
+        </div>
+        <div class="hashTag">
+            <p>
+                <a href="#"><i class="fa fa-bookmark"></i>{{$post->topic->name}}</a></p>
             </div>
-            <div class="hashTag">
-                <p>
-                    <a href="#"><i class="fa fa-bookmark"></i>{{$post->topic->name}}</a></p>
-                </div>
-                <div class="content">
-                    <p>{{substr($post->content, 0, 300)}}.......</p>
+            <div class="content">
+                <p>{{substr($post->content, 0, 300)}}.......</p>
 
-                </div>
-                <div class="readMore">
-                    <p><a href="{{URL::to('post/'.$post->id)}}">
+            </div>
+            <div class="readMore">
+                <p><a href="{{URL::to('post/'.$post->id)}}">
                     {{Form::button('Read More.');}}
                     {{@Form::hidden("postID",$post->id)}}
-                    </a></p>
-               </div>
-                <div id="shareSocial">
-                    <p><a href="http://twitter.com/share?text=Contact%20Career%20Consult%20&url=http://www.careerconsult/services.co.nz"><i class="fa fa-twitter"></i></a></p>
-                    <p><a href="http://www.facebook.com/sharer.php?text=Career%20Consult%20Services&u=http://www.careerconsult/services.co.nz"><i class="fa fa-facebook"></i></a></p>
-                    <p><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.careerconsult/services.co.nz"><i class="fa fa-linkedin"></i></a></p>
-                </div>
-                <div class="avatarProfile">
-                    <img src="{{URL::to('img/'.$post->avatar)}}" alt="Avatar Profile Picture">
-                </div>
-                <div class="editor">
-                    <p>Editor: {{$post->editor}}</p>
-                </div>
-                <div class="date">
-                    <p>{{$post->created_at}}</p>
-                </div>
-            </article>   
-            @endforeach
-            <!-- this will create links which is a ul li -->
-            <div id="pagination">{{$pagPostTypes->links()}}</div>        
-  
-        </section>
+                </a></p>
+            </div>
+            <div id="shareSocial">
+                <p><a href="http://twitter.com/share?text=Contact%20Career%20Consult%20&url=http://www.careerconsult/services.co.nz"><i class="fa fa-twitter"></i></a></p>
+                <p><a href="http://www.facebook.com/sharer.php?text=Career%20Consult%20Services&u=http://www.careerconsult/services.co.nz"><i class="fa fa-facebook"></i></a></p>
+                <p><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.careerconsult/services.co.nz"><i class="fa fa-linkedin"></i></a></p>
+            </div>
+            <div class="avatarProfile">
+                <img src="{{URL::to('img/'.$post->avatar)}}" alt="Avatar Profile Picture">
+            </div>
+            <div class="editor">
+                <p>Editor: {{$post->editor}}</p>
+            </div>
+            <div class="date">
+                <p>{{$post->created_at}}</p>
+            </div>
+        </article>   
+        @endforeach
+        <!-- this will create links which is a ul li -->
+        <div id="pagination">{{$pagPostTypes->links()}}</div>        
+
+    </section>
         
     </aside>
 <!-- Log in pop up -->

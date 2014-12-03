@@ -85,3 +85,12 @@ document.getElementById('txtsearch').onsubmit = function (event)
         var topic = document.querySelectorAll('input[name="topic"]')[0];
         window.location.href = this.action + '/' + encodeURIComponent(topic.value);
     };
+
+//-----------medium.js for editing admin only-----------//
+
+
+$('button').click(function(){
+    $('#serviceContent li').attr('contenteditable','true');
+})
+
+

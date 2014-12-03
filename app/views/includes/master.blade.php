@@ -11,6 +11,7 @@
         and those new to New Zealand">
         <meta name="keywords" content="Services,Prices,Career Consultations,Sign Up,Booking Enquiries,About,Contact">
         <meta name="author" content="Karyn McDonald">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->      
@@ -19,6 +20,7 @@
         {{HTML::style('css/normalize.css')}}
         {{HTML::style('scss/main.css')}}
         {{HTML::style('scss/main.scss')}}
+        
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
         <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
@@ -169,8 +171,7 @@
         <script src="{{URL::to('js/plugins.js')}}"></script>
         <script src="{{URL::to('js/ponsonby.loop.js')}}"></script>
         <script src="{{URL::to('js/jsedit.js')}}"></script>
-        <script src="{{URL::to('js/jquery.history.js')}}"></script>
-        <script src="{{URL::to('js/jquery.jeditable.js')}}"></script>
+        <script src="{{URL::to('js/tinymce.min.js')}}"></script>
         <script src="{{URL::to('js/infinite.loop.js')}}"></script>
         <script src="{{URL::to('js/accordion.js')}}"></script>
         <script src="{{URL::to('js/avatarUpload.js')}}"></script>
