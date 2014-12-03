@@ -5,72 +5,24 @@
 <!-- Career Profile Client add info. -->
 <div id="sectionCareerProfile">
     <section id="career-profile">
-
-
-        @if(Auth::user()->admin == 1)
-        <h1 id="header">REMINDERS</h1>
-        @else
-        <h1 id="header">CAREER PROFILE</h1>
-        @endif
-        @if(Auth::user()->admin == 1)
-        <p id="description">Go ahead, and make some notes.</p>
-        @else
-        <p id="description">Start updating your Career Profile.</p>
-        @endif
+        <h1 id="header">ADD A CLIENT</h1>
+      
+        <p id="description">You can add your client here. This is for safe keeping, and will help you determine a service, and tailor a CV!</p>
+                
         
-        {{ Form::model($user, array('url' => 'users/'.$user->id, 'method'=>'put', 'id'=>'careerProfile-form')) }}
-        <!-- {{ Form::model($user, array('url' => 'users/'.$user->id, 'method'=>'put', 'files'=>'true', 'id'=>'careerProfile-form')) }}  -->
+        {{Form::open(array('url'=>'users','files'=>'true','id'=>'careerProfile-form'))}}
+
         <?php
             $sPhoto = URL::to('img/careerprofile-BLK.png');
 
-            if(Auth::check()){
-
-                 $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
-
-            }
         ?>
         <div class="profileAuto">
-            <img id="profileImage" src="{{$sPhoto}}" alt="profile picture">
+            <img id="profileImage" src="{{$sPhoto}}" alt="career profile">
         </div>
-        @if(Auth::user()->admin == 1)
         <p>
             <span class="border"><i class="fa fa-camera"></i></span>
-            {{Form::label('avatar','', array('id'=>'avatar'))}}
-            {{Form::file('avatar', array('disabled'=>'disabled', 'id' => 'avatar', 'class'=>'border'))}}
-            <!-- {{$errors->first('avatar','<p class="error">:message</p>')}} -->
-        </p>
 
-        <p>
-            <span class="border"><i class="fa fa-user"></i></span>
-            {{Form::label('username','', array('id'=>'userName'))}}
-            {{Form::text('username', $user->username, array('id'=>'userName', 'placeholder'=>'Username', 'class'=>'border'))}}
-            <!-- {{$errors->first('username','<p class="error">:message</p>')}} -->
-        </p>
-        <p>
-            <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
-            {{Form::label('comment','', array('id'=>'comment'))}}
-            {{Form::textarea('comment', '', array('id'=>'comment', 'placeholder'=>'1:', 'class'=>'border'))}}
-            
-        </p>
-        <p>
-            <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
-            {{Form::label('comment','', array('id'=>'comment'))}}
-            {{Form::textarea('comment', '', array('id'=>'comment', 'placeholder'=>'2:', 'class'=>'border'))}}
-            
-        </p>
-        <p>
-            <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
-            {{Form::label('comment','', array('id'=>'comment'))}}
-            {{Form::textarea('comment', '', array('id'=>'comment', 'placeholder'=>'3:', 'class'=>'border'))}}
-            
-        </p>
-        <p class="editProfile">
-            <a href="{{URL::to('users/'.$user->id.'/edit')}}">SAVE</a>
-        </p>
-        @else
-        <p>
-            <span class="border"><i class="fa fa-camera"></i></span>            
-            {{Form::label('avatar','', array('id'=>'avatar'))}}
+
             {{Form::file('avatar', array('id' => 'avatar', 'class'=>'border'))}}
             {{$errors->first('avatar','<p class="error">:message</p>')}}
         </p>
@@ -78,70 +30,71 @@
         <p>
             <span class="border"><i class="fa fa-user"></i></span>
             {{Form::label('username','', array('id'=>'userName'))}}
-            {{Form::text('username', $user->username, array('disabled'=>'disabled', 'id'=>'userName', 'placeholder'=>'Username', 'class'=>'border'))}}
-            <!-- {{$errors->first('username','<p class="error">:message</p>')}} -->
+            {{Form::text('username', '', array('id'=>'userName', 'placeholder'=>'Username', 'class'=>'border'))}}
+            {{$errors->first('username','<p class="error">:message</p>')}}
 
         </p>
+
         <p>
             <span class="border"><i class="fa fa-envelope"></i></span>
             {{Form::label('email','', array('id'=>'email'))}}
-            {{Form::email('email', $user->email, array('id'=>'email', 'placeholder'=>'Email', 'class'=>'border'))}}
+            {{Form::email('email', '', array('id'=>'email', 'placeholder'=>'Email', 'class'=>'border'))}}
             {{$errors->first('email','<p class="error">:message</p>')}}
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-user"></i></span>
             {{Form::label('firstname','', array('id'=>'firstName'))}}
-            {{Form::text('firstname', $user->firstname, array('placeholder'=>'First Name', 'class'=>'border'))}}
+            {{Form::text('firstname', '', array('id'=>'firstName', 'placeholder'=>'First Name', 'class'=>'border'))}}
             {{$errors->first('firstname','<p class="error">:message</p>')}}
         </p>
 
         <p>
             <span class="border"><i class="fa fa-user"></i></span>
             {{Form::label('lastname','', array('id'=>'lastName'))}}
-            {{Form::text('lastname', $user->lastname, array('placeholder'=>'Last Name', 'class'=>'border'))}}
+            {{Form::text('lastname', '', array('id'=>'lastName', 'placeholder'=>'Last Name', 'class'=>'border'))}}
             {{$errors->first('lastname','<p class="error">:message</p>')}}
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-phone-square"></i></span>
             {{Form::label('phone','', array('id'=>'contact'))}}
-            {{Form::text('phone', $user->phone, array( 'id'=>'contact', 'placeholder'=>'Contact Number', 'class'=>'border'))}}
-            {{$errors->first('phone','<p class="error">:message</p>')}}
+            {{Form::text('phone', '', array('placeholder'=>'Contact Number', 'id'=>'contact', 'class'=>'border'))}}
+            {{$errors->first('phone','<p class="error">:message</p>')}} 
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
             {{Form::label('personal_goal','', array('id'=>'personalGoals'))}}
-            {{Form::textarea('personal_goal', '', array('id'=>'personalGoals', 'placeholder'=>'Personal Goals', 'class'=>'border'))}}
-            <!-- {{$errors->first('personal_goal','<p class="error">:message</p>')}} -->
+            {{Form::textarea('personal_goal', '', array( 'id'=>'personalGoals', 'placeholder'=>'Personal Goals', 'class'=>'border'))}}
+            {{$errors->first('personal_goal','<p class="error">:message</p>')}}
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
             {{Form::label('experience','', array('id'=>'experience'))}}
-            {{Form::textarea('experience', '', array('id'=>'experience', 'placeholder'=>'Experience', 'class'=>'border'))}}
-            <!-- {{$errors->first('experience','<p class="error">:message</p>')}}  -->
+            {{Form::textarea('experience', '', array( 'id'=>'experience', 'placeholder'=>'Experience', 'class'=>'border'))}}
+            {{$errors->first('experience','<p class="error">:message</p>')}} 
         </p>
         
         <p>
             <span class="border"><i class="fa fa-university"></i></span>
             {{Form::label('education','', array('id'=>'education'))}}
             {{Form::textarea('education', '', array('id'=>'education', 'placeholder'=>'Education', 'class'=>'border'))}}
-            <!-- {{$errors->first('education','<p class="error">:message</p>')}}  -->
+            {{$errors->first('education','<p class="error">:message</p>')}} 
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-trophy"></i></span>
             {{Form::label('acheivements','', array('id'=>'acheivements'))}}
-            {{Form::textarea('acheivements', '', array('id'=>'acheivements', 'placeholder'=>'Acheivements', 'class'=>'border'))}}
-            <!-- {{$errors->first('acheivements','<p class="error">:message</p>')}}   -->
+            {{Form::textarea('acheivements', '', array( 'id'=>'acheivements', 'placeholder'=>'Acheivements', 'class'=>'border'))}}
+            {{$errors->first('acheivements','<p class="error">:message</p>')}}  
         </p>
         <p>
             <span class="border"><i class="fa fa-history"></i></span>
             {{Form::label('career_history','', array('id'=>'careerHistory'))}}
             {{Form::textarea('career_history', '', array('id'=>'careerHistory', 'placeholder'=>'Career History', 'class'=>'border'))}}
-           <!--  {{$errors->first('career_history','<p class="error">:message</p>')}}   -->
+            {{$errors->first('career_history','<p class="error">:message</p>')}}  
         </p>
         <p>
             <span class="border"><i class="fa fa-thumbs-o-up"></i></span>
@@ -159,22 +112,19 @@
         <p>
             <span class="border"><i  class="fa fa-hand-o-right"></i></span>        
             {{Form::label('service_type','', array('id'=>'service_type'))}}
-
             {{Form::select('service_type', array('0' => 'Services I am interested in..','1'=>'CV Writing & Cover Letters','2'=>'Interview Preparation','3'=>'New to NZ', '4'=>'Employment Contracts', '5'=>'General Job Seeking Advice', '6'=>'General Employment Advice'))}}
             {{$errors->first('service_type','<p class="error">:message</p>')}} 
         </p>
-        
-        {{Form::submit('UPDATE MY PROFILE', array('id'=>'updateCareerButton'));}}
-        @endif
-         
-            
-            
-            {{Form::close()}}
+
+       
+        {{Form::submit('SAVE CLIENT', array('id'=>'saveClient', 'class' => 'addButton'));}}
+
+
+    {{Form::close()}}
+    {{Session::get("error")}}
         </section>
     </div>
-@if(Auth::user()->admin == 1)
-<div id="careerprofileImage"><img src="{{URL::to('img/AucklandCityExtended.png')}}" alt="testimonials from career consult"></div>
-@endif
+
 
 
 @stop

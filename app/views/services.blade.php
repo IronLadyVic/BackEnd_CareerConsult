@@ -30,7 +30,7 @@
 
         @endforeach      
         </div>
-        <p>During your appointment you are encouraged to ask anything!  No question is too silly. </p>
+        <p>During your appointment you are encouraged to ask anything!<br>No question is too silly. </p>
         <p id="testimonialButton">
          <a href="{{URL::to('testimonials/')}}"><span>TESTIMONIALS</span></a>
      </p>

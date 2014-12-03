@@ -35,6 +35,21 @@
       font-size: 0px;
       display: none;
     }
+
+  .nav-handle-user{
+    display: block;
+    top: 1.6em;
+    right:5em; 
+    position: absolute;
+  }
+.nav-handle-user img{
+  border-radius: 50%;
+  height: 2em;
+  width: 2em;
+}
+#signedInTag{
+  display: none;
+}
 /* ==========================================================================
    NAV LOG IN Desktop hide
    ========================================================================== */
@@ -75,14 +90,14 @@
     padding-right: 2em;
   }
 
-  .nav-handle-user{
+/*  .nav-handle-user{
     margin-right: 2em;
     top: 1em;
     margin-top: -6em;
     display: none;
     height: 8em;
 
-  }
+  }*/
 
   #signedInTag{
     font-size: 0.9em;
@@ -100,6 +115,11 @@
     display: none;
 
   }
+ul#main-nav li.show:hover{
+  background-color: #9B8FFB;
+  transition: background-color 1s ease;
+  color: black;
+}
 
   ul#main-nav li.show {
     left: 0;
@@ -312,6 +332,47 @@ p.para-loggedin{
   div#shareSocial{
     width: 90%;
   }
+/* ==========================================================================
+   ADMIN EDIT CONTENT
+   ========================================================================== */
+
+textarea#editTestimonial{
+  background-color: transparent;
+  height: 10em;
+  color: white;
+}
+
+textarea#editClient{
+  background-color: transparent;
+  width: 80%!important;
+  color: white;
+}
+
+textarea#editCompany{
+  background-color: transparent;
+  width: 80%!important;
+  color: white;
+}
+textarea#editPrice{
+  background-color: transparent;
+  width: 80%!important;
+  color: white;
+
+}
+textarea#editPriceContent{
+  width: 100%!important;
+  background-color: transparent;
+  height: 15em;
+}
+textarea#editService{
+  background-color: transparent;
+  height: 10em;
+  width: 90%;
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+}
+
+
 /* ==========================================================================
    LATEST UPDATES - NEXT TO SERVICES ACCORDION
    ========================================================================== */
@@ -658,15 +719,17 @@ ul.pagination{
    ADD POST ON SERVICES PAGE WHEN ADMIN IS LOGGED IN
    ========================================================================== */
    form#addPostForm{
-    width: 100%;
+    width: 105%;
+
 
   }
 
   form#addPostForm input[type="text"], input[type="password"], input[type="email"], input[type="url"]{
     -webkit-appearance: none;
-    width: 90%;
+    width: 80%;
     @include input;
     border-radius: none;
+    margin-left: 0em;
   }
 
   #addPostForm textarea{
@@ -675,7 +738,13 @@ ul.pagination{
     height: 3em;
     @include input;
     padding-top: 0.8em;
+    margin-left:0em;
     
+  }
+  form#addPostForm input[type="file"]{
+    width: 80%;
+    @include input;
+    margin-left: 0em;
   }
   form#addPostForm span{
     border-bottom: 0.1em white solid;
@@ -687,9 +756,19 @@ ul.pagination{
     line-height: 50px;
     text-align: center;
     width: 50px;
-    margin-left: 0.5em;
+    /*margin-left: 0.5em;*/
+    margin-left: 0em;
   }
-
+input#addAPost{
+  width: 100%;
+height: 3em;
+border-radius: 0.2em;
+background-color: #9B8FFB;
+box-shadow: 0.2em 0.2em 0.5em black;
+text-decoration: none;
+text-align: center;
+margin-left: -0.2em;
+}
 
 /* ==========================================================================
    ACTIVE HOLD ON LI DROP DOWN MENU
@@ -1398,6 +1477,22 @@ width: 80%;
     /*border-bottom: 1px solid #9B8FFB;*/
   }
 
+
+/* ==========================================================================
+   ADD A CLIENT
+   ========================================================================== */
+
+
+
+  input#saveClient.addButton{
+@include purpleButton;
+border-bottom: none;
+  border-top: none;
+  margin: 0 auto;
+  margin-left: 1em;
+  width: 90%;
+  }
+
 /* ==========================================================================
    POSTS
    ========================================================================== */
@@ -1406,7 +1501,7 @@ width: 80%;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-    margin-top:2em;
+    /*margin-top:2em;*/
 
   }
   .headerTopic h2 {
@@ -1887,6 +1982,7 @@ textarea#editService{
     padding-left: 1em;
     color: black!important;
     font-weight: bold;
+    display: block;
   }
   div#profilePic{
     height: 3em;
@@ -1939,6 +2035,16 @@ textarea#editService{
 
 
   }
+  ul#main-nav li i:hover{
+ 
+  transition: color 1s ease;
+  color: white;
+}
+  ul#main-nav li:hover{
+  background-color: #9B8FFB;
+  transition: background-color 1s ease;
+  color: black;
+}
   ul#main-nav li#seletedServices li{
     margin-left: -1em;
     height: 4em;
@@ -1957,6 +2063,7 @@ textarea#editService{
   ul#main-nav li#seletedServices p:nth-child(5){
     padding-bottom:1em;
   }
+
 
 
 /* ==========================================================================
@@ -2075,11 +2182,65 @@ padding-top: 1.1em;
   width: 1em;
  
 }
-textarea#editService{
-  background-color: transparent;
-  height: 5em;
-  margin-left: -1em;
+
+/* ==========================================================================
+   ADD POST ON SERVICES PAGE WHEN ADMIN IS LOGGED IN
+   ========================================================================== */
+   form#addPostForm{
+    width: 100%;
+
+  }
+
+  form#addPostForm input[type="text"], input[type="password"], input[type="email"], input[type="url"]{
+    -webkit-appearance: none;
+    width: 70%;
+    @include input;
+    border-radius: none;
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    color: black;
+  }
+
+  #addPostForm textarea{
+    -webkit-appearance: none;
+    width: 70%;
+    height: 3em;
+    @include input;
+    padding-top: 0.8em;
+    color: black;
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+
+  }
+  form#addPostForm input[type="file"]{
+    width: 70%;
+    @include input;
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    color: black;
+  }
+  form#addPostForm span{
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    display: block;
+    float: left;
+    height: 48px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    margin-left: 0em;
+    color: black;
+  }
+input#addAPost{
+  width: 85%;
+height: 3em;
+border-radius: 0.2em;
+background-color: #9B8FFB;
+box-shadow: none;
+text-decoration: none;
+text-align: center;
 }
+
 /* ==========================================================================
    NAV LOG IN
    ========================================================================== */
@@ -2906,6 +3067,25 @@ border: none;
     /*border-bottom: 1px solid #9B8FFB;*/
   }
 /* ==========================================================================
+   ADD A CLIENT
+   ========================================================================== */
+
+
+
+  input#saveClient.addButton{
+@include purpleButton;
+border-bottom: none;
+  border-top: none;
+  
+  margin-left: -0.5em;
+  width: 45%;
+  color: white;
+  box-shadow: none;
+  }
+
+
+
+/* ==========================================================================
    LATEST UPDATES - NEXT TO SERVICES ACCORDION
    ========================================================================== */
 
@@ -3162,24 +3342,24 @@ div#shareSocial p a{
   #rightColomn{
     width: 20%;
     float: left;
-    margin-top: 1em;
+    margin-top: -4.2em;
     
   }
 
   #rightColomn h2 {
     font-size: 1.3em;
-    width: 120%;
+    width: 150%;
     color: black;
     font-weight: 500;
     text-decoration: none;
-    margin-top: -1em;
+    
     /*padding-bottom:1em;*/
   }
 
   
   .panelTopics{
     height: auto;
-
+    width: 130%;
   }
   .panelTopics li {
     border-bottom: 1px solid #dfdfdf;
@@ -3371,6 +3551,45 @@ div#shareSocial p a{
     /*border-bottom: 1px solid #9B8FFB;*/
   }
 
+
+/* ==========================================================================
+   ADMIN EDIT CONTENT
+   ========================================================================== */
+
+textarea#editTestimonial{
+  background-color: transparent;
+  height: 10em;
+}
+
+textarea#editClient{
+  background-color: transparent;
+  width: 50%!important;
+}
+
+textarea#editCompany{
+  background-color: transparent;
+  width: 50%!important;
+}
+textarea#editPrice{
+  background-color: transparent;
+  width: 80%!important;
+  color: white;
+
+}
+textarea#editPriceContent{
+  width: 100%!important;
+  background-color: transparent;
+  height: 15em;
+}
+textarea#editService{
+  background-color: transparent;
+  height: 10em;
+  width: 90%;
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+}
+
+
 /* ==========================================================================
    PAGINATION
    ========================================================================== */
@@ -3554,6 +3773,11 @@ div#brand_logo{
   color: white;
 
 }
+  input#saveClient.addButton{
+  width: 45%;
+  margin-left: -1.5em;
+
+  }
 
 }
 /* ==========================================================================
@@ -3640,7 +3864,11 @@ form#signup-form{
   width: 40%;
   }
 
+  input#saveClient.addButton{
+  width: 43%;
+  margin-left: -1.5em;
 
+  }
 
 }
 
@@ -3744,6 +3972,14 @@ form#signup-form{
     left: 25%;
     top: 15%;
     transform: translate(-50%,-50%);    
+  }
+
+
+
+  input#saveClient.addButton{
+  width: 43%;
+  margin-left: -1.5em;
+
   }
 
 

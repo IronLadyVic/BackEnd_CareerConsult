@@ -39,7 +39,16 @@
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
 
-    <p><img id="profileImage" src="URL::to('img/careerprofile-BLK.png')" alt="profile picture"></p>
+            <?php
+            $sPhoto = URL::to('img/careerprofile-BLK.png');
+
+            if(Auth::check()){
+
+                 $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
+
+            }
+        ?>
+    <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
     <p>
         <span class="border"><i class="fa fa-user"></i></span>           
         {{Form::text('username')}}

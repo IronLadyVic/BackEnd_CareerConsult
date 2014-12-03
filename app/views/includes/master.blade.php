@@ -68,7 +68,7 @@
           <li><a href="{{URL::to('testimonials')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
           <li><a href="{{URL::to('post/1')}}"><i class="fa fa-briefcase"></i><p>Posts</p></a></li>
           <li><a href="{{URL::to('clientlist/')}}" ><i class="fa fa-archive"></i><p id="li-clientlist" class="styleList">Client List</p></a></li> 
-          <li><a href="{{URL::to('clients')}}" ><i class="fa fa-archive"></i><p class="styleList">Add Client</p></a></li>    
+          <li><a href="{{URL::to('clients/new')}}" ><i class="fa fa-archive"></i><p class="styleList">Add Client</p></a></li>    
           <li><a href="{{URL::to('logout')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
           @else
 

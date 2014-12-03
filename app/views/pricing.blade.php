@@ -15,7 +15,9 @@
         <!-- Price type  -->
             <div class="priceTable">
                 <div class="pricesHeader">
+                    <form method="post">
                     <textarea id="editPrice" name="content" style="width:100%"><h2>{{$price->price}}</h2></textarea>
+                    </form>
                 </div>
                 <div class="priceContents">
                     <ul>

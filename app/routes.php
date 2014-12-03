@@ -51,12 +51,7 @@ Route::get('pricing', function(){
 	
 });
 
-//posts
-Route::get('post/{id}', function($id){
-	$oPost = Post::find($id);
-	return View::make('post')->with("post",$oPost);
-	
-});
+
 
 //enquire
 Route::get('enquire', function(){
@@ -64,7 +59,6 @@ Route::get('enquire', function(){
 return View::make('enquire');
 	
 });
-
 
 
 //index logged in
@@ -197,6 +191,96 @@ Route::post('users',function(){
 	}
 		
 });
+
+
+
+
+
+//add a client
+Route::get('clients/new', function(){
+	
+return View::make('add_client');
+	
+});
+
+//Client input and the form is validated and renamed and placed into client profile - only seen by admin
+Route::post('clients', function(){
+	
+	//validate input in the add client form
+
+	$aRules = array(
+		'avatar'=>'required',
+		'username'=>'required|unique:users',
+		'firstname'=>'required',
+		'lastname'=>'required',
+		"email"=>"required|email|unique:users",
+		'phone'=>'required',
+		'personal_goal'=>'required',
+		'experience'=>'required',
+		'education'=>'required',
+		'acheivement'=>'required',
+		'career_history'=>'required',
+		'career_type'=>'required',
+		'service_type'=>'required',
+		'comment'=>'required'
+		);
+
+	$aUserInput = Input::all();
+
+	$messages= array(
+		"email"=>'email is invalid',
+		"avatar"=>'please upload either a jpeg, jpg, png, bmp, gif, or an svg file',
+		"required"=>'The :attribute field is required.'
+		);
+
+	$oValidator = Validator::make($aUserInput, $aRules, $messages);
+
+
+		if($oValidator->passes()){
+
+		$sNewPhotoName = Input::get("firstname").".".Input::file('avatar')->getClientOriginalExtension();
+		Input::file("avatar")->move("uploads",$sNewPhotoName);
+
+
+		
+
+		$aDetails = Input::all();
+		$aDetails["password"] = Hash::make($aDetails["password"]);	
+	
+		$aDetails["avatar"] = $sNewPhotoName;
+		//create new User
+		$oUser = User::create($aDetails);
+
+		//redirect to product list
+		return Redirect::to("clients/");
+		}
+		
+		else{
+
+		//redirect new user form with errors and sticky data
+		return Redirect::to("clients/new")->withErrors($oValidator)->withInput();
+
+	}
+		
+});
+
+
+
+//posts
+Route::get('post/{id}', function($id){
+	$oPost = Post::find($id);
+	return View::make('post')->with("post",$oPost);
+	
+});
+
+
+//posts
+Route::post('posts/', function($id){
+	
+	
+});
+
+
 
 
 
