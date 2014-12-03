@@ -54,7 +54,6 @@ Route::get('pricing', function(){
 //posts
 Route::get('post/{id}', function($id){
 	$oPost = Post::find($id);
-
 	return View::make('post')->with("post",$oPost);
 	
 });

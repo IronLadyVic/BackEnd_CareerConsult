@@ -25,12 +25,9 @@
   #servicesPage div#main-header ul#main-nav li:nth-child(6) {
     background-color: white !important; }
 
-  /*    #main-nav{
-        height: 0%;
-        margin-left: -2.5em;
-        margin-top: 2em;
-      }
-      */
+  #li-clientlist {
+    color: white !important; }
+
   #droparrow.show {
     font-size: 0px;
     display: none; }
@@ -1082,11 +1079,10 @@
     margin: 0 auto;
     margin-top: 1em;
     margin-left: 0.5em;
-    width: 70%; }
+    width: 90%; }
 
   #career-profile p {
-    color: white;
-    /*    padding: 0.5em;*/ }
+    color: white; }
 
   section#career-profile {
     position: relative;
@@ -1199,7 +1195,7 @@
     text-decoration: none;
     position: relative;
     margin: 0 auto;
-    margin-left: 1em;
+    margin-left: 0.5em;
     margin-right: 1em;
     margin-top: 2em;
     color: white;
@@ -1255,6 +1251,13 @@
     height: 3em;
     color: white;
     width: 80%; }
+
+  #careerprofileImage img {
+    display: block;
+    width: 100%;
+    margin-top: 2em;
+    opacity: 0.5;
+    /*border-bottom: 1px solid #9B8FFB;*/ }
 
   /* ==========================================================================
      POSTS
@@ -2572,6 +2575,13 @@
     border-top: none;
     border-bottom: none;
     color: white; }
+
+  #careerprofileImage img {
+    display: block;
+    width: 100%;
+    margin-left: 5em;
+    opacity: 0.5;
+    /*border-bottom: 1px solid #9B8FFB;*/ }
 
   /* ==========================================================================
      LATEST UPDATES - NEXT TO SERVICES ACCORDION

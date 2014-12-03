@@ -26,14 +26,9 @@
       background-color: white!important;
       
     } 
-
-/*    #main-nav{
-      height: 0%;
-      margin-left: -2.5em;
-      margin-top: 2em;
+    #li-clientlist{
+      color: white!important;
     }
-    */
-
 
 
     #droparrow.show{
@@ -1219,12 +1214,12 @@ img#profileImage{
       margin: 0 auto;
       margin-top: 1em;
       margin-left: 0.5em;
-      width: 70%;
+      width: 90%;
     }
 
     #career-profile p{
       color: white;
-      /*    padding: 0.5em;*/
+     
     }
 
     section#career-profile{
@@ -1339,7 +1334,7 @@ img#profileImage{
     @include purpleButton;
     position: relative;
     margin: 0 auto;
-    margin-left: 1em;
+    margin-left: 0.5em;
     margin-right: 1em;
     margin-top: 2em;
     color: white;
@@ -1395,6 +1390,13 @@ img#profileImage{
   @include input;
 width: 80%;
 }
+  #careerprofileImage img{
+    display: block;
+    width:100%;
+    margin-top: 2em;
+    opacity: 0.5;
+    /*border-bottom: 1px solid #9B8FFB;*/
+  }
 
 /* ==========================================================================
    POSTS
@@ -2896,6 +2898,13 @@ border: none;
   color: white;
  
 }
+  #careerprofileImage img{
+    display: block;
+    width:100%;
+    margin-left: 5em;
+    opacity: 0.5;
+    /*border-bottom: 1px solid #9B8FFB;*/
+  }
 /* ==========================================================================
    LATEST UPDATES - NEXT TO SERVICES ACCORDION
    ========================================================================== */

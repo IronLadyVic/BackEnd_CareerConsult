@@ -9,16 +9,27 @@
 <h1>WHAT CLIENTS ARE SAYING:</h1>
     <ul class="cd-testimonials">
 
-    <?php 
-        // $sEditable = "" ;
-        // if(){
-        //     $sEditable = 'data-editable="yes"';
-        // }
+    @if(Auth::user()->admin == 1)
+    @foreach(Testimonial::all() as $testimonial)
+        <li>  
+            <p>
 
-    ?>
+                <textarea id="editTestimonial" name="content" style="width:100%">{{$testimonial->content}}</textarea>
+                    
+            </p>
+            <div class="cd-client">
+                <img src="{{URL::to('img/'.$testimonial->avatar)}}" alt="Client Profile Image">
+                <ul class="cd-client-info">
+                    <li><textarea id="editClient" name="content" style="width:100%">{{$testimonial->client}}</textarea></li>
+                    <li><textarea id="editCompany" name="content" style="width:100%">{{$testimonial->company}}</textarea></li>
+                </ul>
+            </div>               
+       
+     </li> 
+    @endforeach 
 
-
-     @foreach(Testimonial::all() as $testimonial)
+    @else
+    @foreach(Testimonial::all() as $testimonial)
         <li> 
         
 
@@ -33,13 +44,14 @@
             </div>               
        
      </li> 
-      @endforeach   
+    @endforeach   
+    @endif
 </ul> 
     
 </div>
 
 </div>
-<div id="testimonialImage"><img src="img/AucklandCityExtended.png" alt="testimonials from career consult"></div>
+<div id="testimonialImage"><img src="{{URL::to('img/AucklandCityExtended.png')}}" alt="testimonials from career consult"></div>
 </div>
 
 <!-- Log in pop up -->

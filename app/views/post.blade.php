@@ -7,7 +7,8 @@
         <article id="postWrapper">
 
             <div class="contentWrapper">
-          
+            <?php $pagPostTypes =  Post::paginate(1); ?>
+            @foreach($pagPostTypes as $post)
                 <div class="headerTopic">
                     <h2>{{$post->title}}</h2>
                 </div>
@@ -30,8 +31,9 @@
                     <div class="">
                         <p>{{$post->created_at}}</p>
                     </div>
-              
+              @endforeach 
                 </div>
+            <div id="pagination">{{$pagPostTypes->links()}}</div>         
             </article>
             <!-- End of Post -->
 

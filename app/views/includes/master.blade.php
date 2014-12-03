@@ -52,7 +52,7 @@
     @if(Auth::check())
       <!-- <li><a href=""><i class="fa fa-pencil"></i><p>Latest News</p></a></li> -->
 
-            @if(Auth::user()->admin == 1)
+          @if(Auth::user()->admin == 1)
         <li id="menuServices"><a href="{{URL::to('services/edit')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
           <li id="seletedServices">
             <ul>
@@ -64,10 +64,11 @@
             <li><a href="{{URL::to('services/6')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
             </ul>
           </li>           
-          <li><a href="{{URL::to('prices/edit')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
-          <li><a href="{{URL::to('testimonials/edit')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
-          <li><a href="{{URL::to('post/edit')}}"><i class="fa fa-briefcase"></i><p>Posts</p></a></li>
-          <li><a href="{{URL::to('clients/')}}"><i class="fa fa-archive"></i><p class="styleList">Clients</p></a></li>    
+          <li><a href="{{URL::to('pricing')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
+          <li><a href="{{URL::to('testimonials')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
+          <li><a href="{{URL::to('post/1')}}"><i class="fa fa-briefcase"></i><p>Posts</p></a></li>
+          <li><a href="{{URL::to('clientlist/')}}" ><i class="fa fa-archive"></i><p id="li-clientlist" class="styleList">Client List</p></a></li> 
+          <li><a href="{{URL::to('clients')}}" ><i class="fa fa-archive"></i><p class="styleList">Add Client</p></a></li>    
           <li><a href="{{URL::to('logout')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
           @else
 

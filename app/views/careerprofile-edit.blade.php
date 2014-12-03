@@ -5,9 +5,19 @@
 <!-- Career Profile Client add info. -->
 <div id="sectionCareerProfile">
     <section id="career-profile">
-        <h1 id="header">CAREER PROFILE</h1>
 
+
+        @if(Auth::user()->admin == 1)
+        <h1 id="header">REMINDERS</h1>
+        @else
+        <h1 id="header">CAREER PROFILE</h1>
+        @endif
+        @if(Auth::user()->admin == 1)
+        <p id="description">Go ahead, and make some notes.</p>
+        @else
         <p id="description">Start updating your Career Profile.</p>
+        @endif
+        
         {{ Form::model($user, array('url' => 'users/'.$user->id, 'method'=>'put', 'id'=>'careerProfile-form')) }}
         <!-- {{ Form::model($user, array('url' => 'users/'.$user->id, 'method'=>'put', 'files'=>'true', 'id'=>'careerProfile-form')) }}  -->
         <?php
@@ -22,7 +32,42 @@
         <div class="profileAuto">
             <img id="profileImage" src="{{$sPhoto}}" alt="profile picture">
         </div>
-        
+        @if(Auth::user()->admin == 1)
+        <p>
+            <span class="border"><i class="fa fa-camera"></i></span>
+            {{Form::label('avatar','', array('id'=>'avatar'))}}
+            {{Form::file('avatar', array('disabled'=>'disabled', 'id' => 'avatar', 'class'=>'border'))}}
+            <!-- {{$errors->first('avatar','<p class="error">:message</p>')}} -->
+        </p>
+
+        <p>
+            <span class="border"><i class="fa fa-user"></i></span>
+            {{Form::label('username','', array('id'=>'userName'))}}
+            {{Form::text('username', $user->username, array('id'=>'userName', 'placeholder'=>'Username', 'class'=>'border'))}}
+            <!-- {{$errors->first('username','<p class="error">:message</p>')}} -->
+        </p>
+        <p>
+            <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
+            {{Form::label('comment','', array('id'=>'comment'))}}
+            {{Form::textarea('comment', '', array('id'=>'comment', 'placeholder'=>'1:', 'class'=>'border'))}}
+            
+        </p>
+        <p>
+            <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
+            {{Form::label('comment','', array('id'=>'comment'))}}
+            {{Form::textarea('comment', '', array('id'=>'comment', 'placeholder'=>'2:', 'class'=>'border'))}}
+            
+        </p>
+        <p>
+            <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
+            {{Form::label('comment','', array('id'=>'comment'))}}
+            {{Form::textarea('comment', '', array('id'=>'comment', 'placeholder'=>'3:', 'class'=>'border'))}}
+            
+        </p>
+        <p class="editProfile">
+            <a href="{{URL::to('users/'.$user->id.'/edit')}}">SAVE</a>
+        </p>
+        @else
         <p>
             <span class="border"><i class="fa fa-camera"></i></span>            
             {{Form::label('avatar','', array('id'=>'avatar'))}}
@@ -119,16 +164,17 @@
             {{$errors->first('service_type','<p class="error">:message</p>')}} 
         </p>
         
-        
-           {{Form::submit('UPDATE MY PROFILE', array('id'=>'updateCareerButton'));}}
-        
+        {{Form::submit('UPDATE MY PROFILE', array('id'=>'updateCareerButton'));}}
+        @endif
          
             
             
             {{Form::close()}}
         </section>
     </div>
-
+@if(Auth::user()->admin == 1)
+<div id="careerprofileImage"><img src="{{URL::to('img/AucklandCityExtended.png')}}" alt="testimonials from career consult"></div>
+@endif
 
 
 @stop

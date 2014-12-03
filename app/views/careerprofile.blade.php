@@ -5,10 +5,17 @@
 <!-- Career Profile Client add info. -->
 <div id="sectionCareerProfile">
     <section id="career-profile">
+        @if(Auth::user()->admin == 1)
+        <h1 id="header">REMINDERS</h1>
+        @else
         <h1 id="header">CAREER PROFILE</h1>
-
+        @endif
+        
+        @if(Auth::user()->admin == 1)
+        <p id="description">You may wish to take some notes, while your at it and save to the database too!</p>
+        @else
         <p id="description">By updating your Career Profile, this will help your career consultant provide the correct service and help you launch your career, faster and easier.</p>
-
+        @endif
         {{ Form::model($user, array('url' => 'users/'.$user->id, 'files'=>'true', 'id'=>'careerProfile-form')) }} 
         <?php
             $sPhoto = URL::to('img/careerprofile-BLK.png');
@@ -22,7 +29,42 @@
         <div class="profileAuto">
             <img id="profileImage" src="{{$sPhoto}}" alt="profile picture">
         </div>
-        
+        @if(Auth::user()->admin == 1)
+        <p>
+            <span class="border"><i class="fa fa-camera"></i></span>
+            {{Form::label('avatar','', array('id'=>'avatar'))}}
+            {{Form::file('avatar', array('disabled'=>'disabled', 'id' => 'avatar', 'class'=>'border'))}}
+            <!-- {{$errors->first('avatar','<p class="error">:message</p>')}} -->
+        </p>
+
+        <p>
+            <span class="border"><i class="fa fa-user"></i></span>
+            {{Form::label('username','', array('id'=>'userName'))}}
+            {{Form::text('username', $user->username, array('disabled'=>'disabled', 'id'=>'userName', 'placeholder'=>'Username', 'class'=>'border'))}}
+            <!-- {{$errors->first('username','<p class="error">:message</p>')}} -->
+        </p>
+        <p>
+            <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
+            {{Form::label('comment','', array('id'=>'comment'))}}
+            {{Form::textarea('comment', '', array('disabled'=>'disabled', 'id'=>'comment', 'placeholder'=>'1:', 'class'=>'border'))}}
+            
+        </p>
+        <p>
+            <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
+            {{Form::label('comment','', array('id'=>'comment'))}}
+            {{Form::textarea('comment', '', array('disabled'=>'disabled', 'id'=>'comment', 'placeholder'=>'2:', 'class'=>'border'))}}
+            
+        </p>
+        <p>
+            <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
+            {{Form::label('comment','', array('id'=>'comment'))}}
+            {{Form::textarea('comment', '', array('disabled'=>'disabled', 'id'=>'comment', 'placeholder'=>'3:', 'class'=>'border'))}}
+            
+        </p>
+        <p class="editProfile">
+            <a href="{{URL::to('users/'.$user->id.'/edit')}}">CLICK BUTTON TO EDIT</a>
+        </p>
+        @else
         <p>
             <span class="border"><i class="fa fa-camera"></i></span>
             {{Form::label('avatar','', array('id'=>'avatar'))}}
@@ -115,21 +157,21 @@
         <p>
             <span class="border"><i  class="fa fa-hand-o-right"></i></span>        
             {{Form::label('service_type','', array('id'=>'service_type'))}}
-
             {{Form::select('service_type', array('0' => 'Services I am interested in..','1'=>'CV Writing & Cover Letters','2'=>'Interview Preparation','3'=>'New to NZ', '4'=>'Employment Contracts', '5'=>'General Job Seeking Advice', '6'=>'General Employment Advice'))}}
             <!-- {{$errors->first('service_type','<p class="error">:message</p>')}}  -->
         </p>
-        
-        <p class="editProfile">
+         <p class="editProfile">
             <a href="{{URL::to('users/'.$user->id.'/edit')}}">EDIT MY PROFILE</a>
-            </p>
+        </p>
+        @endif
+
           
-            
-            
             {{Form::close()}}
         </section>
     </div>
-
+@if(Auth::user()->admin == 1)
+<div id="careerprofileImage"><img src="{{URL::to('img/AucklandCityExtended.png')}}" alt="testimonials from career consult"></div>
+@endif
 
 
 @stop
