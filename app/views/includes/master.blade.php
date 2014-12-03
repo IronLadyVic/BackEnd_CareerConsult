@@ -49,23 +49,45 @@
     <ul id="main-nav">
     @if(Auth::check())
       <!-- <li><a href=""><i class="fa fa-pencil"></i><p>Latest News</p></a></li> -->
-      <li id="menuServices"><a href="{{URL::to('services/')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
-      <li id="seletedServices">
-        <ul>
-        <li><a href="{{URL::to('services/1')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
-        <li><a href="{{URL::to('services/2')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
-        <li><a href="{{URL::to('services/3')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
-        <li><a href="{{URL::to('services/4')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
-        <li><a href="{{URL::to('services/5')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
-        <li><a href="{{URL::to('services/6')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
-        </ul>
-      </li>           
-      <li><a href="{{URL::to('pricing/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
-      <li><a href="{{URL::to('testimonials/')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
-      <li><a href="{{URL::to('about/')}}"><i class="fa fa-briefcase"></i><p>About</p></a></li>
-      <li><a href="{{URL::to('book/')}}"><i class="fa fa-calendar"></i><p>Book</p></a></li>
-      <li><a href="{{URL::to('users/'.Auth::user()->id)}}"><i class="fa fa-archive"></i><p class="styleList">My Career Profile</p></a></li>
-      <li><a href="{{URL::to('logout')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
+
+            @if(Auth::user()->admin == 1)
+        <li id="menuServices"><a href="{{URL::to('services/edit')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
+          <li id="seletedServices">
+            <ul>
+            <li><a href="{{URL::to('services/1')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
+            <li><a href="{{URL::to('services/2')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
+            <li><a href="{{URL::to('services/3')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
+            <li><a href="{{URL::to('services/4')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
+            <li><a href="{{URL::to('services/5')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
+            <li><a href="{{URL::to('services/6')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
+            </ul>
+          </li>           
+          <li><a href="{{URL::to('prices/edit')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
+          <li><a href="{{URL::to('testimonials/edit')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
+          <li><a href="{{URL::to('post/edit')}}"><i class="fa fa-briefcase"></i><p>Posts</p></a></li>
+          <li><a href="{{URL::to('clients/')}}"><i class="fa fa-archive"></i><p class="styleList">Clients</p></a></li>    
+          <li><a href="{{URL::to('logout')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
+          @else
+
+          <li id="menuServices"><a href="{{URL::to('services/')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
+          <li id="seletedServices">
+            <ul>
+            <li><a href="{{URL::to('services/1')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
+            <li><a href="{{URL::to('services/2')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
+            <li><a href="{{URL::to('services/3')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
+            <li><a href="{{URL::to('services/4')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
+            <li><a href="{{URL::to('services/5')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
+            <li><a href="{{URL::to('services/6')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
+            </ul>
+          </li>           
+          <li><a href="{{URL::to('pricing/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
+          <li><a href="{{URL::to('testimonials/')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
+          <li><a href="{{URL::to('about/')}}"><i class="fa fa-briefcase"></i><p>About</p></a></li>
+          <li><a href="{{URL::to('enquire/')}}"><i class="fa fa-briefcase"></i><p>Enquire</p></a></li>
+          <li><a href="{{URL::to('users/'.Auth::user()->id)}}"><i class="fa fa-archive"></i><p class="styleList">My Career Profile</p></a></li>
+          <li><a href="{{URL::to('logout')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
+
+          @endif
       @else
     <li id="menuServices"><a href="{{URL::to('services/')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
       <li id="seletedServices">
@@ -81,29 +103,12 @@
       <li><a href="{{URL::to('pricing/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
       <li><a href="{{URL::to('testimonials/')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
       <li><a href="{{URL::to('about/')}}"><i class="fa fa-briefcase"></i><p>About</p></a></li>
-      <li><a href="{{URL::to('contact/')}}"><i class="fa fa-phone"></i><p>Contact</p></a></li>
+      <li><a href="{{URL::to('enquire/')}}"><i class="fa fa-briefcase"></i><p>Enquire</p></a></li>
       <li><a href="{{URL::to('users/new')}}"><i class="fa fa-user"></i><p class="styleList">Sign Up</p></a></li>
       <li><a href="{{URL::to('login/')}}"><i class="fa fa-lock"></i><p class="styleList">Log In</p></a></li>
       @endif
       
-    @if(Auth::check() && (Auth::user()->admin == 1))
-    <li id="menuServices"><a href="{{URL::to('services/')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
-      <li id="seletedServices">
-        <ul>
-        <li><a href="{{URL::to('services/1')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
-        <li><a href="{{URL::to('services/2')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
-        <li><a href="{{URL::to('services/3')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
-        <li><a href="{{URL::to('services/4')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
-        <li><a href="{{URL::to('services/5')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
-        <li><a href="{{URL::to('services/6')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
-        </ul>
-      </li>           
-      <li><a href="{{URL::to('prices/')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
-      <li><a href="{{URL::to('testimonials/')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
-      <li><a href="{{URL::to('contact/')}}"><i class="fa fa-briefcase"></i><p>Posts</p></a></li>
-      <li><a href="{{URL::to('clients/')}}"><i class="fa fa-archive"></i><p class="styleList">Clients</p></a></li>    
-      <li><a href="{{URL::to('index/')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
-      @endif
+  
     </ul>
 </div>
 <div class="nav-handle">
@@ -163,6 +168,9 @@
         
         <script src="{{URL::to('js/plugins.js')}}"></script>
         <script src="{{URL::to('js/ponsonby.loop.js')}}"></script>
+        <script src="{{URL::to('js/jsedit.js')}}"></script>
+        <script src="{{URL::to('js/jquery.history.js')}}"></script>
+        <script src="{{URL::to('js/jquery.jeditable.js')}}"></script>
         <script src="{{URL::to('js/infinite.loop.js')}}"></script>
         <script src="{{URL::to('js/accordion.js')}}"></script>
         <script src="{{URL::to('js/avatarUpload.js')}}"></script>

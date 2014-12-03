@@ -59,7 +59,7 @@
     {{$errors->first('checkbox','<p class="border">:message</p>')}} 
     <p  id="rememberMe">Remember Me</p>
 
-    {{Form::submit('LOG IN', array('id'=>'logIn'))}}
+    {{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
 
 
     {{Form::close()}}

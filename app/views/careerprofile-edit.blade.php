@@ -8,8 +8,8 @@
         <h1 id="header">CAREER PROFILE</h1>
 
         <p id="description">Start updating your Career Profile.</p>
-
-        {{ Form::model($user, array('url' => 'users/'.$user->id, 'method'=>'put', 'files'=>'true', 'id'=>'careerProfile-form')) }} 
+        {{ Form::model($user, array('url' => 'users/'.$user->id, 'method'=>'put', 'id'=>'careerProfile-form')) }}
+        <!-- {{ Form::model($user, array('url' => 'users/'.$user->id, 'method'=>'put', 'files'=>'true', 'id'=>'careerProfile-form')) }}  -->
         <?php
             $sPhoto = URL::to('img/careerprofile-BLK.png');
 
@@ -119,9 +119,9 @@
             {{$errors->first('service_type','<p class="error">:message</p>')}} 
         </p>
         
-        <p class="editProfile">
-            <a href="{{URL::to('users/'.$user->id.'/edit')}}">UPDATE MY PROFILE</a>
-            </p>
+        
+           {{Form::submit('UPDATE MY PROFILE', array('id'=>'updateCareerButton'));}}
+        
          
             
             

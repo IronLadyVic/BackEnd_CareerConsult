@@ -1766,6 +1766,10 @@ img#serviceIcon{
       background-color: transparent;
       color: black;
     }
+
+    h2#intro-paragraph-loggedin{
+      width: 48%;
+    }
 /* ==========================================================================
    Pop up log in
    ========================================================================== */
@@ -1796,9 +1800,10 @@ img#serviceIcon{
     background-color: white;
     position: absolute;
     top:5%;
-    left:25%;
+    left:12%;
     transform: translate(-50%,-50%);    
   }
+
   div#loginForm form{
     background-color:white;
     width: 36em;
@@ -1806,6 +1811,7 @@ img#serviceIcon{
     padding-left: 6em;
     padding-right: 1em;
     padding-top: 1em;
+    margin-top: 4em;
   }
   div#loginForm span[role="close-modal"] {
     position: absolute;
@@ -1817,7 +1823,7 @@ img#serviceIcon{
     border-bottom: none;
   }
   div#loginForm img#profileImage {
-    margin-left: 29%;
+    margin-left: 26%;
   }
   div#loginForm #checkBoxRemember{
     height: 1em;
@@ -1951,7 +1957,7 @@ img#serviceIcon{
     float: left;
     display: block;
     position: relative;
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 8em;
     margin-left: 7em;
@@ -1971,13 +1977,13 @@ img#serviceIcon{
     color: black;
     margin-left:-6.5em;
     padding-bottom: 1em;
-    
+    width: 96%;
   }  
 
 #accordion{
   margin-left: -5.5em;
  background: none;
- width: 115%;
+ width: 90%;
 }  
 
 #accordion div.serviceContent{
@@ -2059,18 +2065,7 @@ padding-top: 1.1em;
   width: 1em;
  
 }
-/* ==========================================================================
-   Checkbox for Nav Sign up
-   ========================================================================== */
-/*.checkBox input {
-float: left;
-margin-top:1em!important;
-margin-left: -10.5em;
 
-}
-input #checkBox{
-  float:left;
-  }*/
 /* ==========================================================================
    NAV LOG IN
    ========================================================================== */
@@ -2755,7 +2750,7 @@ form#signup-form span{
     color: black!important;
     font-size: 1.1em;
     // margin-left: -0.5em;
-    width: 80%;
+    // width: 80%;
   }
 
   #careerProfile-form p{
@@ -2879,6 +2874,16 @@ border: none;
   background-color: #f4f2ef; color:black;
   border: none;
 }
+
+#careerProfile-form input#updateCareerButton{
+  @include purpleButton;
+   width: 45%;
+   box-shadow: none;
+    border-top: none;
+  border-bottom: none;
+  color: white;
+ 
+}
 /* ==========================================================================
    LATEST UPDATES - NEXT TO SERVICES ACCORDION
    ========================================================================== */
@@ -2893,7 +2898,7 @@ div#sectionServices{
   width: 50%;
   margin: 0 auto;
   position: relative;
-  margin-top: -3em;
+ /* margin-top: -3em;*/
 }
 aside#asideLatestNews{
   /*  height: 70em;*/
@@ -3086,7 +3091,7 @@ div#shareSocial p a{
   #leftColomn{
     width: 55%;
     float: left;
-    margin-top: -5.5em;
+    /*margin-top: -5.5em;*/
     margin-bottom: 5em;
   }
   .contentWrapper{
@@ -3372,7 +3377,7 @@ ul.pagination{
     height: 35em;
     margin: 0 auto;
     position: relative;
-    left: 10%;
+    left: 5%;
     top: 20%;
   }
 
@@ -3439,6 +3444,31 @@ form#mobdeskForm p#rememberMe{
   margin-left: 1.5em;
 }
 /* ==========================================================================
+   ENQUIRY FORM
+   ========================================================================== */
+
+   form#enquire-form input{
+    @include input;
+    color: black;
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+/* ==========================================================================
    FOOTER
    ========================================================================== */
    div#footer_options{
@@ -3471,6 +3501,10 @@ form#mobdeskForm p#rememberMe{
 
 }
 
+div#brand_logo{
+  margin-left: 0.5em;
+}
+
 
 }
   @media only screen and (min-width: 60em) {
@@ -3485,7 +3519,20 @@ form#mobdeskForm p#rememberMe{
 
 }
 
+  .pricing_table {
+  min-height: 24em;
+  margin-left: -6em;
+  margin-top: -2em;
+}
+  #careerProfile-form input#updateCareerButton{
+  @include purpleButton;
+   width: 45%;
+   box-shadow: none;
+    border-top: none;
+  border-bottom: none;
+  color: white;
 
+}
 
 }
 /* ==========================================================================
@@ -3558,7 +3605,7 @@ form#signup-form{
  
 }
 #signup-form img#profileImage{
-  margin-left: 32%;
+  margin-left: 33%;
   
 
 }
@@ -3573,12 +3620,16 @@ form#signup-form{
   }
 
 
-   @media only screen and (min-width: 100em) {
+
 }
-/*
-    #brand_logo a img {
-      width: 6em;
-      height: 6em;
+
+   @media only screen and (min-width: 100em) {
+
+
+/*    #brand_logo a img {
+      width: 7em;
+      height: 7em;
+      margin-left: 1em;
     }*/
   section#animation{
    margin-top: 0em;
@@ -3617,6 +3668,11 @@ form#signup-form{
 
 
   }
+  .pricing_table {
+  min-height: 28em;
+  margin-left: -6em;
+  margin-top: -2em;
+}
 
   }
 
@@ -3652,9 +3708,24 @@ form#signup-form{
 
 
 }
-#hideBicycle img#workingGirl{
-  margin-top: 8em;
+.pricing_table {
+  min-height: 25em;
+  margin-left: -6em;
+  margin-top: -2em;
 }
+#hideBicycle img#workingGirl{
+  margin-top: 6em;
+}
+  div#loginForm.show{
+    display: block;
+    background-color: white;
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    transform: translate(-50%,-50%);    
+  }
+
+
 
   }
 

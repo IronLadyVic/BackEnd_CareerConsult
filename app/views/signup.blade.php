@@ -78,7 +78,7 @@
             
         </p>
         <p>
-            <span class="border" ><i class="fa fa-phone-square"></i></span>
+            <span class="border" ><i class="fa fa-phone"></i></span>
 
             {{Form::text('phone', '', array('placeholder'=>'Contact Number', 'id'=>'contact', 'class'=>'border'))}}
             {{$errors->first('phone','<p class="error">:message</p>')}}  
@@ -139,7 +139,7 @@
     {{$errors->first('checkbox','<p class="border">:message</p>')}} 
     <p  id="rememberMe">Remember Me</p>
 
-    {{Form::submit('LOG IN', array('id'=>'logIn'))}}
+    {{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
 
 
     {{Form::close()}}

@@ -26,24 +26,18 @@ Route::get('index', function(){
 });
 
 
+//services edit page for admin only
+Route::get('services/edit', function(){
+	
+	return View::make('services_edit');
+	
+});
+
 //services 
 Route::get('services/{id?}', function($id=null){
 	return View::make('services')->with("id",$id);
 	
 });
-
-
-
-// //finding services id, whne you click on navigation service type
-// Route::get('services/{id}', function($id){
-// 	$oService = Service::find($id);
-// 	return View::make('service')->with("id",$id);
-	
-// });
-
-
-
-
 
 //testimonials 
 Route::get('testimonials', function(){
@@ -57,6 +51,7 @@ Route::get('pricing', function(){
 	
 });
 
+//posts
 Route::get('post/{id}', function($id){
 	$oPost = Post::find($id);
 
@@ -64,7 +59,12 @@ Route::get('post/{id}', function($id){
 	
 });
 
-
+//enquire
+Route::get('enquire', function(){
+	
+return View::make('enquire');
+	
+});
 
 
 
@@ -230,43 +230,41 @@ Route::put('users/{id}',function($id){
 
 	// validate data
 	$aRules = array(
+		"email" => 'required|email|unique:users,email,'.$id,	
+		"firstname" => 'required',
+		"lastname" => 'required',
+		"phone" => 'required',
+		"service_type" => 'required',
+		"career_type" => 'required'
 
-	"avatar" => 'required',	
-	"email" => 'required|email|unique:users,email,'.$id,	
-	"firstname" => 'required',
-	"lastname" => 'required',
-	"phone" => 'required',
-	"service_type" => 'required',
-	"career_type" => 'required'
-
-	);
+		);
 
 	$oValidator = Validator::make(Input::all(),$aRules);
 
 	if($oValidator->passes()){
-		// update user avatar
-
-		$sNewPhotoName = Input::get("firstname").".".Input::file('avatar')->getClientOriginalExtension();
-		Input::file("avatar")->move("uploads",$sNewPhotoName);
-
-		$aDetails["avatar"] = $sNewPhotoName;
 		
 		// update user details
 		$oUser = User::find($id);
 		$oUser->fill(Input::all());
 
+				// update user avatar
+
+		// $sNewPhotoName = Input::get("firstname").".".Input::file('avatar')->getClientOriginalExtension();
+		// Input::file("avatar")->move("uploads",$sNewPhotoName);
+
+		// $aDetails["avatar"] = $sNewPhotoName;
+
 		$oUser->save();
 
-
 		// redirect to user page
-		return Redirect::to('users/'.$id);
+		return Redirect::to('users/'.$id)->withInput();
 
 
 	}else{
 		// redirect to editUserDetails with sticky data input and errors
 		return Redirect::to('users/'.$id.'/edit')->withErrors($oValidator)->withInput();//session flash data (old input)
-								 
-	
-}
+		
+		
+	}
 
 })->before("auth");

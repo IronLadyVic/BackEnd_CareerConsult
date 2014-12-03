@@ -8,16 +8,16 @@
     <!-- Introduction Section -->
     @if(Auth::check() && (Auth::user()->admin == 1))
     <section id="introduction">
-        <h2 id="intro-paragraph-loggedin">Hi Karyn, please start editing your content.<br>You can edit, Service, Pricing and Testimonials.</h2>
+        <h2 id="intro-paragraph-loggedin">Hi Karyn, please start editing your content.<br><br>You may edit, Service, Pricing and Testimonials.<br>This will automatically be saved to your database.</h2>
         <!-- <p class="para-loggedin">You can edit, Service, Pricing and Testimonials.</p> -->
 <!--         <p class="para-loggedin">There is no obligation to book an appointment after your consultation, however prices are set so that most budgets can use this service.</p>
  -->        <div id="introButtons">
             <i id="rightarrow" class="fa fa-angle-right"></i>
             <div id="launchCareer">
-                <a href="{{URL::to('addclient/')}}"><span>ADD A CLIENT</span></a>
+                <a href="{{URL::to('addclient/')}}"><span>VIEW CLIENTS</span></a>
             </div>
             <div id="careerButton">
-                <a href="{{URL::to('users/'.Auth::user()->id)}}"><span>VIEW CLIENTS</span></a>
+                <a href="{{URL::to('users/'.Auth::user()->id)}}"><span>ADD A CLIENT</span></a>
             </div>
         </div>
     </section>
