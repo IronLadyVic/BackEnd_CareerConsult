@@ -9,17 +9,12 @@
         <div id="accordion">
             @foreach(Service::all() as $service)
             <img data-editable="icon" src="{{URL::to('uploads/'.$service->icon)}}" alt="header services, icon image" id="serviceIcon">
-
-
-            <form method="post" action="service/id">
-               <h3>{{$service->service_type}}</h3>
-
+               <h3 data-editable="service_type" src="{{URL::to('uploads/'.$service->service_type)}}">{{$service->service_type}}</h3>
                <div class="serviceContent">
-                <ul>
-                    <textarea id="editService" name="content" style="width:100%">{{$service->content}}</textarea>
+                <ul data-editable="content" src="{{URL::to('uploads/'.$service->content)}}">
+                {{$service->content}} 
              </ul>
          </div>
-
          @endforeach
      </form>     
  </div>

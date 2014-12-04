@@ -56,19 +56,19 @@
         <li id="menuServices"><a href="{{URL::to('services/edit')}}"><i class="fa fa-cogs"></i><p>Services</p><i id="droparrow" class="fa fa-angle-down"></i></a></li>    
           <li id="seletedServices">
             <ul>
-            <li><a href="{{URL::to('services/1')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
-            <li><a href="{{URL::to('services/2')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
-            <li><a href="{{URL::to('services/3')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
-            <li><a href="{{URL::to('services/4')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
-            <li><a href="{{URL::to('services/5')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
-            <li><a href="{{URL::to('services/6')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
+            <li><a href="{{URL::to('services/edit')}}"><i class="fa fa-angle-right"></i><p>CV Writing & Cover Letters</p></a></li>
+            <li><a href="{{URL::to('services/edit')}}"><i class="fa fa-angle-right"></i><p>Interview Preparation</p></a></li>
+            <li><a href="{{URL::to('services/edit')}}"><i class="fa fa-angle-right"></i><p>New to NZ</p></a></li>
+            <li><a href="{{URL::to('services/edit')}}"><i class="fa fa-angle-right"></i><p>Employment Contracts</p></a></li>
+            <li><a href="{{URL::to('services/edit')}}"><i class="fa fa-angle-right"></i><p>General Job Seeking Advice</p></a></li>
+            <li><a href="{{URL::to('services/edit')}}"><i class="fa fa-angle-right"></i><p>General Employment Advice</p></a></li> 
             </ul>
           </li>           
-          <li><a href="{{URL::to('pricing')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
-          <li><a href="{{URL::to('testimonials')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
+          <li><a href="{{URL::to('pricing/edit')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
+          <li><a href="{{URL::to('testimonials/edit')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
           <li><a href="{{URL::to('post/1')}}"><i class="fa fa-briefcase"></i><p>Posts</p></a></li>
-          <li><a href="{{URL::to('clientlist/')}}" ><i class="fa fa-archive"></i><p id="li-clientlist" class="styleList">Client List</p></a></li> 
-          <li><a href="{{URL::to('clients/new')}}" ><i class="fa fa-archive"></i><p class="styleList">Add Client</p></a></li>    
+          <li><a href="{{URL::to('clients/2')}}" ><i class="fa fa-archive"></i><p id="li-clientlist" class="styleList">Client List</p></a></li> 
+          <li><a href="{{URL::to('clients/new')}}" ><i class="fa fa-user"></i><p class="styleList">Add Client</p></a></li>    
           <li><a href="{{URL::to('logout')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
           @else
 
@@ -171,8 +171,8 @@
         
         <script src="{{URL::to('js/plugins.js')}}"></script>
         <script src="{{URL::to('js/ponsonby.loop.js')}}"></script>
-        <script src="{{URL::to('js/jsedit.js')}}"></script>
-        <script src="{{URL::to('js/tinymce.min.js')}}"></script>
+        
+        <script src="{{URL::to('js/jquery.jeditable.js')}}"></script>
         <script src="{{URL::to('js/infinite.loop.js')}}"></script>
         <script src="{{URL::to('js/accordion.js')}}"></script>
         <script src="{{URL::to('js/avatarUpload.js')}}"></script>

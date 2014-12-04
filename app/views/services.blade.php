@@ -23,7 +23,7 @@
                     {{$service->content}}
                     
                     <li class="enquiryButton">
-                        <a href="services/">BOOKING ENQUIRY</a>
+                        <a href="enquire">BOOKING ENQUIRY</a>
                     </li>   
                 </ul>
             </div>

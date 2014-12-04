@@ -8,22 +8,19 @@
         <div class="cd-testimonials-wrapper cd-container">
             <h1>WHAT CLIENTS ARE SAYING:</h1>
             <ul class="cd-testimonials">
-
                 @foreach(Testimonial::all() as $testimonial)
                 <li> 
-                    <p>{{$testimonial->content}}</p>
+                    <p data-editable="content" data-url="{{URL::to('testimonials/'.$testimonial->id)}}">{{$testimonial->content}}</p>
                     <div class="cd-client">
                         <img src="{{URL::to('img/'.$testimonial->avatar)}}" alt="Client Profile Image">
                         <ul class="cd-client-info">
-                            <li>{{$testimonial->client}}</li>
-                            <li>{{$testimonial->company}}</li>
+                            <li data-editable="client" data-url="{{URL::to('testimonials/'.$testimonial->id)}}">{{$testimonial->client}}</li>
+                            <li data-editable="company" data-url="{{URL::to('testimonials/'.$testimonial->id)}}">{{$testimonial->company}}</li>
                         </ul>
                     </div>                     
                 </li> 
-                @endforeach 
-
+                @endforeach                 
             </ul> 
-
         </div>
 
     </div>
@@ -44,12 +41,12 @@
 
     if(Auth::check()){
 
-       $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
+     $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
 
-   }
-   ?>
-   <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
-   <p>
+ }
+ ?>
+ <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
+ <p>
     <span class="border"><i class="fa fa-user"></i></span>           
     {{Form::text('username')}}
     {{$errors->first('username','<p class="border">:message</p>')}}

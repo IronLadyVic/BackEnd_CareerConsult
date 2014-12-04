@@ -2074,7 +2074,7 @@ textarea#editService{
     float: left;
     display: block;
     position: relative;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 8em;
     margin-left: 7em;
@@ -3559,16 +3559,19 @@ div#shareSocial p a{
 textarea#editTestimonial{
   background-color: transparent;
   height: 10em;
+  color: black;
 }
 
 textarea#editClient{
   background-color: transparent;
   width: 50%!important;
+  color: black;
 }
 
 textarea#editCompany{
   background-color: transparent;
   width: 50%!important;
+  color: black;
 }
 textarea#editPrice{
   background-color: transparent;

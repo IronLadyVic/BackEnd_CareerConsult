@@ -5,34 +5,15 @@
 <div id="sectionPrices">
     <section id="pricesListed">
         @if(Auth::check())
-        <h1 id="header">TAKE A LOOK AT OUR <a href="{{URL::to('services')}}" id="aLink">SERVICES</a> TODAY.</h1>
+            <h1 id="header">TAKE A LOOK AT OUR <a href="{{URL::to('services')}}" id="aLink">SERVICES</a> TODAY.</h1>
         @else
-        <h1 id="header">TRY CAREER CONSULT FOR FREE. <a href="{{URL::to('users/new')}}" id="aLink">SIGN UP</a> TODAY.</h1>
+            <h1 id="header">TRY CAREER CONSULT FOR FREE. <a href="{{URL::to('users/new')}}" id="aLink">SIGN UP</a> TODAY.</h1>
         @endif
         <div class="pricing_table">
-        @if(Auth::user()->admin == 1)
-        @foreach(Price::all() as $price)
-        <!-- Price type  -->
-            <div class="priceTable">
-                <div class="pricesHeader">
-                    <form method="post">
-                    <textarea id="editPrice" name="content" style="width:100%"><h2>{{$price->price}}</h2></textarea>
-                    </form>
-                </div>
-                <div class="priceContents">
-                    <ul>
-                        <li><textarea id="editPriceContent" name="content" style="width:100%">{{$price->content}}</textarea></li>
-                    </ul>
-                </div>
-            </div>
-        @endforeach  
-        @else
-             
         @foreach(Price::all() as $price)
         <!-- Price type -->
             <div class="priceTable">
                 <div class="pricesHeader"><h2>{{$price->price}}</h2>
-
                 </div>
                 <div class="priceContents">
                     <ul>
@@ -41,8 +22,6 @@
                 </div>
             </div>
         @endforeach     
-        @endif     
-
         </div>
     </section>
     </div>

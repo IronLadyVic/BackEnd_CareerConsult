@@ -39,17 +39,78 @@ Route::get('services/{id?}', function($id=null){
 	
 });
 
-//testimonials 
+//post service edit page for admin only
+Route::put('services/{id}', function($id){
+	$sField = Input::get("field");
+	$sValue = Input::get("value");
+
+	$oService = Service::find($id);
+	$oService->$sField = $sValue;
+
+	$oService->save();
+
+	//return value that value is going to be used to be put back into place
+	//return Input::all();
+	return $sValue;
+	
+});
+
+//testimonials get non edit
 Route::get('testimonials', function(){
 	return View::make('testimonial');
 	
 });
+//testimonials get edit
+Route::get('testimonials/edit', function(){
+	return View::make('testimonial_edit');
+	
+});
+Route::put('testimonials/{id}', function($id){
+		
+	$sField = Input::get("field");
+	$sValue = Input::get("value");
+
+	$oTestimonial = Testimonial::find($id);
+	$oTestimonial->$sField = $sValue;
+
+	$oTestimonial->save();
+
+	//return value that value is going to be used to be put back into place
+	//return Input::all();
+	return $sValue;
+
+		
+});
+
+
 
 //pricing 
 Route::get('pricing', function(){
 	return View::make('pricing');
 	
 });
+
+//pricing 
+Route::get('pricing/edit', function(){
+	return View::make('pricing_edit');
+	
+});
+
+Route::put('pricing/{id}', function($id){
+		
+	$sField = Input::get("field");
+	$sValue = Input::get("value");
+
+	$oPrice = Price::find($id);
+	$oPrice->$sField = $sValue;
+
+	$oPrice->save();
+
+	return $sValue;
+
+		
+});
+
 
 
 
@@ -264,6 +325,17 @@ Route::post('clients', function(){
 		
 });
 
+Route::get('clients/{id}', function($id){
+	$oUser = User::find($id);
+	return View::make('user')->with("user",$oUser);
+	
+})->before("auth");
+
+
+
+
+
+
 
 
 //posts
@@ -274,15 +346,12 @@ Route::get('post/{id}', function($id){
 });
 
 
-//posts
-Route::post('posts/', function($id){
-	
+
+Route::get('topics/{id}', function($id){
+	$oTopic = Topic::find($id);
+	return View::make('topic')->with("topic",$oTopic);
 	
 });
-
-
-
-
 
 
 
