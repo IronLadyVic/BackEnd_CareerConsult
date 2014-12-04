@@ -371,6 +371,90 @@ textarea#editService{
   margin-left: -0.5em;
   margin-top: -0.5em;
 }
+/* ==========================================================================
+   ENQUIRY FORM
+   ========================================================================== */
+form#enquire-form{
+  width: 110%;
+  margin-left: -1em;
+}
+#enquiryHeader{
+  margin-left: -0.5em;
+}
+.enquireContent{
+  margin-left: -1em;
+}
+   form#enquire-form input{
+    @include input;
+    color: black;
+
+   }
+#enquire-form input[type="text"]{
+  color: black!important;
+   border-bottom: 0.1em white solid!important;
+   border-top: 0.1em white solid!important;
+  color: white;
+   width:85%;
+   @include input;
+}
+#enquire-form input[type="email"]{
+  color: black!important;
+   border-bottom: 0.1em white solid!important;
+   border-top: 0.1em white solid!important;
+  color: white;
+   width:85%;
+   @include input;
+}
+#enquire-form textarea{
+  color: black!important;
+   border-bottom: 0.1em white solid!important;
+   border-top: 0.1em white solid!important;
+  color: white;
+   width:85%;
+   @include input;
+}
+#enquire-form select{
+  color: black!important;
+   border-bottom: 0.1em white solid!important;
+   border-top: 0.1em white solid!important;
+    color: white!important;
+   width:85%;
+   @include input;
+}
+  form#enquire-form span{
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    float: left;
+    height: 3em;
+    width: 3em;
+    color: white;
+    padding-top: 0.8em;
+    padding-left: 1em;
+  }
+
+#enquire-form #enquire{
+  @include purpleButton;
+  width:98%;
+  border-bottom: none;
+    border-top: none;
+    box-shadow: none;
+    color: white;
+}
+
+.panelTopics li i{
+  padding-right: 0.8em;
+}
+
+
+/* ==========================================================================
+   GOOGLE MAP
+   ========================================================================== */
+
+li div#flex-google { 
+  display: block;
+  height: 20em;
+  /*outline: 1px red solid;*/
+}
 
 
 /* ==========================================================================
@@ -2146,7 +2230,7 @@ padding-top: 1em;
       list-style: none;
       list-style-type: none;
       box-shadow: none;
-      width: 66%;
+      width: 83%;
       border-radius: 0.2em;
 background-color: #9B8FFB;
 text-align: center;
@@ -2702,7 +2786,7 @@ img#workingGirl {
     width: 80%;
     height: 68em;
     float: left;
-    margin-top: -26em;
+    margin-top: -26em!important;
     margin-left: 17em;
 
   }
@@ -3612,6 +3696,10 @@ ul.pagination{
 .pagination>li>a:hover{
   border: 1px solid #9B8FFB;
 }
+
+#mainPostBody ul.pagination{
+  margin-left: 0em;
+}
 /* ==========================================================================
    Desktop Login only - no pop up model
    ========================================================================== */
@@ -3695,16 +3783,71 @@ form#mobdeskForm p#rememberMe{
     color: black;
 
    }
+#enquire-form input[type="text"]{
+  color: black!important;
+   border-bottom: 0.1em black solid!important;
+   border-top: 0.1em black solid!important;
 
+   width:70%;
+   @include input;
+}
+#enquire-form input[type="email"]{
+  color: black!important;
+   border-bottom: 0.1em black solid!important;
+   border-top: 0.1em black solid!important;
 
+   width:70%;
+   @include input;
+}
+#enquire-form textarea{
+  color: black!important;
+   border-bottom: 0.1em black solid!important;
+   border-top: 0.1em black solid!important;
 
+   width:70%;
+   @include input;
+}
+#enquire-form select{
+  color: black!important;
+   border-bottom: 0.1em black solid!important;
+   border-top: 0.1em black solid!important;
 
+   width:70%;
+   @include input;
+}
+  form#enquire-form span{
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    float: left;
+    height: 3em;
+    width: 3em;
+    color: black;
+    padding-top: 0.8em;
+    padding-left: 1em;
+  }
 
+#enquire-form #enquire{
+  @include purpleButton;
+  width:79%;
+  border-bottom: none;
+    border-top: none;
+    box-shadow: none;
+    color: white;
+}
 
+.panelTopics li i{
+  padding-right: 0.8em;
+}
 
+/* ==========================================================================
+   GOOGLE MAP
+   ========================================================================== */
 
-
-
+li div#flex-google { 
+  display: block;
+  height: 20em;
+  /*outline: 1px red solid;*/
+}
 
 
 
@@ -3779,6 +3922,15 @@ div#brand_logo{
   input#saveClient.addButton{
   width: 45%;
   margin-left: -1.5em;
+
+  }
+
+     section#signing-up{
+    width: 80%;
+    height: 68em;
+    float: left;
+    margin-top: -4em;
+    margin-left: 17em;
 
   }
 

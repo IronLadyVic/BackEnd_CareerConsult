@@ -1,6 +1,6 @@
 @extends('includes.master')
 @section("content")
-
+<div id="mainPostBody">
 <div id="sectionSignUp">
     <section id="signing-up">
         <h1 id="header">SIGN UP</h1>
@@ -113,6 +113,7 @@
         {{Session::get("error")}}
     </section>
 </div>
+</div>
 
 <!-- Log in pop up -->
 <div id="loginForm" class="l-box-lrg pure-u-1 pure-u-md-2-5">
@@ -123,7 +124,17 @@
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
 
-    <p><img id="profileImage" src="URL::to('img/careerprofile-BLK.png')" alt="profile picture"></p>
+        <?php
+            $sPhoto = URL::to('img/careerprofile-BLK.png');
+
+            if(Auth::check()){
+
+                 $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
+
+            }
+    ?>
+
+    <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
     <p>
         <span class="border"><i class="fa fa-user"></i></span>           
         {{Form::text('username')}}

@@ -220,19 +220,12 @@ Route::post('users',function(){
 
 
 		if($oValidator->passes()){
-		//hash password	
 		
-		//uploading avatar career profile picture
-		//we need to tell the route when a user fills in their details that the colomns in the table need to be filled in SQL.
-		
-		//in laravel we need to tell aDetails that it is a key to be filled into the database user table
-		// rename users profile picture, and rename to users name.
+
 		$sNewPhotoName = Input::get("firstname").".".Input::file('avatar')->getClientOriginalExtension();
 		Input::file("avatar")->move("uploads",$sNewPhotoName);
-
-
 		
-
+		//hash password	
 		$aDetails = Input::all();
 		$aDetails["password"] = Hash::make($aDetails["password"]);	
 	
@@ -240,8 +233,14 @@ Route::post('users',function(){
 		//create new User
 		$oUser = User::create($aDetails);
 
+		//email client about sign up success
+    Mail::send('users.mails.welcome', array('firstname'=>Input::get('firstname')), function($message){
+        $message->to(Input::get('email'), Input::get('firstname').' '.Input::get('lastname'))->subject('Welcome to Career Consult!');
+    });
+
 		//redirect to product list
-		return Redirect::to("login/");
+		return Redirect::to('login')->with('message', 'Thanks for signing up!');
+		
 		}
 		
 		else{
@@ -252,7 +251,6 @@ Route::post('users',function(){
 	}
 		
 });
-
 
 
 

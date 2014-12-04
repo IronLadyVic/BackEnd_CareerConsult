@@ -25,7 +25,7 @@
         <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
         <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     
     </head>

@@ -113,4 +113,64 @@ $("[data-editable]").on("click",function(){ //this [data-editiable] is the attri
 });
 
 
+//google map
+
+
+function initialize(){
+
+	var mapLocation = new google.maps.LatLng(-36.855945, 174.746430);
+	var mapStyles = [{
+		stylers:[
+			{hue: "#f4f2ef"},
+			{saturation: -80}
+			]
+	}];
+
+	var markerStyles =[{
+		stylers:[
+		{hue: "#9B8FFB"},
+		{saturation: -80},
+		{fillColor: "#9B8FFB"},
+		]
+	}]
+	
+	var mapOptions ={
+		zoom: 16,
+		center: mapLocation,
+		styles: mapStyles
+
+	}
+
+	
+
+	var map = new google.maps.Map(document.getElementById('flex-google'), mapOptions);
+
+		var marker = new google.maps.Marker({
+		position: mapLocation,
+		map: map,
+		styles: markerStyles,
+		animation: google.maps.Animation.DROP,
+		position: mapLocation,
+		// icon: logoMarker
+		// title: 'Laser Mt Eden Swim Club'
+		
+	});
+	google.maps.event.addListener(marker,'click',toggleBounce);
+}
+
+
+
+//animate the marker
+
+function toggleBounce(){
+
+	if(marker.getAnimation() != null){
+		marker.setAnimation(null);
+	}else{
+		marker.setAnimation(google.maps.Animation.BOUNCE);
+	}
+}
+
+google.maps.event.addDomListener(window,'load',initialize);
+
 

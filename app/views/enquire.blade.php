@@ -7,10 +7,10 @@
         <article id="postWrapper">
             <div class="contentWrapper">
                 <div class="headerTopic">
-                    <h2>Enquire here</h2>
+                    <h2 id="enquiryHeader">Enquire here</h2>
                 </div>
                 <div class="contentPost">
-                    <p>Did you know that employers tend to look at a CV and make up their mind within about 10 seconds… make sure your CV is a YES!</p>                   
+                    <p class="enquireContent">Did you know that employers tend to look at a CV and make up their mind within about 10 seconds… make sure your CV is a YES!</p>                   
                 </div>
 
                 {{Form::open(array('url'=>'users','files'=>'true','id'=>'enquire-form'))}}
@@ -48,7 +48,7 @@
                     {{$errors->first('comment','<p class="error">:message</p>')}} 
 
                 </p>
-                {{Form::submit('SUBMIT ENQUIRY', array('id'=>'signUp', 'class' => 'button'));}}
+                {{Form::submit('SUBMIT ENQUIRY', array('id'=>'enquire', 'class' => 'button'));}}
                 {{Form::close()}}
             </div> 
         </article>
@@ -56,15 +56,15 @@
     </div>
 
     <aside id="rightColomn">
-        <section>
+        <section id="enquireContact">
             <h2>CONTACT US</h2>
             <div class="panelTopics">
                 <ul>
-                    <li><a href=""><i class="fa fa-phone"></i>0800 CAREER CONSULT</a></li>
-                    <li><a href="">Email | karyn@careerconsult.co.nz</a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="0800 CAREER CONSULT"><i class="fa fa-phone"></i>0800 CAREER CONSULT</a></li>
+                    <li><a href="karyn@careerconsult.co.nz"><i class="fa fa-envelope"></i>karyn@careerconsult.co.nz</a></li>
+                    <li><a href="#"><i class="fa fa-skype"></i>karyn@careerconsult.co.nz</a></li>
+                    <li><div id="flex-google"></div></li>
+                    
                 </ul>
             </div>    
         </section>
@@ -79,8 +79,17 @@
     <h1 id="header">LOG IN</h1>
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
+    <?php
+            $sPhoto = URL::to('img/careerprofile-BLK.png');
 
-    <p><img id="profileImage" src="URL::to('img/careerprofile-BLK.png')" alt="profile picture"></p>
+            if(Auth::check()){
+
+                 $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
+
+            }
+    ?>
+
+    <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
     <p>
         <span class="border"><i class="fa fa-user"></i></span>           
         {{Form::text('username')}}
@@ -107,4 +116,5 @@
 <div id="background"></div>
 <!-- End of Log in pop up -->
 
-    @stop    
+
+@stop 
