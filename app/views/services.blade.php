@@ -8,7 +8,7 @@
         <p>Career Consult offer a number of services, which you can pick and choose to suit your needs. Please sign up to and recieive a free 15min consultation and let us help you launch your career.</p>
         <div id="accordion">
         @foreach(Service::all() as $service)
-        <img src="{{URL::to('uploads/'.$service->icon)}}" alt="header services, icon image" id="serviceIcon">
+        <img src="{{URL::to('uploads/'.$service->icon)}}" alt="header services, icon image" class="serviceIcon">
 
             @if($service->id == $id)
              <h3 class="open">{{$service->service_type}}</h3>
@@ -65,9 +65,9 @@
                     {{@Form::hidden("postID",$post->id)}}
                     </a></p>
                </div>
-                <div id="shareSocial">
-                    <p><a href="http://twitter.com/share?text=Contact%20Career%20Consult%20&url=http://www.careerconsult/services.co.nz"><i class="fa fa-twitter"></i></a></p>
-                    <p><a href="http://www.facebook.com/sharer.php?text=Career%20Consult%20Services&u=http://www.careerconsult/services.co.nz"><i class="fa fa-facebook"></i></a></p>
+                <div class="shareSocial">
+                    <p><a href="http://twitter.com/share?text=Contact%20Career%20Consult%20&amp;url=http://www.careerconsult/services.co.nz"><i class="fa fa-twitter"></i></a></p>
+                    <p><a href="http://www.facebook.com/sharer.php?text=Career%20Consult%20Services&amp;u=http://www.careerconsult/services.co.nz"><i class="fa fa-facebook"></i></a></p>
                     <p><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.careerconsult/services.co.nz"><i class="fa fa-linkedin"></i></a></p>
                 </div>
                 <div class="avatarProfile">
@@ -103,7 +103,7 @@
     ?>
 
     <span role="close-modal"><i class="fa fa-times"></i></span>
-    <h1 id="header">LOG IN</h1>
+    <h2 id="header">LOG IN</h2>
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
 

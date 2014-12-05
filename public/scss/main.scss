@@ -208,7 +208,9 @@ ul#main-nav li.show:hover{
       display: block;
       width: 100%;
     }
-
+section#animation h2{
+  font-size: 0em;
+}
     section#animation.hide{
       display: none;
       /*Animation*/
@@ -329,7 +331,7 @@ p.para-loggedin{
     z-index: 4000;
   }
 
-  div#shareSocial{
+  div.shareSocial{
     width: 90%;
   }
 /* ==========================================================================
@@ -564,7 +566,7 @@ section#latestUpdates{
   margin-left: 7em;
 }
 
-div#shareSocial p a{
+div.shareSocial p a{
   color: white;
   float: left;
   width: 3em;
@@ -572,7 +574,7 @@ div#shareSocial p a{
   font-size: 1.2em;
 
 }
-#shareSocial p a:hover{
+.shareSocial p a:hover{
   color: #9B8FFB;
 
 }
@@ -1126,7 +1128,7 @@ margin-left: -0.2em;
     height: 0;
     
   }
-  [role="close-modal"] {
+  div[role="close-modal"] {
     display: none;
     width: 0;
     height: 0;
@@ -1514,6 +1516,18 @@ img#profileImage{
     text-decoration:none;
   }
 
+ #careerProfile-form input#deleteProfile{
+width: 90%;
+     height: 3em;
+@inclue outlineButton;
+border: 1px white solid;
+color: white;
+margin-top: 1em;
+margin-left: 1em;
+border-radius: 0.2em;
+  }
+
+
 
   p#agreementStatement{
     padding: 1em;
@@ -1827,18 +1841,18 @@ list-style-type: none;
  width: 100%;
 
 }
-#shareSocial p a{
+.shareSocial p a{
   color: white;
   float: left;
   width: 3em;
   font-size: 1.5em;
 
 }
-#shareSocial p a:hover{
+.shareSocial p a:hover{
   color: #9B8FFB;
 
 }
-img#serviceIcon{
+img.serviceIcon{
   margin-left: 1em;
   width: 1em;
 
@@ -1920,6 +1934,11 @@ textarea#editService{
 
    @media only screen and (min-width: 40em) {
 
+    input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px #f4f2ef inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: black;
+}
+
     body.show {
       @include responsiveBackground(#f4f2ef); 
 
@@ -1957,7 +1976,7 @@ textarea#editService{
     }
 
     h2#intro-paragraph-loggedin{
-      width: 48%;
+      width: 50%;
     }
 /* ==========================================================================
    Pop up log in
@@ -2002,7 +2021,7 @@ textarea#editService{
     padding-top: 1em;
     margin-top: 4em;
   }
-  div#loginForm span[role="close-modal"] {
+  div#loginForm [role="close-modal"] {
     position: absolute;
     margin-left: 22em;
     padding-right: 0.5em;
@@ -2261,7 +2280,7 @@ padding-top: 1.1em;
 
 
   }
-  img#serviceIcon{
+  img.serviceIcon{
   
   width: 1em;
  
@@ -2659,7 +2678,7 @@ ul#main-nav{
    width: 100%;
  }
  #aucklandSkyline img{
-  margin-top: -6em;
+  margin-top: -3em;
   opacity: 0.3;
   position: absolute;
   margin-left: 1em;
@@ -3122,13 +3141,33 @@ border: none;
     @include purpleButton;
   border-top: none;
   border-bottom: none;
-  width: 45%;
+  width: 21.5%;
   margin-left: 0em;
   color: white;
   box-shadow: none;
   margin-bottom: 2em;
   margin-top:0em;
   }
+
+  p.editProfile{
+    width: 100%;
+  }
+
+
+
+ #careerProfile-form input#deleteProfile{
+width: 21.5%;
+@inclue outlineButton;
+border: 1px black solid!important;
+color: black!important;
+border-radius: 0.2em;
+margin-left: -0.5em;
+margin-top: 0em;
+  }
+
+
+
+
 #careerProfile-form select option {
   background-color: #f4f2ef; color:black;
   border: none;
@@ -3150,6 +3189,111 @@ border: none;
     opacity: 0.5;
     /*border-bottom: 1px solid #9B8FFB;*/
   }
+
+/* ==========================================================================
+   Client display list and their details
+   ========================================================================== */
+#clientList{
+  margin-top: -3em;
+}
+form#clientDisplayInfo{
+  width: 60%;
+}
+form#clientDisplayInfo input{
+  color: black;
+   border-bottom: 1px solid #dfdfdf;
+border-top: 1px solid #fff;
+   width: 80%;
+   @include input;
+}
+form#clientDisplayInfo input[type="email"]{
+  color: black;
+   border-bottom: 1px solid #dfdfdf!important;
+border-top: 1px solid #fff!important;
+   width: 80%;
+   @include input;
+}
+form#clientDisplayInfo textarea{
+  color: black;
+   border-bottom: 1px solid #dfdfdf;
+border-top: 1px solid #fff;
+   width: 80%;
+   height: 3em;
+   @include input;
+}
+
+form#clientDisplayInfo #career_type{
+  color: black;
+   border-bottom: 1px solid #dfdfdf;
+border-top: 1px solid #fff;
+   width: 93%;
+   height: 3em;
+   @include input;
+   display: block;
+   padding-top: 0.8em;
+}
+form#clientDisplayInfo #service_type{
+  color: black;
+   border-bottom: 1px solid #dfdfdf;
+border-top: 1px solid #fff;
+   width: 93%;
+   height: 3em;
+   @include input;
+   display: block;
+   padding-top: 0.8em;
+}
+form#clientDisplayInfo span i{
+  float: left;
+   height: 3em;
+   border-bottom: 1px solid #dfdfdf;
+border-top: 1px solid #fff;
+   color: black;
+   padding-right: 1em;
+   padding-top: 1em;
+   padding-left: 1em;
+}
+form#clientDisplayInfo label{
+  display: none;
+}
+
+form#clientDisplayInfo .editClient{
+  border-radius: 0.2em;
+background-color: #9B8FFB;
+box-shadow: 0.2em 0.2em 0.5em black;
+text-decoration: none;
+border-bottom: none;
+border-top: none;
+margin-left: -0.5em;
+width: 60%;
+color: white;
+box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
    ADD A CLIENT
    ========================================================================== */
@@ -3307,7 +3451,7 @@ section#latestUpdates article:first-child{
   margin-left: 0.5em;
   margin-left: 7.5em;
 }
-div#shareSocial p a{
+div.shareSocial p a{
   color: black;
   float: left;
   width: 3em;
@@ -3315,7 +3459,7 @@ div#shareSocial p a{
   font-size: 1.2em;
 
 }
-#shareSocial p a:hover{
+.shareSocial p a:hover{
   color: #9B8FFB;
 
 }
@@ -3361,6 +3505,15 @@ div#shareSocial p a{
     width: 90%;
     max-width: 80em;
     margin-top:5em;
+
+  }
+     #mainSignUpBody{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 80em;
+    margin-top:26em;
 
   }
   .headerTopic h2 {
@@ -3481,7 +3634,7 @@ div#shareSocial p a{
     height: 29em;
   }
   .cd-testimonials-wrapper h1{
-    margin-left: 0.2em;
+    margin-left: 0.4em;
     color: black;
   }
   .cd-testimonials-wrapper {
@@ -3912,11 +4065,13 @@ div#brand_logo{
 }
   #careerProfile-form input#updateCareerButton{
   @include purpleButton;
-   width: 45%;
+   width: 43%;
    box-shadow: none;
     border-top: none;
   border-bottom: none;
   color: white;
+  margin-left: -1.5em;
+
 
 }
   input#saveClient.addButton{
@@ -3986,14 +4141,44 @@ margin-left: 38%;
 
   #careerProfile-form p.editProfile{
   margin-left: -1.5em;
-  width: 43%;
+  width: 21.5%;
 
   }
+  p.editProfile{
+    width: 100%;
+  }
+
+
+
+
+
+//do in the weekend
+
+
+
+ #careerProfile-form input#deleteProfile{
+width: 21.5%;
+@inclue outlineButton;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 form#signup-form{
   margin-left: 4em;
 }
   #signing-up p{
-    margin-left: -4em;
+    margin-left: -2em;
   }
   ul#reasonsToSignUp{
     margin-left: -0.2em;
@@ -4009,12 +4194,21 @@ form#signup-form{
   
 
 }
+#signing-up h1#header{
+  margin-left: 1em;
+}
+#signing-up p#description{
+  margin-left: 1em;
+}
+ul#reasonsToSignUp{
+  margin-left: 1.8em;
+}
 #signup-form p#agreementStatement{
-  margin-left: -4em;
+  margin-left: -2em;
   width: 80%;
 }
 #signup-form input#signUp{
-  margin-left: -4em;
+  margin-left: -1em;
   margin-top: -2em;
   width: 40%;
   }
@@ -4136,7 +4330,6 @@ form#signup-form{
   margin-left: -1.5em;
 
   }
-
 
 
   }

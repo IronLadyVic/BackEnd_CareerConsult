@@ -63,7 +63,7 @@ $(function(){
 
 	});
 
-	$("#loginForm [role='close-modal']").on("click",function(){
+	$("#loginForm div[role='close-modal']").on("click",function(){
 
 		$("#background").animate({width:"0%",height:"0%",display:"none"},1000,function(){
 			$(this).hide();
@@ -113,7 +113,7 @@ $("[data-editable]").on("click",function(){ //this [data-editiable] is the attri
 });
 
 
-//google map
+//----------- google map-----------//
 
 
 function initialize(){
@@ -174,3 +174,10 @@ function toggleBounce(){
 google.maps.event.addDomListener(window,'load',initialize);
 
 
+
+
+//User deletes their profile - with message
+
+$(document).on('submit', '#deleteProfile', function(){
+    return confirm('Are you sure?');
+});

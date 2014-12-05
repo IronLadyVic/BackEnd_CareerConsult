@@ -323,9 +323,11 @@ Route::post('clients', function(){
 		
 });
 
-Route::get('clients/{id}', function($id){
-	$oUser = User::find($id);
-	return View::make('user')->with("user",$oUser);
+
+
+Route::get('clients', function(){
+	$aClients = User::where("admin","=",0)->get();
+	return View::make('clients')->with("clients",$aClients);
 	
 })->before("auth");
 
@@ -418,3 +420,15 @@ Route::put('users/{id}',function($id){
 	}
 
 })->before("auth");
+
+
+Route::delete('users/{id}',function($id){
+
+	$oUser = User::find($id);
+	$iUserId = $oUser->user->id;
+	$oUser->delete();
+
+	return Redirect::to('index');
+
+	
+});

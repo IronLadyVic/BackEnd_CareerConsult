@@ -1,6 +1,6 @@
 @extends('includes.master')
 @section("content")
-<div id="mainPostBody">
+<div id="mainSignUpBody">
 <div id="sectionSignUp">
     <section id="signing-up">
         <h1 id="header">SIGN UP</h1>

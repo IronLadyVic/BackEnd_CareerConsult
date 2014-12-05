@@ -67,7 +67,7 @@
           <li><a href="{{URL::to('pricing/edit')}}"><i class="fa fa-usd"></i><p>Pricing</p></a></li>
           <li><a href="{{URL::to('testimonials/edit')}}"><i class="fa fa-users"></i><p>Testimonials</p></a></li>
           <li><a href="{{URL::to('post/1')}}"><i class="fa fa-briefcase"></i><p>Posts</p></a></li>
-          <li><a href="{{URL::to('clients/2')}}" ><i class="fa fa-archive"></i><p id="li-clientlist" class="styleList">Client List</p></a></li> 
+          <li><a href="{{URL::to('clients')}}" ><i class="fa fa-archive"></i><p id="li-clientlist" class="styleList">Client List</p></a></li> 
           <li><a href="{{URL::to('clients/new')}}" ><i class="fa fa-user"></i><p class="styleList">Add Client</p></a></li>    
           <li><a href="{{URL::to('logout')}}"><i class="fa fa-unlock"></i><p class="styleList">Log Out</p></a></li>
           @else
@@ -157,7 +157,7 @@
             <li><a href="{{URL::to('#')}}">HELP</a></li>
             <li><a href="{{URL::to('#')}}">PRIVACY</a></li>
             <li><a href="{{URL::to('#')}}">TERMS</a></li>
-            <li><a href="{{URL::to('#')}}">&copy CAREER CONSULT 2014</a></li>
+            <li><a href="{{URL::to('#')}}">&copy; CAREER CONSULT 2014</a></li>
             <li><a href="{{URL::to('www.facebook.com')}}"><i class="fa fa-facebook-square"></i></a></li>
             <li><a href="{{URL::to('www.twitter.com')}}"><i class="fa fa-twitter-square"></i></a></li>
             <li><a href="{{URL::to('www.linkedin.com')}}"><i class="fa fa-linkedin-square"></i></a></li>

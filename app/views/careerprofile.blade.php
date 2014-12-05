@@ -163,10 +163,14 @@
          <p class="editProfile">
             <a href="{{URL::to('users/'.$user->id.'/edit')}}">EDIT MY PROFILE</a>
         </p>
-        @endif
+       <!--  Delete button for User Profile  -->
+        {{Form::model($user, array('url' => 'users/'.$user->id, 'id'=>'careerProfile-form'))}}
+        {{Form::submit('DELETE', array('id'=>'deleteProfile'))}} 
+        {{Form::close()}}
 
-          
-            {{Form::close()}}
+
+        @endif
+        {{Form::close()}}
         </section>
     </div>
 @if(Auth::user()->admin == 1)

@@ -6,7 +6,7 @@
     <div class="leftColomn">
 
         <div class="cd-testimonials-wrapper cd-container">
-            <h1>WHAT CLIENTS ARE SAYING:</h1>
+            <h1>EDIT TESTIMONIALS.</h1>
             <ul class="cd-testimonials">
                 @foreach(Testimonial::all() as $testimonial)
                 <li> 
