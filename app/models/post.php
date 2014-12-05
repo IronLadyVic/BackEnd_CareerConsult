@@ -5,5 +5,5 @@ class Post extends Eloquent{
 		return $this->belongsTo('Topic');
 	}
 
-	protected $fillable = array('title','photo_path','content','avatar','editor','date');
+	protected $fillable = array('topic_id','title','photo_path','content','avatar','editor','date');
 }

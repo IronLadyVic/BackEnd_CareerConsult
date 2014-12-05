@@ -13,8 +13,7 @@
                     <h2>{{$post->title}}</h2>
                 </div>
                 <div class="hashtagPost">
-                    <p>
-                        <a href="#"><i class="fa fa-bookmark"></i>{{$post->topic_id}}</a></p>
+                    <p><a href="{{URL::to('post/'.$post->topic->name)}}"><i class="fa fa-bookmark"></i>{{$post->topic->name}}</a></p>
                     </div>
                     <div class="postPhoto">
                         <img src="{{URL::to('uploadPostPhotos/'.$post->photo_path)}}" alt="Post Image">

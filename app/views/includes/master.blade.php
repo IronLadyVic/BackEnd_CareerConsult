@@ -37,7 +37,7 @@
 @if(Auth::check())    
   <div id="brand_logo"><a href="{{URL::to('welcome/'.Auth::user()->id)}}"><img src="{{asset('img/CareerConsult_logo.png')}}" alt="career consult logo"></a></div>
 @else
-  <div id="brand_logo"><a href="{{URL::to('index')}}"><img src="{{asset('img/CareerConsult_logo.png')}}" alt="career consult logo"></a></div>
+  <div id="brand_logo"><a href="{{URL::to('home')}}"><img src="{{asset('img/CareerConsult_logo.png')}}" alt="career consult logo"></a></div>
 @endif
 <div class="search-container">
         {{Form::open(array( 'id'=>'serachForm'))}}

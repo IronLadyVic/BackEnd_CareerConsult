@@ -20,8 +20,8 @@ Route::get('/', function()
 // ROUTES FOR VIEWING WHEN NOT LOGGED IN
 
 //index not logged in
-Route::get('index', function(){
-	return View::make('index');
+Route::get('home', function(){
+	return View::make('home');
 	//return the index view
 });
 
@@ -126,7 +126,7 @@ return View::make('enquire');
 Route::get('welcome/{id}', function($id){
 
 	$oUser = User::find($id);
-	return View::make('index-loggedin')->with("user",$oUser);
+	return View::make('home-loggedin')->with("user",$oUser);
 	//return the index view logged in with user id showing in URI
 
 })->before("auth");
@@ -173,7 +173,7 @@ Route::post('login',function(){
 Route::get('logout', function()
 {
 	Auth::logout();
-	return Redirect::to('index');
+	return Redirect::to('home');
 });
 
 
@@ -346,6 +346,64 @@ Route::get('post/{id}', function($id){
 });
 
 
+// make a new post	
+Route::post('posts',function(){
+	
+//validate input in the sign up form
+
+	$aRules = array(
+		'topic_id'=>'required|unique:posts'
+		'title'=>'required',
+		'photo_path'=>'required',
+		'content'=>'required',
+		'avatar'=>'required',
+		'editor'=>'required',
+		'date'=>'required'
+	
+		);
+
+	$aAdminInput = Input::all();
+
+	$messages= array(
+		"required"=>'The :attribute field is required.'
+		);
+
+	$oValidator = Validator::make($aAdminInput, $aRules, $messages);
+
+
+		if($oValidator->passes()){
+		
+
+		$sPostImageName = Input::get("topic").".".Input::file('photo_path')->getClientOriginalExtension();
+		Input::file("photo_path")->move("uploadPostPhotos",$sPostImageName);
+		
+		
+		$aPostDetails = Input::all();
+		
+	
+		$aPostDetails["photo_path"] = $sPostImageName;
+		//create new User
+		$oPost = User::create($aPostDetails);
+
+		//redirect to post and services lists
+		return Redirect::to('services/posts');
+		
+		}
+		
+		else{
+
+		//redirect new post form with errors and sticky data
+		return Redirect::to("services/edit")->withErrors($oValidator)->withInput();
+
+	}
+		
+})->before("auth");
+
+
+
+
+
+
 
 Route::get('topics/{id}', function($id){
 	$oTopic = Topic::find($id);
@@ -428,7 +486,7 @@ Route::delete('users/{id}',function($id){
 	$iUserId = $oUser->user->id;
 	$oUser->delete();
 
-	return Redirect::to('index');
+	return Redirect::to('home');
 
 	
 });
