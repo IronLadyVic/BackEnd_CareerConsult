@@ -5,19 +5,17 @@
 <!-- Career Profile Client add info. -->
 <div id="sectionCareerProfile">
     <section id="career-profile">
-        <h1 id="header">ADD A CLIENT</h1>
+        <h1 class="header">ADD A CLIENT</h1>
       
         <p id="description">You can add your client here. This is for safe keeping, and will help you determine a service, and tailor a CV!</p>
                 
         
         {{Form::open(array('url'=>'users','files'=>'true','id'=>'careerProfile-form'))}}
-
-        <?php
-            $sPhoto = URL::to('img/careerprofile-BLK.png');
-
-        ?>
+        
         <div class="profileAuto">
-            <img id="profileImage" src="{{$sPhoto}}" alt="career profile">
+        
+            <img id="profileImage" src="{{URL::to('img/careerprofile-BLK.png')}}" alt="career profile">
+
         </div>
         <p>
             <span class="border"><i class="fa fa-camera"></i></span>

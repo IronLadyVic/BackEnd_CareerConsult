@@ -4,7 +4,7 @@
 <!-- Start of Services -->
 <div id="sectionServices">
     <section id="servicesListed">
-        <h1 id="header">SERVICES</h1>
+        <h1 class="header">SERVICES</h1>
         <p>Career Consult offer a number of services, which you can pick and choose to suit your needs. Please sign up to and recieive a free 15min consultation and let us help you launch your career.</p>
         <div id="accordion">
         @foreach(Service::all() as $service)
@@ -40,7 +40,7 @@
 </div>
 
 
-<aside id="asideLatestNews">
+<aside id="asideCareerAdvice">
     <section id="latestUpdates">
         <h2>LATEST CAREER ADVICE</h2>
         
@@ -103,7 +103,7 @@
     ?>
 
     <span role="close-modal"><i class="fa fa-times"></i></span>
-    <h2 id="header">LOG IN</h2>
+    <h2 class="header">LOG IN</h2>
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
 

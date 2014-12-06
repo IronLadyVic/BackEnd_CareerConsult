@@ -8,9 +8,9 @@
 
 
         @if(Auth::user()->admin == 1)
-        <h1 id="header">REMINDERS</h1>
+        <h1 class="header">REMINDERS</h1>
         @else
-        <h1 id="header">CAREER PROFILE</h1>
+        <h1 class="header">CAREER PROFILE</h1>
         @endif
         @if(Auth::user()->admin == 1)
         <p id="description">Go ahead, and make some notes.</p>

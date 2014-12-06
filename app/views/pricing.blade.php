@@ -5,9 +5,9 @@
 <div id="sectionPrices">
     <section id="pricesListed">
         @if(Auth::check())
-            <h1 id="header">TAKE A LOOK AT OUR <a href="{{URL::to('services')}}" id="aLink">SERVICES</a> TODAY.</h1>
+            <h1 class="header">TAKE A LOOK AT OUR <a href="{{URL::to('services')}}" id="aLink">SERVICES</a> TODAY.</h1>
         @else
-            <h1 id="header">TRY CAREER CONSULT FOR FREE. <a href="{{URL::to('users/new')}}" id="aLink">SIGN UP</a> TODAY.</h1>
+            <h1 class="header">TRY CAREER CONSULT FOR FREE. <a href="{{URL::to('users/new')}}" id="aLink">SIGN UP</a> TODAY.</h1>
         @endif
         <div class="pricing_table">
         @foreach(Price::all() as $price)
@@ -34,7 +34,7 @@
 
     {{Form::open(array('url'=>'login', 'id'=>'logIn-form', 'class'=>'pure-form pure-form-stacked'))}}
     <span role="close-modal"><i class="fa fa-times"></i></span>
-    <h1 id="header">LOG IN</h1>
+    <h1 class="header">LOG IN</h1>
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
 

@@ -32,7 +32,7 @@
 
     {{Form::open(array('url'=>'login', 'id'=>'logIn-form', 'class'=>'pure-form pure-form-stacked'))}}
     <span role="close-modal"><i class="fa fa-times"></i></span>
-    <h1 id="header">LOG IN</h1>
+    <h1 class="header">LOG IN</h1>
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
 

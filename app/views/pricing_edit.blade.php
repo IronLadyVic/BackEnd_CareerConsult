@@ -4,7 +4,7 @@
 <!-- Start of Services -->
 <div id="sectionPrices">
     <section id="pricesListed">            
-       <h1 id="header">EDIT YOUR<a href="{{URL::to('services/edit')}}" id="aLink"> SERVICES</a>.</h1>                    
+       <h1 class="header">EDIT YOUR<a href="{{URL::to('services/edit')}}" id="aLink"> SERVICES</a>.</h1>                    
         <div class="pricing_table">       
         @foreach(Price::all() as $price)
         <!-- Price type  -->

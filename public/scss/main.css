@@ -429,6 +429,125 @@
     /*outline: 1px red solid;*/ }
 
   /* ==========================================================================
+     Client display list and their details
+     ========================================================================== */
+  div#clientPostBody {
+    margin-top: 8em; }
+
+  #clientList {
+    margin-top: -3em; }
+
+  form#clientDisplayInfo input {
+    color: white;
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #fff;
+    width: 80%;
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    color: white; }
+
+  form#clientDisplayInfo input[type="email"] {
+    color: white;
+    border-bottom: 1px solid #dfdfdf !important;
+    border-top: 1px solid white !important;
+    width: 80%;
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    color: white; }
+
+  form#clientDisplayInfo textarea {
+    color: white;
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #fff;
+    width: 80%;
+    height: 3em;
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    color: white; }
+
+  form#clientDisplayInfo #career_type {
+    color: white;
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #fff;
+    width: 93%;
+    height: 3em;
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    color: white;
+    display: block;
+    padding-top: 0.8em; }
+
+  form#clientDisplayInfo #service_type {
+    color: white;
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #fff;
+    width: 93%;
+    height: 3em;
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    color: white;
+    display: block;
+    padding-top: 0.8em; }
+
+  form#clientDisplayInfo span i {
+    float: left;
+    height: 3em;
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #fff;
+    color: white;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-left: 1em; }
+
+  form#clientDisplayInfo label {
+    display: none; }
+
+  form#clientDisplayInfo .editClient {
+    border-radius: 0.2em;
+    background-color: #9B8FFB;
+    box-shadow: 0.2em 0.2em 0.5em black;
+    text-decoration: none;
+    border-bottom: none;
+    border-top: none;
+    margin-left: -0.5em;
+    width: 60%;
+    color: white;
+    box-shadow: none; }
+
+  div#clientPostBody ul.pagination {
+    margin-left: -1.5em; }
+
+  div#clientPostBody p.editProfile {
+    border-radius: 0.2em;
+    background-color: #9B8FFB;
+    box-shadow: 0.2em 0.2em 0.5em black;
+    text-decoration: none;
+    width: 90%;
+    height: 3em;
+    color: white; }
+
+  div#clientPostBody p.editProfile a {
+    padding-top: 1em;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding-left: 25%; }
+
+  section#clients {
+    width: 90%;
+    margin-left: 1em; }
+
+  /* ==========================================================================
      LATEST UPDATES - NEXT TO SERVICES ACCORDION
      ========================================================================== */
   #latestUpdates article {
@@ -797,6 +916,9 @@
     text-decoration: none;
     text-align: center;
     margin-left: -0.2em; }
+
+  #addPostForm label {
+    display: none; }
 
   /* ==========================================================================
      ACTIVE HOLD ON LI DROP DOWN MENU
@@ -1254,7 +1376,7 @@
   /* ==========================================================================
       CAREER PROFILE 
       ========================================================================== */
-  #career-profile h1#header {
+  #career-profile h1.header {
     color: white;
     position: relative;
     margin: 0 auto;
@@ -1472,7 +1594,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-    /*margin-top:2em;*/ }
+    margin-top: 1.5em; }
 
   .headerTopic h2 {
     color: white;
@@ -1575,6 +1697,13 @@
     margin: 0 auto;
     position: relative; }
 
+  div#editSectionServices {
+    float: left;
+    width: 100%;
+    border-top: none !important;
+    margin: 0 auto;
+    position: relative; }
+
   section#servicesListed {
     display: block;
     margin: 0 auto;
@@ -1582,7 +1711,7 @@
     margin-top: 6em;
     border-top: none !important; }
 
-  #servicesListed h1#header {
+  #servicesListed h1.header {
     color: white;
     height: auto;
     position: absolute;
@@ -1612,9 +1741,13 @@
   #accordion div.serviceContent {
     height: auto;
     width: 100%;
-    /*margin-left: -1em;
-    padding-top: 1em;*/
     padding-bottom: 1em; }
+
+  #accordion #serviceEditLi ul li:nth-last-child(1) {
+    background-color: transparent;
+    list-style: decimal outside none;
+    list-style-type: disc;
+    /* margin-left: 1em; */ }
 
   #accordion h3 {
     cursor: pointer;
@@ -1773,7 +1906,7 @@
   #servicesPage div#main-header ul#main-nav li:nth-child(6) {
     background-color: white !important; }
 
-  #signing-up h1#header {
+  #signing-up h1.header {
     margin-left: -0.5em;
     color: black; }
 
@@ -1970,7 +2103,7 @@
     margin-top: 8em;
     margin-left: 7em; }
 
-  #servicesListed h1#header {
+  #servicesListed h1.header {
     color: black;
     height: auto;
     position: relative;
@@ -2035,6 +2168,9 @@
     margin-left: -4em;
     padding-top: 1.1em; }
 
+  #accordion #serviceEditLi ul li:nth-last-child(1) {
+    margin-left: -1.4em; }
+
   p#testimonialButton {
     width: 70%;
     height: 3em;
@@ -2059,11 +2195,11 @@
      ADD POST ON SERVICES PAGE WHEN ADMIN IS LOGGED IN
      ========================================================================== */
   form#addPostForm {
-    width: 100%; }
+    width: 120%; }
 
   form#addPostForm input[type="text"], input[type="password"], input[type="email"], input[type="url"] {
     -webkit-appearance: none;
-    width: 70%;
+    width: 82%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -2076,7 +2212,7 @@
 
   #addPostForm textarea {
     -webkit-appearance: none;
-    width: 70%;
+    width: 82%;
     height: 3em;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
@@ -2089,7 +2225,7 @@
     border-top: 0.1em black solid; }
 
   form#addPostForm input[type="file"] {
-    width: 70%;
+    width: 82%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -2112,13 +2248,15 @@
     color: black; }
 
   input#addAPost {
-    width: 85%;
     height: 3em;
     border-radius: 0.2em;
     background-color: #9B8FFB;
     box-shadow: none;
     text-decoration: none;
     text-align: center; }
+
+  #addPostForm label {
+    display: none; }
 
   /* ==========================================================================
      NAV LOG IN
@@ -2584,7 +2722,7 @@
     color: black;
     border-radius: none; }
 
-  #signing-up h1#header {
+  #signing-up h1.header {
     color: black;
     margin-left: 0em; }
 
@@ -2734,7 +2872,7 @@
     border-top: 0.1em black solid;
     color: black; }
 
-  #career-profile h1#header {
+  #career-profile h1.header {
     color: black; }
 
   #careerProfile-form textarea {
@@ -2878,11 +3016,14 @@
   /* ==========================================================================
      Client display list and their details
      ========================================================================== */
+  div#clientPostBody {
+    margin-top: 5em; }
+
   #clientList {
     margin-top: -3em; }
 
   form#clientDisplayInfo {
-    width: 60%; }
+    width: 100%; }
 
   form#clientDisplayInfo input {
     color: black;
@@ -2922,7 +3063,7 @@
     color: black;
     border-bottom: 1px solid #dfdfdf;
     border-top: 1px solid #fff;
-    width: 93%;
+    width: 88%;
     height: 3em;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
@@ -2936,7 +3077,7 @@
     color: black;
     border-bottom: 1px solid #dfdfdf;
     border-top: 1px solid #fff;
-    width: 93%;
+    width: 88%;
     height: 3em;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
@@ -2971,6 +3112,24 @@
     color: white;
     box-shadow: none; }
 
+  section#clients {
+    margin-top: 3em; }
+
+  div#clientPostBody ul.pagination {
+    margin-left: 0em; }
+
+  div#clientPostBody p.editProfile {
+    box-shadow: none;
+    width: 88%; }
+
+  div#clientPostBody p.editProfile #updateClient {
+    color: white;
+    border-top: none;
+    border-bottom: none; }
+
+  div#clientPostBody p.editProfile a {
+    padding-left: 35%; }
+
   /* ==========================================================================
      ADD A CLIENT
      ========================================================================== */
@@ -3001,10 +3160,24 @@
     position: relative;
     /* margin-top: -3em;*/ }
 
+  div#editSectionServices {
+    float: left;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: -3em; }
+
   aside#asideLatestNews {
     /*  height: 70em;*/
     border-top: none;
     float: left;
+    width: 25%; }
+
+  aside#asideCareerAdvice {
+    /*  height: 70em;*/
+    border-top: none;
+    float: left;
+    margin-top: 3em;
     width: 25%; }
 
   section#latestUpdates {
@@ -3013,7 +3186,8 @@
     width: 100%;
     /*  padding-left: 2em;*/
     height: auto;
-    margin-top: 1.5em; }
+    margin-top: -1.5em;
+    margin-left: -5em; }
 
   section#latestUpdates article {
     /*  margin-top: 2.2em;*/
@@ -3148,7 +3322,7 @@
     margin-right: auto;
     width: 90%;
     max-width: 80em;
-    margin-top: 5em; }
+    margin-top: 1.5em; }
 
   #mainSignUpBody {
     display: block;
@@ -3157,6 +3331,14 @@
     width: 90%;
     max-width: 80em;
     margin-top: 26em; }
+
+  #clientPostBody {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 80em;
+    margin-top: 5em; }
 
   .headerTopic h2 {
     color: black;
@@ -3249,6 +3431,9 @@
   .panelTopics li a:hover {
     transition: color 2s ease;
     color: #9B8FFB; }
+
+  input#addAPost {
+    width: 96%; }
 
   /* ==========================================================================
      TESTIMONIALS
@@ -3673,15 +3858,18 @@
     margin-left: -1.5em; }
 
   input#saveClient.addButton {
-    width: 45%;
-    margin-left: -1.5em; }
+    width: 45%; }
 
   section#signing-up {
     width: 80%;
     height: 68em;
     float: left;
     margin-top: -4em;
-    margin-left: 17em; } }
+    margin-left: 17em; }
+
+  section#latestUpdates {
+    width: 120%;
+    margin-left: -4em; } }
 /* ==========================================================================
    DESKTOP
    ========================================================================== */
@@ -3750,7 +3938,7 @@
   #signup-form img#profileImage {
     margin-left: 33%; }
 
-  #signing-up h1#header {
+  #signing-up h1.header {
     margin-left: 1em; }
 
   #signing-up p#description {
@@ -3770,7 +3958,10 @@
 
   input#saveClient.addButton {
     width: 43%;
-    margin-left: -1.5em; } }
+    margin-left: -1.5em; }
+
+  input#addAPost {
+    width: 92%; } }
 @media only screen and (min-width: 100em) {
   /*    #brand_logo a img {
         width: 7em;
@@ -3856,4 +4047,7 @@
 
   input#saveClient.addButton {
     width: 43%;
-    margin-left: -1.5em; } }
+    margin-left: -1.5em; }
+
+  input#addAPost {
+    width: 90%; } }

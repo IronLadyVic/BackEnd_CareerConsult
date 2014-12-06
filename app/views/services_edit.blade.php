@@ -2,15 +2,15 @@
 @section("content")
 
 <!-- Start of Services -->
-<div id="sectionServices">
+<div id="editSectionServices">
     <section id="servicesListed">
-        <h1 id="header">SERVICES</h1>
+        <h1 class="header">SERVICES</h1>
         <p>Career Consult offer a number of services, which you can pick and choose to suit your needs. Please sign up to and recieive a free 15min consultation and let us help you launch your career.</p>
         <div id="accordion">
             @foreach(Service::all() as $service)
             <img data-editable="icon" src="{{URL::to('uploads/'.$service->icon)}}" alt="header services, icon image" class="serviceIcon">
             <h3 data-editable="service_type" data-url="{{URL::to('uploads/'.$service->service_type)}}">{{$service->service_type}}</h3>
-            <div class="serviceContent">
+            <div class="serviceContent" id="serviceEditLi">
                 <ul data-editable="content" data-url="{{URL::to('uploads/'.$service->content)}}">
                     {{$service->content}} 
                 </ul>

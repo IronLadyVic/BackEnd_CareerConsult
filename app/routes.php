@@ -24,6 +24,11 @@ Route::get('home', function(){
 	return View::make('home');
 	//return the index view
 });
+//index not logged in
+Route::get('services', function(){
+	return View::make('services');
+	//return the index view
+});
 
 
 //services edit page for admin only
@@ -56,17 +61,18 @@ Route::put('services/{id}', function($id){
 });
 
 //testimonials get non edit
-Route::get('testimonials', function(){
+Route::get('testimonial', function(){
 	return View::make('testimonial');
 	
 });
+
 //testimonials get edit
 Route::get('testimonials/edit', function(){
 	return View::make('testimonial_edit');
 	
 });
 Route::put('testimonials/{id}', function($id){
-		
+
 	$sField = Input::get("field");
 	$sValue = Input::get("value");
 
@@ -79,7 +85,7 @@ Route::put('testimonials/{id}', function($id){
 	//return Input::all();
 	return $sValue;
 
-		
+
 });
 
 
@@ -97,7 +103,7 @@ Route::get('pricing/edit', function(){
 });
 
 Route::put('pricing/{id}', function($id){
-		
+
 	$sField = Input::get("field");
 	$sValue = Input::get("value");
 
@@ -108,7 +114,7 @@ Route::put('pricing/{id}', function($id){
 
 	return $sValue;
 
-		
+
 });
 
 
@@ -117,7 +123,7 @@ Route::put('pricing/{id}', function($id){
 //enquire
 Route::get('enquire', function(){
 	
-return View::make('enquire');
+	return View::make('enquire');
 	
 });
 
@@ -150,7 +156,7 @@ Route::post('login',function(){
 		'username'=>Input::get('username'),
 		'password'=>Input::get('password')
 		// 'checkbox'=>Input::get('check')
-	);
+		);
 	if(Auth::attempt($aLoginDetails)){
 		//redirect to user home page or admin editable pages to view clients, add clients
 		
@@ -183,7 +189,7 @@ Route::get('logout', function()
 //Sign up GET, sign up form for users/new route (ReSTful URI)
 Route::get('users/new', function(){
 
-	 return View::make('signup');
+	return View::make('signup');
 
 });
 
@@ -219,7 +225,7 @@ Route::post('users',function(){
 	$oValidator = Validator::make($aUserInput, $aRules, $messages);
 
 
-		if($oValidator->passes()){
+	if($oValidator->passes()){
 		
 
 		$sNewPhotoName = Input::get("firstname").".".Input::file('avatar')->getClientOriginalExtension();
@@ -228,28 +234,28 @@ Route::post('users',function(){
 		//hash password	
 		$aDetails = Input::all();
 		$aDetails["password"] = Hash::make($aDetails["password"]);	
-	
+
 		$aDetails["avatar"] = $sNewPhotoName;
 		//create new User
 		$oUser = User::create($aDetails);
 
 		//email client about sign up success
-    Mail::send('users.mails.welcome', array('firstname'=>Input::get('firstname')), function($message){
-        $message->to(Input::get('email'), Input::get('firstname').' '.Input::get('lastname'))->subject('Welcome to Career Consult!');
-    });
+		Mail::send('users.mails.welcome', array('firstname'=>Input::get('firstname')), function($message){
+			$message->to(Input::get('email'), Input::get('firstname').' '.Input::get('lastname'))->subject('Welcome to Career Consult!');
+		});
 
 		//redirect to product list
 		return Redirect::to('login')->with('message', 'Thanks for signing up!');
 		
-		}
-		
-		else{
+	}
+
+	else{
 
 		//redirect new user form with errors and sticky data
 		return Redirect::to("users/new")->withErrors($oValidator)->withInput();
 
 	}
-		
+
 });
 
 
@@ -258,7 +264,7 @@ Route::post('users',function(){
 //add a client
 Route::get('clients/new', function(){
 	
-return View::make('add_client');
+	return View::make('add_client');
 	
 });
 
@@ -284,7 +290,7 @@ Route::post('clients', function(){
 		'comment'=>'required'
 		);
 
-	$aUserInput = Input::all();
+	$aAdminInput = Input::all();
 
 	$messages= array(
 		"email"=>'email is invalid',
@@ -292,36 +298,86 @@ Route::post('clients', function(){
 		"required"=>'The :attribute field is required.'
 		);
 
-	$oValidator = Validator::make($aUserInput, $aRules, $messages);
+	$oValidator = Validator::make($aAdminInput, $aRules, $messages);
 
 
-		if($oValidator->passes()){
+	if($oValidator->passes()){
 
-		$sNewPhotoName = Input::get("firstname").".".Input::file('avatar')->getClientOriginalExtension();
-		Input::file("avatar")->move("uploads",$sNewPhotoName);
+		$sClientImage = Input::get("firstname").".".Input::file('avatar')->getClientOriginalExtension();
+		Input::file("avatar")->move("uploads",$sClientImage);
 
 
 		
 
 		$aDetails = Input::all();
-		$aDetails["password"] = Hash::make($aDetails["password"]);	
-	
-		$aDetails["avatar"] = $sNewPhotoName;
-		//create new User
-		$oUser = User::create($aDetails);
-
-		//redirect to product list
-		return Redirect::to("clients/");
-		}
 		
-		else{
 
-		//redirect new user form with errors and sticky data
+		$aAdminInput["avatar"] = $sClientImage;
+		//create new User
+		$oClient = User::create($aAdminInput);
+
+		//redirect to client list
+		return Redirect::to('clients/'.$id)->withInput();
+	}
+
+	else{
+
+		//redirect new client form with errors and sticky data
 		return Redirect::to("clients/new")->withErrors($oValidator)->withInput();
 
 	}
-		
+
 });
+
+Route::get('clients/{id}', function($id){
+	$oClient = User::find($id);
+	return View::make("clients")->with("client", $oClient);
+	
+});
+
+Route::get('clients/{id}/edit', function($id){
+	$oClient = User::find($id);
+	return View::make("clients_edit")->with("client", $oClient);
+	
+});
+
+
+Route::put('clients/{id}',function($id){
+
+	// validate data
+	$aRules = array(
+		"email" => 'required|email|unique:users,email,'.$id,	
+		"firstname" => 'required',
+		"lastname" => 'required',
+		"phone" => 'required',
+		"service_type" => 'required',
+		"career_type" => 'required'
+
+		);
+
+	$oValidator = Validator::make(Input::all(),$aRules);
+
+	if($oValidator->passes()){
+		
+		// update user details
+		$oClient = User::find($id);
+		$oClient->fill(Input::all());
+
+
+		$oClient->save();
+
+		// redirect to client page with their id 
+		return Redirect::to('clients/'.$id)->withInput();
+
+
+	}else{
+		// redirect to edit Clients details with sticky data input and errors
+		return Redirect::to('clients/'.$id.'/edit')->withErrors($oValidator)->withInput();//session flash data (old input)
+		
+		
+	}
+
+})->before("auth");
 
 
 
@@ -352,14 +408,14 @@ Route::post('posts',function(){
 //validate input in the sign up form
 
 	$aRules = array(
-		'topic_id'=>'required|unique:posts'
+		'topic_id'=>'required|unique:posts',
 		'title'=>'required',
 		'photo_path'=>'required',
 		'content'=>'required',
 		'avatar'=>'required',
 		'editor'=>'required',
 		'date'=>'required'
-	
+
 		);
 
 	$aAdminInput = Input::all();
@@ -371,7 +427,7 @@ Route::post('posts',function(){
 	$oValidator = Validator::make($aAdminInput, $aRules, $messages);
 
 
-		if($oValidator->passes()){
+	if($oValidator->passes()){
 		
 
 		$sPostImageName = Input::get("topic").".".Input::file('photo_path')->getClientOriginalExtension();
@@ -380,28 +436,37 @@ Route::post('posts',function(){
 		
 		$aPostDetails = Input::all();
 		
-	
+
 		$aPostDetails["photo_path"] = $sPostImageName;
 		//create new User
 		$oPost = User::create($aPostDetails);
 
 		//redirect to post and services lists
-		return Redirect::to('services/posts');
+		return Redirect::to('services');
 		
-		}
-		
-		else{
+	}
+
+	else{
 
 		//redirect new post form with errors and sticky data
 		return Redirect::to("services/edit")->withErrors($oValidator)->withInput();
 
 	}
-		
+
 })->before("auth");
 
 
 
+Route::delete('posts/{id}',function($id){
 
+	$oPost = User::find($id);
+	$iPostId = $oPost->post->id;
+	$oPost->delete();
+
+	return Redirect::to('home');
+
+	
+});
 
 
 
@@ -457,7 +522,7 @@ Route::put('users/{id}',function($id){
 		$oUser = User::find($id);
 		$oUser->fill(Input::all());
 
-				// update user avatar
+		// update user avatar
 
 		// $sNewPhotoName = Input::get("firstname").".".Input::file('avatar')->getClientOriginalExtension();
 		// Input::file("avatar")->move("uploads",$sNewPhotoName);

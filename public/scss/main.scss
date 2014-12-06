@@ -458,6 +458,121 @@ li div#flex-google {
   /*outline: 1px red solid;*/
 }
 
+/* ==========================================================================
+   Client display list and their details
+   ========================================================================== */
+   div#clientPostBody{
+    margin-top: 8em;
+   }
+#clientList{
+  margin-top: -3em;
+}
+form#clientDisplayInfo{
+  // width: 100%;
+}
+form#clientDisplayInfo input{
+  color: white;
+   border-bottom: 1px solid #dfdfdf;
+border-top: 1px solid #fff;
+   width: 80%;
+   @include input;
+}
+form#clientDisplayInfo input[type="email"]{
+  color: white;
+   border-bottom: 1px solid #dfdfdf!important;
+border-top: 1px solid #fff!important;
+   width: 80%;
+   @include input;
+}
+form#clientDisplayInfo textarea{
+  color: white;
+   border-bottom: 1px solid #dfdfdf;
+border-top: 1px solid #fff;
+   width: 80%;
+   height: 3em;
+   @include input;
+}
+
+form#clientDisplayInfo #career_type{
+  color: white;
+   border-bottom: 1px solid #dfdfdf;
+border-top: 1px solid #fff;
+   width: 93%;
+   height: 3em;
+   @include input;
+   display: block;
+   padding-top: 0.8em;
+}
+form#clientDisplayInfo #service_type{
+  color: white;
+   border-bottom: 1px solid #dfdfdf;
+border-top: 1px solid #fff;
+   width: 93%;
+   height: 3em;
+   @include input;
+   display: block;
+   padding-top: 0.8em;
+}
+form#clientDisplayInfo span i{
+  float: left;
+   height: 3em;
+   border-bottom: 1px solid #dfdfdf;
+border-top: 1px solid #fff;
+   color: white;
+   padding-right: 1em;
+   padding-top: 1em;
+   padding-left: 1em;
+}
+form#clientDisplayInfo label{
+  display: none;
+}
+
+form#clientDisplayInfo .editClient{
+  border-radius: 0.2em;
+background-color: #9B8FFB;
+box-shadow: 0.2em 0.2em 0.5em black;
+text-decoration: none;
+border-bottom: none;
+border-top: none;
+margin-left: -0.5em;
+width: 60%;
+color: white;
+box-shadow: none;
+}
+div#clientPostBody ul.pagination{
+  margin-left:-1.5em;
+
+}
+div#clientPostBody p.editProfile{
+  @include purpleButton;
+  width: 90%;
+  height: 3em;
+  color: white;
+}
+div#clientPostBody p.editProfile a{
+  padding-top: 1em;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding-left: 25%;
+}
+
+section#clients{
+   width: 90%;
+   margin-left:1em;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* ==========================================================================
    LATEST UPDATES - NEXT TO SERVICES ACCORDION
@@ -855,7 +970,9 @@ text-decoration: none;
 text-align: center;
 margin-left: -0.2em;
 }
-
+#addPostForm label{
+  display: none;
+}
 /* ==========================================================================
    ACTIVE HOLD ON LI DROP DOWN MENU
    ========================================================================== */
@@ -1373,7 +1490,7 @@ img#profileImage{
 
 
 
-    #career-profile h1#header{
+    #career-profile h1.header{
       color: white;
       position: relative;
       margin: 0 auto;
@@ -1599,7 +1716,7 @@ border-bottom: none;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-    /*margin-top:2em;*/
+    margin-top:1.5em;
 
   }
   .headerTopic h2 {
@@ -1717,7 +1834,13 @@ border-bottom: none;
       margin: 0 auto;
       position: relative;
     }
-
+    div#editSectionServices{
+      float: left;
+      width: 100%;
+      border-top: none!important;
+      margin: 0 auto;
+      position: relative;
+    }
     section#servicesListed{
       display: block;
       margin: 0 auto;
@@ -1726,7 +1849,7 @@ border-bottom: none;
     border-top: none!important;
     }
 
-    #servicesListed h1#header{
+    #servicesListed h1.header{
       color: white;
       height: auto;
       position: absolute;
@@ -1759,14 +1882,15 @@ padding-right: 0.5em;
 #accordion div.serviceContent{
   height: auto;
   width: 100%;
-  // border-bottom: 1px solid white;
-  // border-top: 1px solid white;
-  /*margin-left: -1em;
-  padding-top: 1em;*/
   padding-bottom: 1em;
 }
 
-
+#accordion #serviceEditLi ul li:nth-last-child(1){
+  background-color: transparent;
+  list-style: decimal outside none;
+list-style-type: disc;
+/* margin-left: 1em; */
+}
 
 #accordion h3{
   cursor:  pointer;
@@ -1962,7 +2086,7 @@ textarea#editService{
     } 
 
 
-    #signing-up h1#header{
+    #signing-up h1.header{
       margin-left: -0.5em;
       color: black;
     }
@@ -2184,7 +2308,7 @@ textarea#editService{
 
   }
 
-  #servicesListed h1#header{
+  #servicesListed h1.header{
     color: black;
     height: auto;
     position: relative;
@@ -2259,6 +2383,9 @@ margin-left: -4em;
 padding-top: 1.1em;
         }
 
+#accordion #serviceEditLi ul li:nth-last-child(1){
+  margin-left: -1.4em;
+}
 
 
 
@@ -2290,13 +2417,13 @@ padding-top: 1.1em;
    ADD POST ON SERVICES PAGE WHEN ADMIN IS LOGGED IN
    ========================================================================== */
    form#addPostForm{
-    width: 100%;
+    width: 120%;
 
   }
 
   form#addPostForm input[type="text"], input[type="password"], input[type="email"], input[type="url"]{
     -webkit-appearance: none;
-    width: 70%;
+    width: 82%;
     @include input;
     border-radius: none;
     border-bottom: 0.1em black solid;
@@ -2306,7 +2433,7 @@ padding-top: 1.1em;
 
   #addPostForm textarea{
     -webkit-appearance: none;
-    width: 70%;
+    width: 82%;
     height: 3em;
     @include input;
     padding-top: 0.8em;
@@ -2316,7 +2443,7 @@ padding-top: 1.1em;
 
   }
   form#addPostForm input[type="file"]{
-    width: 70%;
+    width: 82%;
     @include input;
     border-bottom: 0.1em black solid;
     border-top: 0.1em black solid;
@@ -2335,7 +2462,7 @@ padding-top: 1.1em;
     color: black;
   }
 input#addAPost{
-  width: 85%;
+  // width: 85%;
 height: 3em;
 border-radius: 0.2em;
 background-color: #9B8FFB;
@@ -2343,7 +2470,9 @@ box-shadow: none;
 text-decoration: none;
 text-align: center;
 }
-
+#addPostForm label{
+  display: none;
+}
 /* ==========================================================================
    NAV LOG IN
    ========================================================================== */
@@ -2876,7 +3005,7 @@ img#workingGirl {
   border-radius: none;
 }
 
-#signing-up h1#header{
+#signing-up h1.header{
   color: black;
   margin-left: 0em;
 }
@@ -3044,7 +3173,7 @@ form#signup-form span{
     color: black;
   }
 
-  #career-profile h1#header{
+  #career-profile h1.header{
     color: black;
     // margin-left: 0.1em;
   }
@@ -3193,11 +3322,14 @@ margin-top: 0em;
 /* ==========================================================================
    Client display list and their details
    ========================================================================== */
+   div#clientPostBody{
+    margin-top: 5em;
+   }
 #clientList{
   margin-top: -3em;
 }
 form#clientDisplayInfo{
-  width: 60%;
+  width: 100%;
 }
 form#clientDisplayInfo input{
   color: black;
@@ -3226,7 +3358,7 @@ form#clientDisplayInfo #career_type{
   color: black;
    border-bottom: 1px solid #dfdfdf;
 border-top: 1px solid #fff;
-   width: 93%;
+   width: 88%;
    height: 3em;
    @include input;
    display: block;
@@ -3236,7 +3368,7 @@ form#clientDisplayInfo #service_type{
   color: black;
    border-bottom: 1px solid #dfdfdf;
 border-top: 1px solid #fff;
-   width: 93%;
+   width: 88%;
    height: 3em;
    @include input;
    display: block;
@@ -3269,30 +3401,28 @@ color: white;
 box-shadow: none;
 }
 
+section#clients{
+  margin-top: 3em;
+}
 
+div#clientPostBody ul.pagination{
+  margin-left: 0em;
+}
 
+div#clientPostBody p.editProfile{
+  box-shadow:none;
+  width: 88%;
+  
+}
+div#clientPostBody p.editProfile #updateClient{
+  color: white;
+  border-top: none;
+  border-bottom: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+div#clientPostBody p.editProfile a{
+  padding-left: 35%;
+}
 
 /* ==========================================================================
    ADD A CLIENT
@@ -3329,11 +3459,26 @@ div#sectionServices{
   position: relative;
  /* margin-top: -3em;*/
 }
+div#editSectionServices{
+    float: left;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: -3em;
+}
 aside#asideLatestNews{
   /*  height: 70em;*/
   border-top: none;
   float: left;
   
+  width: 25%;
+
+}
+aside#asideCareerAdvice{
+  /*  height: 70em;*/
+  border-top: none;
+  float: left;
+  margin-top:3em;
   width: 25%;
 
 }
@@ -3344,7 +3489,8 @@ section#latestUpdates{
   width: 100%;
   /*  padding-left: 2em;*/
   height:auto;
-  margin-top: 1.5em;
+  margin-top: -1.5em;
+  margin-left: -5em;
 }
 
 section#latestUpdates article{
@@ -3504,7 +3650,7 @@ div.shareSocial p a{
     margin-right: auto;
     width: 90%;
     max-width: 80em;
-    margin-top:5em;
+    margin-top:1.5em;
 
   }
      #mainSignUpBody{
@@ -3515,6 +3661,14 @@ div.shareSocial p a{
     max-width: 80em;
     margin-top:26em;
 
+  }
+  #clientPostBody{
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 80em;
+    margin-top:5em;
   }
   .headerTopic h2 {
     color: black;
@@ -3620,6 +3774,10 @@ div.shareSocial p a{
    color: #9B8FFB;
    
  }
+   input#addAPost{
+  width: 96%;
+}
+
 /* ==========================================================================
    TESTIMONIALS
    ========================================================================== */
@@ -3956,7 +4114,6 @@ form#mobdeskForm p#rememberMe{
   color: black!important;
    border-bottom: 0.1em black solid!important;
    border-top: 0.1em black solid!important;
-
    width:70%;
    @include input;
 }
@@ -3964,7 +4121,6 @@ form#mobdeskForm p#rememberMe{
   color: black!important;
    border-bottom: 0.1em black solid!important;
    border-top: 0.1em black solid!important;
-
    width:70%;
    @include input;
 }
@@ -4045,6 +4201,7 @@ div#brand_logo{
 }
 
 
+
 }
   @media only screen and (min-width: 60em) {
 #ponsonbyHousing img{
@@ -4076,7 +4233,7 @@ div#brand_logo{
 }
   input#saveClient.addButton{
   width: 45%;
-  margin-left: -1.5em;
+  // margin-left: -1.5em;
 
   }
 
@@ -4088,6 +4245,10 @@ div#brand_logo{
     margin-left: 17em;
 
   }
+  section#latestUpdates{
+  width: 120%;
+  margin-left: -4em;
+}
 
 }
 /* ==========================================================================
@@ -4194,7 +4355,7 @@ form#signup-form{
   
 
 }
-#signing-up h1#header{
+#signing-up h1.header{
   margin-left: 1em;
 }
 #signing-up p#description{
@@ -4218,6 +4379,10 @@ ul#reasonsToSignUp{
   margin-left: -1.5em;
 
   }
+  input#addAPost{
+  width: 92%;
+}
+
 
 }
 
@@ -4330,7 +4495,9 @@ ul#reasonsToSignUp{
   margin-left: -1.5em;
 
   }
-
+input#addAPost{
+  width: 90%;
+}
 
   }
 

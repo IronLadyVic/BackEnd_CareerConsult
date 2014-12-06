@@ -3,7 +3,7 @@
 
 <div id="mobdeskLogin">
 <section id="mobdeskSection">
-    <h1 id="header">LOG IN</h1>
+    <h1 class="header">LOG IN</h1>
     
     <p id="mobdeskDescription">Log in to update your career profile, or enquire about booking a service.</p>
 
