@@ -5,7 +5,7 @@
 <div id="sectionPrices">
     <section id="pricesListed">
         @if(Auth::check())
-            <h1 class="header">TAKE A LOOK AT OUR <a href="{{URL::to('services')}}" id="aLink">SERVICES</a> TODAY.</h1>
+            <h1 class="header">TAKE A LOOK AT OUR <a href="{{URL::to('services/1')}}" id="aLink">SERVICES</a> TODAY.</h1>
         @else
             <h1 class="header">TRY CAREER CONSULT FOR FREE. <a href="{{URL::to('users/new')}}" id="aLink">SIGN UP</a> TODAY.</h1>
         @endif

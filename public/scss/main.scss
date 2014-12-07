@@ -8,9 +8,17 @@
    @media only screen and (min-width: 20em) {
     body.show{
       @include responsiveBackground(#242424);
-
-
     }
+    input{
+  border-radius: none!important;
+}
+    select{
+    border-radius: none!important;
+}
+textarea{
+   border-radius: none!important;
+}
+
 
     body{
       @include responsiveBackground(#242424);
@@ -275,7 +283,7 @@ ul#main-nav li#seletedServices li:last-child{
 #brand_logo a img{
   height: 25%;
   width:25%;
-  margin-left: 1.4em;
+  margin-left: 1em;
 }
 
 
@@ -376,6 +384,14 @@ textarea#editService{
 /* ==========================================================================
    ENQUIRY FORM
    ========================================================================== */
+      #mainEnquireBody{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top:0em;
+
+  }
 form#enquire-form{
   width: 110%;
   margin-left: -1em;
@@ -388,31 +404,31 @@ form#enquire-form{
 }
    form#enquire-form input{
     @include input;
-    color: black;
+    color: white!important;
 
    }
 #enquire-form input[type="text"]{
   color: black!important;
    border-bottom: 0.1em white solid!important;
    border-top: 0.1em white solid!important;
-  color: white;
-   width:85%;
+  color: white!important;
+   width:80%;
    @include input;
 }
 #enquire-form input[type="email"]{
   color: black!important;
    border-bottom: 0.1em white solid!important;
    border-top: 0.1em white solid!important;
-  color: white;
-   width:85%;
+  color: white!important;
+   width:80%;
    @include input;
 }
 #enquire-form textarea{
   color: black!important;
    border-bottom: 0.1em white solid!important;
    border-top: 0.1em white solid!important;
-  color: white;
-   width:85%;
+  color: white!important;
+   width:80%;
    @include input;
 }
 #enquire-form select{
@@ -420,7 +436,7 @@ form#enquire-form{
    border-bottom: 0.1em white solid!important;
    border-top: 0.1em white solid!important;
     color: white!important;
-   width:85%;
+   width:80%;
    @include input;
 }
   form#enquire-form span{
@@ -436,17 +452,19 @@ form#enquire-form{
 
 #enquire-form #enquire{
   @include purpleButton;
-  width:98%;
+  width:96%;
   border-bottom: none;
     border-top: none;
-    box-shadow: none;
+    
     color: white;
 }
 
 .panelTopics li i{
   padding-right: 0.8em;
 }
-
+#enquireContact .panelTopics ul li:last-child{
+  height: 22em;
+}
 
 /* ==========================================================================
    GOOGLE MAP
@@ -563,7 +581,13 @@ section#clients{
 
 }
 
-
+div#clientPostBody p.editProfile #updateClient{
+  color: white!important;
+  border-top: none!important;
+  border-bottom: none!important;
+  /*padding-left: 5%;*/
+  width: 100%;
+}
 
 
 
@@ -697,18 +721,17 @@ div.shareSocial p a{
    Desktop Login only - no pop up model
    ========================================================================== */
    div#mobdeskLogin{
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     position: relative;
-    // left: 20%;
-    // top: 20%;
+    margin-left: 1em;
   }
 
   section#mobdeskSection{
     margin: 0 auto;
     position: relative;
-    width: 25em;
+    /*width: 25em;*/
     height:auto;
     margin-top: 1.5em;
     
@@ -717,7 +740,7 @@ div.shareSocial p a{
     color: white;
   }
   p#mobdeskDescription{
-    width: 70%;
+    width: 90%;
     color: white;
   }
   form#mobdeskForm{
@@ -742,7 +765,7 @@ div.shareSocial p a{
    border-bottom: 0.1em white solid!important;
    border-top: 0.1em white solid!important;
 
-   width: 65%;
+   width: 75%;
    @include input;
  }
 
@@ -751,7 +774,7 @@ div.shareSocial p a{
    border-bottom: 0.1em white solid!important;
    border-top: 0.1em white solid!important;
 
-   width:65%;
+   width:75%;
    @include input;
 
  }
@@ -760,7 +783,7 @@ div.shareSocial p a{
 }
 
 form#mobdeskForm #loggingInButton{
-  width:76%;
+  width:89%;
 }
 form#mobdeskForm p#rememberMe{
   margin-top: -1.2em;
@@ -1631,6 +1654,8 @@ img#profileImage{
    #careerProfile-form p.editProfile a{
     color: white;
     text-decoration:none;
+    width: 100%;
+    height: auto;
   }
 
  #careerProfile-form input#deleteProfile{
@@ -1833,6 +1858,9 @@ border-bottom: none;
       border-top: none!important;
       margin: 0 auto;
       position: relative;
+    }
+    div#mainServicesBody{
+      margin-top: -2.5em;
     }
     div#editSectionServices{
       float: left;
@@ -2061,7 +2089,18 @@ textarea#editService{
     input:-webkit-autofill {
     -webkit-box-shadow:0 0 0 50px #f4f2ef inset; /* Change the color to your own background color */
     -webkit-text-fill-color: black;
+    
 }
+input{
+  border-radius: none!important;
+}
+    select{
+    border-radius: none!important;
+}
+textarea{
+   border-radius: none!important;
+}
+
 
     body.show {
       @include responsiveBackground(#f4f2ef); 
@@ -2839,6 +2878,20 @@ img#workingGirl {
 
   }
 
+#leg img#pushbike{
+  margin-left: 5em;
+}
+
+img#pushbike {
+  width: 1em;
+    height: 2em;
+    position: absolute;
+    top: 24em;
+    display:block;
+  
+
+  }
+
 
 /* ==========================================================================
    Introduction buttons 
@@ -3091,8 +3144,8 @@ form#signup-form span{
   width: 1em;
   height: 1em;
   position: relative;
-  margin-top: 4em;
-  margin-left: -2em;
+  margin-top: 5em;
+  margin-left: -3em;
   border: none;
 }
 
@@ -3143,8 +3196,6 @@ form#signup-form span{
     height: 3em;
 
   }
-
-
 
 
   form#careerProfile-form{
@@ -3332,9 +3383,9 @@ form#clientDisplayInfo{
   width: 100%;
 }
 form#clientDisplayInfo input{
-  color: black;
-   border-bottom: 1px solid #dfdfdf;
-border-top: 1px solid #fff;
+  color: black!important;
+   border-bottom: 1px solid #dfdfdf!important;
+border-top: 1px solid #fff!important;
    width: 80%;
    @include input;
 }
@@ -3346,18 +3397,18 @@ border-top: 1px solid #fff!important;
    @include input;
 }
 form#clientDisplayInfo textarea{
-  color: black;
-   border-bottom: 1px solid #dfdfdf;
-border-top: 1px solid #fff;
+  color: black!important;
+   border-bottom: 1px solid #dfdfdf!important;
+  border-top: 1px solid #fff!important;
    width: 80%;
    height: 3em;
    @include input;
 }
 
 form#clientDisplayInfo #career_type{
-  color: black;
-   border-bottom: 1px solid #dfdfdf;
-border-top: 1px solid #fff;
+  color: black!important;
+   border-bottom: 1px solid #dfdfdf!important;
+border-top: 1px solid #fff!important;
    width: 88%;
    height: 3em;
    @include input;
@@ -3365,9 +3416,9 @@ border-top: 1px solid #fff;
    padding-top: 0.8em;
 }
 form#clientDisplayInfo #service_type{
-  color: black;
-   border-bottom: 1px solid #dfdfdf;
-border-top: 1px solid #fff;
+  color: black!important;
+   border-bottom: 1px solid #dfdfdf!important;
+border-top: 1px solid #fff!important;
    width: 88%;
    height: 3em;
    @include input;
@@ -3377,8 +3428,8 @@ border-top: 1px solid #fff;
 form#clientDisplayInfo span i{
   float: left;
    height: 3em;
-   border-bottom: 1px solid #dfdfdf;
-border-top: 1px solid #fff;
+   border-bottom: 1px solid #dfdfdf!important;
+border-top: 1px solid #fff!important;
    color: black;
    padding-right: 1em;
    padding-top: 1em;
@@ -3415,9 +3466,10 @@ div#clientPostBody p.editProfile{
   
 }
 div#clientPostBody p.editProfile #updateClient{
-  color: white;
-  border-top: none;
-  border-bottom: none;
+  color: white!important;
+  border-top: none!important;
+  border-bottom: none!important;
+  /*padding-left: 22%;*/
 }
 
 div#clientPostBody p.editProfile a{
@@ -4088,7 +4140,17 @@ form#mobdeskForm p#rememberMe{
 /* ==========================================================================
    ENQUIRY FORM
    ========================================================================== */
-
+   #mainEnquireBody{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top:4.5em;
+   
+  }
+ #mainEnquireBody .contentWrapper{
+  margin-left: 1em;
+  }
    form#enquire-form input{
     @include input;
     color: black;
@@ -4137,7 +4199,7 @@ form#mobdeskForm p#rememberMe{
 
 #enquire-form #enquire{
   @include purpleButton;
-  width:79%;
+  width:78%;
   border-bottom: none;
     border-top: none;
     box-shadow: none;
@@ -4227,12 +4289,12 @@ div#brand_logo{
     border-top: none;
   border-bottom: none;
   color: white;
-  margin-left: -1.5em;
+  /*margin-left: -1.5em;*/
 
 
 }
   input#saveClient.addButton{
-  width: 45%;
+  width: 50%;
   // margin-left: -1.5em;
 
   }
@@ -4498,6 +4560,7 @@ ul#reasonsToSignUp{
 input#addAPost{
   width: 90%;
 }
+
 
   }
 

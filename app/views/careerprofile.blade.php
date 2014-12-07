@@ -161,7 +161,7 @@
             <!-- {{$errors->first('service_type','<p class="error">:message</p>')}}  -->
         </p>
          <p class="editProfile">
-            <a href="{{URL::to('users/'.$user->id.'/edit')}}">EDIT MY PROFILE</a>
+            <a href="{{URL::to('users/'.$user->id.'/edit')}}">EDIT</a>
         </p>
        <!--  Delete button for User Profile  -->
         {{Form::model($user, array('url' => 'users/'.$user->id, 'id'=>'careerProfile-form'))}}

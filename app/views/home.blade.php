@@ -11,7 +11,7 @@
         <div id="introButtons">
             <i id="rightarrow" class="fa fa-angle-right"></i>
             <div id="launchCareer">
-                <a href="{{URL::to('services/')}}"><span>LAUNCH YOUR CAREER</span></a>
+                <a href="{{URL::to('services/1')}}"><span>LAUNCH YOUR CAREER</span></a>
             </div>
             <div id="careerButton">
                 <a href="{{URL::to('users/new')}}"><span>SIGN UP</span></a>
@@ -24,7 +24,8 @@
         <h2>Auckland Skyline</h2>
         <div id="aucklandSkyline"><img src="{{URL::to('img/Auckland-skyline.png')}}" alt="Auckland City"></div>
         <div id="ponsonbyHousing"><img src="{{URL::to('img/Ponsonby_Grey_Street.fw.png')}}" alt="Auckland City"></div>
-        <div id="hideBicycle"><img src="{{URL::to('img/CareerConsultBicyle_grey.png')}}" alt="Career Consult" id="workingGirl" style=""></div>
+        <div id="hideBicycle"><img src="{{URL::to('img/CareerConsultBicyle_greyv2.png')}}" alt="Career Consult" id="workingGirl" style=""></div>
+        <div id="leg"><img src="{{URL::to('img/legMoving.png')}}" alt="Career Consult, Launch Your Career" id="pushbike" style=""></div>
     </section>
 
 </div>

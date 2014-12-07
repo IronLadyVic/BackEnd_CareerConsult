@@ -14,6 +14,15 @@
   body.show {
     background-color: #242424; }
 
+  input {
+    border-radius: none !important; }
+
+  select {
+    border-radius: none !important; }
+
+  textarea {
+    border-radius: none !important; }
+
   body {
     background-color: #242424; }
 
@@ -200,7 +209,7 @@
     /* margin-left: -20em;*/
     /*opacity: 0.8;*/
     position: relative;
-    border-bottom: 1px #928cc4 solid !important; }
+    border-bottom: 1px #928CC4 solid !important; }
 
   #ponsonbyHousing img {
     display: none; }
@@ -234,7 +243,7 @@
   #brand_logo a img {
     height: 25%;
     width: 25%;
-    margin-left: 1.4em; }
+    margin-left: 1em; }
 
   /* ==========================================================================
       SECTION INTRODUCTION BUTTONS AND INTRO  
@@ -330,6 +339,13 @@
   /* ==========================================================================
      ENQUIRY FORM
      ========================================================================== */
+  #mainEnquireBody {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 0em; }
+
   form#enquire-form {
     width: 110%;
     margin-left: -1em; }
@@ -346,14 +362,14 @@
     background-color: transparent;
     height: 3em;
     color: white;
-    color: black; }
+    color: white !important; }
 
   #enquire-form input[type="text"] {
     color: black !important;
     border-bottom: 0.1em white solid !important;
     border-top: 0.1em white solid !important;
-    color: white;
-    width: 85%;
+    color: white !important;
+    width: 80%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -364,8 +380,8 @@
     color: black !important;
     border-bottom: 0.1em white solid !important;
     border-top: 0.1em white solid !important;
-    color: white;
-    width: 85%;
+    color: white !important;
+    width: 80%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -376,8 +392,8 @@
     color: black !important;
     border-bottom: 0.1em white solid !important;
     border-top: 0.1em white solid !important;
-    color: white;
-    width: 85%;
+    color: white !important;
+    width: 80%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -389,7 +405,7 @@
     border-bottom: 0.1em white solid !important;
     border-top: 0.1em white solid !important;
     color: white !important;
-    width: 85%;
+    width: 80%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -411,14 +427,16 @@
     background-color: #9B8FFB;
     box-shadow: 0.2em 0.2em 0.5em black;
     text-decoration: none;
-    width: 98%;
+    width: 96%;
     border-bottom: none;
     border-top: none;
-    box-shadow: none;
     color: white; }
 
   .panelTopics li i {
     padding-right: 0.8em; }
+
+  #enquireContact .panelTopics ul li:last-child {
+    height: 22em; }
 
   /* ==========================================================================
      GOOGLE MAP
@@ -451,7 +469,7 @@
   form#clientDisplayInfo input[type="email"] {
     color: white;
     border-bottom: 1px solid #dfdfdf !important;
-    border-top: 1px solid white !important;
+    border-top: 1px solid #fff !important;
     width: 80%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
@@ -546,6 +564,13 @@
   section#clients {
     width: 90%;
     margin-left: 1em; }
+
+  div#clientPostBody p.editProfile #updateClient {
+    color: white !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    /*padding-left: 5%;*/
+    width: 100%; }
 
   /* ==========================================================================
      LATEST UPDATES - NEXT TO SERVICES ACCORDION
@@ -647,15 +672,16 @@
      Desktop Login only - no pop up model
      ========================================================================== */
   div#mobdeskLogin {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
-    position: relative; }
+    position: relative;
+    margin-left: 1em; }
 
   section#mobdeskSection {
     margin: 0 auto;
     position: relative;
-    width: 25em;
+    /*width: 25em;*/
     height: auto;
     margin-top: 1.5em; }
 
@@ -663,7 +689,7 @@
     color: white; }
 
   p#mobdeskDescription {
-    width: 70%;
+    width: 90%;
     color: white; }
 
   form#mobdeskForm {
@@ -684,7 +710,7 @@
     color: black;
     border-bottom: 0.1em white solid !important;
     border-top: 0.1em white solid !important;
-    width: 65%;
+    width: 75%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -695,7 +721,7 @@
     color: white;
     border-bottom: 0.1em white solid !important;
     border-top: 0.1em white solid !important;
-    width: 65%;
+    width: 75%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
     background-color: transparent;
@@ -706,7 +732,7 @@
     margin-left: 25%; }
 
   form#mobdeskForm #loggingInButton {
-    width: 76%; }
+    width: 89%; }
 
   form#mobdeskForm p#rememberMe {
     margin-top: -1.2em;
@@ -759,7 +785,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 5em;
     color: white; }
@@ -924,13 +950,13 @@
      ACTIVE HOLD ON LI DROP DOWN MENU
      ========================================================================== */
   ul#main-nav li:active {
-    background-image: linear-gradient(#9b8ffb, #2b2937); }
+    background-image: linear-gradient(#9B8FFB, #2B2937); }
 
   ul#main-nav li p:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   ul#main-nav li i:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   header #main-header ul#main-nav li a {
     text-decoration: none;
@@ -1510,7 +1536,9 @@
 
   #careerProfile-form p.editProfile a {
     color: white;
-    text-decoration: none; }
+    text-decoration: none;
+    width: 100%;
+    height: auto; }
 
   #careerProfile-form input#deleteProfile {
     width: 90%;
@@ -1697,6 +1725,9 @@
     margin: 0 auto;
     position: relative; }
 
+  div#mainServicesBody {
+    margin-top: -2.5em; }
+
   div#editSectionServices {
     float: left;
     width: 100%;
@@ -1845,7 +1876,7 @@
       INPUT ERRORS
       ========================================================================== */
   .invalid {
-    color: #9b8ffb;
+    color: #9B8FFB;
     font-size: 0.5em;
     position: absolute;
     margin-top: -1em; }
@@ -1890,6 +1921,15 @@
     -webkit-box-shadow: 0 0 0 50px #f4f2ef inset;
     /* Change the color to your own background color */
     -webkit-text-fill-color: black; }
+
+  input {
+    border-radius: none !important; }
+
+  select {
+    border-radius: none !important; }
+
+  textarea {
+    border-radius: none !important; }
 
   body.show {
     background-color: #f4f2ef; }
@@ -2334,7 +2374,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 110px;
     color: white; }
@@ -2593,6 +2633,16 @@
     top: 18em;
     display: block; }
 
+  #leg img#pushbike {
+    margin-left: 5em; }
+
+  img#pushbike {
+    width: 1em;
+    height: 2em;
+    position: absolute;
+    top: 24em;
+    display: block; }
+
   /* ==========================================================================
      Introduction buttons 
      ========================================================================== */
@@ -2809,8 +2859,8 @@
     width: 1em;
     height: 1em;
     position: relative;
-    margin-top: 4em;
-    margin-left: -2em;
+    margin-top: 5em;
+    margin-left: -3em;
     border: none; }
 
   #signup-form img#profileImage {
@@ -3026,9 +3076,9 @@
     width: 100%; }
 
   form#clientDisplayInfo input {
-    color: black;
-    border-bottom: 1px solid #dfdfdf;
-    border-top: 1px solid #fff;
+    color: black !important;
+    border-bottom: 1px solid #dfdfdf !important;
+    border-top: 1px solid #fff !important;
     width: 80%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
@@ -3039,7 +3089,7 @@
   form#clientDisplayInfo input[type="email"] {
     color: black;
     border-bottom: 1px solid #dfdfdf !important;
-    border-top: 1px solid white !important;
+    border-top: 1px solid #fff !important;
     width: 80%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
@@ -3048,9 +3098,9 @@
     color: white; }
 
   form#clientDisplayInfo textarea {
-    color: black;
-    border-bottom: 1px solid #dfdfdf;
-    border-top: 1px solid #fff;
+    color: black !important;
+    border-bottom: 1px solid #dfdfdf !important;
+    border-top: 1px solid #fff !important;
     width: 80%;
     height: 3em;
     border-bottom: 0.1em white solid;
@@ -3060,9 +3110,9 @@
     color: white; }
 
   form#clientDisplayInfo #career_type {
-    color: black;
-    border-bottom: 1px solid #dfdfdf;
-    border-top: 1px solid #fff;
+    color: black !important;
+    border-bottom: 1px solid #dfdfdf !important;
+    border-top: 1px solid #fff !important;
     width: 88%;
     height: 3em;
     border-bottom: 0.1em white solid;
@@ -3074,9 +3124,9 @@
     padding-top: 0.8em; }
 
   form#clientDisplayInfo #service_type {
-    color: black;
-    border-bottom: 1px solid #dfdfdf;
-    border-top: 1px solid #fff;
+    color: black !important;
+    border-bottom: 1px solid #dfdfdf !important;
+    border-top: 1px solid #fff !important;
     width: 88%;
     height: 3em;
     border-bottom: 0.1em white solid;
@@ -3090,8 +3140,8 @@
   form#clientDisplayInfo span i {
     float: left;
     height: 3em;
-    border-bottom: 1px solid #dfdfdf;
-    border-top: 1px solid #fff;
+    border-bottom: 1px solid #dfdfdf !important;
+    border-top: 1px solid #fff !important;
     color: black;
     padding-right: 1em;
     padding-top: 1em;
@@ -3123,9 +3173,10 @@
     width: 88%; }
 
   div#clientPostBody p.editProfile #updateClient {
-    color: white;
-    border-top: none;
-    border-bottom: none; }
+    color: white !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    /*padding-left: 22%;*/ }
 
   div#clientPostBody p.editProfile a {
     padding-left: 35%; }
@@ -3718,6 +3769,16 @@
   /* ==========================================================================
      ENQUIRY FORM
      ========================================================================== */
+  #mainEnquireBody {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 4.5em; }
+
+  #mainEnquireBody .contentWrapper {
+    margin-left: 1em; }
+
   form#enquire-form input {
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
@@ -3785,7 +3846,7 @@
     background-color: #9B8FFB;
     box-shadow: 0.2em 0.2em 0.5em black;
     text-decoration: none;
-    width: 79%;
+    width: 78%;
     border-bottom: none;
     border-top: none;
     box-shadow: none;
@@ -3855,10 +3916,10 @@
     border-top: none;
     border-bottom: none;
     color: white;
-    margin-left: -1.5em; }
+    /*margin-left: -1.5em;*/ }
 
   input#saveClient.addButton {
-    width: 45%; }
+    width: 50%; }
 
   section#signing-up {
     width: 80%;
@@ -4051,3 +4112,5 @@
 
   input#addAPost {
     width: 90%; } }
+
+/*# sourceMappingURL=main.css.map */

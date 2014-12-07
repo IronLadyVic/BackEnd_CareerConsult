@@ -2,7 +2,7 @@
 @section("content")
 
 <!-- Main Post -->
-<div id="mainPostBody">
+<div id="mainEnquireBody">
     <div id="leftColomn">
         <article id="postWrapper">
             <div class="contentWrapper">

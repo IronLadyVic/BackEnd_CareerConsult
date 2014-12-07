@@ -20,7 +20,7 @@
     </div>
     <p>During your appointment you are encouraged to ask anything!<br>No question is too silly. </p>
     <p id="testimonialButton">
-     <a href="{{URL::to('testimonials/')}}"><span>TESTIMONIALS</span></a>
+     <a href="{{URL::to('testimonials/edit')}}"><span>TESTIMONIALS</span></a>
  </p>
 </section>
 

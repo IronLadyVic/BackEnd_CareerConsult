@@ -2,6 +2,7 @@
 @section("content")
 
 <!-- Start of Services -->
+<div id="mainServicesBody">
 <div id="sectionServices">
     <section id="servicesListed">
         <h1 class="header">SERVICES</h1>
@@ -32,13 +33,11 @@
         </div>
         <p>During your appointment you are encouraged to ask anything!<br>No question is too silly. </p>
         <p id="testimonialButton">
-         <a href="{{URL::to('testimonials/')}}"><span>TESTIMONIALS</span></a>
+         <a href="{{URL::to('testimonial')}}"><span>TESTIMONIALS</span></a>
      </p>
  </section>
-
-
 </div>
-
+</div>
 
 <aside id="asideCareerAdvice">
     <section id="latestUpdates">

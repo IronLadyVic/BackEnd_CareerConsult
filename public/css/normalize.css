@@ -83,6 +83,7 @@ select,
 textarea {
     /*font-family: sans-serif;*/
     font-family: 'Quicksand', sans-serif;
+    border-radius: none!important;
 }
 
 /**
