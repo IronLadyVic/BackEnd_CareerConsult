@@ -62,7 +62,7 @@
             
         </p>
         <p class="editProfile">
-            <a href="{{URL::to('users/'.$user->id.'/edit')}}">CLICK BUTTON TO EDIT</a>
+            <a href="{{URL::to('users/'.$user->id.'/edit')}}">EDIT</a>
         </p>
         @else
         <p>
@@ -164,7 +164,7 @@
             <a href="{{URL::to('users/'.$user->id.'/edit')}}">EDIT</a>
         </p>
        <!--  Delete button for User Profile  -->
-        {{Form::model($user, array('url' => 'users/'.$user->id, 'id'=>'careerProfile-form'))}}
+        {{Form::model($user, array('url' => 'users/'.$user->id, 'method'=>'delete', 'id'=>'careerProfile-form'))}}
         {{Form::submit('DELETE', array('id'=>'deleteProfile'))}} 
         {{Form::close()}}
 

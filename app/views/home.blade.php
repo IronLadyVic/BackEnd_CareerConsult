@@ -24,8 +24,8 @@
         <h2>Auckland Skyline</h2>
         <div id="aucklandSkyline"><img src="{{URL::to('img/Auckland-skyline.png')}}" alt="Auckland City"></div>
         <div id="ponsonbyHousing"><img src="{{URL::to('img/Ponsonby_Grey_Street.fw.png')}}" alt="Auckland City"></div>
-        <div id="hideBicycle"><img src="{{URL::to('img/CareerConsultBicyle_greyv2.png')}}" alt="Career Consult" id="workingGirl" style=""></div>
-        <div id="leg"><img src="{{URL::to('img/legMoving.png')}}" alt="Career Consult, Launch Your Career" id="pushbike" style=""></div>
+        <div id="hideBicycle"><img src="{{URL::to('img/CareerConsultBicyle_grey.png')}}" alt="Career Consult" id="workingGirl"></div>
+        
     </section>
 
 </div>
@@ -36,17 +36,14 @@
 
     {{Form::open(array('url'=>'login', 'id'=>'logIn-form', 'class'=>'pure-form pure-form-stacked'))}}
     <span role="close-modal"><i class="fa fa-times"></i></span>
-    <h1 class="header">LOG IN</h1>
+    <h1 id="header">LOG IN</h1>
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
 
             <?php
             $sPhoto = URL::to('img/careerprofile-BLK.png');
-
             if(Auth::check()){
-
                  $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
-
             }
         ?>
     <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>

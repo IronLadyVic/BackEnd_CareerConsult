@@ -42,7 +42,7 @@
         <h2>Auckland Skyline</h2>
         <div id="aucklandSkyline"><img src="{{URL::to('img/Auckland-skyline.png')}}" alt="Auckland City"></div>
         <div id="ponsonbyHousing"><img src="{{URL::to('img/Ponsonby_Grey_Street.fw.png')}}" alt="Ponsonby"></div>
-        <div id="hideBicycle"><img src="{{URL::to('img/CareerConsultBicyle_greyv2.png')}}" alt="Career Consult, working girl" id="workingGirl" style=""></div>
+        <div id="hideBicycle"><img src="{{URL::to('img/CareerConsultBicyle_grey.png')}}" alt="Career Consult" id="workingGirl"></div>
     </section>
 
 </div>

@@ -56,6 +56,12 @@
     display: none; }
 
   /* ==========================================================================
+     FORM VALIDATION ERRORS
+     ========================================================================== */
+  .error {
+    color: #9B8FFB; }
+
+  /* ==========================================================================
      NAV LOG IN Desktop hide
      ========================================================================== */
   div#navLogIn a {
@@ -739,10 +745,6 @@
     color: white;
     margin-left: 1.5em; }
 
-  p.error {
-    border-bottom: 1px #9B8FFB solid;
-    border-top: 1px #9B8FFB solid; }
-
   /* ==========================================================================
      PRICING
      ========================================================================== */
@@ -945,6 +947,16 @@
 
   #addPostForm label {
     display: none; }
+
+  #deletePost {
+    margin-top: 1em;
+    border: 1px solid white !important;
+    border-radius: 0.2em;
+    border: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    width: 40%;
+    color: white; }
 
   /* ==========================================================================
      ACTIVE HOLD ON LI DROP DOWN MENU
@@ -1391,9 +1403,12 @@
   #signup-form input#checkbox {
     float: left; }
 
-  p.error {
-    color: #9B8FFB;
-    margin-top: 0em; }
+  #signup-form p.error {
+    color: #9B8FFB !important;
+    margin-top: -0.8em;
+    margin-left: 1em;
+    font-size: 0.5em;
+    height: 0.6em; }
 
   #signup-form button#signUp.button {
     width: 90%;
@@ -1624,6 +1639,13 @@
     width: 90%;
     margin-top: 1.5em; }
 
+  #mainPostsandTopics {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 5em; }
+
   .headerTopic h2 {
     color: white;
     height: auto;
@@ -1774,11 +1796,23 @@
     width: 100%;
     padding-bottom: 1em; }
 
-  #accordion #serviceEditLi ul li:nth-last-child(1) {
+  #accordion div#serviceEditLi {
+    height: auto;
+    width: 100%;
+    padding-bottom: 1em; }
+
+  #accordion #serviceEditLi #deleteService {
     background-color: transparent;
     list-style: decimal outside none;
     list-style-type: disc;
-    /* margin-left: 1em; */ }
+    margin-top: 1em;
+    margin-left: -1.5em;
+    border: 1px solid black !important;
+    border-radius: 0.2em;
+    border: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    width: 40%; }
 
   #accordion h3 {
     cursor: pointer;
@@ -1873,6 +1907,70 @@
     background-color: transparent; }
 
   /* ==========================================================================
+     ADD A SERVICE IN ACCORDION
+     ========================================================================== */
+  #editSectionServices div#accordion:last-child {
+    padding-top: none;
+    background-color: transparent; }
+
+  form#addAServiceForm {
+    width: 100%;
+    margin-top: 2em; }
+
+  form#addAServiceForm p {
+    color: black;
+    margin-top: 0em;
+    width: 98%; }
+
+  form#addAServiceForm input[type="file"] {
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    color: white;
+    height: 3em;
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    color: black;
+    width: 80%;
+    cursor: pointer; }
+
+  form#addAServiceForm input[type="text"] {
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    color: white;
+    height: 3em;
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    color: black;
+    width: 80%; }
+
+  form#addAServiceForm span {
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    display: block;
+    float: left;
+    height: 48px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    padding-left: 1.8em;
+    color: black; }
+
+  form#addAServiceForm #addAButton {
+    border-radius: 0.2em;
+    background-color: #9B8FFB;
+    box-shadow: 0.2em 0.2em 0.5em black;
+    text-decoration: none;
+    color: white;
+    box-shadow: none;
+    height: 3em;
+    width: 38%;
+    margin-left: 1em; }
+
+  /* ==========================================================================
       INPUT ERRORS
       ========================================================================== */
   .invalid {
@@ -1960,6 +2058,17 @@
 
   h2#intro-paragraph-loggedin {
     width: 50%; }
+
+  /* ==========================================================================
+     Form validation
+     ========================================================================== */
+  #signup-form p.error {
+    color: #9B8FFB !important;
+    padding-top: 0.3em;
+    margin-top: -1em;
+    margin-left: -1em;
+    font-size: 0.5em;
+    height: 0.4em !important; }
 
   /* ==========================================================================
      Pop up log in
@@ -2138,7 +2247,7 @@
     float: left;
     display: block;
     position: relative;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     margin-top: 8em;
     margin-left: 7em; }
@@ -2163,6 +2272,13 @@
     width: 90%; }
 
   #accordion div.serviceContent {
+    height: auto;
+    width: 100%;
+    margin-left: 1em;
+    padding-bottom: 1em;
+    background: none; }
+
+  #accordion div#serviceEditLi {
     height: auto;
     width: 100%;
     margin-left: 1em;
@@ -2208,8 +2324,18 @@
     margin-left: -4em;
     padding-top: 1.1em; }
 
-  #accordion #serviceEditLi ul li:nth-last-child(1) {
-    margin-left: -1.4em; }
+  #accordion #serviceEditLi #deleteService {
+    background-color: transparent;
+    list-style: decimal outside none;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-left: -1.5em;
+    border: 1px solid black !important;
+    border-radius: 0.2em;
+    border: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    width: 50%; }
 
   p#testimonialButton {
     width: 70%;
@@ -2332,9 +2458,7 @@
      PRICING
      ========================================================================== */
   div#sectionPrices {
-    /*    float: left;
-    margin: 0 auto;
-    position: relative;*/ }
+    height: 50em; }
 
   section#pricesListed {
     float: left;
@@ -2634,13 +2758,13 @@
     display: block; }
 
   #leg img#pushbike {
-    margin-left: 5em; }
+    margin-left: -5em; }
 
   img#pushbike {
     width: 1em;
     height: 2em;
     position: absolute;
-    top: 24em;
+    top: 22em;
     display: block; }
 
   /* ==========================================================================
@@ -2874,10 +2998,6 @@
     background-color: #f4f2ef;
     color: black;
     border: none; }
-
-  #signing-up p.error {
-    position: relative;
-    /*margin-top: -2em;*/ }
 
   /* ==========================================================================
       CAREER PROFILE 
@@ -3208,8 +3328,7 @@
     float: left;
     width: 50%;
     margin: 0 auto;
-    position: relative;
-    /* margin-top: -3em;*/ }
+    position: relative; }
 
   div#editSectionServices {
     float: left;
@@ -3337,6 +3456,76 @@
 
   .shareSocial p a:hover {
     color: #9B8FFB; }
+
+  #deletePost {
+    margin-top: 1em;
+    border: 1px solid black !important;
+    border-radius: 0.2em;
+    border: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    width: 40%;
+    color: black; }
+
+  /* ==========================================================================
+     ADD A SERVICE IN ACCORDION
+     ========================================================================== */
+  form#addAServiceForm {
+    width: 100%;
+    margin-top: 2em; }
+
+  form#addAServiceForm p {
+    margin-left: -2em;
+    margin-top: -1em;
+    width: 118%; }
+
+  form#addAServiceForm input[type="file"] {
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    color: white;
+    height: 3em;
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    color: black;
+    width: 80%;
+    cursor: pointer; }
+
+  form#addAServiceForm input[type="text"] {
+    border-bottom: 0.1em white solid;
+    border-top: 0.1em white solid;
+    background-color: transparent;
+    height: 3em;
+    color: white;
+    height: 3em;
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    color: black;
+    width: 80%; }
+
+  form#addAServiceForm span {
+    border-bottom: 0.1em black solid;
+    border-top: 0.1em black solid;
+    display: block;
+    float: left;
+    height: 48px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    padding-left: 1.8em;
+    color: black; }
+
+  form#addAServiceForm #addAButton {
+    border-radius: 0.2em;
+    background-color: #9B8FFB;
+    box-shadow: 0.2em 0.2em 0.5em black;
+    text-decoration: none;
+    color: white;
+    box-shadow: none;
+    height: 3em;
+    width: 38%;
+    margin-left: -1.3em; }
 
   /* ==========================================================================
      ADMIN POST CAREER UPDATES/ADVICE
@@ -3930,7 +4119,8 @@
 
   section#latestUpdates {
     width: 120%;
-    margin-left: -4em; } }
+    margin-left: -4em;
+    margin-top: -1.2em; } }
 /* ==========================================================================
    DESKTOP
    ========================================================================== */
@@ -4111,6 +4301,9 @@
     margin-left: -1.5em; }
 
   input#addAPost {
-    width: 90%; } }
+    width: 90%; }
+
+  div#sectionPrices {
+    height: 40em; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -64,9 +64,8 @@
             {{Form::textarea('comment', '', array('id'=>'comment', 'placeholder'=>'3:', 'class'=>'border'))}}
             
         </p>
-        <p class="editProfile">
-            <a href="{{URL::to('users/'.$user->id.'/edit')}}">SAVE</a>
-        </p>
+        {{Form::submit('SAVE UPDATE', array('id'=>'updateCareerButton'));}}
+
         @else
         <p>
             <span class="border"><i class="fa fa-camera"></i></span>            
@@ -164,7 +163,7 @@
             {{$errors->first('service_type','<p class="error">:message</p>')}} 
         </p>
         
-        {{Form::submit('UPDATE MY PROFILE', array('id'=>'updateCareerButton'));}}
+        {{Form::submit('SAVE UPDATE', array('id'=>'updateCareerButton'));}}
         @endif
          
             

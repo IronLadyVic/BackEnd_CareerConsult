@@ -37,6 +37,12 @@ Route::get('services/edit', function(){
 	return View::make('services_edit');
 	
 });
+//services with enquiry form with service_type
+Route::get('services/enquire', function($service_type){
+	$oService = Service::find($service_type);	
+	return View::make('services_enquire')->with("service_type",$service_type);
+	
+});
 
 //services 
 Route::get('services/{id?}', function($id=null){
@@ -59,6 +65,62 @@ Route::put('services/{id}', function($id){
 	return $sValue;
 	
 });
+//delete a service type using id | admin only
+Route::delete('services/{id}',function($id){
+	$oService = Service::find($id);	
+	$oService->delete();
+	return Redirect::to('services/edit');	
+});
+
+//Adding a service and return back to editing services page | admin only
+Route::post('service',function(){
+	
+	$aRules = array(
+		'icon'=>'required',
+		'service_type'=>'required|unique:services',
+		'content'=>'required'
+		
+		);
+
+	$aAdminInput = Input::all();
+
+	$messages= array(
+		"required"=>'The :attribute field is required.'
+		);
+
+	$oValidator = Validator::make($aAdminInput, $aRules, $messages);
+
+
+	if($oValidator->passes()){
+		$sServiceIcon = Input::get("service_type").".".Input::file('icon')->getClientOriginalExtension();
+		Input::file("icon")->move("uploadServiceIcons",$sServiceIcon);
+		
+		//hash password	
+		$aDetails = Input::all();	
+
+		$aDetails["icon"] = $sServiceIcon;
+		//create new User
+		$oService = Service::create($aDetails);
+
+		
+		return Redirect::to('services/1');
+		}else{
+
+		//redirect new client form with errors and sticky data
+		return Redirect::to('services/edit')->withErrors($oValidator)->withInput();
+
+	}
+
+});
+
+
+
+
+
+
+
+
+
 
 //testimonials get non edit
 Route::get('testimonial', function(){
@@ -87,7 +149,12 @@ Route::put('testimonials/{id}', function($id){
 
 
 });
-
+//delete a testimonial using id | admin only
+Route::delete('testimonials/{id}',function($id){
+	$oTestimonial = Testimonial::find($id);	
+	$oTestimonial->delete();
+	return Redirect::to('testimonials/edit');	
+});
 
 
 //pricing 
@@ -126,6 +193,23 @@ Route::get('enquire', function(){
 	return View::make('enquire');
 	
 });
+
+//enquire
+Route::post('enquire', function(){
+	
+	return View::make('success');
+	
+});
+
+
+
+
+
+
+
+
+
+
 
 
 //index logged in
@@ -240,9 +324,9 @@ Route::post('users',function(){
 		$oUser = User::create($aDetails);
 
 		//email client about sign up success
-		Mail::send('users.mails.welcome', array('firstname'=>Input::get('firstname')), function($message){
-			$message->to(Input::get('email'), Input::get('firstname').' '.Input::get('lastname'))->subject('Welcome to Career Consult!');
-		});
+		// Mail::send('users.mails.welcome', array('firstname'=>Input::get('firstname')), function($message){
+		// 	$message->to(Input::get('email'), Input::get('firstname').' '.Input::get('lastname'))->subject('Welcome to Career Consult!');
+		// });
 
 		//redirect to product list
 		return Redirect::to('login')->with('message', 'Thanks for signing up!');
@@ -402,6 +486,13 @@ Route::get('post/{id}', function($id){
 });
 
 
+
+
+
+
+
+
+
 // make a new post	
 Route::post('posts',function(){
 	
@@ -439,10 +530,10 @@ Route::post('posts',function(){
 
 		$aPostDetails["photo_path"] = $sPostImageName;
 		//create new User
-		$oPost = User::create($aPostDetails);
+		$oPost = Post::create($aPostDetails);
 
 		//redirect to post and services lists
-		return Redirect::to('services');
+		return Redirect::to('post/'.$id);
 		
 	}
 
@@ -457,15 +548,19 @@ Route::post('posts',function(){
 
 
 
+
+
+
+
+
+
+
+
+
 Route::delete('posts/{id}',function($id){
-
-	$oPost = User::find($id);
-	$iPostId = $oPost->post->id;
+	$oPost = Post::find($id);	
 	$oPost->delete();
-
-	return Redirect::to('home');
-
-	
+	return Redirect::to('services/edit');	
 });
 
 
@@ -547,10 +642,12 @@ Route::put('users/{id}',function($id){
 
 Route::delete('users/{id}',function($id){
 
-	$oUser = User::find($id);
-	$iUserId = $oUser->user->id;
-	$oUser->delete();
+	// $oUser = User::find($id);
+	// $iUserId = $oUser->user->id;
+	// $oUser->delete();
+	$user = User::find($id);
 
+	$user->delete();
 	return Redirect::to('home');
 
 	

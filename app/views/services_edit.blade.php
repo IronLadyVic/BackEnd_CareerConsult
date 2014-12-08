@@ -13,20 +13,46 @@
             <div class="serviceContent" id="serviceEditLi">
                 <ul data-editable="content" data-url="{{URL::to('uploads/'.$service->content)}}">
                     {{$service->content}} 
+                    {{ Form::model($service, array('url' => 'services/'.$service->id, 'method'=>'delete')) }}
+                    {{Form::submit('DELETE', array('id'=>'deleteService'))}} 
+                    {{Form::close()}}
                 </ul>
             </div>
             @endforeach
-        </form>     
-    </div>
-    <p>During your appointment you are encouraged to ask anything!<br>No question is too silly. </p>
-    <p id="testimonialButton">
-     <a href="{{URL::to('testimonials/edit')}}"><span>TESTIMONIALS</span></a>
- </p>
-</section>
 
+            <!-- Add a new service -->
+            <img src="{{URL::to('img/plusOne.png')}}" alt="header services, icon image" class="serviceIcon">
+            <h3>Add a Service</h3>
+            <div class="serviceContent">
+                
+                {{Form::open(array('url'=>'services','files'=>'true','id'=>'addAServiceForm'))}}
+                <p>Please add service icon, service type and content.</p>
+                <p> 
+                    <span class="border"><i class="fa fa-camera"></i></span>             
+                    {{Form::file('serviceIcon', '', array('id'=>'serviceIcon'))}}    
+                </p> 
+                <p>
+                    <span class="border"><i class="fa fa-font"></i></span>            
+                    {{Form::text('servicetype', '', array('id'=>'servicetype', 'placeholder'=>'Service Type'))}}            
+                </p>
+                <p> 
+                    <span class="border"><i class="fa fa-file-text-o"></i></span>         
+                    {{Form::text('content', '', array('id'=>'content', 'placeholder'=>'Content'))}}               
+                </p>
+                
+                
+                {{Form::submit('ADD SERVICE', array('id'=>'addAButton'));}}
+                {{Form::close()}}
+                
+            </div>     
+        </div>
+        
+        <div id="accordion">
+            
+        </div>
 
+    </section>
 </div>
-
 
 <aside id="asideLatestNews">
     <section id="latestUpdates">
@@ -93,74 +119,78 @@
             <div class="readMore">
                 
                 <p><a href="{{URL::to('post/'.$post->id)}}">
-                {{Form::open(array('url'=>'posts', $post->id))}}   
+                    {{Form::open(array('url'=>'posts', $post->id))}}   
                     {{Form::button('Read More.');}}
                     {{@Form::hidden("postID",$post->id)}}                                      
-                {{Form::close()}}</a></p>
-            </div>
-            <div class="shareSocial">
-                <p><a href="http://twitter.com/share?text=Contact%20Career%20Consult%20&amp;url=http://www.careerconsult/services.co.nz"><i class="fa fa-twitter"></i></a></p>
-                <p><a href="http://www.facebook.com/sharer.php?text=Career%20Consult%20Services&amp;u=http://www.careerconsult/services.co.nz"><i class="fa fa-facebook"></i></a></p>
-                <p><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.careerconsult/services.co.nz"><i class="fa fa-linkedin"></i></a></p>
-            </div>
-            <div class="avatarProfile">
-                <img src="{{URL::to('img/'.$post->avatar)}}" alt="Avatar Profile Picture">
-            </div>
-            <div class="editor">
-                <p>Editor: {{$post->editor}}</p>
-            </div>
-            <div class="date">
-                <p>{{$post->created_at}}</p>
-            </div>
-        </article>   
-        @endforeach
-        <!-- this will create links which is a ul li -->
-        <div id="pagination">{{$pagPostTypes->links()}}</div>        
+                    {{Form::close()}}</a></p>
+                </div>
+                <div class="shareSocial">
+                    <p><a href="http://twitter.com/share?text=Contact%20Career%20Consult%20&amp;url=http://www.careerconsult/services.co.nz"><i class="fa fa-twitter"></i></a></p>
+                    <p><a href="http://www.facebook.com/sharer.php?text=Career%20Consult%20Services&amp;u=http://www.careerconsult/services.co.nz"><i class="fa fa-facebook"></i></a></p>
+                    <p><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.careerconsult/services.co.nz"><i class="fa fa-linkedin"></i></a></p>
+                </div>
+                <div class="avatarProfile">
+                    <img src="{{URL::to('img/'.$post->avatar)}}" alt="Avatar Profile Picture">
+                </div>
+                <div class="editor">
+                    <p>Editor: {{$post->editor}}</p>
+                </div>
+                <div class="date">
+                    <p>{{$post->created_at}}</p>
+                </div>
+                {{ Form::model($post, array('url' => 'posts/'.$post->id, 'method'=>'delete')) }}
+                {{Form::submit('DELETE POST', array('id'=>'deletePost'))}} 
+                {{Form::close()}}
+            </article>
 
-    </section>
+            @endforeach
+            <!-- this will create links which is a ul li -->
+            <div id="pagination">{{$pagPostTypes->links()}}</div>        
 
-</aside>
-<!-- Log in pop up -->
-<div id="loginForm" class="l-box-lrg pure-u-1 pure-u-md-2-5">
+        </section>
 
-    {{Form::open(array('url'=>'login', 'id'=>'logIn-form'))}}
+    </aside>
+    <!-- Log in pop up -->
+    <div id="loginForm" class="l-box-lrg pure-u-1 pure-u-md-2-5">
 
-    <?php
-    $sPhoto = URL::to('img/careerprofile-BLK.png');
+        {{Form::open(array('url'=>'login', 'id'=>'logIn-form'))}}
 
-    if(Auth::check()){
+        <?php
+        $sPhoto = URL::to('img/careerprofile-BLK.png');
 
-     $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
+        if(Auth::check()){
 
- }
- ?>
+           $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
 
- <span role="close-modal"><i class="fa fa-times"></i></span>
- <h1 class="header">LOG IN</h1>
+       }
+       ?>
 
- <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
+       <span role="close-modal"><i class="fa fa-times"></i></span>
+       <h1 class="header">LOG IN</h1>
 
- <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
- <p>
-    <span class="border"><i class="fa fa-user"></i></span>           
-    {{Form::text('username')}}
-    {{$errors->first('username','<p class="border">:message</p>')}}
-</p>
-<p>
-    <span class="border"><i class="fa fa-lock"></i></span>
-    {{Form::password('password')}}
-    {{$errors->first('password','<p class="border">:message</p>')}}
+       <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
 
-</p> 
-{{Form::checkbox('check', 'agreement', true, array('id' => 'checkBoxRemember'));}}
-{{$errors->first('checkbox','<p class="border">:message</p>')}} 
-<p  id="rememberMe">Remember Me</p>
+       <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
+       <p>
+        <span class="border"><i class="fa fa-user"></i></span>           
+        {{Form::text('username')}}
+        {{$errors->first('username','<p class="border">:message</p>')}}
+    </p>
+    <p>
+        <span class="border"><i class="fa fa-lock"></i></span>
+        {{Form::password('password')}}
+        {{$errors->first('password','<p class="border">:message</p>')}}
 
-{{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
+    </p> 
+    {{Form::checkbox('check', 'agreement', true, array('id' => 'checkBoxRemember'));}}
+    {{$errors->first('checkbox','<p class="border">:message</p>')}} 
+    <p  id="rememberMe">Remember Me</p>
+
+    {{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
 
 
-{{Form::close()}}
-{{Session::get("error")}}
+    {{Form::close()}}
+    {{Session::get("error")}}
 </div>
 
 

@@ -4,6 +4,7 @@ $(function(){
 //accordinan bit
 
 $("#accordion .serviceContent").hide();
+
 var hash = window.location.hash;
 
 
@@ -41,12 +42,6 @@ $("#accordian h3").not(this).next().slideUp(); //using next to go to the next si
 }
 
 
-
-
-// $("#accordian h3.open").next().slideDown(function(){
-// 	$(this).prev().find("i").removeClass("fa fa-angle-down").addClass("fa fa-angle-up");
-// 	$(this).prev().data("open",1);
-// 	});
 
 });
 

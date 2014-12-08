@@ -25,18 +25,17 @@
         <p>
         <span class="border"><i class="fa fa-user"></i></span>
         {{Form::text('username', '', array('placeholder'=>'Username', 'id'=>'userName', 'class'=>'border'))}}
-        {{$errors->first('username','<p class="error">:message</p>')}}
         </p>
-
+        {{$errors->first('username','<p class="error">:message</p>')}}
         <p>
         <span class="border" ><i class="fa fa-lock"></i></span>       
         {{Form::password('password', array('placeholder' => 'Password', 'id'=>'passwordLogin'))}}
-        {{$errors->first('password','<p class="error">:message</p>')}}     
         </p>
+        {{$errors->first('username','<p class="error">:message</p>')}}
 
        {{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}
        <p  id="rememberMe">Remember Me</p>
-        {{$errors->first('checkbox','<p class="border">:message</p>')}}
+        
         
     
         {{Form::submit('LOG IN', array('id'=>'loggingInButton', 'class' => 'button'));}}

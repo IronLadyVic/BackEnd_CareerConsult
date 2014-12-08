@@ -24,11 +24,10 @@
                     {{$service->content}}
                     
                     <li class="enquiryButton">
-                        <a href="enquire">BOOKING ENQUIRY</a>
+                        <a href="{{URL::to('services/enquire'.$service->service_type)}}">BOOKING ENQUIRY</a>
                     </li>   
                 </ul>
             </div>
-
         @endforeach      
         </div>
         <p>During your appointment you are encouraged to ask anything!<br>No question is too silly. </p>
