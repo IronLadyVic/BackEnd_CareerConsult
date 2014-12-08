@@ -61,6 +61,13 @@
   .error {
     color: #9B8FFB; }
 
+  #careerProfile-form p.error {
+    color: #9B8FFB !important;
+    margin-top: -0.8em;
+    margin-left: 1em;
+    font-size: 0.5em;
+    height: 0.6em; }
+
   /* ==========================================================================
      NAV LOG IN Desktop hide
      ========================================================================== */
@@ -1565,6 +1572,17 @@
     margin-left: 1em;
     border-radius: 0.2em; }
 
+  #careerProfile-form input#updateCareerButton {
+    border-radius: 0.2em;
+    background-color: #9B8FFB;
+    box-shadow: 0.2em 0.2em 0.5em black;
+    text-decoration: none;
+    width: 92%;
+    border-top: none;
+    border-bottom: none;
+    color: white;
+    margin-left: 0.5em; }
+
   p#agreementStatement {
     padding: 1em;
     color: white; }
@@ -2070,6 +2088,13 @@
     font-size: 0.5em;
     height: 0.4em !important; }
 
+  #careerProfile-form p.error {
+    color: #9B8FFB !important;
+    margin-top: -1.5em;
+    margin-left: -1em !important;
+    font-size: 0.5em;
+    height: 0.4em !important; }
+
   /* ==========================================================================
      Pop up log in
      ========================================================================== */
@@ -2247,7 +2272,7 @@
     float: left;
     display: block;
     position: relative;
-    width: 85%;
+    width: 72%;
     margin: 0 auto;
     margin-top: 8em;
     margin-left: 7em; }
@@ -2464,7 +2489,7 @@
     float: left;
     display: block;
     position: relative;
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
     margin-top: -26em;
     margin-left: 22em; }
@@ -2592,7 +2617,7 @@
   #tab-desk-nav {
     width: 15.4em;
     float: left;
-    height: 90em;
+    height: 200%;
     top: 0;
     left: 0;
     position: absolute;
@@ -3012,14 +3037,15 @@
     width: 70%;
     height: 50em;
     float: left;
-    margin-left: 2em; }
+    margin-left: 2em;
+    margin-top: -2.5em; }
 
   #careerProfile-form label {
     font-size: 0px; }
 
   #career-profile p {
     float: left;
-    width: 47%;
+    /*    width: 47%;*/
     height: 3em; }
 
   form#careerProfile-form {
@@ -3131,7 +3157,7 @@
   #careerProfile-form img#profileImage {
     width: 8em;
     height: 8em;
-    margin-left: 35%;
+    margin-left: 37%;
     margin-bottom: 1em; }
 
   #careerProfile-form p.editProfile {
@@ -3328,7 +3354,8 @@
     float: left;
     width: 50%;
     margin: 0 auto;
-    position: relative; }
+    position: relative;
+    z-index: -10000; }
 
   div#editSectionServices {
     float: left;
@@ -4053,6 +4080,20 @@
     /*outline: 1px red solid;*/ }
 
   /* ==========================================================================
+     SERVICE ENQUIRE TYPE
+     ========================================================================== */
+  aside#serviceEnquire {
+    border-top: none;
+    float: left;
+    margin-top: 3em;
+    width: 25%; }
+
+  section#enquireServiceType {
+    width: 120%;
+    margin-left: -4em;
+    margin-top: -1.2em; }
+
+  /* ==========================================================================
      FOOTER
      ========================================================================== */
   div#footer_options {
@@ -4105,7 +4146,7 @@
     border-top: none;
     border-bottom: none;
     color: white;
-    /*margin-left: -1.5em;*/ }
+    margin-left: -0.5em; }
 
   input#saveClient.addButton {
     width: 50%; }
@@ -4120,7 +4161,14 @@
   section#latestUpdates {
     width: 120%;
     margin-left: -4em;
-    margin-top: -1.2em; } }
+    margin-top: -1.2em; }
+
+  section#career-profile {
+    width: 70%;
+    height: 50em;
+    float: left;
+    margin-left: 2em;
+    margin-top: 0em; } }
 /* ==========================================================================
    DESKTOP
    ========================================================================== */

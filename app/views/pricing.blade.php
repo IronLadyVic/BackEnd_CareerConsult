@@ -17,7 +17,7 @@
                 </div>
                 <div class="priceContents">
                     <ul>
-                        <li>{{$price->content}}</li>
+                        {{$price->content}}
                     </ul>
                 </div>
             </div>
@@ -38,37 +38,36 @@
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
 
-        <?php
-            $sPhoto = URL::to('img/careerprofile-BLK.png');
+    <?php
+    $sPhoto = URL::to('img/careerprofile-BLK.png');
 
-            if(Auth::check()){
+    if(Auth::check()){
 
-                 $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
+       $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
 
-            }
-    ?>
+   }
+   ?>
 
-    <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
-    <p>
-        <span class="border"><i class="fa fa-user"></i></span>           
-        {{Form::text('username')}}
-        {{$errors->first('username','<p class="border">:message</p>')}}
-    </p>
-    <p>
-        <span class="border"><i class="fa fa-lock"></i></span>
-        {{Form::password('password')}}
-        {{$errors->first('password','<p class="border">:message</p>')}}
+   <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
+   <p>
+    <span class="border"><i class="fa fa-user"></i></span>
+    {{Form::text('username', '', array('placeholder'=>'Username', 'id'=>'userName', 'class'=>'border'))}}
+</p>
+{{$errors->first('username','<p class="error">:message</p>')}}
+<p>
+    <span class="border" ><i class="fa fa-lock"></i></span>       
+    {{Form::password('password', array('placeholder' => 'Password', 'id'=>'passwordLogin'))}}
+</p>
+{{$errors->first('username','<p class="error">:message</p>')}}
 
-    </p> 
-    {{Form::checkbox('check', 'agreement', true, array('id' => 'checkBoxRemember'));}}
-    {{$errors->first('checkbox','<p class="border">:message</p>')}} 
-    <p  id="rememberMe">Remember Me</p>
+{{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}
+<p  id="rememberMe">Remember Me</p>
 
-    {{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
+{{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
 
 
-    {{Form::close()}}
-    {{Session::get("error")}}
+{{Form::close()}}
+{{Session::get("error")}}
 </div>
 
 

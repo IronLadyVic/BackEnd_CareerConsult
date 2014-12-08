@@ -111,39 +111,39 @@
         <p>
             <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
             {{Form::label('personal_goal','', array('id'=>'personalGoals'))}}
-            {{Form::textarea('personal_goal', '', array('disabled'=>'disabled', 'id'=>'personalGoals', 'placeholder'=>'Personal Goals', 'class'=>'border'))}}
+            {{Form::textarea('personal_goal', $user->personal_goal, array('disabled'=>'disabled', 'id'=>'personalGoals', 'placeholder'=>'Personal Goals', 'class'=>'border'))}}
             <!-- {{$errors->first('personal_goal','<p class="error">:message</p>')}} -->
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
             {{Form::label('experience','', array('id'=>'experience'))}}
-            {{Form::textarea('experience', '', array('disabled'=>'disabled', 'id'=>'experience', 'placeholder'=>'Experience', 'class'=>'border'))}}
+            {{Form::textarea('experience', $user->experience, array('disabled'=>'disabled', 'id'=>'experience', 'placeholder'=>'Experience', 'class'=>'border'))}}
             <!-- {{$errors->first('experience','<p class="error">:message</p>')}}  -->
         </p>
         
         <p>
             <span class="border"><i class="fa fa-university"></i></span>
             {{Form::label('education','', array('id'=>'education'))}}
-            {{Form::textarea('education', '', array('disabled'=>'disabled', 'id'=>'education', 'placeholder'=>'Education', 'class'=>'border'))}}
+            {{Form::textarea('education', $user->education, array('disabled'=>'disabled', 'id'=>'education', 'placeholder'=>'Education', 'class'=>'border'))}}
             <!-- {{$errors->first('education','<p class="error">:message</p>')}}  -->
         </p>
 
         <p>
             <span class="border"><i  class="fa fa-trophy"></i></span>
-            {{Form::label('acheivements','', array('id'=>'acheivements'))}}
-            {{Form::textarea('acheivements', '', array('disabled'=>'disabled', 'id'=>'acheivements', 'placeholder'=>'Acheivements', 'class'=>'border'))}}
+            {{Form::label('acheivement','', array('id'=>'acheivements'))}}
+            {{Form::textarea('acheivement', $user->acheivement, array('disabled'=>'disabled', 'id'=>'acheivements', 'placeholder'=>'Acheivements', 'class'=>'border'))}}
             <!-- {{$errors->first('acheivements','<p class="error">:message</p>')}}   -->
         </p>
         <p>
             <span class="border"><i class="fa fa-history"></i></span>
             {{Form::label('career_history','', array('id'=>'careerHistory'))}}
-            {{Form::textarea('career_history', '', array('disabled'=>'disabled', 'id'=>'careerHistory', 'placeholder'=>'Career History', 'class'=>'border'))}}
+            {{Form::textarea('career_history', $user->career_history, array('disabled'=>'disabled', 'id'=>'careerHistory', 'placeholder'=>'Career History', 'class'=>'border'))}}
            <!--  {{$errors->first('career_history','<p class="error">:message</p>')}}   -->
         </p>
         <p>
             <span class="border"><i class="fa fa-thumbs-o-up"></i></span>
-            {{Form::label('career_type','', array('id'=>'career_type'))}}
+            {{Form::label('career_type', $user->career_type, array('id'=>'career_type'))}}
             
             {{Form::select('career_type', array('0' => 'Choose your Career Class','1'=>'Accounting','2'=>'Administration and Office Support','3'=>'Advertising, Arts and Media',
             '4'=>'Banking Financial Services', '5'=>'Call Centre and Customer Service', '6'=>'CEO and General Management', '7'=>'Community Services and Development',
@@ -156,7 +156,7 @@
         </p>
         <p>
             <span class="border"><i  class="fa fa-hand-o-right"></i></span>        
-            {{Form::label('service_type','', array('id'=>'service_type'))}}
+            {{Form::label('service_type', $user->service_type, array('id'=>'service_type'))}}
             {{Form::select('service_type', array('0' => 'Services I am interested in..','1'=>'CV Writing & Cover Letters','2'=>'Interview Preparation','3'=>'New to NZ', '4'=>'Employment Contracts', '5'=>'General Job Seeking Advice', '6'=>'General Employment Advice'))}}
             <!-- {{$errors->first('service_type','<p class="error">:message</p>')}}  -->
         </p>

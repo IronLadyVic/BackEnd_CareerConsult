@@ -1,20 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 06, 2014 at 01:49 AM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Host: localhost:8889
+-- Generation Time: Dec 08, 2014 at 10:40 PM
+-- Server version: 5.5.34
+-- PHP Version: 5.5.10
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `careerconsult`
@@ -26,7 +20,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `posts`
 --
 
-CREATE TABLE IF NOT EXISTS `posts` (
+CREATE TABLE `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `topic_id` int(11) NOT NULL,
   `title` varchar(5000) NOT NULL,
@@ -58,7 +52,7 @@ INSERT INTO `posts` (`id`, `topic_id`, `title`, `photo_path`, `content`, `avatar
 -- Table structure for table `prices`
 --
 
-CREATE TABLE IF NOT EXISTS `prices` (
+CREATE TABLE `prices` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `price` varchar(5000) NOT NULL,
   `content` text NOT NULL,
@@ -73,12 +67,12 @@ CREATE TABLE IF NOT EXISTS `prices` (
 --
 
 INSERT INTO `prices` (`id`, `price`, `content`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'FREE', '15 minute free consultation either over telephone, email or meeting up.', '2014-12-04 00:35:29', '2014-12-03 11:35:29', '0000-00-00 00:00:00'),
-(2, '$30', '30 minute appointment\nCover a range of services\nSign up, and prepare your Career Profile for a consultation\nCV Design\nMeet up in Ponsonby', '2014-11-28 00:25:16', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, '$40', '45 minute appointment\nHave a service tailored to your needs\nSign up, and prepare your Career Profile for a consultation\nPrepare your CV and Interview Questions\nMeet in CBD', '2014-12-04 00:26:29', '2014-12-03 11:26:29', '0000-00-00 00:00:00'),
-(4, '$50', '1 hour appointment\nAppointments are generally face to face\nSome services can be completed by email or  Skype\nPrepare your CV and Interview Questions\nMeet up of your choice', '2014-12-04 00:20:08', '2014-12-03 11:20:08', '0000-00-00 00:00:00'),
-(5, '$25', 'Independant advice\r\nFocus on new employment contract\r\nService tailored via email', '2014-11-18 09:04:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(6, 'TBC', 'Other services, as discussed\nEnquire about a service\nContact us via email or phone', '2014-11-28 00:25:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(1, 'FREE', '<li>15 minute free consultation either over telephone, email or meeting up.</li>', '2014-12-08 19:21:42', '2014-12-03 11:35:29', '0000-00-00 00:00:00'),
+(2, '$30', '<li>30 minute appointment.</li>\n<li>Cover a range of services\nSign up, and prepare your Career Profile for a consultation.</li>\n<li>CV Design.</li>\n<li>Meet up in Ponsonby.</li>', '2014-12-08 19:22:27', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, '$40', '<li>45 minute appointment.</li>\n<li>Have a service tailored to your needs\nSign up, and prepare your Career Profile for a consultation.</li>\n<li>Prepare your CV and Interview Questions.</li>\n<li>Meet in CBD</li>', '2014-12-08 19:22:58', '2014-12-03 11:26:29', '0000-00-00 00:00:00'),
+(4, '$50', '<li>1 hour appointment\nAppointments are generally face to face.</li>\n<li>Some services can be completed by email or  Skype.</li>\n<li>Prepare your CV and Interview Questions.</li>\n<li>Meet up of your choice.</li>', '2014-12-08 19:23:35', '2014-12-03 11:20:08', '0000-00-00 00:00:00'),
+(5, '$25', '<li>Independent advice.</li>\n<li>Focus on new employment contract.</li>\n<li>Service can be tailored via email.</li>', '2014-12-08 19:24:23', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(6, 'TBC', '<li>Other services, as discussed.</li>\n<li>Inquire about a service.</li>\n<li>Contact us via email or phone.</li>', '2014-12-08 19:24:53', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -86,7 +80,7 @@ INSERT INTO `prices` (`id`, `price`, `content`, `created_at`, `updated_at`, `del
 -- Table structure for table `services`
 --
 
-CREATE TABLE IF NOT EXISTS `services` (
+CREATE TABLE `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `icon` varchar(5000) NOT NULL,
   `service_type` varchar(5000) NOT NULL,
@@ -115,7 +109,7 @@ INSERT INTO `services` (`id`, `icon`, `service_type`, `content`, `created_at`, `
 -- Table structure for table `testimonials`
 --
 
-CREATE TABLE IF NOT EXISTS `testimonials` (
+CREATE TABLE `testimonials` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content` text NOT NULL,
   `avatar` varchar(5000) NOT NULL,
@@ -143,7 +137,7 @@ INSERT INTO `testimonials` (`id`, `content`, `avatar`, `client`, `company`, `cre
 -- Table structure for table `topics`
 --
 
-CREATE TABLE IF NOT EXISTS `topics` (
+CREATE TABLE `topics` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(1000) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -169,7 +163,7 @@ INSERT INTO `topics` (`id`, `name`, `created_at`, `updated_at`, `deleted_at`) VA
 -- Table structure for table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) NOT NULL,
   `password` varchar(50000) NOT NULL,
@@ -199,13 +193,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `lastname`, `email`, `phone`, `avatar`, `personal_goal`, `experience`, `education`, `acheivement`, `career_history`, `career_type`, `service_type`, `comment`, `remember_token`, `created_at`, `updated_at`, `deleted_at`, `admin`) VALUES
-(1, 'kaz', '$2y$10$rNEdxaLROwHoXfVInAnXTusr.7/GVhhQ19WNao1nAK64qn8.0d3.y', 'Karyn', 'McDonald', 'karynmcdonald@hotmail.com', '021 123 4567', 'KarynsProfilePic.png', '', '', '', '', '', '', '', '', 'dMWteBw6ClZYyZaWnhlc0QnFwjL8QnjqPPBNgAw2NwuFHFNh1HS06iczCWOT', '2014-12-05 23:48:44', '2014-12-05 10:48:44', '0000-00-00 00:00:00', 1),
+(1, 'kaz', '$2y$10$rNEdxaLROwHoXfVInAnXTusr.7/GVhhQ19WNao1nAK64qn8.0d3.y', 'Karyn', 'McDonald', 'karynmcdonald@hotmail.com', '021 123 4567', 'KarynsProfilePic.png', '', '', '', '', '', '', '', '', 'LCcwPqJh7W4gp5xScndrB0nGFNMHIOAVL5spvU3dsqtckUfozHQL7PJ3HiSK', '2014-12-08 20:55:03', '2014-12-08 07:55:03', '0000-00-00 00:00:00', 1),
 (2, 'timmy', '$2y$10$EMZzpJSZ5fSuAcrhlYXtc.HaOyxFP/SEq9ZDadov1vUBsfKYMmtPm', 'Tim', 'Taylor', 'timtaylor@xtra.co.nz', '09 455 1234', 'timmy.jpg', 'improve on all the aspects: knowledge, experience and personal in a world class manufacturing environment. My commitment is to perform every requested task with responsibility, honor ability and my best effort. ', 'Mentor\r\nBig Brothers & sisters\r\nAugust 2008 - present\r\n-Act as a big sister to a loving 11 year old and guide her through positive achivements.\r\n-Tutor helped child to strive for excellance at school.\r\n- Engaged in team sports, and activities.\r\n\r\nDay Camp Counsellor\r\nAmbrosia Camp\r\nSummer 2007/2008\r\n- Taught children ages 6-9 the importance of community outreach by volunteering for local hospitals, parks and other charities.\r\n- Conducted workshops to educate kids about the different charities in the world.\r\n\r\nSales Specialist\r\nAmerican Eagle\r\nApril 2007 - December 2007\r\n- Made the 2nd highest number in store sales and became the employee of the month.\r\nTrained new employees on cash registers and sales precedures.\r\nEarned one of the highest numbers of clients to open credit cared applications.', '2003-2005\r\nBachelor of Teaching and Training\r\n\r\n1999 - 2002\r\nHigh School, University Entrance.', '2008\r\nBest all round supporter\r\n\r\n2008\r\n1st in running sports\r\n2nd in Team events', 'Mentor\r\nBig Brothers & sisters\r\nAugust 2008 - present\r\n\r\nDay Camp Counsellor\r\nAmbrosia Camp\r\nSummer 2007/2008\r\n\r\nSales Specialist\r\nAmerican Eagle\r\nApril 2007 - December 2007', '2', '2', 'I currently moved over from the states and need help with my CV and writing letters to future employees.\r\n\r\nThank you\r\nRegards\r\n\r\nTim', '', '2014-12-06 00:44:51', '2014-12-05 11:44:51', '0000-00-00 00:00:00', 0),
 (3, 'KiKi', '$2y$10$EMZzpJSZ5fSuAcrhlYXtc.HaOyxFP/SEq9ZDadov1vUBsfKYMmtPm', 'Kimberley', 'Smith', 'k.smith@yahoo.com', '02 234 21244', 'Kiki.png', 'To be able to find a job that will help me find happiness and friendships with in a job. ', 'Intern\r\n2014\r\nJohn Irving Architects\r\n\r\nI only have 6month experience in working as an intern at John Irvine Architects. There I was able to map sketches, plans and liaise with Senior Architects and Business Analysts to produce sound structural plans for both residential and commercial sites.', '2010 - 2013\r\nBachelor of Architecture\r\nUniversity of Auckland\r\n\r\n2006 - 2009\r\nAuckland Girls Grammer School\r\nA University ', '2013 \r\nWinning an internship at John Irving Architects.\r\n\r\n2013 \r\n1st in Bachelor of Architecture, with Honors.\r\n\r\n2009\r\nDux\r\n1st at High School in Design & Architecture\r\n', 'Intern\r\n2014\r\nJohn Irving Architects\r\n\r\n\r\nManager\r\n2004 - 2013\r\nPaper Plus', 'Design & Architecture', 'Interview Preparation', 'I find going to interviews scary, so would like to overcome that by practicing and practicing. Please help me.\r\nRegards\r\n\r\nKiki', '', '2014-12-06 00:37:14', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0),
 (5, 'JadeSmith', '$2y$10$EMZzpJSZ5fSuAcrhlYXtc.HaOyxFP/SEq9ZDadov1vUBsfKYMmtPm', 'Jade', 'Smith', 'jades.smith@yahoo.com', '021 1234 234', 'jay.jpg', 'To be a fully qualified pharmacist and work in a pharmaceutical company researching skin age care.', 'Administrative Assistant\r\nJanuary 2010 - Date\r\n\r\nAdministrative Co-ordinator\r\nAugust 2006 - November 2008', 'Bachelor of  Arts 2006', 'Top Grade 2006 for paper in American Pharmaceuticals.', 'Administrative Assistant\r\n\r\nPremier Pharmaceuticals, Christchurch, Nz\r\n\r\nJanuary 2010 - Date\r\n\r\nprovide full secretarial and administrative support to the 10-person sales department\r\nmanage customer requests for information\r\nprepare departmental correspondence, documents, reports, presentations\r\nschedule and coordinate meetings and appointments\r\ndraw up and distribute minutes of meetings\r\nplan and arrange travel itineraries\r\norganize functions and events\r\ntrack expense claims and prepare expense reports\r\nset up and maintain customer data management systems\r\n\r\nAdministrative Co-ordinator\r\n\r\nBuckleys Property Management Company, Christchurch, NZ\r\n\r\nAugust 2006 - November 2008\r\n\r\nprovided the full range of secretarial and administrative support to the Managing Director plus 5 employees\r\nscheduled meetings, appointments and property viewings\r\nco-ordinated company events and functions\r\nhandled incoming calls and correspondence\r\nprepared correspondence, documents, newsletters\r\nliaised directly with maintenance contractors, clients, tenants\r\nprocessed invoices and prepared payments', 'Science and Technology', 'Interview Preparation', 'Please help me prepare for a job interview I have dated for 30th of November 2014. Scared out of my wits. Thanks\r\nRegards\r\nJade', '', '2014-12-06 00:37:44', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0),
 (6, 'Justin1986', '$2y$10$EMZzpJSZ5fSuAcrhlYXtc.HaOyxFP/SEq9ZDadov1vUBsfKYMmtPm', 'Justin', 'Beibs', 'justinbeibs@gmail.com', '021 2345 234', 'Justin.jpg', 'I want a job to utilize the skills which I''ve gotten from my studies and my parents, teachers, friends and others.', 'Lead role in Les Miserables, both acting and singing for 3 month tour around NZ.\r\n\r\nSmall advertising acting role, where I portrayed a young man for Colgate toothpaste.', 'Bachelor of Drama', 'Achievement in fine arts at the School of Drama, Auckland, NZ.\r\n\r\nHonorable mention in the Sunday Star times for the lead role in Les Miserables 2010.', '2010, 3mth contract \r\nActors Guild, Auckland\r\n\r\n2009-2010\r\nBar Manager\r\nFoodStore\r\n\r\n2008 - 2009\r\nAuckland Actors Company', 'Advertising, Arts and Media', 'Employment Contracts', 'Please help me with my next acting gig, I need help with a current contract I have signed, my employer is not doing the right thing, I need a human resources help.', '', '2014-12-06 00:37:59', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0),
-(8, 'Vicram', '$2y$10$EMZzpJSZ5fSuAcrhlYXtc.HaOyxFP/SEq9ZDadov1vUBsfKYMmtPm', 'Vic', 'Clark', 'clark.victoriajane@gmail.com', '024029244224', 'Vicky.jpg', '', 'asdgasdgdasg', '', '', 'adfhasdhsdg', '0', '1', 'none', 'mAm5RefJudduLkicsx58Ib4oKWIukeoAZYdAauAmjf7X2zDYFCRXeHF7va5v', '2014-12-06 00:38:12', '2014-12-04 12:33:06', '0000-00-00 00:00:00', 0);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+(8, 'Vicram', '$2y$10$EMZzpJSZ5fSuAcrhlYXtc.HaOyxFP/SEq9ZDadov1vUBsfKYMmtPm', 'Vic', 'Clark', 'clark.victoriajane@gmail.com', '024029244224', 'Vicky.jpg', 'dsrg', 'seffgswdgh', 'sdggdhhswdgh', 'adlglasedghawdgksgseg', 'sdggkjhsdvgkbjn', '10', '4', 'none', 'J4GO415eSaRwDf4IRkitGfarq9gV49qpUWAWGYOritisWgSesDfxJI3IzicQ', '2014-12-08 21:38:57', '2014-12-08 08:38:57', '0000-00-00 00:00:00', 0);

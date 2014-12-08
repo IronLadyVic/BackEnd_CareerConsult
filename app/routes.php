@@ -17,7 +17,7 @@ Route::get('/', function()
 	//return the index view
 });
 
-// ROUTES FOR VIEWING WHEN NOT LOGGED IN
+
 
 //index not logged in
 Route::get('home', function(){
@@ -38,10 +38,10 @@ Route::get('services/edit', function(){
 	
 });
 //services with enquiry form with service_type
-Route::get('services/enquire', function($service_type){
-	$oService = Service::find($service_type);	
-	return View::make('services_enquire')->with("service_type",$service_type);
-	
+Route::get('services/{id}/enquire',function($id){
+
+	return View::make('services_enquire')->with("id",$id);
+
 });
 
 //services 
@@ -604,10 +604,19 @@ Route::put('users/{id}',function($id){
 		"firstname" => 'required',
 		"lastname" => 'required',
 		"phone" => 'required',
+		"personal_goal" => 'required',
+		"experience" => 'required',
+		"education" => 'required',
+		"acheivement" => 'required',
+		"career_history" => 'required',
 		"service_type" => 'required',
 		"career_type" => 'required'
 
 		);
+		$messages= array(
+		"required"=>'The :attribute field is required.'
+		);
+ 
 
 	$oValidator = Validator::make(Input::all(),$aRules);
 

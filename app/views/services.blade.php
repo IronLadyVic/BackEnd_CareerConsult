@@ -22,10 +22,15 @@
             <div class="serviceContent">
                 <ul>
                     {{$service->content}}
-                    
+                    @if($service->id == $id)
                     <li class="enquiryButton">
-                        <a href="{{URL::to('services/enquire'.$service->service_type)}}">BOOKING ENQUIRY</a>
-                    </li>   
+                        <a href="{{URL::to('services/'.$service->id.'/enquire')}}">BOOKING ENQUIRY</a>
+                    </li>
+                    @else 
+                    <li class="enquiryButton">
+                        <a href="{{URL::to('services/'.$service->id.'/enquire')}}">BOOKING ENQUIRY</a>
+                    </li>
+                    @endif  
                 </ul>
             </div>
         @endforeach      
@@ -87,45 +92,43 @@
     </aside>
 <!-- Log in pop up -->
 <div id="loginForm" class="l-box-lrg pure-u-1 pure-u-md-2-5">
-    
-    {{Form::open(array('url'=>'login', 'id'=>'logIn-form'))}}
 
-        <?php
-            $sPhoto = URL::to('img/careerprofile-BLK.png');
-
-            if(Auth::check()){
-
-                 $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
-
-            }
-    ?>
-
+    {{Form::open(array('url'=>'login', 'id'=>'logIn-form', 'class'=>'pure-form pure-form-stacked'))}}
     <span role="close-modal"><i class="fa fa-times"></i></span>
-    <h2 class="header">LOG IN</h2>
+    <h1 class="header">LOG IN</h1>
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
 
-    <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
-    <p>
-        <span class="border"><i class="fa fa-user"></i></span>           
-        {{Form::text('username')}}
-        {{$errors->first('username','<p class="border">:message</p>')}}
-    </p>
-    <p>
-        <span class="border"><i class="fa fa-lock"></i></span>
-        {{Form::password('password')}}
-        {{$errors->first('password','<p class="border">:message</p>')}}
+    <?php
+    $sPhoto = URL::to('img/careerprofile-BLK.png');
 
-    </p> 
-    {{Form::checkbox('check', 'agreement', true, array('id' => 'checkBoxRemember'));}}
-    {{$errors->first('checkbox','<p class="border">:message</p>')}} 
-    <p  id="rememberMe">Remember Me</p>
+    if(Auth::check()){
 
-    {{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
+       $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
+
+   }
+   ?>
+
+   <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
+   <p>
+    <span class="border"><i class="fa fa-user"></i></span>
+    {{Form::text('username', '', array('placeholder'=>'Username', 'id'=>'userName', 'class'=>'border'))}}
+</p>
+{{$errors->first('username','<p class="error">:message</p>')}}
+<p>
+    <span class="border" ><i class="fa fa-lock"></i></span>       
+    {{Form::password('password', array('placeholder' => 'Password', 'id'=>'passwordLogin'))}}
+</p>
+{{$errors->first('username','<p class="error">:message</p>')}}
+
+{{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}
+<p  id="rememberMe">Remember Me</p>
+
+{{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
 
 
-    {{Form::close()}}
-    {{Session::get("error")}}
+{{Form::close()}}
+{{Session::get("error")}}
 </div>
 
 

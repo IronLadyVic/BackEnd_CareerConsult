@@ -51,9 +51,9 @@
             <h2>CONTACT US</h2>
             <div class="panelTopics">
                 <ul>
-                    <li><a href="0800 CAREER CONSULT"><i class="fa fa-phone"></i>0800 CAREER CONSULT</a></li>
-                    <li><a href="karyn@careerconsult.co.nz"><i class="fa fa-envelope"></i>karyn@careerconsult.co.nz</a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i>karyn@careerconsult.co.nz</a></li>
+                    <li><a href="{{URL::to('0800 CAREER CONSULT')}}"><i class="fa fa-phone"></i>0800 CAREER CONSULT</a></li>
+                    <li><a href="{{URL::to('karyn@careerconsult.co.nz')}}"><i class="fa fa-envelope"></i>karyn@careerconsult.co.nz</a></li>
+                    <li><a href="{{URL::to('#')}}"><i class="fa fa-skype"></i>karyn@careerconsult.co.nz</a></li>
                     <li><div id="flex-google"></div></li>
                     
                 </ul>
@@ -70,29 +70,37 @@
     <h1 class="header">LOG IN</h1>
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>
-               <?php
-            $sPhoto = URL::to('img/careerprofile-BLK.png');
-            if(Auth::check()){
-                 $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
-            }
-        ?>
-    <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
-        
-        <p>
-        <span class="border"><i class="fa fa-user"></i></span>
-        {{Form::text('username', '', array('placeholder'=>'Username', 'id'=>'userName', 'class'=>'border'))}}
-        </p>
-        {{$errors->first('username','<p class="error">:message</p>')}}
-        <p>
-        <span class="border" ><i class="fa fa-lock"></i></span>       
-        {{Form::password('password', array('placeholder' => 'Password', 'id'=>'passwordLogin'))}}
-        </p>
-        {{$errors->first('username','<p class="error">:message</p>')}}
 
-       {{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}
-       <p  id="rememberMe">Remember Me</p>
-    
-        {{Form::submit('LOG IN', array('id'=>'loggingInButton', 'class' => 'button'));}}
+    <?php
+    $sPhoto = URL::to('img/careerprofile-BLK.png');
+
+    if(Auth::check()){
+
+       $sPhoto = URL::to('uploads/'.Auth::user()->avatar);
+
+   }
+   ?>
+
+   <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
+   <p>
+    <span class="border"><i class="fa fa-user"></i></span>
+    {{Form::text('username', '', array('placeholder'=>'Username', 'id'=>'userName', 'class'=>'border'))}}
+</p>
+{{$errors->first('username','<p class="error">:message</p>')}}
+<p>
+    <span class="border" ><i class="fa fa-lock"></i></span>       
+    {{Form::password('password', array('placeholder' => 'Password', 'id'=>'passwordLogin'))}}
+</p>
+{{$errors->first('username','<p class="error">:message</p>')}}
+
+{{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}
+<p  id="rememberMe">Remember Me</p>
+
+{{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
+
+
+{{Form::close()}}
+{{Session::get("error")}}
 </div>
 
 

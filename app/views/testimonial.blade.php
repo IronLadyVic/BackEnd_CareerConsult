@@ -48,20 +48,20 @@
 
    }
    ?>
+
    <p><img id="profileImage" src="{{$sPhoto}}" alt="profile picture"></p>
    <p>
-    <span class="border"><i class="fa fa-user"></i></span>           
-    {{Form::text('username')}}
-    {{$errors->first('username','<p class="border">:message</p>')}}
+    <span class="border"><i class="fa fa-user"></i></span>
+    {{Form::text('username', '', array('placeholder'=>'Username', 'id'=>'userName', 'class'=>'border'))}}
 </p>
+{{$errors->first('username','<p class="error">:message</p>')}}
 <p>
-    <span class="border"><i class="fa fa-lock"></i></span>
-    {{Form::password('password')}}
-    {{$errors->first('password','<p class="border">:message</p>')}}
+    <span class="border" ><i class="fa fa-lock"></i></span>       
+    {{Form::password('password', array('placeholder' => 'Password', 'id'=>'passwordLogin'))}}
+</p>
+{{$errors->first('username','<p class="error">:message</p>')}}
 
-</p> 
-{{Form::checkbox('check', 'agreement', true, array('id' => 'checkBoxRemember'));}}
-{{$errors->first('checkbox','<p class="border">:message</p>')}} 
+{{Form::checkbox('check', 'none', false, array('id' => 'checkBoxRemember'));}}
 <p  id="rememberMe">Remember Me</p>
 
 {{Form::submit('LOG IN', array('id'=>'logIn', 'class'=>'border'))}}
