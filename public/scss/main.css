@@ -51,12 +51,7 @@
     border-radius: 50%;
     height: 2em;
     width: 2em;
-    float: right;
-    -ms-transform: rotate(90deg);
-    /* IE 9 */
-    -webkit-transform: rotate(90deg);
-    /* Chrome, Safari, Opera */
-    transform: rotate(90deg); }
+    float: right; }
 
   #signedInTag {
     display: none; }
@@ -68,7 +63,7 @@
     color: #9B8FFB; }
 
   #careerProfile-form p.error {
-    color: #9b8ffb !important;
+    color: #9B8FFB !important;
     margin-top: -0.8em;
     margin-left: 1em;
     font-size: 0.5em;
@@ -224,7 +219,7 @@
     /* margin-left: -20em;*/
     /*opacity: 0.8;*/
     position: relative;
-    border-bottom: 1px #928cc4 solid !important; }
+    border-bottom: 1px #928CC4 solid !important; }
 
   #ponsonbyHousing img {
     display: none; }
@@ -504,7 +499,7 @@
   form#clientDisplayInfo input[type="email"] {
     color: white;
     border-bottom: 1px solid #dfdfdf !important;
-    border-top: 1px solid white !important;
+    border-top: 1px solid #fff !important;
     width: 80%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
@@ -816,7 +811,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 5em;
     color: white; }
@@ -991,13 +986,13 @@
      ACTIVE HOLD ON LI DROP DOWN MENU
      ========================================================================== */
   ul#main-nav li:active {
-    background-image: linear-gradient(#9b8ffb, #2b2937); }
+    background-image: linear-gradient(#9B8FFB, #2B2937); }
 
   ul#main-nav li p:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   ul#main-nav li i:active {
-    color: lavender; }
+    color: #E6E6FA; }
 
   header #main-header ul#main-nav li a {
     text-decoration: none;
@@ -1433,7 +1428,7 @@
     float: left; }
 
   #signup-form p.error {
-    color: #9b8ffb !important;
+    color: #9B8FFB !important;
     margin-top: -0.8em;
     margin-left: 1em;
     font-size: 0.5em;
@@ -2016,7 +2011,7 @@
       INPUT ERRORS
       ========================================================================== */
   .invalid {
-    color: #9b8ffb;
+    color: #9B8FFB;
     font-size: 0.5em;
     position: absolute;
     margin-top: -1em; }
@@ -2099,13 +2094,13 @@
     color: black; }
 
   h2#intro-paragraph-loggedin {
-    width: 50%; }
+    width: 65%; }
 
   /* ==========================================================================
      Form validation
      ========================================================================== */
   #signup-form p.error {
-    color: #9b8ffb !important;
+    color: #9B8FFB !important;
     padding-top: 0.3em;
     margin-top: -1em;
     margin-left: -1em;
@@ -2113,7 +2108,7 @@
     height: 0.4em !important; }
 
   #careerProfile-form p.error {
-    color: #9b8ffb !important;
+    color: #9B8FFB !important;
     margin-top: -1.5em;
     margin-left: -1em !important;
     font-size: 0.5em;
@@ -2212,12 +2207,7 @@
     /*margin-right: 18em;*/ }
 
   .nav-handle-user img {
-    border-radius: 50%;
-    -ms-transform: rotate(90deg);
-    /* IE 9 */
-    -webkit-transform: rotate(90deg);
-    /* Chrome, Safari, Opera */
-    transform: rotate(90deg); }
+    border-radius: 50%; }
 
   #signedInTag {
     font-size: 0.9em;
@@ -2555,7 +2545,7 @@
     background-image: -ms-linear-gradient(top, #686868, #525252);
     background-image: -o-linear-gradient(top, #686868, #525252);
     background-image: linear-gradient(to bottom, #686868, #525252);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#686868', endColorstr='#525252',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#525252',GradientType=0 );
     padding: 9px 14px;
     height: 110px;
     color: white; }
@@ -3256,7 +3246,7 @@
   form#clientDisplayInfo input {
     color: black !important;
     border-bottom: 1px solid #dfdfdf !important;
-    border-top: 1px solid white !important;
+    border-top: 1px solid #fff !important;
     width: 80%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
@@ -3267,7 +3257,7 @@
   form#clientDisplayInfo input[type="email"] {
     color: black;
     border-bottom: 1px solid #dfdfdf !important;
-    border-top: 1px solid white !important;
+    border-top: 1px solid #fff !important;
     width: 80%;
     border-bottom: 0.1em white solid;
     border-top: 0.1em white solid;
@@ -3278,7 +3268,7 @@
   form#clientDisplayInfo textarea {
     color: black !important;
     border-bottom: 1px solid #dfdfdf !important;
-    border-top: 1px solid white !important;
+    border-top: 1px solid #fff !important;
     width: 80%;
     height: 3em;
     border-bottom: 0.1em white solid;
@@ -3290,7 +3280,7 @@
   form#clientDisplayInfo #career_type {
     color: black !important;
     border-bottom: 1px solid #dfdfdf !important;
-    border-top: 1px solid white !important;
+    border-top: 1px solid #fff !important;
     width: 88%;
     height: 3em;
     border-bottom: 0.1em white solid;
@@ -3304,7 +3294,7 @@
   form#clientDisplayInfo #service_type {
     color: black !important;
     border-bottom: 1px solid #dfdfdf !important;
-    border-top: 1px solid white !important;
+    border-top: 1px solid #fff !important;
     width: 88%;
     height: 3em;
     border-bottom: 0.1em white solid;
@@ -3319,7 +3309,7 @@
     float: left;
     height: 3em;
     border-bottom: 1px solid #dfdfdf !important;
-    border-top: 1px solid white !important;
+    border-top: 1px solid #fff !important;
     color: black;
     padding-right: 1em;
     padding-top: 1em;
@@ -4399,3 +4389,5 @@
 
   div#sectionPrices {
     height: 40em; } }
+
+/*# sourceMappingURL=main.css.map */
