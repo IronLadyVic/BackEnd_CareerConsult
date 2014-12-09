@@ -43,8 +43,11 @@
       <div>
         <!-- Post to add by Admin -->
         <h2>ENQUIRE</h2>
+                <?php
+                    $selectedService = Service::find($id);
+                ?>
         
-                {{Form::model($service, array('url'=>$service->id.'/enquire','method'=>'post','id'=>'enquire-form'))}}
+                {{Form::model($selectedService, array('url'=>$selectedService->id.'/enquire','method'=>'post','id'=>'enquire-form'))}}
                 <p>
                     <span class="border" ><i class="fa fa-user"></i></span>
                     {{Form::text('firstname', '', array('placeholder'=>'First Name', 'id'=>'firstName', 'class'=>'border'))}}
@@ -61,10 +64,11 @@
                 </p>
                 {{$errors->first('email','<p class="error">:message</p>')}}
 
-                @foreach(Service::all() as $service)
-                {{Form::text('service_type', $service->service_type, array('disabled'=>'disabled', 'class'=>'border'))}}
-                            
-                @endforeach 
+                <p>
+                <span><img src="{{URL::to('uploads/'.$selectedService->icon)}}" alt="Service Type Icon" class="serviceTypeIcon"></span>
+                {{Form::text('service_type', $selectedService->service_type, array('disabled'=>'disabled', 'class'=>'border'))}}
+                </p>            
+             
 
                 <p>
                     <span class="border"><i class="fa fa-pencil-square-o"></i></span>

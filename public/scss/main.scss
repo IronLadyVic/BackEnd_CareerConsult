@@ -54,10 +54,16 @@ textarea{
   border-radius: 50%;
   height: 2em;
   width: 2em;
+  // height:30%;
+    float: right;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
 }
 #signedInTag{
   display: none;
 }
+
 /* ==========================================================================
    FORM VALIDATION ERRORS
    ========================================================================== */
@@ -131,11 +137,7 @@ textarea{
     color: white!important;
   }
 
-  .nav-handle-user img{
-    height:30%;
-    float: right;
 
-  }
   ul#main-nav li{
     display: none;
 
@@ -494,6 +496,28 @@ li div#flex-google {
 }
 
 /* ==========================================================================
+   SERVICE ENQUIRE TYPE
+   ========================================================================== */
+#enquireServiceType{
+  margin-left: 1.5em;
+}
+
+#enquireServiceType h2{
+  margin-left: -0.5em;
+  color: white;
+}
+
+#enquireServiceType p{
+  width: 92%;
+}
+img.serviceTypeIcon{
+  width: 1.5em;
+  display: none;
+}
+#enquire-form #enquire{
+  width: 90%;
+}
+/* ==========================================================================
    Client display list and their details
    ========================================================================== */
    div#clientPostBody{
@@ -797,6 +821,9 @@ div.shareSocial p a{
  }
  #mobdeskForm img#profileImage{
   margin-left: 25%;
+    //   -ms-transform: rotate(90deg); /* IE 9 */
+    // -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    // transform: rotate(90deg);
 }
 
 form#mobdeskForm #loggingInButton{
@@ -1500,6 +1527,9 @@ img#profileImage{
   height: 8em;
   width: 8em;
   margin-left: 28%;
+    //   -ms-transform: rotate(90deg); /* IE 9 */
+    // -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    // transform: rotate(90deg);
 }
 #signup-form p#agreementStatement{
   /*// width: 94%;*/
@@ -1691,13 +1721,13 @@ img#profileImage{
   }
 
  #careerProfile-form input#deleteProfile{
-width: 90%;
+width: 92%;
      height: 3em;
 @inclue outlineButton;
 border: 1px white solid;
 color: white;
 margin-top: 1em;
-margin-left: 1em;
+margin-left: 0.5em;
 border-radius: 0.2em;
   }
 
@@ -1706,7 +1736,7 @@ border-radius: 0.2em;
 background-color: #9B8FFB;
 box-shadow: 0.2em 0.2em 0.5em black;
 text-decoration: none;
-width:92%;
+width:94%;
 border-top: none;
 border-bottom: none;
 color: white;
@@ -1790,8 +1820,8 @@ border-bottom: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    margin-top:5em;
+    width: 100%;
+    // margin-top:5em;
 
   }
   .headerTopic h2 {
@@ -1910,7 +1940,7 @@ border-bottom: none;
       position: relative;
     }
     div#mainServicesBody{
-      margin-top: -2.5em;
+      margin-top: -1em;
     }
     div#editSectionServices{
       float: left;
@@ -2003,7 +2033,7 @@ background: #e6e6e6;
   background:#d3d3d3;
 }
 li.enquiryButton {
-  height: 3.5em;
+  height: 3em;
   color: white;
   margin:0 auto;
   @include purpleButton;
@@ -2074,6 +2104,10 @@ img.serviceIcon{
   float: left;
   border-radius: 50%;
   margin-top: -0.3em;
+}
+img.serviceTypeIcon{
+  width: 1.5em;
+
 }
 
 textarea#editService{
@@ -2338,6 +2372,9 @@ textarea{
   }
   div#loginForm img#profileImage {
     margin-left: 26%;
+    //     -ms-transform: rotate(90deg); /* IE 9 */
+    // -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    // transform: rotate(90deg);
   }
   div#loginForm #checkBoxRemember{
     height: 1em;
@@ -2382,6 +2419,10 @@ textarea{
   }
   .nav-handle-user img{
     border-radius: 50%;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+
   }
 
   #signedInTag{
@@ -2609,7 +2650,10 @@ list-style-type: disc;
   width: 1em;
  
 }
+img.serviceTypeIcon{
+  width: 1.5em;
 
+}
 /* ==========================================================================
    ADD POST ON SERVICES PAGE WHEN ADMIN IS LOGGED IN
    ========================================================================== */
@@ -2830,6 +2874,9 @@ form#logIn-form span{
 
 #logIn-form img#profileImage{
   margin-left: 8.5em;
+    //   -ms-transform: rotate(90deg); /* IE 9 */
+    // -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    // transform: rotate(90deg);
 }
 
 #logIn-form input#checkBoxRemember{
@@ -3309,7 +3356,7 @@ form#signup-form span{
   margin-left: 35%;
   background-color: #242424;
   color: #242424;
-
+  
 }
 
 #signup-form select option {
@@ -3464,7 +3511,9 @@ border: none;
     height: 8em;
     margin-left: 37%;
     margin-bottom: 1em;
-
+    //   -ms-transform: rotate(90deg); /* IE 9 */
+    // -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    // transform: rotate(90deg);
 
   }
   #careerProfile-form p.editProfile{
@@ -3932,7 +3981,7 @@ form#addAServiceForm #addAButton{
     margin-right: auto;
     width: 90%;
     max-width: 80em;
-    margin-top:1.5em;
+    margin-top:5em;
 
   }
      #mainSignUpBody{
@@ -4058,6 +4107,10 @@ form#addAServiceForm #addAButton{
  }
    input#addAPost{
   width: 96%;
+}
+
+#mainPostsandTopics{
+  margin-top: 5em;
 }
 
 /* ==========================================================================
@@ -4357,6 +4410,9 @@ ul.pagination{
  }
  #mobdeskForm img#profileImage{
   margin-left: 25%;
+    //   -ms-transform: rotate(90deg); /* IE 9 */
+    // -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    // transform: rotate(90deg);
 }
 
 form#mobdeskForm #loggingInButton{
@@ -4466,10 +4522,18 @@ margin-top: -1.2em;
    }
 
 
+#enquireServiceType h2{
+  margin-left: -0.5em;
+  color: black;
+}
 
-
-
-
+#enquireServiceType #enquire{
+  width: 78%;
+}
+img.serviceTypeIcon{
+  width: 1.5em;
+  display: block;
+}
 
 
 
@@ -4617,6 +4681,9 @@ img#workingGirl{
 }
 #careerProfile-form img#profileImage {
 margin-left: 38%;
+    // -ms-transform: rotate(90deg); /* IE 9 */
+    // -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    // transform: rotate(90deg);
 }
 
   #careerProfile-form p.editProfile{

@@ -10,7 +10,7 @@
             <ul id="reasonsToSignUp">
                 <li>Why should I sign up?</li>
                 <li>Help your Career Consultant tailor a service to your needs by filling in your Career Profile.</li>
-                <li>Not sure on signing up? Please enquire with one of our <a href="{{URL::to('services/')}}" id="aLink">services</a>.</li>
+                <li>Not sure on signing up? Please enquire with one of our <a href="{{URL::to('services/1')}}" id="aLink">services</a>.</li>
                 <li>Upload your Career Profile Picture. Help your Career Consultant recognise who you are, when you decide to meet up.</li>
             </ul>
 

@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'careerconsult',
-			'username'  => 'root',
-			'password'  => 'root',
+			'database'  => 'victoria_careerconsult',
+			'username'  => 'victoria_admin ',
+			'password'  => 'nwgkpm012345',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

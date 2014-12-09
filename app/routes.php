@@ -281,6 +281,23 @@ Route::get('users/new', function(){
 //Sign up POST
 //User Inputs into form the sign up form and is validated and photo is renamed and placed into 'careerprofile'
 
+
+Route::get('email', function(){
+
+		Mail::send('emails.welcome', array('username'=>'Vicram'), function($message){ //send 'emails.welcome' is the view the user will see
+			$message->to('clark.victoriajane@gmail.com', 'vic clark')->subject('Welcome to Career Consult!');
+		});
+
+			return "email sent";
+
+
+});
+
+
+
+
+
+
 Route::post('users',function(){
 
 	//validate input in the sign up form

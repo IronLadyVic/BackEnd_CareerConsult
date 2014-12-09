@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'authapp@awesomeauthapp. com', 'name' => 'CAREER CONSULT PENDING PROJECT'),
+	'from' => array('address' => 'pdavis1986@gmail.com', 'name' => 'P DAVIS'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => "clark.victoriajane@gmail.com",
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => "surfsports28",
 
 	/*
 	|--------------------------------------------------------------------------

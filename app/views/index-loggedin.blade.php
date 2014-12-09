@@ -23,7 +23,7 @@
     </section>
     @else
     <section id="introduction">
-        <h2 id="intro-paragraph-loggedin">Career Consult understands that when you are looking for a job, or need employment advice, money can be a concern. I aim to reduce this worry by offering a free 15 minute consultation to determine your needs and prepare a tailored plan.</h2>
+        <h2 id="intro-paragraph-loggedin">Career Consult understands that when you are looking for a job, or need employment advice, money can be a concern. We aim to reduce this worry by offering a free 15 minute consultation to determine your needs and prepare a tailored plan.</h2>
         <!-- <p class="para-loggedin">I aim to reduce this worry by offering a FREE 15 minute consultation to determine your needs and prepare a tailored plan.</p>
         <p class="para-loggedin">There is no obligation to book an appointment after your consultation, however prices are set so that most budgets can use this service.</p> -->
         <div id="introButtons">
