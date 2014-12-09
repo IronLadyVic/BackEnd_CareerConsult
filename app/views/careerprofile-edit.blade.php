@@ -2,7 +2,7 @@
 @section("content")
 
 
-<!-- Career Profile Client add info. -->
+<!-- Career Profile Client -->
 <div id="sectionCareerProfile">
     <section id="career-profile">
 
@@ -19,7 +19,6 @@
         @endif
         
         {{ Form::model($user, array('url' => 'users/'.$user->id, 'method'=>'put', 'id'=>'careerProfile-form')) }}
-        <!-- {{ Form::model($user, array('url' => 'users/'.$user->id, 'method'=>'put', 'files'=>'true', 'id'=>'careerProfile-form')) }}  -->
         <?php
             $sPhoto = URL::to('img/careerprofile-BLK.png');
 

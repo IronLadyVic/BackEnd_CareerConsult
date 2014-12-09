@@ -94,7 +94,7 @@
 <div id="loginForm" class="l-box-lrg pure-u-1 pure-u-md-2-5">
 
     {{Form::open(array('url'=>'login', 'id'=>'logIn-form', 'class'=>'pure-form pure-form-stacked'))}}
-    <span role="close-modal"><i class="fa fa-times"></i></span>
+    <p class="closeModel"><i class="fa fa-times"></i></p>
     <h1 class="header">LOG IN</h1>
 
     <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>

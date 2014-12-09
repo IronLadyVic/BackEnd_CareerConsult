@@ -63,7 +63,7 @@ $(function(){
 
 	});
 
-	$("#loginForm span[role='close-modal']").on("click",function(){
+	$("#loginForm p.closeModel").on("click",function(){
 
 		$("#background").animate({width:"0%",height:"0%",display:"none"},1000,function(){
 			$(this).hide();

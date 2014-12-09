@@ -30,15 +30,18 @@
                 <p> 
                     <span class="border"><i class="fa fa-camera"></i></span>             
                     {{Form::file('serviceIcon', '', array('id'=>'serviceIcon'))}}    
-                </p> 
+                </p>
+                {{$errors->first('serviceIcon','<p class="error">:message</p>')}} 
                 <p>
                     <span class="border"><i class="fa fa-font"></i></span>            
-                    {{Form::text('servicetype', '', array('id'=>'servicetype', 'placeholder'=>'Service Type'))}}            
+                    {{Form::text('service_type', '', array('id'=>'servicetype', 'placeholder'=>'Service Title'))}}            
                 </p>
+                {{$errors->first('service_type','<p class="error">:message</p>')}}
                 <p> 
                     <span class="border"><i class="fa fa-file-text-o"></i></span>         
                     {{Form::text('content', '', array('id'=>'content', 'placeholder'=>'Content'))}}               
                 </p>
+                {{$errors->first('content','<p class="error">:message</p>')}}
                 
                 
                 {{Form::submit('ADD SERVICE', array('id'=>'addAButton'));}}
@@ -67,32 +70,38 @@
             {{Form::text('title', '', array('id'=>'title', 'placeholder'=>'Post Title'))}}
             
         </p>
+        {{$errors->first('title','<p class="error">:message</p>')}}
         <p> 
             <span class="border"><i class="fa fa-link"></i></span>
-            {{Form::label('hashTag','', array('id'=>'hashTagLabel'))}}
-            {{Form::text('hashTag', '', array('id'=>'hashTag', 'placeholder'=>'Topic'))}}   
+            {{Form::label('topic_id','', array('id'=>'hashTagLabel'))}}
+            {{Form::text('topic_id', '', array('id'=>'topic_id', 'placeholder'=>'Topic'))}}   
             
         </p>
+        {{$errors->first('topic_id','<p class="error">:message</p>')}}
         <p> 
             <span class="border"><i class="fa fa-camera"></i></span>  
-            {{Form::label('postPicture','', array('id'=>'postPictureLabel'))}}
-            {{Form::file('postPicture', '', array('id'=>'postPicture'))}}    
+            {{Form::label('photo_path','', array('id'=>'postPictureLabel'))}}
+            {{Form::file('photo_path', '', array('id'=>'photo_path'))}}    
         </p>
+        {{$errors->first('photo_path','<p class="error">:message</p>')}}
         <p>
             <span class="border"><i class="fa fa-file-text-o"></i></span>
             {{Form::label('content','', array('id'=>'contentLabel'))}}
             {{Form::textarea('content', '', array('id'=>'content', 'placeholder'=>'Start Writing...'))}}             
         </p>
+        {{$errors->first('content','<p class="error">:message</p>')}}
         <p>
             <span class="border"><i class="fa fa-eraser"></i></span>
             {{Form::label('editor','', array('id'=>'editorLabel'))}}
             {{Form::text('editor', '', array('id'=>'editor', 'placeholder'=>'Editor Name'))}}                
         </p> 
+        {{$errors->first('editor','<p class="error">:message</p>')}}
         <p>
             <span class="border"><i class="fa fa-calendar"></i></span>
             {{Form::label('date','', array('id'=>'dateLabel'))}}
             {{Form::text('date', '', array('id'=>'date', 'placeholder'=>'Date'))}}             
-        </p>      
+        </p>
+        {{$errors->first('date','<p class="error">:message</p>')}}      
         <label for="addAPost"></label>
         
         {{Form::submit('ADD A POST', array('id'=>'addAPost', 'class' => 'addButton'));}}
@@ -165,7 +174,7 @@
        }
        ?>
 
-       <span role="close-modal"><i class="fa fa-times"></i></span>
+       <p class="closeModel"><i class="fa fa-times"></i></p>
        <h1 class="header">LOG IN</h1>
 
        <p id="loginDescription">Log in to update your career profile, or enquire about booking a service.</p>

@@ -9,12 +9,28 @@
     body.show{
       @include responsiveBackground(#242424);
     }
-    input{
-  border-radius: none!important;
+
+input[type="text"] {
+    -webkit-appearance: none!important;
+    border-radius: 0!important;
 }
-    select{
-    border-radius: none!important;
+input[type="email"] {
+    -webkit-appearance: none!important;
+    border-radius: 0!important;
 }
+input[type="password"] {
+    -webkit-appearance: none!important;
+    border-radius: 0!important;
+}
+input[type="textarea"] {
+    -webkit-appearance: none!important;
+    border-radius: 0!important;
+}
+select {
+    -webkit-appearance: none!important;
+    border-radius: 0!important;
+}
+
 textarea{
    border-radius: none!important;
 }
@@ -554,7 +570,7 @@ form#clientDisplayInfo #career_type{
   color: white;
    border-bottom: 1px solid #dfdfdf;
 border-top: 1px solid #fff;
-   width: 93%;
+   width: 95%;
    height: 3em;
    @include input;
    display: block;
@@ -564,7 +580,7 @@ form#clientDisplayInfo #service_type{
   color: white;
    border-bottom: 1px solid #dfdfdf;
 border-top: 1px solid #fff;
-   width: 93%;
+   width: 95%;
    height: 3em;
    @include input;
    display: block;
@@ -602,16 +618,16 @@ div#clientPostBody ul.pagination{
 }
 div#clientPostBody p.editProfile{
   @include purpleButton;
-  width: 90%;
+  width: 92%;
   height: 3em;
   color: white;
 }
 div#clientPostBody p.editProfile a{
-  padding-top: 1em;
+  padding-top: 0.9em;
   text-decoration: none;
   color: white;
   display: block;
-  padding-left: 25%;
+  padding-left: 18%;
 }
 
 section#clients{
@@ -741,7 +757,8 @@ section#latestUpdates{
 .date{
   font-size: 0.8em;
   font-weight: 500;
-  margin-left: 7em;
+  margin-left: 6.8em;
+  margin-top: 0.5em;
 }
 
 div.shareSocial p a{
@@ -928,8 +945,22 @@ ul.pagination{
   border: 1px solid #9B8FFB;
   color: #9B8FFB;
 }
-
-
+/* ==========================================================================
+   SERVICE ENQUIRE TYPE
+   ========================================================================== */
+.aboutPara{
+  width: 90%;
+}
+.qualifications{
+  font-weight: bold, 500;
+  font-size: 0.6em;
+  text-align: center;
+  width: 80%;
+  margin-left: 2em;
+}
+#aboutBody{
+  margin-top: 7em;
+}
 /* ==========================================================================
    ADMIN ADD EDIT AND DELETE BUTTONS
    ========================================================================== */
@@ -1882,7 +1913,7 @@ border-bottom: none;
     padding-right: 0.5em;
   }
   .contentPost{
-    width: 82%;
+    width: 90%;
   }
   #rightColomn{
     width: 85%;
@@ -1898,11 +1929,12 @@ border-bottom: none;
     text-decoration: none;
     padding-top: 1em;
     padding-bottom:1em;
+    margin-left: 0.5em;
   }
 
   .panelTopics{
     height: auto;
-
+    margin-left: 0.5em;
   }
   .panelTopics li {
     border-bottom: 1px solid #dfdfdf;
@@ -1938,7 +1970,7 @@ border-bottom: none;
       position: relative;
     }
     div#mainServicesBody{
-      margin-top: -1em;
+      margin-top: -3em;
     }
     div#editSectionServices{
       float: left;
@@ -2359,7 +2391,7 @@ textarea{
     padding-top: 1em;
     margin-top: 4em;
   }
-  div#loginForm [role="close-modal"] {
+  div#loginForm p.closeModel {
     position: absolute;
     margin-left: 22em;
     padding-right: 0.5em;
@@ -2379,13 +2411,15 @@ textarea{
     width: 1em;
     float: left;
     margin-left: 1em;
+    border: 0.1em solid black;
+    color: black;
   }
   div#loginForm input#logIn{
     @include purpleButton;
-    width: 21.5em;
+    width: 22em;
     height: 3em;
     box-shadow: none;
-    margin-left: 1em;
+    margin-left: 0.5em;
     color: white!important;
     box-shadow: none;
     border-top: none;
@@ -2598,14 +2632,14 @@ padding-top: 1em;
       list-style: none;
       list-style-type: none;
       box-shadow: none;
-      width: 83%;
+      width: 85%;
       border-radius: 0.2em;
 background-color: #9B8FFB;
 text-align: center;
 text-decoration: none;
 position: center;
 margin-left: -4em;
-padding-top: 1.1em;
+padding-top: 0.8em;
         }
 
 #accordion #serviceEditLi #deleteService{
@@ -3670,7 +3704,9 @@ div#clientPostBody p.editProfile #updateClient{
 div#clientPostBody p.editProfile a{
   padding-left: 35%;
 }
-
+div#clientPostBody ul.pagination{
+  margin-left: -0.5em;
+}
 /* ==========================================================================
    ADD A CLIENT
    ========================================================================== */
@@ -3714,7 +3750,6 @@ div#editSectionServices{
   margin-top: -3em;
 }
 aside#asideLatestNews{
-  /*  height: 70em;*/
   border-top: none;
   float: left;
   
@@ -3722,30 +3757,30 @@ aside#asideLatestNews{
 
 }
 aside#asideCareerAdvice{
-  /*  height: 70em;*/
   border-top: none;
   float: left;
   margin-top:3em;
   width: 25%;
+}
 
-
+aside#aboutCareerAdvice{
+  border-top: none;
+  float: left;
+  margin-top:-5em;
+  width: 25%;
 }
 
 section#latestUpdates{
   float: left;
-  /*  margin-left: 1em;*/
   width: 100%;
-  /*  padding-left: 2em;*/
   height:auto;
   margin-top: -1.5em;
   margin-left: -5em;
 }
 
 section#latestUpdates article{
-  /*  margin-top: 2.2em;*/
   border-bottom: 1px solid #aaaaaa;
   border-top: 1px solid white;
-  /*padding-bottom: 1em;*/
   float: left;
 
 }
@@ -3844,6 +3879,7 @@ section#latestUpdates article:first-child{
   font-weight: 500;
   margin-left: 0.5em;
   margin-left: 7.5em;
+  margin-top: -1.5em;
 }
 div.shareSocial p a{
   color: black;
@@ -3980,6 +4016,15 @@ form#addAServiceForm #addAButton{
     margin-top:5em;
 
   }
+     #aboutBody{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 80em;
+    margin-top:8em;
+
+  }
      #mainSignUpBody{
     display: block;
     margin-left: auto;
@@ -4005,6 +4050,7 @@ form#addAServiceForm #addAButton{
     font-size: 1.2em;
     text-transform: uppercase;
     padding-bottom:1em;
+
   } 
 
   #leftColomn{
@@ -4108,6 +4154,9 @@ form#addAServiceForm #addAButton{
 #mainPostsandTopics{
   margin-top: 5em;
 }
+#mainPostsandTopics ul.pagination{
+  margin-left:0em;
+}
 
 /* ==========================================================================
    TESTIMONIALS
@@ -4116,7 +4165,7 @@ form#addAServiceForm #addAButton{
     display: block;
     width: 100%;
     margin-left: 12em;
-    margin-top:-2em;
+    margin-top:-0.5em;
 
   }
   div.leftColomn{
@@ -4516,7 +4565,13 @@ li div#flex-google {
 margin-left: -4em;
 margin-top: -1.2em;
    }
+form#enquire-form{
+  width: 100%;
+}
 
+#enquireServiceType p{
+  width: 100%;
+}
 
 #enquireServiceType h2{
   margin-left: -0.5em;
@@ -4524,14 +4579,25 @@ margin-top: -1.2em;
 }
 
 #enquireServiceType #enquire{
-  width: 78%;
+  width: 82%;
 }
 img.serviceTypeIcon{
   width: 1.5em;
   display: block;
 }
-
-
+/* ==========================================================================
+   SERVICE ENQUIRE TYPE
+   ========================================================================== */
+.aboutPara{
+  width: 85%;
+}
+.qualifications{
+  font-weight: bold, 500;
+  font-size: 0.6em;
+  text-align: center;
+  width: 55%;
+  margin-left: 6em;
+}
 
 /* ==========================================================================
    FOOTER
@@ -4592,7 +4658,7 @@ div#brand_logo{
 }
   #careerProfile-form input#updateCareerButton{
   @include purpleButton;
-   width: 43%;
+   width: 46%;
    box-shadow: none;
     border-top: none;
   border-bottom: none;

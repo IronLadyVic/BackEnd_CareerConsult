@@ -2,7 +2,7 @@
 @section("content")
 
 
-<!-- Career Profile Client add info. -->
+<!-- Career Profile Client -->
 <div id="sectionCareerProfile">
     <section id="career-profile">
         @if(Auth::user()->admin == 1)
@@ -12,9 +12,9 @@
         @endif
         
         @if(Auth::user()->admin == 1)
-        <p id="description">You may wish to take some notes, while your at it and save to the database too!</p>
+        <p id="description">Press edit to save client notes and feedback.</p>
         @else
-        <p id="description">By updating your Career Profile, this will help your career consultant provide the correct service and help you launch your career, faster and easier.</p>
+        <p id="description">By updating your Career Profile, this will help your career consultant provide the correct <a href="{{URL::to('services/5/enquire')}}" id="aLink">service</a> and help you launch your career, faster and easier.</p>
         @endif
         {{ Form::model($user, array('url' => 'users/'.$user->id, 'files'=>'true', 'id'=>'careerProfile-form')) }} 
         <?php
@@ -46,19 +46,19 @@
         <p>
             <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
             {{Form::label('comment','', array('id'=>'comment'))}}
-            {{Form::textarea('comment', '', array('disabled'=>'disabled', 'id'=>'comment', 'placeholder'=>'1:', 'class'=>'border'))}}
+            {{Form::textarea('comment', '', array('disabled'=>'disabled', 'id'=>'comment', 'placeholder'=>'Client Notes:', 'class'=>'border'))}}
             
         </p>
         <p>
             <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
             {{Form::label('comment','', array('id'=>'comment'))}}
-            {{Form::textarea('comment', '', array('disabled'=>'disabled', 'id'=>'comment', 'placeholder'=>'2:', 'class'=>'border'))}}
+            {{Form::textarea('comment', '', array('disabled'=>'disabled', 'id'=>'comment', 'placeholder'=>'Feedback:', 'class'=>'border'))}}
             
         </p>
         <p>
             <span class="border"><i  class="fa fa-pencil-square-o"></i></span>
             {{Form::label('comment','', array('id'=>'comment'))}}
-            {{Form::textarea('comment', '', array('disabled'=>'disabled', 'id'=>'comment', 'placeholder'=>'3:', 'class'=>'border'))}}
+            {{Form::textarea('comment', '', array('disabled'=>'disabled', 'id'=>'comment', 'placeholder'=>'Comments:', 'class'=>'border'))}}
             
         </p>
         <p class="editProfile">
@@ -174,7 +174,7 @@
         </section>
     </div>
 @if(Auth::user()->admin == 1)
-<div id="careerprofileImage"><img src="{{URL::to('img/AucklandCityExtended.png')}}" alt="testimonials from career consult"></div>
+<div id="careerprofileImage"><img src="{{URL::to('img/AucklandCityExtended.png')}}" alt="Client Profile, Auckland City"></div>
 @endif
 
 

@@ -18,7 +18,6 @@ Route::get('/', function()
 });
 
 
-
 //index not logged in
 Route::get('home', function(){
 	return View::make('home');
@@ -28,6 +27,11 @@ Route::get('home', function(){
 Route::get('services', function(){
 	return View::make('services');
 	//return the index view
+});
+//about
+Route::get('about', function(){
+	return View::make('about');
+	//return the about view
 });
 
 
@@ -72,6 +76,18 @@ Route::delete('services/{id}',function($id){
 	return Redirect::to('services/edit');	
 });
 
+
+
+
+
+
+
+
+
+// Trung can you help me with this?
+
+
+
 //Adding a service and return back to editing services page | admin only
 Route::post('service',function(){
 	
@@ -103,7 +119,7 @@ Route::post('service',function(){
 		$oService = Service::create($aDetails);
 
 		
-		return Redirect::to('services/1');
+		return Redirect::to('services/edit');
 		}else{
 
 		//redirect new client form with errors and sticky data
@@ -111,7 +127,7 @@ Route::post('service',function(){
 
 	}
 
-});
+})->before("auth");
 
 
 
@@ -507,7 +523,7 @@ Route::get('post/{id}', function($id){
 
 
 
-
+// Trung can you help me with the photo thing again?
 
 
 // make a new post	
@@ -538,7 +554,7 @@ Route::post('posts',function(){
 	if($oValidator->passes()){
 		
 
-		$sPostImageName = Input::get("topic").".".Input::file('photo_path')->getClientOriginalExtension();
+		// $sPostImageName = Input::get("topic").".".Input::file('photo_path')->getClientOriginalExtension();
 		Input::file("photo_path")->move("uploadPostPhotos",$sPostImageName);
 		
 		
